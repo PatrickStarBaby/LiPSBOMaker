@@ -80,7 +80,7 @@ func sourceScan(filePath string, output string) {
 	} else {
 		//此处参数一filePath就是.dsc文件移入主目录后的路径，例：/apt-2.7.14build2/apt_2.7.14build2.dsc
 		//参数二会截取得到主目录/apt-2.7.14build2，并拼接上/debian/patches
-		err, pkg := source.ParseSourceDebFile(filePath, filepath.Join(filepath.Dir(filePath), "debian/patches"))
+		err, pkg := source.ParseSourceDebFile(filePath, filepath.Join(filepath.Dir(filePath), "debian/patches"), filepath.Join(filepath.Dir(filePath), "debian/copyright"))
 		if err != nil {
 			fmt.Println(err)
 		}

@@ -251,7 +251,7 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	metadata.Url = url[0]
 	metadata.Description = description[0]
 	metadata.Sources = sources
-	metadata.License = licenses[0]
+	metadata.License = licenses
 	metadata.Packager = packager[0]
 	metadata.PackageList = strings.Join(packageList, ",")
 
@@ -323,7 +323,7 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 		Ref:          bomRef,
 		Dependencies: &dependencyBomref,
 	}
-	
+
 	return nil, &_package.Pkg{
 		Metadata:     &metadata,
 		BuildDepends: &buildDepends,

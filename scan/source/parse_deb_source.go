@@ -118,7 +118,7 @@ func readSeriesFile(seriesPath string) ([]string, error) {
 	if err := scanner.Err(); err != nil {
 		return nil, err
 	}
-	fmt.Printf("-----------patches:--------------", patches)
+	fmt.Println("-----------patches:--------------", patches)
 	return patches, nil
 }
 
@@ -153,7 +153,7 @@ func parseCopyright(copyrightFilePath string) {
 
 }
 
-func ParseSourceDebFile(dscFilePath string, patchesDirPath string) (error, *_package.Pkg) {
+func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFilePath string) (error, *_package.Pkg) {
 	// 打开dsc文件
 	file, err := os.Open(dscFilePath) // 替换为你的dsc文件路径
 	if err != nil {
@@ -185,6 +185,11 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string) (error, *_pac
 	}, "package-id")
 	fmt.Println("BOMRef: ", bomRef)
 
+	licenseList, err := parseLicensesFromCopyright(copyrightFilePath)
+	if err != nil {
+		fmt.Println("提取license发生错误：", err)
+	}
+
 	metadata := _package.Metadata{}
 	metadata.Lifecycle = _package.SourceLifecycle
 	metadata.BomRef = bomRef
@@ -192,6 +197,7 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string) (error, *_pac
 	metadata.Version = dscFields.Version.String()
 	metadata.PURL = purl
 	metadata.Url = dscFields.Homepage
+	metadata.License = licenseList
 	sources := []string{}
 	for _, file := range dscFields.Files {
 		sources = append(sources, file.Filename)

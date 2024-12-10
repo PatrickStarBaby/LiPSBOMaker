@@ -2,11 +2,12 @@ package cyclonedxjson
 
 import (
 	"fmt"
-	"github.com/CycloneDX/cyclonedx-go"
-	"github.com/google/uuid"
 	_package "slp/package"
 	"strings"
 	"time"
+
+	"github.com/CycloneDX/cyclonedx-go"
+	"github.com/google/uuid"
 )
 
 func ToFormatModel(s *_package.Pkg) *cyclonedx.BOM {
@@ -146,17 +147,22 @@ func PatchToComponent(p _package.Patch) cyclonedx.Component {
 	}
 }
 
-func encodeLicenses(lic string) *cyclonedx.Licenses {
-	license, err := _package.ParseLicenseExpression(lic)
-	if err != nil {
-		return nil
-	}
+func encodeLicenses(lic []string) *cyclonedx.Licenses {
 	out := cyclonedx.Licenses{}
-	out = append(out, cyclonedx.LicenseChoice{
-		License: &cyclonedx.License{
-			Name: license,
-		},
-	})
+	for _, v := range lic {
+		license, err := _package.ParseLicenseExpression(v)
+		if err != nil {
+			fmt.Println("非法的SPDX license格式，", err)
+			continue
+		}
+
+		out = append(out, cyclonedx.LicenseChoice{
+			License: &cyclonedx.License{
+				Name: license,
+			},
+		})
+	}
+
 	return &out
 }
 

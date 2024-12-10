@@ -1,0 +1,436 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper. GNU copyright 1997 by Joey Hess.
+
+export SHELL = /bin/bash
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+include /usr/share/dpkg/architecture.mk
+
+changelog_values := $(shell dpkg-parsechangelog \
+			| awk '/^(Version|Source):/ {print $$2}')
+PKGSOURCE  := $(word 1, $(changelog_values))
+PKGVERSION := $(word 2, $(changelog_values))
+UPSTRVER   := $(shell echo $(PKGVERSION) | sed 's,(.*)-.*,\1,')
+VER        := $(shell echo $(PKGVERSION) | awk 'BEGIN{FS="." }{print $$1 "." $$2}')
+NVER       := $(shell echo $(VER) | awk 'BEGIN{FS="." }{print $$1 "." $$2 + 1}') 
+
+
+distribution := $(shell dpkg-vendor --query Vendor)
+distrelease  := $(shell . /etc/os-release; echo $$VERSION_CODENAME)
+
+# required python3.x version
+UPSTRVER   := 3.12.3-0~
+
+# required versions of python3-lib2to3 and python3-distutils
+STDLIBVER   := 3.12.3-0~
+
+ifeq (,$(filter $(distrelease),lenny etch squeeze wheezy lucid maverick natty oneiric precise quantal raring saucy trusty))
+  bd_i586 = dpkg-dev (>= 1.17.11), python3.12:any (>= 3.12.3-0~),
+else
+  bd_i586 = dpkg-dev (>= 1.16.1~),
+endif
+
+PWD		:= $(shell pwd)
+
+d		:= debian/tmp
+scriptdir	=  usr/share/lib/python$(VER)
+scriptdir	=  usr/share/python$(VER)
+scriptdir	=  usr/lib/python$(VER)
+
+rst2html	= rst2html
+
+ifeq (,$(findstring nodoc,$(DEB_BUILD_OPTIONS)))
+with_doc	= yes
+else
+with_doc	= no
+endif
+
+ifneq ($(with_doc),yes)
+  NOPKGS	= -Npython3-doc
+endif
+
+build-arch: build
+build-indep: build
+
+build: stamp-build
+stamp-build:
+	touch stamp-build
+
+stamp-doc-policy:
+	: # compact text version
+	$(MAKE) -C policy singlehtml SPHINXOPTS='-D html_theme_options.nosidebar=true'
+	( \
+	    echo 'The HTML version of the Debian Python Policy can be found in the python3-dev package'; \
+	    html2text policy/_build/singlehtml/index.html; \
+	) > policy/_build/python-policy.txt
+	rm -rf policy/_build/singlehtml
+
+	: # dh_sphinxdoc cannot handle singlehtml, so build both and then discard html
+	$(MAKE) -C policy html singlehtml
+	touch stamp-doc-policy
+
+ifeq ($(with_doc),yes)
+stamp-doc: stamp-doc-policy
+else
+stamp-doc:
+endif
+	touch stamp-doc
+
+control-file:
+	sed -e "s/@UPSTRVER@/$(UPSTRVER)/g" \
+	    -e "s/@STDLIBVER@/$(STDLIBVER)/g" \
+	    -e "s/@NVER@/$(NVER)/g" \
+	    -e "s/@VER@/$(VER)/g" \
+	    -e "s/@bd_i586@/$(bd_i586)/g" \
+		<debian/control.in >debian/control.tmp
+ifeq ($(distribution),Ubuntu)
+  ifneq (,$(findstring ubuntu, $(PKGVERSION)))
+	m='Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>'; \
+	sed -i "/^Maintainer:/s/\(.*\)/Maintainer: $$m\nXSBC-Original-\1/" \
+	  debian/control.tmp
+  endif
+endif
+	[ -e debian/control ] \
+	  && cmp -s debian/control debian/control.tmp \
+	  && rm -f debian/control.tmp && exit 0; \
+	  mv debian/control.tmp debian/control
+
+faqs = index general programming library extending windows gui installed
+get-faq:
+	rm -rf faq
+	mkdir faq
+	cd faq && \
+	  wget -nv $(foreach p,$(faqs),http://python.org/doc/faq/$(p).ht)
+	sed 's,\<\([a-zA-Z0-9]*\.html\)\>,faq/\1,' faq/index.ht \
+		| awk '/^Translations$$/ {exit} {print}' > faq/FAQ.ht
+	( \
+	  echo ''; \
+	  echo 'This is a local copy of the online FAQ located at'; \
+	  echo 'http://python.org/doc/faq.'; \
+	  echo "The copy was fetched and generated in `date '+%B %Y'`."; \
+	) >> faq/FAQ.ht
+	rm -f faq/index.ht
+
+clean: control-file
+	dh_testdir
+	dh_testroot
+	rm -f stamp-*
+	rm -f patch-stamp*
+
+	rm -rf policy/_build
+	rm -f faq/*.h2 faq/*.html
+
+	set -e;\
+	for f in debian/*.in; do \
+	    f2=`echo $$f | sed "s,PVER,python$(VER),g;s/VER/$(VER)/g;s,\.in$$,,"`; \
+	    if [ $$f2 != debian/control ]; then \
+	        rm -f $$f2; \
+	    fi; \
+	done
+	rm -f debian/*.py[co]
+	make clean
+	dh_clean
+
+stamp-control:
+	: # We have to prepare the various control files
+
+	set -e;\
+	for f in debian/*.in; do \
+	    f2=`echo $$f | sed "s,PVER,python$(VER),g;s/VER/$(VER)/g;s,\.in$$,,"`; \
+	    if [ $$f2 != debian/control ]; then \
+		sed -e "s/@PVER@/python$(VER)/g;s/@VER@/$(VER)/g" \
+		    -e "s/@PRIORITY@/$(PRIORITY)/g" \
+		    -e "s,@SCRIPTDIR@,/$(scriptdir),g" \
+		  <$$f >$$f2; \
+	    fi; \
+	done
+
+install: build stamp-dh_python stamp-install
+stamp-install: stamp-build control-file stamp-control
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	dh_install
+ifeq (0,1)
+	dh_installdirs usr/share/doc/python/faq
+
+	set -e; \
+	cd faq && \
+	for p in *.ht; do \
+	  p=`basename $$p .ht`; \
+	  echo $(rst2html) $$p.ht $$p.html; \
+	  awk 'NR > 2' $$p.ht > $$p.ht2; \
+	  $(rst2html) $$p.ht2 $$p.html; \
+	  mv $$p.html ../debian/python/usr/share/doc/python/faq/; \
+	  rm -f $$p.ht2; \
+	done
+	mv debian/python/usr/share/doc/python/faq/FAQ.html \
+		debian/python/usr/share/doc/python/
+endif
+	touch stamp-install
+
+stamp-dh_python:
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	#make check_versions
+	DESTDIR=debian/python3 PREFIX=/usr make install-dev
+	DESTDIR=debian/python3-minimal PREFIX=/usr make install-runtime
+ifeq ($(with_doc),yes)
+	DESTDIR=debian/python3-minimal PREFIX=/usr make manpages
+endif
+	# disabled by default, run manually if you want to update it
+	# (requires apt-file and network connection)
+	#make dist_fallback
+	touch $@
+
+# Build architecture-independent files here.
+binary-indep: build install stamp-doc
+	dh_testdir -i
+	dh_testroot -i
+	dh_installman -i
+
+ifeq ($(with_doc),yes)
+	mkdir -p debian/python3-doc/usr/share/doc/python3
+	ln -sf ../python$(VER)-doc/html \
+		debian/python3-doc/usr/share/doc/python3/html
+	mkdir -p debian/python3-doc/usr/share/doc/python3-doc
+	ln -sf ../python$(VER)-doc/html \
+		debian/python3-doc/usr/share/doc/python3-doc/html
+endif
+
+	: # provide the idle and idle.1 defaults
+	mkdir -p debian/idle/usr/bin
+	install -m 755 debian/idle.py debian/idle/usr/bin/idle
+
+	mkdir -p debian/idle/usr/share/man/man1
+	install -m 644 debian/idle.1 debian/idle/usr/share/man/man1/idle.1
+
+	mkdir -p debian/idle/usr/share/pixmaps
+	ln -sf python3.xpm debian/idle/usr/share/pixmaps/idle.xpm
+
+	mkdir -p debian/idle/usr/share/applications
+	cp -p debian/idle.desktop debian/idle/usr/share/applications/
+
+	: # provide the 2to3-3 a and 2to3-3.1 defaults
+	mkdir -p debian/2to3/usr/bin
+	install -m 755 debian/2to3.py debian/2to3/usr/bin/2to3
+
+	mkdir -p debian/2to3/usr/share/man/man1
+	install -m 644 debian/2to3.1 debian/2to3/usr/share/man/man1/2to3.1
+
+#	dh_installdebconf -i $(NOPKGS)
+	dh_lintian -i
+	dh_installdocs -i $(NOPKGS) --all debian/README.Debian
+	dh_installchangelogs -i $(NOPKGS)
+
+	for p in examples idle idle3; do \
+	  case $$p in idle*) : ;; *) p=python3-$$p; esac; \
+	  rm -rf debian/$$p/usr/share/doc/$$p; \
+	  ln -sf python3 debian/$$p/usr/share/doc/$$p; \
+	done
+
+	dh_compress -i $(NOPKGS)
+	dh_fixperms -i $(NOPKGS)
+	dh_installdeb -i $(NOPKGS)
+	dh_gencontrol -i $(NOPKGS)
+	dh_md5sums -i $(NOPKGS)
+	dh_builddeb -i $(NOPKGS)
+
+# Build architecture-dependent files here.
+binary-arch: build install stamp-doc
+	dh_testdir -a
+	dh_testroot -a
+	dh_installman -a
+
+	: # provide the python and python.1 defaults
+	mkdir -p debian/python3-minimal/usr/bin
+	ln -sf python$(VER) debian/python3-minimal/usr/bin/python3
+	mkdir -p debian/python3-minimal/usr/share/man/man1
+	ln -sf python$(VER).1.gz \
+		debian/python3-minimal/usr/share/man/man1/python3.1.gz
+
+	: # 
+	mkdir -p debian/python3-minimal/usr/share/python3
+	cp -p debian/debian_defaults \
+		debian/python3-minimal/usr/share/python3/
+
+	install -m 755 debian/py3versions.py \
+		debian/python3-minimal/usr/share/python3/
+	install -m 644 debian/py3versions.1 \
+		debian/python3-minimal/usr/share/man/man1/
+	dh_link -ppython3-minimal /usr/share/python3/py3versions.py /usr/bin/py3versions
+
+#	mkdir debian/python-minimal/usr/share/python-central
+#	cp -p debian/python.pycentral debian/python-minimal/usr/share/python-central/
+
+	mkdir -p debian/python3/usr/bin
+	ln -sf pydoc$(VER) debian/python3/usr/bin/pydoc3
+	ln -sf pygettext$(VER) debian/python3/usr/bin/pygettext3
+	ln -sf pdb$(VER) debian/python3/usr/bin/pdb3
+
+	mkdir -p debian/python3/usr/share/python3
+	install -m 644 debian/python.mk \
+		debian/python3/usr/share/python3/
+
+	mkdir -p debian/python3/usr/share/man/man1
+	ln -sf pydoc$(VER).1.gz \
+		debian/python3/usr/share/man/man1/pydoc3.1.gz
+	ln -sf pygettext$(VER).1.gz \
+		debian/python3/usr/share/man/man1/pygettext3.1.gz
+	ln -sf pdb$(VER).1.gz \
+		debian/python3/usr/share/man/man1/pdb3.1.gz
+
+ifeq ($(with_doc),yes)
+	mkdir -p debian/python3/usr/share/doc/python3
+	cp -p policy/_build/python-policy.txt \
+		debian/python3/usr/share/doc/python3/
+
+	mkdir -p debian/python3-dev/usr/share/doc/python3
+	: # dh_sphinxdoc cannot handle singlehtml, so build both and then discard html
+	cp -a policy/_build/html/* \
+		debian/python3-dev/usr/share/doc/python3/
+	dh_sphinxdoc -v -p python3-dev
+	rm -rf debian/python3-dev/usr/share/doc/python3/_sources
+	rm -f debian/python3-dev/usr/share/doc/python3/*.html
+	rm -f debian/python3-dev/usr/share/doc/python3/objects.inv
+
+	cp -p policy/_build/singlehtml/index.html \
+		debian/python3-dev/usr/share/doc/python3/python-policy.html
+	ln -sf python-policy.html \
+		debian/python3-dev/usr/share/doc/python3/index.html
+endif
+
+	mkdir -p debian/python3/usr/share/pixmaps
+	ln -sf python$(VER).xpm debian/python3/usr/share/pixmaps/python3.xpm
+
+	: # add symlinks to policy text file
+	mkdir -p debian/python3/usr/share/doc/python$(VER)
+	ln -sf ../python3/python-policy.txt.gz \
+		debian/python3/usr/share/doc/python$(VER)/python-policy.txt.gz
+
+ifeq (0,1)
+	mkdir -p debian/python3/usr/share/apps/konsole
+	cp -p debian/python.desktop debian/python3/usr/share/apps/konsole/
+endif
+
+	: # provide the python3-config default
+	mkdir -p debian/python3-dev/usr/bin
+	ln -sf python$(VER)-config debian/python3-dev/usr/bin/python3-config
+	mkdir -p debian/python3-dev/usr/share/man/man1
+	ln -sf python$(VER)-config.1.gz \
+		debian/python3-dev/usr/share/man/man1/python3-config.1.gz
+
+	: # provide pkgconfig defaults
+	mkdir -p debian/libpython3-dev/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig
+	ln -sf python-$(VER).pc \
+		debian/libpython3-dev/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/python3.pc
+
+	mkdir -p debian/libpython3-dbg/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig
+	ln -sf python-$(VER)-dbg.pc \
+		debian/libpython3-dbg/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/python3-dbg.pc
+	ln -sf python-$(VER)d.pc \
+		debian/libpython3-dbg/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/python3d.pc
+
+	ln -sf python-$(VER)-embed.pc \
+		debian/libpython3-dev/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/python3-embed.pc
+
+	ln -sf python-$(VER)d-embed.pc \
+		debian/libpython3-dbg/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/python3d-embed.pc
+	ln -sf python-$(VER)d-embed.pc \
+		debian/libpython3-dbg/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/python3-dbg-embed.pc
+
+	: # provide the python-dbg and python-dbg.1 defaults
+	mkdir -p debian/python3-dbg/usr/bin
+	ln -sf python$(VER)d debian/python3-dbg/usr/bin/python3d
+	ln -sf python$(VER)d-config debian/python3-dbg/usr/bin/python3d-config
+	ln -sf python$(VER)-dbg debian/python3-dbg/usr/bin/python3-dbg
+	ln -sf python$(VER)-dbg-config debian/python3-dbg/usr/bin/python3-dbg-config
+	mkdir -p debian/python3-dbg/usr/share/man/man1
+	ln -sf python$(VER)d.1.gz \
+		debian/python3-dbg/usr/share/man/man1/python3d.1.gz
+	ln -sf python$(VER)d-config.1.gz \
+		debian/python3-dbg/usr/share/man/man1/python3d-config.1.gz
+	ln -sf python$(VER)-dbg.1.gz \
+		debian/python3-dbg/usr/share/man/man1/python3-dbg.1.gz
+	ln -sf python$(VER)-dbg-config.1.gz \
+		debian/python3-dbg/usr/share/man/man1/python3-dbg-config.1.gz
+	mkdir -p debian/python3-dbg/usr/share/doc/python3
+	ln -sf ../python$(VER)/SpecialBuilds.txt.gz \
+		debian/python3-dbg/usr/share/doc/python3/SpecialBuilds.txt.gz
+	ln -sf ../python$(VER)/README.debug \
+		debian/python3-dbg/usr/share/doc/python3/README.debug
+
+	mkdir -p debian/python3/usr/lib/valgrind
+	cp -p debian/valgrind-python.supp \
+		debian/python3/usr/lib/valgrind/python3.supp
+
+	: # provide the DEB_HOST_GNU_TYPE/DEB_HOST_MULTIRACH python-config defaults
+	mkdir -p debian/libpython3-dev/usr/bin
+	ln -sf $(DEB_HOST_MULTIARCH)-python$(VER)-config \
+		debian/libpython3-dev/usr/bin/$(DEB_HOST_MULTIARCH)-python3-config
+	mkdir -p debian/libpython3-dev/usr/share/man/man1
+	ln -sf $(DEB_HOST_MULTIARCH)-python$(VER)-config.1.gz \
+		debian/libpython3-dev/usr/share/man/man1/$(DEB_HOST_MULTIARCH)-python3-config.1.gz
+ifneq ($(DEB_HOST_MULTIARCH),$(DEB_HOST_GNU_TYPE))
+	ln -sf $(DEB_HOST_GNU_TYPE)-python$(VER)-config \
+		debian/libpython3-dev/usr/bin/$(DEB_HOST_GNU_TYPE)-python3-config
+	ln -sf $(DEB_HOST_GNU_TYPE)-python$(VER)-config.1.gz \
+		debian/libpython3-dev/usr/share/man/man1/$(DEB_HOST_GNU_TYPE)-python3-config.1.gz
+endif
+
+	mkdir -p debian/libpython3-dbg/usr/bin
+	ln -sf $(DEB_HOST_MULTIARCH)-python$(VER)d-config \
+		debian/libpython3-dbg/usr/bin/$(DEB_HOST_MULTIARCH)-python3d-config
+	ln -sf $(DEB_HOST_MULTIARCH)-python$(VER)-dbg-config \
+		debian/libpython3-dbg/usr/bin/$(DEB_HOST_MULTIARCH)-python3-dbg-config
+	mkdir -p debian/libpython3-dbg/usr/share/man/man1
+	ln -sf $(DEB_HOST_MULTIARCH)-python$(VER)d-config.1.gz \
+		debian/libpython3-dbg/usr/share/man/man1/$(DEB_HOST_MULTIARCH)-python3d-config.1.gz
+	ln -sf $(DEB_HOST_MULTIARCH)-python$(VER)-dbg-config.1.gz \
+		debian/libpython3-dbg/usr/share/man/man1/$(DEB_HOST_MULTIARCH)-python3-dbg-config.1.gz
+ifneq ($(DEB_HOST_MULTIARCH),$(DEB_HOST_GNU_TYPE))
+	ln -sf $(DEB_HOST_GNU_TYPE)-python$(VER)d-config \
+		debian/libpython3-dbg/usr/bin/$(DEB_HOST_GNU_TYPE)-python3d-config
+	ln -sf $(DEB_HOST_GNU_TYPE)-python$(VER)-dbg-config \
+		debian/libpython3-dbg/usr/bin/$(DEB_HOST_GNU_TYPE)-python3-dbg-config
+	ln -sf $(DEB_HOST_GNU_TYPE)-python$(VER)d-config.1.gz \
+		debian/libpython3-dbg/usr/share/man/man1/$(DEB_HOST_GNU_TYPE)-python3d-config.1.gz
+	ln -sf $(DEB_HOST_GNU_TYPE)-python$(VER)-dbg-config.1.gz \
+		debian/libpython3-dbg/usr/share/man/man1/$(DEB_HOST_GNU_TYPE)-python3-dbg-config.1.gz
+endif
+
+	: # python3-nopie
+	mkdir -p debian/python3-nopie/usr/bin
+	ln -sf python$(VER)-pie debian/python3-nopie/usr/bin/python3-pie
+
+	dh_lintian -a
+	dh_installdocs -a $(NOPKGS) --all debian/README.Debian
+	dh_installchangelogs -a $(NOPKGS)
+
+	for p in all all-dev all-dbg dbg dev nopie venv full; do \
+	  case $$p in idle*) : ;; *) p=python3-$$p; esac; \
+	  rm -rf debian/$$p/usr/share/doc/$$p; \
+	  ln -sf python3 debian/$$p/usr/share/doc/$$p; \
+	done
+	rm -rf debian/libpython3-all-dev/usr/share/doc/libpython3-all-dev
+	ln -sf libpython3-dev debian/libpython3-all-dev/usr/share/doc/libpython3-all-dev
+	rm -rf debian/libpython3-all-dbg/usr/share/doc/libpython3-all-dbg
+	ln -sf libpython3-dbg debian/libpython3-all-dbg/usr/share/doc/libpython3-all-dbg
+
+	dh_compress -a $(NOPKGS)
+	dh_fixperms -a $(NOPKGS)
+	dh_installdeb -a $(NOPKGS)
+	dh_gencontrol -a $(NOPKGS)
+	dh_md5sums -a $(NOPKGS)
+	dh_builddeb -a $(NOPKGS)
+
+binary: binary-indep binary-arch
+
+.PHONY: control-file configure build clean binary-indep binary-arch binary install
+
+# Local Variables:
+# mode: makefile
+# end:

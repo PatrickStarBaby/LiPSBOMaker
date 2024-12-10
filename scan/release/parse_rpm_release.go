@@ -153,7 +153,7 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	metadata.PURL = purl
 	metadata.Url = url[0]
 	metadata.Description = description[0]
-	metadata.License = licenses[0]
+	metadata.License = licenses
 	metadata.PackageList = strings.Join(packageList, ", ")
 
 	metadata.SourcePkg = strings.Join(sourceRPM, ", ")

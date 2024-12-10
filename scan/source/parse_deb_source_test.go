@@ -10,10 +10,10 @@ func TestParsePatchFiles(t *testing.T) {
 		patchesDirPath string
 	}{
 		{
-			patchesDirPath: "E:\\postgraduate\\SBOM调研\\Rpm\\sourcePackages\\bash-5.2.21\\debian\\patches",
+			patchesDirPath: "test-fixtures/debPkg/bash_5.2.21/debian/patches",
 		},
 		{
-			patchesDirPath: "E:\\postgraduate\\SBOM调研\\Rpm\\sourcePackages\\apt-2.7.14build2",
+			patchesDirPath: "test-fixtures/debPkg/apt-2.7.14build2",
 		},
 	}
 
@@ -37,7 +37,7 @@ func TestReadDscFile(t *testing.T) {
 		expected string
 	}{
 		{
-			rootPath: "E:\\postgraduate\\SBOM调研\\Rpm\\sourcePackages\\apt_2.7.14build2.dsc",
+			rootPath: "test-fixtures/debPkg/apt-2.7.14build2/apt_2.7.14build2.dsc",
 			expected: "IsNative",
 		},
 	}
@@ -62,10 +62,13 @@ func TestReadDscFileByPault(t *testing.T) {
 		expected string
 	}{
 		{
-			rootPath: "E:\\postgraduate\\SBOM调研\\Rpm&Deb\\工具\\slp\\sourcefile\\ubuntu24.04.1 LTS-source\\apt\\apt_2.7.14build2.dsc",
+			rootPath: "test-fixtures/debPkg/apt-2.7.14build2/apt_2.7.14build2.dsc",
 		},
 		{
-			rootPath: "E:\\postgraduate\\SBOM调研\\Rpm&Deb\\工具\\slp\\sourcefile\\ubuntu24.04.1 LTS-source\\bash\\bash_5.2.21-2ubuntu4.dsc",
+			rootPath: "test-fixtures/debPkg/bash_5.2.21/bash_5.2.21-2ubuntu4.dsc",
+		},
+		{
+			rootPath: "test-fixtures/debPkg/python3-defaults-3.12.3/python3-defaults_3.12.3-0ubuntu2.dsc",
 		},
 	}
 
