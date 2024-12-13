@@ -1,8 +1,10 @@
 package scan_utils
 
 import (
+	"bytes"
 	"github.com/sassoftware/go-rpmutils"
 	"os"
+	"os/exec"
 	"regexp"
 )
 
@@ -70,4 +72,18 @@ func isEmptyMap(m map[string]string) bool {
 		}
 	}
 	return true
+}
+
+// 执行命令并返回输出
+func RunCommand(command string, args ...string) (string, error) {
+	cmd := exec.Command(command, args...)
+	var out bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &out
+
+	err := cmd.Run()
+	if err != nil {
+		return "", err
+	}
+	return out.String(), nil
 }

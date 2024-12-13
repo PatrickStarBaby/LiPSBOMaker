@@ -15,6 +15,12 @@ import (
 	"slp/package/cpegenerate/dictionary"
 )
 
+/*
+	CPE 支持两种主要格式：
+	URI 格式：cpe:/a:vendor:product:version.
+	WFN 格式：wfn:[part="a", vendor="vendor", product="product", version="version"]
+*/
+
 func generateIndexedDictionaryJSON(rawGzipData io.Reader) ([]byte, error) {
 	gzipReader, err := gzip.NewReader(rawGzipData)
 	if err != nil {
@@ -64,14 +70,19 @@ func filterCpeList(cpeList CpeList) CpeList {
 			log.Printf("unable to parse CPE URI %q: %s", cpeItem.Name, err)
 			continue
 		}
-
-		if slices.Contains([]string{"h", "o"}, parsedName.Part) {
+		/*if slices.Contains([]string{"h", "o"}, parsedName.Part) {
+			continue
+		}*/
+		// 去除硬件CPE  （有三种：o：Operating System-操作系统， a：Application-软件， h：Hardware-硬件）
+		if slices.Contains([]string{"h"}, parsedName.Part) {
 			continue
 		}
 
+		// 将（Version和Update置空）标准化后的 wfn.Attributes 对象转换回一个 CPE URI 字符串
 		normalizedName := normalizeCPE(parsedName).BindToURI()
 		cpeItem.Name = normalizedName
 
+		// 判断cpe是否过期，如果过期则替换成<cpe-23:deprecated-by>标签记录的名字
 		cpeName := cpeItem.Cpe23Item.Name
 		if cpeItem.Cpe23Item.Deprecation.DeprecatedBy.Name != "" {
 			cpeName = cpeItem.Cpe23Item.Deprecation.DeprecatedBy.Name
@@ -91,7 +102,7 @@ func filterCpeList(cpeList CpeList) CpeList {
 	return processedCpeList
 }
 
-// normalizeCPE removes the version and update parts of CPE Attributes.
+// normalizeCPE函数 去除去除CPE Attributes对象 Version 和 Update 字段的值
 func normalizeCPE(cpe *wfn.Attributes) *wfn.Attributes {
 	cpeCopy := *cpe
 

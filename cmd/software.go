@@ -36,7 +36,6 @@ var softwareCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		lifecycle, _ := cmd.Flags().GetString("lifecycle")
 		output, _ := cmd.Flags().GetString("output")
-		fmt.Println(output)
 		// 按生命周期参数分别处理
 		switch lifecycle {
 		case "source":
