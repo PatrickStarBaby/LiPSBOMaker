@@ -23,7 +23,7 @@ func GetInstalledRpmInfo(pkgName string) {
 	for _, line := range pkgs {
 		trimmedLine := strings.TrimSpace(line) // 去掉每行首尾空白
 		if trimmedLine != "" {                 // 过滤空白行
-			pkg, err := scan_utils.SplitRPMName(line)
+			pkg, err := scan_utils.SplitRPMName(trimmedLine)
 			if err != nil {
 				continue
 			}
