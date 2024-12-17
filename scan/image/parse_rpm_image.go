@@ -21,7 +21,7 @@ func ParseRpmDB(path string) error {
 		if entry == nil {
 			continue
 		}
-		fmt.Println(entry)
+		fmt.Println(entry.Name, entry.Version, entry.Requires, entry.Vendor)
 	}
 	return nil
 }
