@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"slp/file"
 	"slp/format/cyclonedxjson"
+	"slp/scan/installed"
 	"slp/scan/release"
 	"slp/scan/source"
 	scan_utils "slp/utils"
@@ -129,7 +130,7 @@ func installedScan(pkgName string, output string) {
 	//通过判断rpm命令是否存在的方式，来确定当前的系统环境到底是rpm还是deb
 	if scan_utils.CheckCommandExists("rpm") {
 		//rpm体系
-		err, _ := release.ParseInstalledRpm(pkgName)
+		err, _ := installed.ParseInstalledRpm(pkgName)
 		if err != nil {
 			fmt.Println(err)
 		}
