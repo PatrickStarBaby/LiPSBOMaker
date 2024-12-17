@@ -1,7 +1,6 @@
 package scan_utils
 
 import (
-	"bytes"
 	"fmt"
 	"github.com/sassoftware/go-rpmutils"
 	"os"
@@ -78,15 +77,12 @@ func isEmptyMap(m map[string]string) bool {
 // 执行命令并返回输出
 func RunCommand(command string, args ...string) (string, error) {
 	cmd := exec.Command(command, args...)
-	var out bytes.Buffer
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-
-	err := cmd.Run()
+	// 捕获标准输出
+	output, err := cmd.Output()
 	if err != nil {
 		return "", err
 	}
-	return out.String(), nil
+	return string(output), nil
 }
 
 // 检查系统中是否存在指定的命令
