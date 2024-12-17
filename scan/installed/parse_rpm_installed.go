@@ -27,7 +27,7 @@ func GetInstalledRpmInfo(pkgName string) {
 			if err != nil {
 				continue
 			}
-			fmt.Println(pkg)
+			fmt.Println(pkg.Name)
 			if pkg.Name != pkgName { //出现自身依赖的要去掉，例如bash
 				requirePkgs = append(requirePkgs, *pkg)
 			}
