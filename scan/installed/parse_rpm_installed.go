@@ -20,7 +20,6 @@ func GetInstalledRpmInfo(pkgName string) {
 	}
 	pkgs := strings.Split(res, "\n")
 	var requirePkgs []scan_utils.RPM_NEVRA
-	fmt.Println("-------------")
 	for _, line := range pkgs {
 		trimmedLine := strings.TrimSpace(line) // 去掉每行首尾空白
 		if trimmedLine != "" {                 // 过滤空白行
@@ -29,7 +28,7 @@ func GetInstalledRpmInfo(pkgName string) {
 				continue
 			}
 			fmt.Println("-------------")
-			fmt.Println(pkg.Name)
+			fmt.Println(pkg)
 			if pkg.Name != pkgName { //出现自身依赖的要去掉，例如bash
 				requirePkgs = append(requirePkgs, *pkg)
 			}
