@@ -78,12 +78,18 @@ func isEmptyMap(m map[string]string) bool {
 func RunCommand(command string, args ...string) (string, error) {
 	cmd := exec.Command(command, args...)
 	var out bytes.Buffer
-	cmd.Stdout = &out
-	cmd.Stderr = &out
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
 
 	err := cmd.Run()
 	if err != nil {
 		return "", err
 	}
 	return out.String(), nil
+}
+
+// 检查系统中是否存在指定的命令
+func CheckCommandExists(command string) bool {
+	_, err := exec.LookPath(command)
+	return err == nil
 }
