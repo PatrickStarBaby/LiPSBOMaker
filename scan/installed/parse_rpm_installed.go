@@ -4,6 +4,7 @@ import (
 	"fmt"
 	_package "slp/package"
 	scan_utils "slp/utils"
+	"strings"
 )
 
 func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
@@ -12,23 +13,24 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 }
 
 func GetInstalledRpmInfo(pkgName string) {
-	requirePkgs, err := scan_utils.RunCommand("dnf", "repoquery", "--requires", "--resolve", "--installed", pkgName)
+	res, err := scan_utils.RunCommand("dnf", "repoquery", "--requires", "--resolve", "--installed", pkgName)
 	if err != nil {
 		fmt.Println("dnf repoquery --requires --resolve命令执行失败：", err)
 		return
 	}
-	fmt.Println(requirePkgs)
-	// 使用 rpmutils 提取包名信息
-	/*nevra, err := scan_utils.SplitRPMName(rpmName)
-	if err != nil {
-		log.Fatalf("解析失败: %v", err)
+	pkgs := strings.Split(res, "\n")
+	var requirePkgs []scan_utils.RPM_NEVRA
+	for _, line := range pkgs {
+		trimmedLine := strings.TrimSpace(line) // 去掉每行首尾空白
+		if trimmedLine != "" {                 // 过滤空白行
+			pkg, err := scan_utils.SplitRPMName(line)
+			if err != nil {
+				continue
+			}
+			fmt.Println(pkg)
+			if pkg.Name != pkgName { //出现自身依赖的要去掉，例如bash
+				requirePkgs = append(requirePkgs, *pkg)
+			}
+		}
 	}
-
-	// 输出结果
-	fmt.Println("解析结果:")
-	fmt.Printf("Name: %s\n", nevra.Name)
-	fmt.Printf("Epoch: %d\n", nevra.Epoch)
-	fmt.Printf("Version: %s\n", nevra.Version)
-	fmt.Printf("Release: %s\n", nevra.Release)
-	fmt.Printf("Arch: %s\n", nevra.Arch)*/
 }
