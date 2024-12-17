@@ -8,6 +8,7 @@ import (
 	"slp/format/cyclonedxjson"
 	"slp/scan/release"
 	"slp/scan/source"
+	scan_utils "slp/utils"
 	"strings"
 )
 
@@ -56,6 +57,12 @@ var softwareCmd = &cobra.Command{
 			}
 		case "installed":
 			fmt.Println("这是要生成二进制使用阶段SBOM")
+			if len(args) == 0 {
+				fmt.Println("Parameters are missing, Usage: ")
+				fmt.Println("slp package -l=[\"source\"/\"release\"/\"installed\"] [SOURCE] --output [FILENAME]")
+			} else {
+				installedScan(args[0], output)
+			}
 		default:
 			fmt.Println(fmt.Sprintf("invalid argument: %s (allowed values are: %s)", lifecycle, strings.Join(allowedLifecycleArgs, ", ")))
 		}
@@ -113,5 +120,20 @@ func releaseScan(filePath string, output string) {
 		if err != nil {
 			fmt.Println(err)
 		}
+	}
+}
+
+// rpm,deb都是直接输入软件包名即可，例如：slp package -l=installed bash --output test.json
+func installedScan(pkgName string, output string) {
+	//在基于 RPM 的系统（如 RHEL、CentOS、Fedora）上，rpm 命令必然存在
+	//通过判断rpm命令是否存在的方式，来确定当前的系统环境到底是rpm还是deb
+	if scan_utils.CheckCommandExists("rpm") {
+		//rpm体系
+		err, _ := release.ParseInstalledRpm(pkgName)
+		if err != nil {
+			fmt.Println(err)
+		}
+	} else {
+		//deb体系
 	}
 }

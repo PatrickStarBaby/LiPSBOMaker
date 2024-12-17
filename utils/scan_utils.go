@@ -2,6 +2,7 @@ package scan_utils
 
 import (
 	"bytes"
+	"fmt"
 	"github.com/sassoftware/go-rpmutils"
 	"os"
 	"os/exec"
@@ -92,4 +93,51 @@ func RunCommand(command string, args ...string) (string, error) {
 func CheckCommandExists(command string) bool {
 	_, err := exec.LookPath(command)
 	return err == nil
+}
+
+// RPM_NEVRA 结构体
+type RPM_NEVRA struct {
+	Name    string
+	Epoch   string
+	Version string
+	Release string
+	Arch    string
+}
+
+// SplitRPMFilename 解析 RPM 包名称
+/*
+	匹配正确的情况：
+	不带后缀：
+	glibc-0:2.38-47.oe2403.x86_64
+	elfutils-default-yama-scope-0:0.190-3.oe2403.noarch
+	带文件后缀：
+	coreutils-0:9.4-3.oe2403.x86_64.rpm
+*/
+func SplitRPMName(rpmPkgName string) (*RPM_NEVRA, error) {
+	// 定义正则表达式解析 RPM 名称
+	pattern := `^(?P<Name>[\w\-]+)-(?P<Epoch>\d+):(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
+	re := regexp.MustCompile(pattern)
+
+	// 执行正则匹配
+	match := re.FindStringSubmatch(rpmPkgName)
+	if match == nil {
+		return nil, fmt.Errorf("无法解析 RPM 文件名: %s", rpmPkgName)
+	}
+
+	// 提取命名组
+	result := make(map[string]string)
+	for i, name := range re.SubexpNames() {
+		if i > 0 && name != "" {
+			result[name] = match[i]
+		}
+	}
+
+	// 构建 NEVRA 结构体
+	return &RPM_NEVRA{
+		Name:    result["Name"],
+		Epoch:   result["Epoch"],
+		Version: result["Version"],
+		Release: result["Release"],
+		Arch:    result["Arch"],
+	}, nil
 }
