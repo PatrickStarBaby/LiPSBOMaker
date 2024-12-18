@@ -58,7 +58,6 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Pkg, error) {
 	pkgInfo := make(map[string]string)
 	lines := strings.Split(res, "\n")
 	for _, line := range lines {
-		fmt.Println(line)
 		if len(line) == 0 || !strings.Contains(line, ":") {
 			continue
 		}
