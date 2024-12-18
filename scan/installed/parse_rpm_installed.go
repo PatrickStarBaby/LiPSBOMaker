@@ -57,15 +57,30 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Pkg, error) {
 	}
 	pkgInfo := make(map[string]string)
 	lines := strings.Split(res, "\n")
-	for _, line := range lines {
+	for i := 0; i < len(lines); i++ {
+		parts := strings.SplitN(lines[i], ":", 2)
+		key := strings.TrimSpace(parts[0])
+		value := strings.TrimSpace(parts[1])
+		if key == "Description" {
+			i++
+			for ; i < len(lines); i++ {
+				value += lines[i]
+			}
+		}
+		pkgInfo[key] = value
+	}
+	/*for _, line := range lines {
 		if len(line) == 0 || !strings.Contains(line, ":") {
 			continue
 		}
 		parts := strings.SplitN(line, ":", 2)
 		key := strings.TrimSpace(parts[0])
 		value := strings.TrimSpace(parts[1])
+		if key == "Description" {
+
+		}
 		pkgInfo[key] = value
-	}
+	}*/
 
 	metadata := _package.Metadata{}
 	metadata.Lifecycle = _package.InstalledLifecycle
