@@ -64,7 +64,7 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Pkg, error) {
 		if key == "Description" {
 			i++
 			for ; i < len(lines); i++ {
-				value += lines[i]
+				value = value + "\n" + lines[i]
 			}
 		}
 		pkgInfo[key] = value
