@@ -58,3 +58,5 @@ slp package -l=installed "xxx" --output ./rpm-installed.json
 slp package -l=installed "xxx" --output ./deb-installed.json
 ```
 
+##### todo:
+1、purl生成时，namespace、distro字段自适应各个系统，
