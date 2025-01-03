@@ -7,6 +7,7 @@ import (
 	_package "slp/package"
 	scan_utils "slp/utils"
 	"strings"
+	"time"
 )
 
 func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
@@ -107,6 +108,23 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Metadata, error) {
 
 	purl := _package.RpmPackageURL(packageurl.TypeDebian, "openEuler", pkgInfo["Name"], pkgInfo["Architecture"], metadata.SourcePkg, pkgInfo["Version"], pkgInfo["Release"], "openEuler-24.03")
 	fmt.Println("PURL: ", purl)
+	metadata.PURL = purl
+
+	bomRef, err := _package.GetBomRef(purl, struct {
+		Name      string
+		Version   string
+		Release   string
+		Arch      string
+		timestamp time.Time //加上时间戳防止重复
+	}{
+		Name:      metadata.Name,
+		Version:   metadata.Version,
+		Release:   metadata.Release,
+		Arch:      metadata.Architecture,
+		timestamp: time.Now(),
+	}, "package-id")
+	fmt.Println("BOMRef: ", bomRef)
+	metadata.BomRef = bomRef
 
 	return &metadata, nil
 }
