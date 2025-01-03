@@ -18,6 +18,7 @@ type Metadata struct {
 	Release     string        `json:"release,omitempty"` //rpm包的release
 	Arch        string        `json:"arch,omitempty"`    //rpm包的arch
 	PURL        string        `json:"purl,omitempty"`
+	CPE         string        `json:"cpe,omitempty"`
 	Url         string        `json:"url,omitempty"` //扫描对象的链接
 	Description string        `json:"description,omitempty"`
 
@@ -50,17 +51,8 @@ type Patch struct {
 
 // 运行时依赖
 type Depend struct {
-	Name          string   `json:"name,omitempty"`
-	DebDependType string   `json:"debDependType,omitempty"` //Built-Using、Depends、Pre-Depends
-	Version       string   `json:"version,omitempty"`
-	Release       string   `json:"release,omitempty"` //rpm包的release
-	Arch          string   `json:"arch,omitempty"`    //rpm包的arch
-	Url           string   `json:"url,omitempty"`     //扫描对象的链接
-	BomRef        string   `json:"bom-ref,omitempty"`
-	PURL          string   `json:"purl,omitempty"`
-	CPE           string   `json:"cpe,omitempty"`
-	License       []string `json:"license,omitempty"`
-	Description   string   `json:"description,omitempty"`
+	DebDependType string `json:"debDependType,omitempty"` //Built-Using、Depends、Pre-Depends
+	Metadata
 }
 
 type BuildDepend struct {

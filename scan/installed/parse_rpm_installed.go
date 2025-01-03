@@ -2,6 +2,7 @@ package installed
 
 import (
 	"fmt"
+	"github.com/CycloneDX/cyclonedx-go"
 	"github.com/package-url/packageurl-go"
 	_package "slp/package"
 	scan_utils "slp/utils"
@@ -13,16 +14,36 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 	if err != nil {
 		fmt.Println(err)
 	}
+	pkg := _package.Pkg{}
+	metadata, err := GetInstalledRpmInfo(pkgName)
+	if err != nil {
+		fmt.Println(err)
+	}
+	pkg.Metadata = metadata
+	var deps []_package.Depend
+	dependencyBomref := []string{}
 	for _, require := range requires {
-		pkg, err := GetInstalledRpmInfo(require.Name)
+		p, err := GetInstalledRpmInfo(require.Name)
 		if err != nil {
 			fmt.Println(err)
 		}
-		fmt.Println(pkg.Metadata.Name)
-		fmt.Println(pkg.Metadata.Description)
+		dep := _package.Depend{}
+		dep.Metadata = *p
+		deps = append(deps, dep)
+		dependencyBomref = append(dependencyBomref, dep.BomRef)
+		fmt.Println(dep.Name)
+		fmt.Println(dep.Description)
+		fmt.Println(dep.BomRef)
 		fmt.Println("-------------")
 	}
-	return nil, nil
+	pkg.Depends = &deps
+
+	directDependency := cyclonedx.Dependency{
+		Ref:          pkg.Metadata.BomRef,
+		Dependencies: &dependencyBomref,
+	}
+	pkg.Dependencies = &[]cyclonedx.Dependency{directDependency}
+	return nil, &pkg
 }
 
 func GetRpmRequires(pkgName string) ([]scan_utils.RPM_NEVRA, error) {
@@ -50,7 +71,7 @@ func GetRpmRequires(pkgName string) ([]scan_utils.RPM_NEVRA, error) {
 	return requirePkgs, nil
 }
 
-func GetInstalledRpmInfo(pkgName string) (*_package.Pkg, error) {
+func GetInstalledRpmInfo(pkgName string) (*_package.Metadata, error) {
 	res, err := scan_utils.RunCommand("rpm", "-qi", pkgName)
 	if err != nil {
 		return nil, fmt.Errorf("rpm -qi命令执行失败：%v", err)
@@ -69,18 +90,6 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Pkg, error) {
 		}
 		pkgInfo[key] = value
 	}
-	/*for _, line := range lines {
-		if len(line) == 0 || !strings.Contains(line, ":") {
-			continue
-		}
-		parts := strings.SplitN(line, ":", 2)
-		key := strings.TrimSpace(parts[0])
-		value := strings.TrimSpace(parts[1])
-		if key == "Description" {
-
-		}
-		pkgInfo[key] = value
-	}*/
 
 	metadata := _package.Metadata{}
 	metadata.Lifecycle = _package.InstalledLifecycle
@@ -99,7 +108,5 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Pkg, error) {
 	purl := _package.RpmPackageURL(packageurl.TypeDebian, "openEuler", pkgInfo["Name"], pkgInfo["Architecture"], metadata.SourcePkg, pkgInfo["Version"], pkgInfo["Release"], "openEuler-24.03")
 	fmt.Println("PURL: ", purl)
 
-	return &_package.Pkg{
-		Metadata: &metadata,
-	}, nil
+	return &metadata, nil
 }

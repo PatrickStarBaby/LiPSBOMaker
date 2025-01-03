@@ -130,7 +130,11 @@ func installedScan(pkgName string, output string) {
 	//通过判断rpm命令是否存在的方式，来确定当前的系统环境到底是rpm还是deb
 	if scan_utils.CheckCommandExists("rpm") {
 		//rpm体系
-		err, _ := installed.ParseInstalledRpm(pkgName)
+		err, pkg := installed.ParseInstalledRpm(pkgName)
+		if err != nil {
+			fmt.Println(err)
+		}
+		err = file.WriteCycloneDX(cyclonedxjson.ToFormatModel(pkg), output)
 		if err != nil {
 			fmt.Println(err)
 		}
