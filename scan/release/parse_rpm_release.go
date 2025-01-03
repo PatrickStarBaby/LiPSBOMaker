@@ -203,9 +203,11 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 				timestamp: time.Now(),
 			}, "package-id")
 			depends = append(depends, _package.Depend{
-				Name:    uniqueNames[i],
-				Version: uniqueVersions[i],
-				BomRef:  dependBomRef,
+				Metadata: _package.Metadata{
+					Name:    uniqueNames[i],
+					Version: uniqueVersions[i],
+					BomRef:  dependBomRef,
+				},
 			})
 			dependencyBomref = append(dependencyBomref, dependBomRef)
 			fmt.Printf("依赖: %s, 版本要求: %s\n", uniqueNames[i], uniqueVersions[i])

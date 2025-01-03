@@ -182,7 +182,7 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 	metadata.Section = controlData["Section"]
 	metadata.Priority = controlData["Priority"]
 
-	depends := []_package.Depend{}
+	var depends []_package.Depend
 	dependencyBomref := []string{}
 	if controlData["Depends"] != "" {
 		dep, err := dependency.Parse(controlData["Depends"])
@@ -207,10 +207,12 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 					timestamp: time.Now(),
 				}, "package-id")
 				depends = append(depends, _package.Depend{
-					Name:          p.Name,
-					Version:       version,
+					Metadata: _package.Metadata{
+						Name:    p.Name,
+						Version: version,
+						BomRef:  dependBomRef,
+					},
 					DebDependType: "Depends",
-					BomRef:        dependBomRef,
 				})
 				dependencyBomref = append(dependencyBomref, dependBomRef)
 			}
@@ -240,10 +242,12 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 					timestamp: time.Now(),
 				}, "package-id")
 				depends = append(depends, _package.Depend{
-					Name:          p.Name,
-					Version:       version,
+					Metadata: _package.Metadata{
+						Name:    p.Name,
+						Version: version,
+						BomRef:  dependBomRef,
+					},
 					DebDependType: "Pre-Depends",
-					BomRef:        dependBomRef,
 				})
 				dependencyBomref = append(dependencyBomref, dependBomRef)
 			}
@@ -273,10 +277,12 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 					timestamp: time.Now(),
 				}, "package-id")
 				depends = append(depends, _package.Depend{
-					Name:          p.Name,
-					Version:       version,
+					Metadata: _package.Metadata{
+						Name:    p.Name,
+						Version: version,
+						BomRef:  dependBomRef,
+					},
 					DebDependType: "Built-Using",
-					BomRef:        dependBomRef,
 				})
 				dependencyBomref = append(dependencyBomref, dependBomRef)
 			}
