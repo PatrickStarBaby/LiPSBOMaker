@@ -140,5 +140,9 @@ func installedScan(pkgName string, output string) {
 		}
 	} else {
 		//deb体系
+		err, _ := installed.ParseInstalledDeb(pkgName)
+		if err != nil {
+			fmt.Println(err)
+		}
 	}
 }
