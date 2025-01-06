@@ -30,7 +30,7 @@ func GetInstalledDebInfo(pkgName string) (*_package.Metadata, error) {
 	if err != nil {
 		return nil, fmt.Errorf("dpkg -s命令执行失败：%v", err)
 	}
-
+	fmt.Println("123")
 	pkgInfo := make(map[string]string)
 
 	var currentKey string
