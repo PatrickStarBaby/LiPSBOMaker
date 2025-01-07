@@ -105,6 +105,7 @@ func DependToComponent(p _package.Depend) cyclonedx.Component {
 		Version:    version,
 		PackageURL: p.PURL,
 		Licenses:   encodeLicenses(p.License),
+
 		//CPE:                encodeSingleCPE(p),
 		//Author:             encodeAuthor(p),
 		//Publisher:          encodePublisher(p),
@@ -186,12 +187,6 @@ func getMetadataComponentProperties(m *_package.Metadata) *[]cyclonedx.Property 
 		out = append(out, cyclonedx.Property{
 			Name:  "release",
 			Value: m.Release,
-		})
-	}
-	if m.Arch != "" {
-		out = append(out, cyclonedx.Property{
-			Name:  "arch",
-			Value: m.Arch,
 		})
 	}
 	if m.IsNative != "" {
@@ -287,10 +282,10 @@ func getDependProperties(d *_package.Depend) *[]cyclonedx.Property {
 			Value: d.Release,
 		})
 	}
-	if d.Arch != "" {
+	if d.Architecture != "" {
 		out = append(out, cyclonedx.Property{
-			Name:  "arch",
-			Value: d.Arch,
+			Name:  "architecture",
+			Value: d.Architecture,
 		})
 	}
 	return &out
@@ -314,10 +309,10 @@ func getBuildDependProperties(bd *_package.BuildDepend) *[]cyclonedx.Property {
 			Value: bd.Release,
 		})
 	}
-	if bd.Arch != "" {
+	if bd.Architecture != "" {
 		out = append(out, cyclonedx.Property{
-			Name:  "arch",
-			Value: bd.Arch,
+			Name:  "architecture",
+			Value: bd.Architecture,
 		})
 	}
 	out = append(out, cyclonedx.Property{

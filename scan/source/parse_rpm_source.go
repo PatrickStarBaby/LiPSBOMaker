@@ -3,16 +3,17 @@ package source
 import (
 	"compress/gzip"
 	"fmt"
-	"github.com/CycloneDX/cyclonedx-go"
-	"github.com/package-url/packageurl-go"
-	"github.com/sassoftware/go-rpmutils"
 	"io"
 	"log"
 	"os"
 	_package "slp/package"
-	"slp/utils"
+	scan_utils "slp/utils"
 	"strings"
 	"time"
+
+	"github.com/CycloneDX/cyclonedx-go"
+	"github.com/package-url/packageurl-go"
+	"github.com/sassoftware/go-rpmutils"
 
 	"github.com/cavaliergopher/cpio"
 	"github.com/cavaliergopher/rpm"
@@ -246,7 +247,7 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	metadata.Name = nevra.Name
 	metadata.Version = nevra.Version
 	metadata.Release = nevra.Release
-	metadata.Arch = nevra.Arch
+	metadata.Architecture = nevra.Arch
 	metadata.PURL = purl
 	metadata.Url = url[0]
 	metadata.Description = description[0]
@@ -290,9 +291,11 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 				timestamp: time.Now(),
 			}, "package-id")
 			buildDepends = append(buildDepends, _package.BuildDepend{
-				Name:    buildRequire[i],
-				Version: version,
-				BomRef:  buildRequireBomRef,
+				Metadata: _package.Metadata{
+					Name:    buildRequire[i],
+					Version: version,
+					BomRef:  buildRequireBomRef,
+				},
 			})
 			dependencyBomref = append(dependencyBomref, buildRequireBomRef)
 			fmt.Printf("依赖: %s, 版本要求: %s %s\n", buildRequire[i], scan_utils.GetOperator(buildRequireFlags[i]), buildRequireVersion[i])

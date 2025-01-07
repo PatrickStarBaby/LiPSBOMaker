@@ -3,17 +3,18 @@ package source
 import (
 	"bufio"
 	"fmt"
-	"github.com/CycloneDX/cyclonedx-go"
-	"github.com/package-url/packageurl-go"
 	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
-	"pault.ag/go/debian/control"
-	"pault.ag/go/debian/dependency"
 	_package "slp/package"
 	"strings"
 	"time"
+
+	"github.com/CycloneDX/cyclonedx-go"
+	"github.com/package-url/packageurl-go"
+	"pault.ag/go/debian/control"
+	"pault.ag/go/debian/dependency"
 )
 
 // 测试三方包解析dsc文件，未使用
@@ -238,10 +239,12 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 				timestamp: time.Now(),
 			}, "package-id")
 			buildDepends = append(buildDepends, _package.BuildDepend{
-				Name:               p.Name,
-				Version:            version,
+				Metadata: _package.Metadata{
+					Name:    p.Name,
+					Version: version,
+					BomRef:  buildDependBomRef,
+				},
 				DebBuildDependType: "Build-Depends",
-				BomRef:             buildDependBomRef,
 			})
 			dependencyBomref = append(dependencyBomref, buildDependBomRef)
 		}
@@ -263,10 +266,12 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 				timestamp: time.Now(),
 			}, "package-id")
 			buildDepends = append(buildDepends, _package.BuildDepend{
-				Name:               p.Name,
-				Version:            version,
+				Metadata: _package.Metadata{
+					Name:    p.Name,
+					Version: version,
+					BomRef:  buildDependBomRef,
+				},
 				DebBuildDependType: "Build-Depends-Indep",
-				BomRef:             buildDependBomRef,
 			})
 			dependencyBomref = append(dependencyBomref, buildDependBomRef)
 		}
@@ -288,10 +293,12 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 				timestamp: time.Now(),
 			}, "package-id")
 			buildDepends = append(buildDepends, _package.BuildDepend{
-				Name:               p.Name,
-				Version:            version,
+				Metadata: _package.Metadata{
+					Name:    p.Name,
+					Version: version,
+					BomRef:  buildDependBomRef,
+				},
 				DebBuildDependType: "Build-Depends-Arch",
-				BomRef:             buildDependBomRef,
 			})
 			dependencyBomref = append(dependencyBomref, buildDependBomRef)
 		}

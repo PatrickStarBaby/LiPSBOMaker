@@ -2,14 +2,15 @@ package release
 
 import (
 	"fmt"
+	"os"
+	_package "slp/package"
+	scan_utils "slp/utils"
+	"strings"
+	"time"
+
 	"github.com/CycloneDX/cyclonedx-go"
 	"github.com/package-url/packageurl-go"
 	"github.com/sassoftware/go-rpmutils"
-	"os"
-	_package "slp/package"
-	"slp/utils"
-	"strings"
-	"time"
 )
 
 func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
@@ -149,7 +150,7 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	metadata.Name = nevra.Name
 	metadata.Version = nevra.Version
 	metadata.Release = nevra.Release
-	metadata.Arch = nevra.Arch
+	metadata.Architecture = nevra.Arch
 	metadata.PURL = purl
 	metadata.Url = url[0]
 	metadata.Description = description[0]
