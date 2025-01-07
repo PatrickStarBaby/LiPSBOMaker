@@ -30,7 +30,7 @@ func GetInstalledDebInfo(pkgName string) (*_package.Metadata, error) {
 	if err != nil {
 		return nil, fmt.Errorf("dpkg -s命令执行失败：%v", err)
 	}
-	fmt.Println("123")
+
 	pkgInfo := make(map[string]string)
 
 	var currentKey string
@@ -53,10 +53,64 @@ func GetInstalledDebInfo(pkgName string) (*_package.Metadata, error) {
 		}
 
 	}
+
+	_, exists := pkgInfo["Pre-Depends"]
+	if exists {
+		fields := strings.Split(pkgInfo["Pre-Depends"], ",")
+		var preDeps []string
+		for _, field := range fields {
+			preDeps = append(preDeps, splitPackageChoice(field)...)
+		}
+		fmt.Println(preDeps)
+	}
+
+	_, exists = pkgInfo["Depends"]
+	if exists {
+		fields := strings.Split(pkgInfo["Depends"], ",")
+		var deps []string
+		for _, field := range fields {
+			deps = append(deps, splitPackageChoice(field)...)
+		}
+		fmt.Println(deps)
+	}
+
 	for key, value := range pkgInfo {
 		fmt.Printf("Key: %s, Value: %s\n", key, value)
 	}
 	metadata := _package.Metadata{}
 
 	return &metadata, nil
+}
+
+func splitPackageChoice(s string) (ret []string) {
+	fields := strings.Split(s, "|")
+	for _, field := range fields {
+		field = strings.TrimSpace(field)
+		if field != "" {
+			ret = append(ret, stripVersionSpecifier(field))
+		}
+	}
+	return ret
+}
+
+func stripVersionSpecifier(s string) string {
+	// examples:
+	// libgmp10 (>= 2:6.2.1+dfsg1)         -->  libgmp10
+	// libgmp10                            -->  libgmp10
+	// foo [i386]                          -->  foo
+	// default-mta | mail-transport-agent  -->  default-mta | mail-transport-agent
+	// kernel-headers-2.2.10 [!hurd-i386]  -->  kernel-headers-2.2.10
+
+	return strings.TrimSpace(SplitAny(s, "[(<>=")[0])
+}
+
+func SplitAny(s string, seps string) []string {
+	splitter := func(r rune) bool {
+		return strings.ContainsRune(seps, r)
+	}
+	result := strings.FieldsFunc(s, splitter)
+	if len(result) == 0 {
+		return []string{s}
+	}
+	return result
 }
