@@ -140,7 +140,11 @@ func installedScan(pkgName string, output string) {
 		}
 	} else {
 		//deb体系
-		err, _ := installed.ParseInstalledDeb(pkgName)
+		err, pkg := installed.ParseInstalledDeb(pkgName)
+		if err != nil {
+			fmt.Println(err)
+		}
+		err = file.WriteCycloneDX(cyclonedxjson.ToFormatModel(pkg), output)
 		if err != nil {
 			fmt.Println(err)
 		}
