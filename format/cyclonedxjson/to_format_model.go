@@ -62,6 +62,7 @@ func encodeMetadata(p *_package.Pkg) *cyclonedx.Metadata {
 		Version:            p.Metadata.Version,
 		Copyright:          p.Metadata.Copyright,
 		PackageURL:         p.Metadata.PURL,
+		CPE:                p.Metadata.CPE,
 		ExternalReferences: encodeExternalReferences(p.Metadata.Url),
 		Licenses:           encodeLicenses(p.Metadata.License),
 		Description:        p.Metadata.Description,
@@ -105,7 +106,7 @@ func DependToComponent(p _package.Depend) cyclonedx.Component {
 		Version:    version,
 		PackageURL: p.PURL,
 		Licenses:   encodeLicenses(p.License),
-
+		CPE:        p.CPE,
 		//CPE:                encodeSingleCPE(p),
 		//Author:             encodeAuthor(p),
 		//Publisher:          encodePublisher(p),
@@ -129,6 +130,7 @@ func BuildDependToComponent(p _package.BuildDepend) cyclonedx.Component {
 		Version:    version,
 		PackageURL: p.PURL,
 		Licenses:   encodeLicenses(p.License),
+		CPE:        p.CPE,
 		//CPE:                encodeSingleCPE(p),
 		//Author:             encodeAuthor(p),
 		//Publisher:          encodePublisher(p),
@@ -163,7 +165,9 @@ func encodeLicenses(lic []string) *cyclonedx.Licenses {
 			},
 		})
 	}
-
+	if len(lic) == 0 {
+		out = nil
+	}
 	return &out
 }
 
@@ -266,6 +270,8 @@ func getMetadataComponentProperties(m *_package.Metadata) *[]cyclonedx.Property 
 
 func getDependProperties(d *_package.Depend) *[]cyclonedx.Property {
 	var out []cyclonedx.Property
+	metadataProperties := getMetadataComponentProperties(&d.Metadata)
+	out = *metadataProperties
 	out = append(out, cyclonedx.Property{
 		Name:  "componentType",
 		Value: "depend",
@@ -276,23 +282,13 @@ func getDependProperties(d *_package.Depend) *[]cyclonedx.Property {
 			Value: d.DebDependType,
 		})
 	}
-	if d.Release != "" {
-		out = append(out, cyclonedx.Property{
-			Name:  "release",
-			Value: d.Release,
-		})
-	}
-	if d.Architecture != "" {
-		out = append(out, cyclonedx.Property{
-			Name:  "architecture",
-			Value: d.Architecture,
-		})
-	}
 	return &out
 }
 
 func getBuildDependProperties(bd *_package.BuildDepend) *[]cyclonedx.Property {
 	var out []cyclonedx.Property
+	metadataProperties := getMetadataComponentProperties(&bd.Metadata)
+	out = *metadataProperties
 	out = append(out, cyclonedx.Property{
 		Name:  "componentType",
 		Value: "buildDepend",
@@ -301,18 +297,6 @@ func getBuildDependProperties(bd *_package.BuildDepend) *[]cyclonedx.Property {
 		out = append(out, cyclonedx.Property{
 			Name:  "buildDependType",
 			Value: bd.DebBuildDependType,
-		})
-	}
-	if bd.Release != "" {
-		out = append(out, cyclonedx.Property{
-			Name:  "release",
-			Value: bd.Release,
-		})
-	}
-	if bd.Architecture != "" {
-		out = append(out, cyclonedx.Property{
-			Name:  "architecture",
-			Value: bd.Architecture,
 		})
 	}
 	out = append(out, cyclonedx.Property{

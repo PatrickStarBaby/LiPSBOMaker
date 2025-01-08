@@ -105,7 +105,9 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Metadata, error) {
 	metadata.SourcePkg = pkgInfo["Source RPM"]
 	metadata.BuildHost = pkgInfo["Build Host"]
 	metadata.BuildTime = pkgInfo["Build Date"]
-	metadata.License = []string{pkgInfo["License"]}
+	if pkgInfo["License"] != "" {
+		metadata.License = []string{pkgInfo["License"]}
+	}
 
 	// namespace: "openEuler"; distro: "openEuler-24.03"
 	purl := _package.RpmPackageURL(packageurl.TypeDebian, "", pkgInfo["Name"], pkgInfo["Architecture"], metadata.SourcePkg, pkgInfo["Version"], pkgInfo["Release"], "")
