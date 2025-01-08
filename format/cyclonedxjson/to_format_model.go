@@ -152,6 +152,7 @@ func PatchToComponent(p _package.Patch) cyclonedx.Component {
 
 func encodeLicenses(lic []string) *cyclonedx.Licenses {
 	out := cyclonedx.Licenses{}
+
 	for _, v := range lic {
 		license, err := _package.ParseLicenseExpression(v)
 		if err != nil {
@@ -165,10 +166,12 @@ func encodeLicenses(lic []string) *cyclonedx.Licenses {
 			},
 		})
 	}
-	if len(lic) == 0 {
-		out = nil
+
+	if len(out) > 0 {
+		return &out
 	}
-	return &out
+
+	return nil
 }
 
 func encodeExternalReferences(url string) *[]cyclonedx.ExternalReference {
