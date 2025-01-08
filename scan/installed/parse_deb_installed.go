@@ -94,8 +94,9 @@ func GetMetaData(pkgName string) (*_package.Metadata, error) {
 		metadata.SourcePkg = info["Package"]
 	}
 	// PURL
+	namespace, distro := getOsInfo()
 	// namespace: "ubuntu"; distro: "ubuntu-24.04"
-	purl := _package.RpmPackageURL(packageurl.TypeDebian, "", info["Package"], info["Architecture"], metadata.SourcePkg, info["Version"], "", "")
+	purl := _package.RpmPackageURL(packageurl.TypeDebian, namespace, info["Package"], info["Architecture"], metadata.SourcePkg, info["Version"], "", distro)
 	fmt.Println("PURL: ", purl)
 	metadata.PURL = purl
 	// BOMRef
@@ -226,4 +227,33 @@ func installAptRdepends() error {
 		return fmt.Errorf("failed to install apt-rdepends: %v", err)
 	}
 	return nil
+}
+
+// 获取软件包所处的系统信息以生成PURL
+func getOsInfo() (namespace, distro string) {
+	res, err := scan_utils.RunCommand("cat", "/etc/os-release")
+	if err != nil {
+		fmt.Println(fmt.Errorf("dpkg -s命令执行失败：%v", err))
+		return "", ""
+	}
+
+	osInfo := make(map[string]string)
+	var currentKey string
+	lines := strings.Split(res, "\n")
+
+	for _, line := range lines {
+		if line == "" {
+			continue
+		}
+		// Check if line is a new field
+		if strings.HasPrefix(line, "VERSION_ID") || strings.HasPrefix(line, "ID") {
+			// Split the line by the first occurrence of ':'
+			parts := strings.SplitN(line, "=", 2)
+			currentKey = strings.TrimSpace(parts[0])
+			temp := strings.TrimSpace(parts[1])
+			osInfo[currentKey] = strings.Trim(temp, "\"")
+		}
+
+	}
+	return osInfo["ID"], osInfo["ID"] + "-" + osInfo["VERSION_ID"]
 }
