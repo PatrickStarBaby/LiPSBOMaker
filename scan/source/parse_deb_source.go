@@ -165,7 +165,8 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 	}
 
 	// PURL
-	purl := _package.RpmPackageURL(packageurl.TypeDebian, "ubuntu", dscFields.Source, "", "", dscFields.Version.String(), "", "ubuntu-24.04")
+	// namespace: "ubuntu"; distro: "ubuntu-24.04"
+	purl := _package.RpmPackageURL(packageurl.TypeDebian, "", dscFields.Source, "", "", dscFields.Version.String(), "", "")
 	fmt.Println("PURL: ", purl)
 
 	// BOMRef
@@ -194,6 +195,7 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 	metadata.Version = dscFields.Version.String()
 	metadata.PURL = purl
 	metadata.Url = dscFields.Homepage
+	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
 	metadata.License = licenseList
 	sources := []string{}
 	for _, file := range dscFields.Files {

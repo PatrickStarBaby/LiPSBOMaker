@@ -140,7 +140,8 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 		metadata.SourcePkg = controlData["Package"]
 	}
 	// PURL
-	purl := _package.RpmPackageURL(packageurl.TypeDebian, "ubuntu", controlData["Package"], controlData["Architecture"], metadata.SourcePkg, controlData["Version"], "", "ubuntu-24.04")
+	// namespace: "ubuntu"; distro: "ubuntu-24.04"
+	purl := _package.RpmPackageURL(packageurl.TypeDebian, "", controlData["Package"], controlData["Architecture"], metadata.SourcePkg, controlData["Version"], "", "")
 	fmt.Println("PURL: ", purl)
 
 	// BOMRef
@@ -164,6 +165,7 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 	metadata.Architecture = controlData["Architecture"]
 	metadata.PURL = purl
 	metadata.Url = controlData["Homepage"]
+	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
 
 	// 引入"pault.ag/go/debian/deb"三方包读取Description、
 	file, err := os.Open(debFilePath)

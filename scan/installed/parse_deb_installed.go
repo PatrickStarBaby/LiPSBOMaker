@@ -80,6 +80,7 @@ func GetMetaData(pkgName string) (*_package.Metadata, error) {
 	metadata.Version = info["Version"]
 	metadata.Architecture = info["Architecture"]
 	metadata.Url = info["Homepage"]
+	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
 	metadata.Description = info["Description"]
 	metadata.Maintainer = info["Maintainer"]
 	metadata.OriginalMaintainer = info["Original-Maintainer"]
@@ -93,7 +94,8 @@ func GetMetaData(pkgName string) (*_package.Metadata, error) {
 		metadata.SourcePkg = info["Package"]
 	}
 	// PURL
-	purl := _package.RpmPackageURL(packageurl.TypeDebian, "ubuntu", info["Package"], info["Architecture"], metadata.SourcePkg, info["Version"], "", "ubuntu-24.04")
+	// namespace: "ubuntu"; distro: "ubuntu-24.04"
+	purl := _package.RpmPackageURL(packageurl.TypeDebian, "", info["Package"], info["Architecture"], metadata.SourcePkg, info["Version"], "", "")
 	fmt.Println("PURL: ", purl)
 	metadata.PURL = purl
 	// BOMRef

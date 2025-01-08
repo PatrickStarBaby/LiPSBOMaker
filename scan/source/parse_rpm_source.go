@@ -151,7 +151,8 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	fmt.Println("Arch: ", nevra.Arch)
 
 	// PURL
-	purl := _package.RpmPackageURL(packageurl.TypeRPM, "openEuler", nevra.Name, nevra.Arch, "", nevra.Version, nevra.Release, "openEuler-24.03")
+	// namespace: "openEuler"; distro: "openEuler-24.03"
+	purl := _package.RpmPackageURL(packageurl.TypeRPM, "", nevra.Name, nevra.Arch, "", nevra.Version, nevra.Release, "")
 	fmt.Println("PURL: ", purl)
 
 	//BOMRef
@@ -250,6 +251,7 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	metadata.Architecture = nevra.Arch
 	metadata.PURL = purl
 	metadata.Url = url[0]
+	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
 	metadata.Description = description[0]
 	metadata.Sources = sources
 	metadata.License = licenses
