@@ -87,7 +87,7 @@ func RunCommand(command string, args ...string) (string, error) {
 			return "NotInstalled", err
 		}
 		// 其他错误
-		return "", err
+		return string(output), err
 	}
 	return string(output), nil
 }

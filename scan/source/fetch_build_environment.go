@@ -27,7 +27,7 @@ func RecordDebBuildEnvInformation(dscFilePath string) error {
 	if err != nil {
 		return err
 	}
-
+	fmt.Println("-----------------写入文件--------------------")
 	// 将结构体转换为JSON格式（格式化缩进）
 	jsonData, err := json.MarshalIndent(debBuildEnv, "", "  ")
 	if err != nil {

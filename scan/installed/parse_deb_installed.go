@@ -29,6 +29,7 @@ func ParseInstalledDeb(pkgName string) (error, *_package.Pkg) {
 		p, err := GetMetaData(depName)
 		if err != nil {
 			fmt.Println(err)
+			continue
 		}
 		deps = append(deps, _package.Depend{
 			Metadata:      *p,
@@ -120,7 +121,8 @@ func GetMetaData(pkgName string) (*_package.Metadata, error) {
 func GetInstalledDebInfo(pkgName string) (map[string]string, error) {
 	res, err := scan_utils.RunCommand("dpkg", "-s", pkgName)
 	if err != nil {
-		return nil, fmt.Errorf("dpkg -s命令执行失败：%v", err)
+		fmt.Println(res)
+		return nil, fmt.Errorf("dpkg -s 命令执行失败：%v", err)
 	}
 
 	pkgInfo := make(map[string]string)
