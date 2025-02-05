@@ -152,7 +152,7 @@ func parsePatchFiles(patchesDirPath string) (patches []_package.Patch, err error
 
 func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFilePath string) (error, *_package.Pkg) {
 	// 打开dsc文件
-	file, err := os.Open(dscFilePath) // 替换为你的dsc文件路径
+	file, err := os.Open(dscFilePath) // dsc文件路径
 	if err != nil {
 		return fmt.Errorf("无法打开dsc文件: %v", err), nil
 	}

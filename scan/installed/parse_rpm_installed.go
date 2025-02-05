@@ -47,6 +47,7 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 	return nil, &pkg
 }
 
+// 三个获取依赖的命令：rpm -qR xxx  /  dnf deplist xxx  /  dnf repoquery --requires --resolve --installed xxx
 func GetRpmRequires(pkgName string) ([]scan_utils.RPM_NEVRA, error) {
 	res, err := scan_utils.RunCommand("dnf", "repoquery", "--requires", "--resolve", "--installed", pkgName)
 	if err != nil {

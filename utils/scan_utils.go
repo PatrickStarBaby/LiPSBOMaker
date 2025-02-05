@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"regexp"
+	"strings"
 )
 
 // 转换版本符号（>=，<=等）
@@ -78,8 +79,14 @@ func isEmptyMap(m map[string]string) bool {
 func RunCommand(command string, args ...string) (string, error) {
 	cmd := exec.Command(command, args...)
 	// 捕获标准输出
-	output, err := cmd.Output()
+	output, err := cmd.CombinedOutput()
+
 	if err != nil {
+		// 包未安装的错误单独处理
+		if strings.Contains(string(output), "is not installed") {
+			return "NotInstalled", err
+		}
+		// 其他错误
 		return "", err
 	}
 	return string(output), nil

@@ -56,9 +56,10 @@ type Depend struct {
 
 type BuildDepend struct {
 	Metadata
-	DebBuildDependType       string `json:"debBuildDependType,omitempty"`       //deb的构建依赖类型：Build-Depends、Build-Depends-Indep、Build-Depends-Arch
-	AffectsBinaryComposition bool   `json:"affectsBinaryComposition,omitempty"` //是否会直接影响（成为）二进制包的成分
-	InferentialDescription   string `json:"inferential_description,omitempty"`  //用大模型生成分类时的推断性描述，记录以便校验
+	DebBuildDependType       string `json:"debBuildDependType,omitempty"`            //deb的构建依赖类型：Build-Depends、Build-Depends-Indep、Build-Depends-Arch
+	AffectsBinaryComposition bool   `json:"affectsBinaryComposition,omitempty"`      //是否会直接影响（成为）二进制包的成分
+	InferentialDescription   string `json:"inferential_description,omitempty"`       //用大模型生成分类时的推断性描述，记录以便校验
+	VirtualOrConcreteDesc    string `json:"virtualOrConcrete_description,omitempty"` //这是虚实依赖描述
 }
 
 type Pkg struct {
