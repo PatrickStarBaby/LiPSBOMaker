@@ -100,6 +100,8 @@ func getRPMProvider(provide string) (error, []_package.Pkg) {
 	}
 	lines := strings.Split(res, "\n")
 	var providerList []_package.Pkg
+	fmt.Println("----------------这是一段：")
+	fmt.Println(lines)
 	for _, line := range lines {
 		trimmedLine := strings.TrimSpace(line)
 		fmt.Println("这是一行：", trimmedLine)
