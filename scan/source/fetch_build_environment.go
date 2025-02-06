@@ -77,9 +77,10 @@ func FetchRpmBuildDep(rpmSourcePkgPath string) (error, *RpmBuildEnv) {
 	var buildRequires []buildDepProviderGroup
 	for _, v := range buildRequireNameList {
 		err, provider := getRPMProvider(v)
+		// 发生错误时，例如出现rpmlib(CompressedFileNames)等，还是插入到列表中
 		if err != nil {
 			fmt.Println(err)
-			continue
+			//continue
 		}
 		buildRequires = append(buildRequires, buildDepProviderGroup{
 			RequireProvide: v,
@@ -92,6 +93,7 @@ func FetchRpmBuildDep(rpmSourcePkgPath string) (error, *RpmBuildEnv) {
 	}
 }
 
+// 通过rpm -q --whatprovides xxx 命令获取Provider列表
 func getRPMProvider(provide string) (error, []_package.Pkg) {
 	res, err := scan_utils.RunCommand("rpm", "-q", "--whatprovides", provide)
 	if err != nil {
