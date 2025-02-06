@@ -115,10 +115,16 @@ type RPM_NEVRA struct {
 	elfutils-default-yama-scope-0:0.190-3.oe2403.noarch
 	带文件后缀：
 	coreutils-0:9.4-3.oe2403.x86_64.rpm
+
+	一些特殊的情况：
+	gcc-c++-0:12.3.1-38.oe2403.x86_64
+	libstdc++-0:12.3.1-38.oe2403.x86_64
+	glibc-0:2.38-47.oe2403.x86_64
+	elfutils-default-yama-scope-0:0.190-3.oe2403.noarch
 */
 func SplitRPMName(rpmPkgName string) (*RPM_NEVRA, error) {
 	// 定义正则表达式解析 RPM 名称
-	pattern := `^(?P<Name>[\w\-]+)-(?P<Epoch>\d+):(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
+	pattern := `^(?P<Name>[\w\-\+]+)-(?P<Epoch>\d+):(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
 	re := regexp.MustCompile(pattern)
 
 	// 执行正则匹配
@@ -147,7 +153,7 @@ func SplitRPMName(rpmPkgName string) (*RPM_NEVRA, error) {
 
 func SplitRPMNameWithoutEpoch(rpmPkgName string) (*RPM_NEVRA, error) {
 	// 定义正则表达式解析 RPM 名称
-	pattern := `^(?P<Name>[\w\-]+)-(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
+	pattern := `^(?P<Name>[\w\-\+]+)-(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
 	re := regexp.MustCompile(pattern)
 
 	// 执行正则匹配
