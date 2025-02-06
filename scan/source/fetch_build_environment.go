@@ -102,6 +102,7 @@ func getRPMProvider(provide string) (error, []_package.Pkg) {
 	var providerList []_package.Pkg
 	for _, line := range lines {
 		trimmedLine := strings.TrimSpace(line)
+		fmt.Println("这是一行：", trimmedLine)
 		pkg, err := scan_utils.SplitRPMNameWithoutEpoch(trimmedLine)
 		if err != nil {
 			fmt.Println(err)
