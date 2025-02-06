@@ -100,22 +100,21 @@ func getRPMProvider(provide string) (error, []_package.Pkg) {
 	}
 	lines := strings.Split(res, "\n")
 	var providerList []_package.Pkg
-	fmt.Println("----------------这是一段：")
-	fmt.Println(lines)
 	for _, line := range lines {
 		trimmedLine := strings.TrimSpace(line)
-		fmt.Println("这是一行：", trimmedLine)
-		pkg, err := scan_utils.SplitRPMNameWithoutEpoch(trimmedLine)
-		if err != nil {
-			fmt.Println(err)
-			continue
+		if trimmedLine != "" {
+			pkg, err := scan_utils.SplitRPMNameWithoutEpoch(trimmedLine)
+			if err != nil {
+				fmt.Println(err)
+				continue
+			}
+			err, provider := installed.ParseInstalledRpm(pkg.Name)
+			if err != nil {
+				fmt.Println(err)
+				continue
+			}
+			providerList = append(providerList, *provider)
 		}
-		err, provider := installed.ParseInstalledRpm(pkg.Name)
-		if err != nil {
-			fmt.Println(err)
-			continue
-		}
-		providerList = append(providerList, *provider)
 	}
 	return nil, providerList
 }
