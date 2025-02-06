@@ -144,3 +144,32 @@ func SplitRPMName(rpmPkgName string) (*RPM_NEVRA, error) {
 		Arch:    result["Arch"],
 	}, nil
 }
+
+func SplitRPMNameWithoutEpoch(rpmPkgName string) (*RPM_NEVRA, error) {
+	// 定义正则表达式解析 RPM 名称
+	pattern := `^(?P<Name>[\w\-]+)-(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
+	re := regexp.MustCompile(pattern)
+
+	// 执行正则匹配
+	match := re.FindStringSubmatch(rpmPkgName)
+	if match == nil {
+		return nil, fmt.Errorf("无法解析 RPM 文件名: %s", rpmPkgName)
+	}
+
+	// 提取命名组
+	result := make(map[string]string)
+	for i, name := range re.SubexpNames() {
+		if i > 0 && name != "" {
+			result[name] = match[i]
+		}
+	}
+
+	// 构建 NEVRA 结构体
+	return &RPM_NEVRA{
+		Name:    result["Name"],
+		Epoch:   result["Epoch"],
+		Version: result["Version"],
+		Release: result["Release"],
+		Arch:    result["Arch"],
+	}, nil
+}
