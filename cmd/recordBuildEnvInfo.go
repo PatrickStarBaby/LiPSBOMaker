@@ -34,11 +34,13 @@ func recordEnv(filePath string) {
 	ext := filepath.Ext(filePath)
 	// 根据文件后缀判断 deb/RPM 体系
 	if ext == ".rpm" {
-		err := source.RecordDebBuildEnvInformation(filePath)
+		// rpm体系 传入 rpm源码包的路径
+		err := source.RecordRpmBuildEnvInformation(filePath)
 		if err != nil {
 			fmt.Println(err)
 		}
 	} else {
+		// deb体系 传入 .dsc 文件路径
 		err := source.RecordDebBuildEnvInformation(filePath)
 		if err != nil {
 			fmt.Println(err)
