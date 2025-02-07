@@ -2,11 +2,11 @@ package scan_utils
 
 import (
 	"fmt"
-	"github.com/sassoftware/go-rpmutils"
 	"os"
 	"os/exec"
 	"regexp"
-	"strings"
+
+	"github.com/sassoftware/go-rpmutils"
 )
 
 // 转换版本符号（>=，<=等）
@@ -82,11 +82,6 @@ func RunCommand(command string, args ...string) (string, error) {
 	output, err := cmd.CombinedOutput()
 
 	if err != nil {
-		// 包未安装的错误单独处理
-		if strings.Contains(string(output), "is not installed") {
-			return "NotInstalled", err
-		}
-		// 其他错误
 		return string(output), err
 	}
 	return string(output), nil
