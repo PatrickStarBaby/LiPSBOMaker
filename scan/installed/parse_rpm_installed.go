@@ -23,19 +23,11 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 	pkg.Metadata = metadata
 	var deps []_package.Depend
 	dependencyBomref := []string{}
-	for _, require := range requires {
-		p, err := GetInstalledRpmInfo(require.Name)
-		if err != nil {
-			fmt.Println(err)
+	for _, requireList := range requires {
+		for _, require := range requireList {
+			deps = append(deps, require)
+			dependencyBomref = append(dependencyBomref, require.BomRef)
 		}
-		dep := _package.Depend{}
-		dep.Metadata = *p
-		deps = append(deps, dep)
-		dependencyBomref = append(dependencyBomref, dep.BomRef)
-		fmt.Println(dep.Name)
-		fmt.Println(dep.Description)
-		fmt.Println(dep.BomRef)
-		fmt.Println("-------------")
 	}
 	pkg.Depends = &deps
 
@@ -48,29 +40,58 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 }
 
 // 三个获取依赖的命令：rpm -qR xxx  /  dnf deplist xxx  /  dnf repoquery --requires --resolve --installed xxx
-func GetRpmRequires(pkgName string) ([]scan_utils.RPM_NEVRA, error) {
-	res, err := scan_utils.RunCommand("dnf", "repoquery", "--requires", "--resolve", "--installed", pkgName)
+// 然后用rpm -q --whatprovides 找到Provider
+func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
+	res, err := scan_utils.RunCommand("rpm", "-qR", pkgName)
 	if err != nil {
-		return nil, fmt.Errorf("dnf repoquery --requires --resolve命令执行失败：%v", err)
+		fmt.Println(res)
+		return nil, fmt.Errorf("rpm -qR 命令执行失败：%v", err)
 	}
 	pkgs := strings.Split(res, "\n")
-	var requirePkgs []scan_utils.RPM_NEVRA
+	var requirePkgs [][]_package.Depend
 	for _, line := range pkgs {
 		trimmedLine := strings.TrimSpace(line) // 去掉每行首尾空白
 		if trimmedLine != "" {                 // 过滤空白行
-			pkg, err := scan_utils.SplitRPMName(trimmedLine)
+			metadataList, err := getProvider(trimmedLine)
+			if err != nil {
+				fmt.Println(err)
+				//continue
+			}
+			var temp []_package.Depend
+			for _, metadata := range metadataList {
+				if metadata.Name != pkgName { //出现自身依赖的要去掉，例如bash
+					temp = append(temp, _package.Depend{
+						Metadata:          metadata,
+						RpmRequireProvide: trimmedLine,
+					})
+				}
+			}
+			requirePkgs = append(requirePkgs, temp)
+		}
+	}
+	return requirePkgs, nil
+}
+
+func getProvider(provide string) ([]_package.Metadata, error) {
+	res, err := scan_utils.RunCommand("rpm", "-q", "--whatprovides", provide)
+	if err != nil {
+		fmt.Println(res)
+		return nil, fmt.Errorf("rpm -q --whatprovides 命令执行失败：%v", err)
+	}
+	lines := strings.Split(res, "\n")
+	var providerList []_package.Metadata
+	for _, line := range lines {
+		trimmedLine := strings.TrimSpace(line)
+		if trimmedLine != "" {
+			provider, err := GetInstalledRpmInfo(trimmedLine)
 			if err != nil {
 				fmt.Println(err)
 				continue
 			}
-			fmt.Println("-------------")
-			fmt.Println(pkg)
-			if pkg.Name != pkgName { //出现自身依赖的要去掉，例如bash
-				requirePkgs = append(requirePkgs, *pkg)
-			}
+			providerList = append(providerList, *provider)
 		}
 	}
-	return requirePkgs, nil
+	return providerList, nil
 }
 
 func GetInstalledRpmInfo(pkgName string) (*_package.Metadata, error) {
