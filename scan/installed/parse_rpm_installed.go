@@ -48,6 +48,7 @@ func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
 		return nil, fmt.Errorf("rpm -qR 命令执行失败：%v", err)
 	}
 	pkgs := strings.Split(res, "\n")
+	pkgs = scan_utils.RemoveDuplicates(pkgs)
 	var requirePkgs [][]_package.Depend
 	for _, line := range pkgs {
 		trimmedLine := strings.Split(strings.TrimSpace(line), " ")[0] // 去掉每行首尾空白, 并且提取出name

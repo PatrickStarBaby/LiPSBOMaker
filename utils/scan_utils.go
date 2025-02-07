@@ -75,7 +75,25 @@ func isEmptyMap(m map[string]string) bool {
 	return true
 }
 
-// 执行命令并返回输出
+// RemoveDuplicates 字符串数组去重
+func RemoveDuplicates(strArray []string) []string {
+	// 创建一个 map 来保存已经出现的元素
+	seen := make(map[string]bool)
+	var result []string
+
+	// 遍历字符串数组
+	for _, str := range strArray {
+		// 如果元素没有出现过，则添加到结果数组中
+		if !seen[str] {
+			seen[str] = true
+			result = append(result, str)
+		}
+	}
+
+	return result
+}
+
+// RunCommand 执行命令并返回输出
 func RunCommand(command string, args ...string) (string, error) {
 	cmd := exec.Command(command, args...)
 	// 捕获标准输出
