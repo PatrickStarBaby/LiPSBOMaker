@@ -285,6 +285,12 @@ func getDependProperties(d *_package.Depend) *[]cyclonedx.Property {
 			Value: d.DebDependType,
 		})
 	}
+	if d.RpmRequireProvide != "" {
+		out = append(out, cyclonedx.Property{
+			Name:  "rpmRequireProvide",
+			Value: d.RpmRequireProvide,
+		})
+	}
 	return &out
 }
 
@@ -310,6 +316,12 @@ func getBuildDependProperties(bd *_package.BuildDepend) *[]cyclonedx.Property {
 		out = append(out, cyclonedx.Property{
 			Name:  "inferentialDescription",
 			Value: bd.InferentialDescription,
+		})
+	}
+	if bd.RpmRequireProvide != "" {
+		out = append(out, cyclonedx.Property{
+			Name:  "rpmRequireProvide",
+			Value: bd.RpmRequireProvide,
 		})
 	}
 	return &out
