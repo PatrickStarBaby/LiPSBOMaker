@@ -42,7 +42,7 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 // 三个获取依赖的命令：rpm -qR xxx  /  dnf deplist xxx  /  dnf repoquery --requires --resolve --installed xxx
 // 然后用rpm -q --whatprovides 找到Provider
 func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
-	res, err := scan_utils.RunCommand("rpm", "-qR", pkgName, "|", "awk", "'{print $1}'")
+	res, err := scan_utils.RunCommand("rpm", "-qR", pkgName)
 	if err != nil {
 		fmt.Println(res)
 		return nil, fmt.Errorf("rpm -qR 命令执行失败：%v", err)
@@ -50,8 +50,8 @@ func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
 	pkgs := strings.Split(res, "\n")
 	var requirePkgs [][]_package.Depend
 	for _, line := range pkgs {
-		trimmedLine := strings.TrimSpace(line) // 去掉每行首尾空白
-		if trimmedLine != "" {                 // 过滤空白行
+		trimmedLine := strings.Split(strings.TrimSpace(line), " ")[0] // 去掉每行首尾空白, 并且提取出name
+		if trimmedLine != "" {                                        // 过滤空白行
 			metadataList, err := getProvider(trimmedLine)
 			if err != nil {
 				fmt.Println(err)
