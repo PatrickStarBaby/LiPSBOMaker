@@ -318,6 +318,12 @@ func getBuildDependProperties(bd *_package.BuildDepend) *[]cyclonedx.Property {
 			Value: bd.InferentialDescription,
 		})
 	}
+	if bd.VirtualOrConcreteDesc != "" {
+		out = append(out, cyclonedx.Property{
+			Name:  "virtualOrConcrete_description",
+			Value: bd.VirtualOrConcreteDesc,
+		})
+	}
 	if bd.RpmRequireProvide != "" {
 		out = append(out, cyclonedx.Property{
 			Name:  "rpmRequireProvide",

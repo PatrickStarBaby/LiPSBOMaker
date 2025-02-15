@@ -379,7 +379,6 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 
 	//依赖可能存在 "|" 的关系，所以bdList也可能有多项
 	for _, bdList := range buildEnv.BuildDepends {
-		fmt.Println(bdList)
 		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends")...)
 	}
 	for _, bdList := range buildEnv.BuildDependsIndep {
@@ -408,7 +407,7 @@ func envBdToBd(bdList source.BuildDepPkgGroup, buildDependType string) []_packag
 		})
 	} else {
 		//拼接或依赖关系描述
-		orRelation := ""
+		var orRelation string
 		for i, bd := range bdList {
 			if i != 0 { // 如果不是第一个元素，添加分隔符
 				orRelation += " | "
