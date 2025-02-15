@@ -4,31 +4,35 @@ import (
 	"archive/tar"
 	"bytes"
 	"compress/gzip"
+	"encoding/json"
 	"fmt"
 	"github.com/CycloneDX/cyclonedx-go"
 	"github.com/blakesmith/ar"           // 用于解压 deb 文件
 	"github.com/klauspost/compress/zstd" // 用于解压 zstd 格式
 	"github.com/package-url/packageurl-go"
+	"github.com/ulikunitz/xz" // 用于解压 xz 格式
 	"io"
 	"log"
 	"os"
 	"pault.ag/go/debian/deb"
 	"pault.ag/go/debian/dependency"
 	_package "slp/package"
+	"slp/scan/source"
 	"strings"
 	"time"
 )
 
-// Function to extract the control file from a deb package
-func extractControlFile(debFilePath string) ([]byte, error) {
+// 解压deb文件，获得control文件，或者buildEnv.json文件
+// fileName参数传入："control.tar" 时是获取control文件
+// fileName参数传入："data.tar" 时是获取buildEnv.json文件
+func extractFileFromDeb(debFilePath string, fileName string) (map[string]string, *source.DebBuildEnv, error) {
 	file, err := os.Open(debFilePath)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	defer file.Close()
 
 	arReader := ar.NewReader(file)
-	var controlFile []byte
 
 	// Loop through the .deb file to find control.tar.zst or control.tar.gz
 	for {
@@ -36,50 +40,100 @@ func extractControlFile(debFilePath string) ([]byte, error) {
 		if err == io.EOF {
 			break
 		} else if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 
-		// Check if the file is control.tar.zst or control.tar.gz
-		if strings.HasPrefix(header.Name, "control.tar") {
-			controlData := new(bytes.Buffer)
-			if _, err := io.Copy(controlData, arReader); err != nil {
-				return nil, err
+		// 从第一层压缩文件中找到 control.tar.zst或者data.tar.zst
+		if strings.HasPrefix(header.Name, fileName) {
+			fileData := new(bytes.Buffer)
+			if _, err := io.Copy(fileData, arReader); err != nil {
+				return nil, nil, err
 			}
-
+			// zst/gz/xz三种压缩方式，分别处理
 			if strings.HasSuffix(header.Name, ".zst") {
-				zstdReader, err := zstd.NewReader(controlData)
+				zstdReader, err := zstd.NewReader(fileData)
 				if err != nil {
-					return nil, err
+					return nil, nil, err
 				}
 				defer zstdReader.Close()
 
 				unzstdData := new(bytes.Buffer)
 				if _, err := io.Copy(unzstdData, zstdReader); err != nil {
-					return nil, err
+					return nil, nil, err
 				}
-				controlFile = unzstdData.Bytes()
-
+				if fileName == "control.tar" {
+					err, controlData := parseControlFile(unzstdData.Bytes())
+					if err != nil {
+						return nil, nil, err
+					}
+					return controlData, nil, nil
+				} else if fileName == "data.tar" {
+					err, buildEnv := parseBuildEnvFile(unzstdData.Bytes())
+					if err != nil {
+						return nil, nil, err
+					}
+					return nil, buildEnv, nil
+				}
 			} else if strings.HasSuffix(header.Name, ".gz") {
-				gzReader, err := gzip.NewReader(controlData)
+				gzReader, err := gzip.NewReader(fileData)
 				if err != nil {
-					return nil, err
+					return nil, nil, err
 				}
 				defer gzReader.Close()
 
 				unzippedData := new(bytes.Buffer)
 				if _, err := io.Copy(unzippedData, gzReader); err != nil {
-					return nil, err
+					return nil, nil, err
 				}
-				controlFile = unzippedData.Bytes()
+				if fileName == "control.tar" {
+					err, controlData := parseControlFile(unzippedData.Bytes())
+					if err != nil {
+						return nil, nil, err
+					}
+					return controlData, nil, nil
+				} else if fileName == "data.tar" {
+					err, buildEnv := parseBuildEnvFile(unzippedData.Bytes())
+					if err != nil {
+						return nil, nil, err
+					}
+					return nil, buildEnv, nil
+				}
+			} else if strings.HasSuffix(header.Name, ".xz") {
+				xzReader, err := xz.NewReader(fileData)
+				if err != nil {
+					return nil, nil, err
+				}
+
+				unxzData := new(bytes.Buffer)
+				if _, err := io.Copy(unxzData, xzReader); err != nil {
+					return nil, nil, err
+				}
+				if fileName == "control.tar" {
+					err, controlData := parseControlFile(unxzData.Bytes())
+					if err != nil {
+						return nil, nil, err
+					}
+					return controlData, nil, nil
+				} else if fileName == "data.tar" {
+					err, buildEnv := parseBuildEnvFile(unxzData.Bytes())
+					if err != nil {
+						return nil, nil, err
+					}
+					return nil, buildEnv, nil
+				}
 			}
 			break
 		}
 	}
-	return controlFile, nil
+	if fileName == "control.tar" {
+		return nil, nil, fmt.Errorf("未发现control文件")
+	} else {
+		return nil, nil, fmt.Errorf("未发现buildEnv.json文件")
+	}
 }
 
 // Function to parse metadata from control file
-func parseControlFile(controlData []byte) map[string]string {
+func parseControlFile(controlData []byte) (error, map[string]string) {
 	metadata := make(map[string]string)
 	tarReader := tar.NewReader(bytes.NewReader(controlData))
 
@@ -88,7 +142,7 @@ func parseControlFile(controlData []byte) map[string]string {
 		if err == io.EOF {
 			break
 		} else if err != nil {
-			log.Fatal(err)
+			return err, nil
 		}
 		// Find the control file which usually contains metadata
 		if strings.HasSuffix(header.Name, "control") {
@@ -112,18 +166,38 @@ func parseControlFile(controlData []byte) map[string]string {
 		}
 	}
 
-	return metadata
+	return nil, metadata
+}
+
+func parseBuildEnvFile(buildEnvData []byte) (error, *source.DebBuildEnv) {
+	tarReader := tar.NewReader(bytes.NewReader(buildEnvData))
+	for {
+		header, err := tarReader.Next()
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			return err, nil
+		}
+		// 通过文件名找到buildEnv.json文件，并将其解析
+		if strings.HasSuffix(header.Name, "buildEnv.json") {
+			var sbom source.DebBuildEnv
+			decoder := json.NewDecoder(tarReader)
+			err = decoder.Decode(&sbom)
+			if err != nil {
+				return err, nil
+			}
+			return nil, &sbom
+		}
+	}
+	return fmt.Errorf("未发现buildEnv.json文件"), nil
 }
 
 func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
-	// Step 1: Extract control file data from deb package
-	controlFileContent, err := extractControlFile(debFilePath)
+	// Parse metadata from control file
+	controlData, _, err := extractFileFromDeb(debFilePath, "control.tar")
 	if err != nil {
 		return fmt.Errorf("Failed to extract control file: %v", err), nil
 	}
-
-	// Step 2: Parse metadata from control file
-	controlData := parseControlFile(controlFileContent)
 
 	fmt.Println("Parsed Control Fields:")
 	for key, value := range controlData {
@@ -296,9 +370,58 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 		Dependencies: &dependencyBomref,
 	}
 
+	// Parse build-depends from buildEnv.json file
+	_, buildEnv, err := extractFileFromDeb(debFilePath, "data.tar")
+	if err != nil {
+		return fmt.Errorf("Failed to extract buildEnv.json file: %v", err), nil
+	}
+	var buildDeps []_package.BuildDepend
+
+	//依赖可能存在 "|" 的关系，所以bdList也可能有多项
+	for _, bdList := range buildEnv.BuildDepends {
+		fmt.Println(bdList)
+		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends")...)
+	}
+	for _, bdList := range buildEnv.BuildDependsIndep {
+		fmt.Println(bdList)
+		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends-Indep")...)
+	}
+	for _, bdList := range buildEnv.BuildDependsArch {
+		fmt.Println(bdList)
+		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends-Arch")...)
+	}
+
 	return nil, &_package.Pkg{
 		Metadata:     &metadata,
 		Depends:      &depends,
+		BuildDepends: &buildDeps,
 		Dependencies: &[]cyclonedx.Dependency{directDependency},
 	}
+}
+
+func envBdToBd(bdList source.BuildDepPkgGroup, buildDependType string) []_package.BuildDepend {
+	var buildDeps []_package.BuildDepend
+	if len(bdList) == 1 {
+		buildDeps = append(buildDeps, _package.BuildDepend{
+			Metadata:           *bdList[0].Metadata,
+			DebBuildDependType: buildDependType,
+		})
+	} else {
+		//拼接或依赖关系描述
+		orRelation := ""
+		for i, bd := range bdList {
+			if i != 0 { // 如果不是第一个元素，添加分隔符
+				orRelation += " | "
+			}
+			orRelation += bd.Metadata.Name
+		}
+		for _, bd := range bdList {
+			buildDeps = append(buildDeps, _package.BuildDepend{
+				Metadata:              *bd.Metadata,
+				DebBuildDependType:    buildDependType,
+				VirtualOrConcreteDesc: orRelation,
+			})
+		}
+	}
+	return buildDeps
 }

@@ -16,10 +16,11 @@ func TestFetchDebBuildDep(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.dscFilePath, func(t *testing.T) {
-			err := FetchDebBuildDep(test.dscFilePath)
+			err, env := FetchDebBuildDep(test.dscFilePath)
 			if err != nil {
 				fmt.Println(err)
 			}
+			fmt.Println(env)
 		})
 	}
 }

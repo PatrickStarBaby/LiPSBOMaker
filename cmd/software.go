@@ -60,7 +60,8 @@ var softwareCmd = &cobra.Command{
 			fmt.Println("这是要生成二进制使用阶段SBOM")
 			if len(args) == 0 {
 				fmt.Println("Parameters are missing, Usage: ")
-				fmt.Println("slp package -l=[\"source\"/\"release\"/\"installed\"] [SOURCE] --output [FILENAME]")
+				fmt.Println("slp package -l=[\"source\"/\"release\"/\"" +
+					"\"] [SOURCE] --output [FILENAME]")
 			} else {
 				installedScan(args[0], output)
 			}

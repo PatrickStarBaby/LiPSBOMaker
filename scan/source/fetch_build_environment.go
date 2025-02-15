@@ -14,12 +14,12 @@ import (
 )
 
 // deb包中存在'或'依赖组的关系，同一种类型的依赖可能有一组包都满足
-type buildDepPkgGroup []_package.Pkg
+type BuildDepPkgGroup []_package.Pkg
 
 type DebBuildEnv struct {
-	BuildDepends      []buildDepPkgGroup `json:"build-depends,omitempty"`
-	BuildDependsIndep []buildDepPkgGroup `json:"build-depends-indep,omitempty"`
-	BuildDependsArch  []buildDepPkgGroup `json:"build-depends-arch,omitempty"`
+	BuildDepends      []BuildDepPkgGroup `json:"build-depends,omitempty"`
+	BuildDependsIndep []BuildDepPkgGroup `json:"build-depends-indep,omitempty"`
+	BuildDependsArch  []BuildDepPkgGroup `json:"build-depends-arch,omitempty"`
 }
 
 // rpm包的一个依赖功能可能有多个提供者
@@ -164,12 +164,12 @@ func FetchDebBuildDep(dscFilePath string) (error, *DebBuildEnv) {
 		return fmt.Errorf("无法解析dsc文件: %v", err), nil
 	}
 
-	buildDeps := []buildDepPkgGroup{}
-	buildDepsIndep := []buildDepPkgGroup{}
-	buildDepsArch := []buildDepPkgGroup{}
+	buildDeps := []BuildDepPkgGroup{}
+	buildDepsIndep := []BuildDepPkgGroup{}
+	buildDepsArch := []BuildDepPkgGroup{}
 
 	for _, d := range dscFields.BuildDepends.Relations {
-		var deps buildDepPkgGroup
+		var deps BuildDepPkgGroup
 		for _, p := range d.Possibilities {
 			err, dep := installed.ParseInstalledDeb(p.Name)
 			if err == nil {
@@ -179,7 +179,7 @@ func FetchDebBuildDep(dscFilePath string) (error, *DebBuildEnv) {
 		buildDeps = append(buildDeps, deps)
 	}
 	for _, d := range dscFields.BuildDependsIndep.Relations {
-		var deps buildDepPkgGroup
+		var deps BuildDepPkgGroup
 		for _, p := range d.Possibilities {
 			err, dep := installed.ParseInstalledDeb(p.Name)
 			if err == nil {
@@ -189,7 +189,7 @@ func FetchDebBuildDep(dscFilePath string) (error, *DebBuildEnv) {
 		buildDepsIndep = append(buildDepsIndep, deps)
 	}
 	for _, d := range dscFields.BuildDependsArch.Relations {
-		var deps buildDepPkgGroup
+		var deps BuildDepPkgGroup
 		for _, p := range d.Possibilities {
 			err, dep := installed.ParseInstalledDeb(p.Name)
 			if err == nil {
