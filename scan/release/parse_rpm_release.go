@@ -256,10 +256,16 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 
 			for _, providers := range buildEnv.BuildRequires {
 				for _, provider := range providers.Provider {
-					buildDp = append(buildDp, _package.BuildDepend{
-						Metadata:          *provider.Metadata,
-						RpmRequireProvide: providers.RequireProvide,
-					})
+					existSameProvider, index := ifExistSameProvider(buildDp, provider)
+					//判断多个功能是否同属于一个Provider，同属一个Provider时不需要新增Depend，只需修改RpmRequire字段
+					if existSameProvider {
+						buildDp[index].RpmRequire = buildDp[index].RpmRequire + ", " + providers.RequireProvide
+					} else {
+						buildDp = append(buildDp, _package.BuildDepend{
+							Metadata:   *provider.Metadata,
+							RpmRequire: providers.RequireProvide,
+						})
+					}
 				}
 			}
 		}
@@ -271,6 +277,17 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 		BuildDepends: &buildDp,
 		Dependencies: &[]cyclonedx.Dependency{directDependency},
 	}
+}
+
+func ifExistSameProvider(deps []_package.BuildDepend, toBeJudge _package.Pkg) (exist bool, index int) {
+	exist = false
+	for i := 0; i < len(deps); i++ {
+		if toBeJudge.Metadata.Name == deps[i].Name {
+			exist = true
+			index = i
+		}
+	}
+	return exist, index
 }
 
 func removeDuplicates(names []string, versions []string) ([]string, []string) {

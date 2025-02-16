@@ -285,10 +285,10 @@ func getDependProperties(d *_package.Depend) *[]cyclonedx.Property {
 			Value: d.DebDependType,
 		})
 	}
-	if d.RpmRequireProvide != "" {
+	if d.RpmRequire != "" {
 		out = append(out, cyclonedx.Property{
-			Name:  "rpmRequireProvide",
-			Value: d.RpmRequireProvide,
+			Name:  "rpmRequire",
+			Value: d.RpmRequire,
 		})
 	}
 	return &out
@@ -324,10 +324,10 @@ func getBuildDependProperties(bd *_package.BuildDepend) *[]cyclonedx.Property {
 			Value: bd.VirtualOrConcreteDesc,
 		})
 	}
-	if bd.RpmRequireProvide != "" {
+	if bd.RpmRequire != "" {
 		out = append(out, cyclonedx.Property{
-			Name:  "rpmRequireProvide",
-			Value: bd.RpmRequireProvide,
+			Name:  "rpmRequire",
+			Value: bd.RpmRequire,
 		})
 	}
 	return &out

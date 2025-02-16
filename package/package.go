@@ -51,8 +51,8 @@ type Patch struct {
 // 运行时依赖
 type Depend struct {
 	Metadata
-	DebDependType     string `json:"debDependType,omitempty"`     //Built-Using、Depends、Pre-Depends
-	RpmRequireProvide string `json:"rpmRequireProvide,omitempty"` //指明主包依赖于该包提供的哪个provide功能
+	DebDependType string `json:"debDependType,omitempty"` //Built-Using、Depends、Pre-Depends
+	RpmRequire    string `json:"rpmRequire,omitempty"`    //指明主包依赖于该包提供的哪个功能
 }
 
 type BuildDepend struct {
@@ -61,7 +61,7 @@ type BuildDepend struct {
 	AffectsBinaryComposition bool   `json:"affectsBinaryComposition,omitempty"`      //是否会直接影响（成为）二进制包的成分
 	InferentialDescription   string `json:"inferential_description,omitempty"`       //用大模型生成分类时的推断性描述，记录以便校验
 	VirtualOrConcreteDesc    string `json:"virtualOrConcrete_description,omitempty"` //这是虚实依赖描述
-	RpmRequireProvide        string `json:"rpmRequireProvide,omitempty"`             //指明主包依赖于该包提供的哪个provide功能
+	RpmRequire               string `json:"rpmRequire,omitempty"`                    //指明主包依赖于该包提供的哪个功能
 }
 
 type Pkg struct {

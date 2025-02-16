@@ -25,8 +25,14 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 	dependencyBomref := []string{}
 	for _, requireList := range requires {
 		for _, require := range requireList {
-			deps = append(deps, require)
-			dependencyBomref = append(dependencyBomref, require.BomRef)
+			existSameProvider, index := ifExistSameProvider(deps, require)
+			//判断多个功能是否同属于一个Provider，同属一个Provider时不需要新增Depend，只需修改RpmRequire字段
+			if existSameProvider {
+				deps[index].RpmRequire = deps[index].RpmRequire + ", " + require.RpmRequire
+			} else {
+				deps = append(deps, require)
+				dependencyBomref = append(dependencyBomref, require.BomRef)
+			}
 		}
 	}
 	pkg.Depends = &deps
@@ -37,6 +43,17 @@ func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
 	}
 	pkg.Dependencies = &[]cyclonedx.Dependency{directDependency}
 	return nil, &pkg
+}
+
+func ifExistSameProvider(deps []_package.Depend, toBeJudge _package.Depend) (exist bool, index int) {
+	exist = false
+	for i := 0; i < len(deps); i++ {
+		if toBeJudge.Name == deps[i].Name {
+			exist = true
+			index = i
+		}
+	}
+	return exist, index
 }
 
 // 三个获取依赖的命令：rpm -qR xxx  /  dnf deplist xxx  /  dnf repoquery --requires --resolve --installed xxx
@@ -62,8 +79,8 @@ func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
 			for _, metadata := range metadataList {
 				if metadata.Name != pkgName { //出现自身依赖的要去掉，例如bash
 					temp = append(temp, _package.Depend{
-						Metadata:          metadata,
-						RpmRequireProvide: trimmedLine,
+						Metadata:   metadata,
+						RpmRequire: trimmedLine,
 					})
 				}
 			}
