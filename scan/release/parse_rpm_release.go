@@ -1,9 +1,11 @@
 package release
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	_package "slp/package"
+	"slp/scan/source"
 	scan_utils "slp/utils"
 	"strings"
 	"time"
@@ -160,7 +162,9 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	metadata.PackageList = strings.Join(packageList, ", ")
 
 	metadata.SourcePkg = strings.Join(sourceRPM, ", ")
-	metadata.Packager = packager[0]
+	if len(packager) > 0 {
+		metadata.Packager = packager[0]
+	}
 	metadata.BuildTime = buildDate.String()
 	metadata.BuildHost = strings.Join(buildHost, ", ")
 
@@ -173,6 +177,7 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	if err != nil {
 		fmt.Println(fmt.Errorf("读取require时报错：%v", err))
 	}
+
 	//-------requireFlags，获取版本符号（>=，<=等）-------
 	requireFlags, err := rpm.Header.GetUint32s(rpmutils.REQUIREFLAGS)
 	if err != nil {
@@ -224,9 +229,46 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 		Dependencies: &dependencyBomref,
 	}
 
+	// 从rpm包中提取文件
+	reader, err := rpm.PayloadReader()
+	if err != nil {
+		fmt.Println(fmt.Errorf("rpm.PayloadReader()报错：%v", err))
+	}
+	var buildDp []_package.BuildDepend
+	// 使用 reader 读取 RPM 包中的文件
+	for {
+		header, err := reader.Next()
+		if err != nil {
+			if err.Error() == "EOF" {
+				break
+			}
+			fmt.Println(fmt.Errorf("使用 reader 读取 RPM 包中的文件时发生错误：%v", err))
+		}
+		// 从 buildEnv.json 文件中提取构建依赖精确补充信息
+		if strings.HasSuffix(header.Filename(), "buildEnv.json") {
+			var buildEnv source.RpmBuildEnv
+			// 读取文件内容
+			decoder := json.NewDecoder(reader)
+			err = decoder.Decode(&buildEnv)
+			if err != nil {
+				fmt.Println(fmt.Errorf("序列化buildEnv.json时发生错误：%v", err))
+			}
+
+			for _, providers := range buildEnv.BuildRequires {
+				for _, provider := range providers.Provider {
+					buildDp = append(buildDp, _package.BuildDepend{
+						Metadata:          *provider.Metadata,
+						RpmRequireProvide: providers.RequireProvide,
+					})
+				}
+			}
+		}
+	}
+
 	return nil, &_package.Pkg{
 		Metadata:     &metadata,
 		Depends:      &depends,
+		BuildDepends: &buildDp,
 		Dependencies: &[]cyclonedx.Dependency{directDependency},
 	}
 }

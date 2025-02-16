@@ -180,13 +180,13 @@ func parseBuildEnvFile(buildEnvData []byte) (error, *source.DebBuildEnv) {
 		}
 		// 通过文件名找到buildEnv.json文件，并将其解析
 		if strings.HasSuffix(header.Name, "buildEnv.json") {
-			var sbom source.DebBuildEnv
+			var buildEnv source.DebBuildEnv
 			decoder := json.NewDecoder(tarReader)
-			err = decoder.Decode(&sbom)
+			err = decoder.Decode(&buildEnv)
 			if err != nil {
 				return err, nil
 			}
-			return nil, &sbom
+			return nil, &buildEnv
 		}
 	}
 	return fmt.Errorf("未发现buildEnv.json文件"), nil
