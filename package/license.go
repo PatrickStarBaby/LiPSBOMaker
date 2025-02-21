@@ -37,7 +37,8 @@ func ParseLicenseExpression(expression string) (license string, err error) {
 	// https://github.com/anchore/syft/issues/1814
 	valid, _ := spdxexp.ValidateLicenses([]string{expression})
 	if !valid {
-		return "", fmt.Errorf("invalid SPDX expression: %s", expression)
+		//return "", fmt.Errorf("invalid SPDX expression: %s", expression)
+		fmt.Println("invalid SPDX expression: ", expression)
 	}
 
 	return expression, nil

@@ -81,7 +81,6 @@ func GetMetaData(pkgName string) (*_package.Metadata, error) {
 	metadata.Version = info["Version"]
 	metadata.Architecture = info["Architecture"]
 	metadata.Url = info["Homepage"]
-	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
 	metadata.Description = info["Description"]
 	metadata.Maintainer = info["Maintainer"]
 	metadata.OriginalMaintainer = info["Original-Maintainer"]
@@ -94,6 +93,7 @@ func GetMetaData(pkgName string) (*_package.Metadata, error) {
 	} else {
 		metadata.SourcePkg = info["Package"]
 	}
+	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
 	// PURL
 	namespace, distro := getOsInfo()
 	// namespace: "ubuntu"; distro: "ubuntu-24.04"

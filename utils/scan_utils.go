@@ -164,9 +164,10 @@ func SplitRPMName(rpmPkgName string) (*RPM_NEVRA, error) {
 	}, nil
 }
 
+// dnf-4.16.2-6.oe2403.noarch
 func SplitRPMNameWithoutEpoch(rpmPkgName string) (*RPM_NEVRA, error) {
 	// 定义正则表达式解析 RPM 名称
-	pattern := `^(?P<Name>[\w\-\+]+)-(?P<Version>[\d\.]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
+	pattern := `^(?P<Name>[\w\-\+]+)-(?P<Version>[\d\.A-Za-z]+)-(?P<Release>[\w\.]+)\.(?P<Arch>[\w_]+)(\.rpm)?$`
 	re := regexp.MustCompile(pattern)
 
 	// 执行正则匹配

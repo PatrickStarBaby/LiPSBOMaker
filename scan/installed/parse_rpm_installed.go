@@ -140,7 +140,13 @@ func GetInstalledRpmInfo(pkgName string) (*_package.Metadata, error) {
 	metadata.Architecture = pkgInfo["Architecture"]
 	metadata.Packager = pkgInfo["Packager"]
 	metadata.Url = pkgInfo["URL"]
-	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
+	sourcePkgNEVRA, err := scan_utils.SplitRPMNameWithoutEpoch(pkgInfo["Source RPM"])
+	if err != nil {
+		metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
+	} else {
+		metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", sourcePkgNEVRA.Name, sourcePkgNEVRA.Version)
+	}
+
 	metadata.Description = pkgInfo["Description"]
 	metadata.SourcePkg = pkgInfo["Source RPM"]
 	metadata.BuildHost = pkgInfo["Build Host"]

@@ -12,6 +12,9 @@ func TestParseReleaseRpmFile(t *testing.T) {
 		{
 			rpmFilePath: "./test-fixtures/bash-5.2.15-9.oe2403.x86_64-after-supplement.rpm", //这个是嵌入buildEnv.json文件之后的rpm包
 		},
+		{
+			rpmFilePath: "./test-fixtures/tzdata-2024a-2.oe2403.noarch-after-supplement.rpm", //这个是嵌入buildEnv.json文件之后的rpm包
+		},
 	}
 
 	for _, test := range tests {

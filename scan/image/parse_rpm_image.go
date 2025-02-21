@@ -1,12 +1,10 @@
 package image
 
-import (
-	"fmt"
-	rpmdb "github.com/knqyf263/go-rpmdb/pkg"
-)
+import scan_utils "slp/utils"
 
 func ParseRpmDB(path string) error {
-	if path == "" {
+	scan_utils.RunCommand("dnf", "install", "syft")
+	/*if path == "" {
 		path = "/var/lib/rpm"
 	}
 	db, err := rpmdb.Open(path)
@@ -22,6 +20,6 @@ func ParseRpmDB(path string) error {
 			continue
 		}
 		fmt.Println(entry.Name, entry.Version, entry.Requires, entry.Vendor)
-	}
+	}*/
 	return nil
 }
