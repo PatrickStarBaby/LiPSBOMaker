@@ -1,6 +1,6 @@
-# SLP
+# LiPSBOMaker
 
-SLP是一个针对Linux发行版的SBOM生成工具，可以生成多粒度多阶段的SBOM
+LiPSBOMaker是一个针对Linux发行版的SBOM生成工具，可以生成多粒度多阶段的SBOM
 
 
 
