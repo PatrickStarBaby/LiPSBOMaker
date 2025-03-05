@@ -48,6 +48,16 @@ type Patch struct {
 	Subject string `json:"subject,omitempty"`
 }
 
+// Linux内核
+type LinuxKernel struct {
+	Name         string `json:"name,omitempty"`         //内核名称
+	Version      string `json:"version,omitempty"`      //内核版本，例如5.15.167.4-microsoft-standard-WSL2
+	BomRef       string `json:"bom-ref,omitempty"`      //扫描对象的bomref
+	Architecture string `json:"architecture,omitempty"` //内核针对的架构
+	BuildTime    string `json:"buildTime,omitempty"`    //内核编译的时间
+	Compiler     string `json:"compiler,omitempty"`     //编译该内核的编译器信息
+}
+
 // 运行时依赖
 type Depend struct {
 	Metadata
