@@ -9,9 +9,9 @@
             "buildTime": "#1 SMP Fri Mar 29 23:14:13 UTC 2024"
         },
         {
-            "bom-ref": "pkg:deb/adduser@3.134?arch=all&distro=-&package-id=9ba85d23e4669888",
+            "bom-ref": "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
             "name": "adduser",
-            "purl": "pkg:deb/adduser@3.134?arch=all&distro=-",
+            "purl": "pkg:deb/adduser@3.134?arch=all&distro=debian-12",
             "type": "library",
             "version": "3.134",
             "cpe": "cpe:2.3:a:*:adduser:3.134:*:*:*:*:*:*:*",
@@ -36,9 +36,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=-&package-id=41f8164eac096820",
+            "bom-ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12&package-id=41f8164eac096820",
             "name": "apt",
-            "purl": "pkg:deb/apt@2.6.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.6.1",
             "cpe": "cpe:2.3:a:*:apt:2.6.1:*:*:*:*:*:*:*",
@@ -63,9 +63,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=-&package-id=2045c018e654b9b7",
+            "bom-ref": "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12&package-id=2045c018e654b9b7",
             "name": "base-files",
-            "purl": "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=-",
+            "purl": "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "12.4+deb12u9",
             "cpe": "cpe:2.3:a:*:base-files:12.4+deb12u9:*:*:*:*:*:*:*",
@@ -90,9 +90,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=-&package-id=21200f8b39328bd5",
+            "bom-ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12&package-id=21200f8b39328bd5",
             "name": "base-passwd",
-            "purl": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.6.1",
             "cpe": "cpe:2.3:a:*:base-passwd:3.6.1:*:*:*:*:*:*:*",
@@ -117,9 +117,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=-&package-id=90e650df84381b25",
+            "bom-ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12&package-id=90e650df84381b25",
             "name": "bash",
-            "purl": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=-",
+            "purl": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "5.2.15-2+b7",
             "cpe": "cpe:2.3:a:*:bash:5.2.15-2+b7:*:*:*:*:*:*:*",
@@ -144,9 +144,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/bsdutils@1:2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=8d5758ac73acb15f",
+            "bom-ref": "pkg:deb/bsdutils@1:2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=8d5758ac73acb15f",
             "name": "bsdutils",
-            "purl": "pkg:deb/bsdutils@1:2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/bsdutils@1:2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:bsdutils:1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -171,9 +171,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/coreutils@9.1-1?arch=amd64&distro=-&package-id=e535df04f445508c",
+            "bom-ref": "pkg:deb/coreutils@9.1-1?arch=amd64&distro=debian-12&package-id=e535df04f445508c",
             "name": "coreutils",
-            "purl": "pkg:deb/coreutils@9.1-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/coreutils@9.1-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "9.1-1",
             "cpe": "cpe:2.3:a:*:coreutils:9.1-1:*:*:*:*:*:*:*",
@@ -198,9 +198,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=-&package-id=dd1b2909c9c51c7d",
+            "bom-ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12&package-id=dd1b2909c9c51c7d",
             "name": "dash",
-            "purl": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "0.5.12-2",
             "cpe": "cpe:2.3:a:*:dash:0.5.12-2:*:*:*:*:*:*:*",
@@ -225,9 +225,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/debconf@1.5.82?arch=all&distro=-&package-id=2a95b98bb39533d2",
+            "bom-ref": "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2",
             "name": "debconf",
-            "purl": "pkg:deb/debconf@1.5.82?arch=all&distro=-",
+            "purl": "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12",
             "type": "library",
             "version": "1.5.82",
             "cpe": "cpe:2.3:a:*:debconf:1.5.82:*:*:*:*:*:*:*",
@@ -252,9 +252,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=-&package-id=3bab0fc5c261c89a",
+            "bom-ref": "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12&package-id=3bab0fc5c261c89a",
             "name": "debian-archive-keyring",
-            "purl": "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=-",
+            "purl": "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12",
             "type": "library",
             "version": "2023.3+deb12u1",
             "cpe": "cpe:2.3:a:*:debian-archive-keyring:2023.3+deb12u1:*:*:*:*:*:*:*",
@@ -279,9 +279,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=-&package-id=82236db65ac2f574",
+            "bom-ref": "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574",
             "name": "debianutils",
-            "purl": "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "5.7-0.5~deb12u1",
             "cpe": "cpe:2.3:a:*:debianutils:5.7-0.5~deb12u1:*:*:*:*:*:*:*",
@@ -306,9 +306,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/diffutils@1:3.8-4?arch=amd64&distro=-&package-id=80fd8f2e267c3889",
+            "bom-ref": "pkg:deb/diffutils@1:3.8-4?arch=amd64&distro=debian-12&package-id=80fd8f2e267c3889",
             "name": "diffutils",
-            "purl": "pkg:deb/diffutils@1:3.8-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/diffutils@1:3.8-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:3.8-4",
             "cpe": "cpe:2.3:a:*:diffutils:1:3.8-4:*:*:*:*:*:*:*",
@@ -333,9 +333,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=-&package-id=476727d5c343219b",
+            "bom-ref": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b",
             "name": "dpkg",
-            "purl": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=-",
+            "purl": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.21.22",
             "cpe": "cpe:2.3:a:*:dpkg:1.21.22:*:*:*:*:*:*:*",
@@ -360,9 +360,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=-&package-id=e7bc5e9c87a3f8ec",
+            "bom-ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12&package-id=e7bc5e9c87a3f8ec",
             "name": "e2fsprogs",
-            "purl": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.47.0-2",
             "cpe": "cpe:2.3:a:*:e2fsprogs:1.47.0-2:*:*:*:*:*:*:*",
@@ -387,9 +387,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/findutils@4.9.0-4?arch=amd64&distro=-&package-id=0e57adc3f8682bcb",
+            "bom-ref": "pkg:deb/findutils@4.9.0-4?arch=amd64&distro=debian-12&package-id=0e57adc3f8682bcb",
             "name": "findutils",
-            "purl": "pkg:deb/findutils@4.9.0-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/findutils@4.9.0-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "4.9.0-4",
             "cpe": "cpe:2.3:a:*:findutils:4.9.0-4:*:*:*:*:*:*:*",
@@ -414,9 +414,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=-&package-id=38044bc0ea31b1f9",
+            "bom-ref": "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
             "name": "gcc-12-base",
-            "purl": "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=-",
+            "purl": "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "12.2.0-14",
             "cpe": "cpe:2.3:a:*:gcc-12-base:12.2.0-14:*:*:*:*:*:*:*",
@@ -441,9 +441,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=-&package-id=f273a44764dc5e89",
+            "bom-ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
             "name": "gpgv",
-            "purl": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.2.40-1.1",
             "cpe": "cpe:2.3:a:*:gpgv:2.2.40-1.1:*:*:*:*:*:*:*",
@@ -468,9 +468,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=-&package-id=c0f223ed77627dae",
+            "bom-ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12&package-id=c0f223ed77627dae",
             "name": "grep",
-            "purl": "pkg:deb/grep@3.8-5?arch=amd64&distro=-",
+            "purl": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.8-5",
             "cpe": "cpe:2.3:a:*:grep:3.8-5:*:*:*:*:*:*:*",
@@ -495,9 +495,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=-&package-id=3b94635eadfd0b6a",
+            "bom-ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12&package-id=3b94635eadfd0b6a",
             "name": "gzip",
-            "purl": "pkg:deb/gzip@1.12-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.12-1",
             "cpe": "cpe:2.3:a:*:gzip:1.12-1:*:*:*:*:*:*:*",
@@ -522,9 +522,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/hostname@3.23+nmu1?arch=amd64&distro=-&package-id=3ca9c66dd4e8db5b",
+            "bom-ref": "pkg:deb/hostname@3.23+nmu1?arch=amd64&distro=debian-12&package-id=3ca9c66dd4e8db5b",
             "name": "hostname",
-            "purl": "pkg:deb/hostname@3.23+nmu1?arch=amd64&distro=-",
+            "purl": "pkg:deb/hostname@3.23+nmu1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.23+nmu1",
             "cpe": "cpe:2.3:a:*:hostname:3.23+nmu1:*:*:*:*:*:*:*",
@@ -549,9 +549,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/init-system-helpers@1.65.2?arch=all&distro=-&package-id=2e66c36365f06e4d",
+            "bom-ref": "pkg:deb/init-system-helpers@1.65.2?arch=all&distro=debian-12&package-id=2e66c36365f06e4d",
             "name": "init-system-helpers",
-            "purl": "pkg:deb/init-system-helpers@1.65.2?arch=all&distro=-",
+            "purl": "pkg:deb/init-system-helpers@1.65.2?arch=all&distro=debian-12",
             "type": "library",
             "version": "1.65.2",
             "cpe": "cpe:2.3:a:*:init-system-helpers:1.65.2:*:*:*:*:*:*:*",
@@ -576,9 +576,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=-&package-id=cb298c58c3a6b975",
+            "bom-ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12&package-id=cb298c58c3a6b975",
             "name": "libacl1",
-            "purl": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.3.1-3",
             "cpe": "cpe:2.3:a:*:libacl1:2.3.1-3:*:*:*:*:*:*:*",
@@ -603,9 +603,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=-&package-id=bd99401c8506eff9",
+            "bom-ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
             "name": "libapt-pkg6.0",
-            "purl": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.6.1",
             "cpe": "cpe:2.3:a:*:libapt-pkg6.0:2.6.1:*:*:*:*:*:*:*",
@@ -630,9 +630,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=-&package-id=3a77edf12e8ff074",
+            "bom-ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12&package-id=3a77edf12e8ff074",
             "name": "libattr1",
-            "purl": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:2.5.1-4",
             "cpe": "cpe:2.3:a:*:libattr1:1:2.5.1-4:*:*:*:*:*:*:*",
@@ -657,9 +657,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=-&package-id=aa1580f769241070",
+            "bom-ref": "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12&package-id=aa1580f769241070",
             "name": "libaudit-common",
-            "purl": "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=-",
+            "purl": "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12",
             "type": "library",
             "version": "1:3.0.9-1",
             "cpe": "cpe:2.3:a:*:libaudit-common:1:3.0.9-1:*:*:*:*:*:*:*",
@@ -684,9 +684,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49",
+            "bom-ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
             "name": "libaudit1",
-            "purl": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:3.0.9-1",
             "cpe": "cpe:2.3:a:*:libaudit1:1:3.0.9-1:*:*:*:*:*:*:*",
@@ -711,9 +711,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=c17ff013b5cb2f8f",
+            "bom-ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
             "name": "libblkid1",
-            "purl": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:libblkid1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -738,9 +738,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=-&package-id=77a806ce07c391c6",
+            "bom-ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
             "name": "libbz2-1.0",
-            "purl": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.0.8-5+b1",
             "cpe": "cpe:2.3:a:*:libbz2-1.0:1.0.8-5+b1:*:*:*:*:*:*:*",
@@ -765,9 +765,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=-&package-id=50226d74c8c8236d",
+            "bom-ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=50226d74c8c8236d",
             "name": "libc-bin",
-            "purl": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=-",
+            "purl": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.36-9+deb12u9",
             "cpe": "cpe:2.3:a:*:libc-bin:2.36-9+deb12u9:*:*:*:*:*:*:*",
@@ -792,9 +792,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
+            "bom-ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
             "name": "libc6",
-            "purl": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-",
+            "purl": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.36-9+deb12u9",
             "cpe": "cpe:2.3:a:*:libc6:2.36-9+deb12u9:*:*:*:*:*:*:*",
@@ -819,9 +819,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=-&package-id=8ac37f98cf34e8b5",
+            "bom-ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
             "name": "libcap-ng0",
-            "purl": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "0.8.3-1+b3",
             "cpe": "cpe:2.3:a:*:libcap-ng0:0.8.3-1+b3:*:*:*:*:*:*:*",
@@ -846,9 +846,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=-&package-id=e6b3528df3c40bff",
+            "bom-ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
             "name": "libcap2",
-            "purl": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:2.66-4",
             "cpe": "cpe:2.3:a:*:libcap2:1:2.66-4:*:*:*:*:*:*:*",
@@ -873,9 +873,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=-&package-id=c1e5c6fbe3502a11",
+            "bom-ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
             "name": "libcom-err2",
-            "purl": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.47.0-2",
             "cpe": "cpe:2.3:a:*:libcom-err2:1.47.0-2:*:*:*:*:*:*:*",
@@ -900,9 +900,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=-&package-id=38db0e164e39d207",
+            "bom-ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
             "name": "libcrypt1",
-            "purl": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:4.4.33-2",
             "cpe": "cpe:2.3:a:*:libcrypt1:1:4.4.33-2:*:*:*:*:*:*:*",
@@ -927,9 +927,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=-&package-id=61387bccff2fd18d",
+            "bom-ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12&package-id=61387bccff2fd18d",
             "name": "libdb5.3",
-            "purl": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "5.3.28+dfsg2-1",
             "cpe": "cpe:2.3:a:*:libdb5.3:5.3.28+dfsg2-1:*:*:*:*:*:*:*",
@@ -954,9 +954,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=-&package-id=f3d7c1c203490183",
+            "bom-ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
             "name": "libdebconfclient0",
-            "purl": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=-",
+            "purl": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "0.270",
             "cpe": "cpe:2.3:a:*:libdebconfclient0:0.270:*:*:*:*:*:*:*",
@@ -981,9 +981,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=-&package-id=7d4d16397179656e",
+            "bom-ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12&package-id=7d4d16397179656e",
             "name": "libext2fs2",
-            "purl": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.47.0-2",
             "cpe": "cpe:2.3:a:*:libext2fs2:1.47.0-2:*:*:*:*:*:*:*",
@@ -1008,9 +1008,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=-&package-id=2a3eec1614b68fb8",
+            "bom-ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
             "name": "libffi8",
-            "purl": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.4.4-1",
             "cpe": "cpe:2.3:a:*:libffi8:3.4.4-1:*:*:*:*:*:*:*",
@@ -1035,9 +1035,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-&package-id=ba4ec38abfa53c27",
+            "bom-ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
             "name": "libgcc-s1",
-            "purl": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-",
+            "purl": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "12.2.0-14",
             "cpe": "cpe:2.3:a:*:libgcc-s1:12.2.0-14:*:*:*:*:*:*:*",
@@ -1062,9 +1062,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=-&package-id=146d529dac7b949c",
+            "bom-ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
             "name": "libgcrypt20",
-            "purl": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.10.1-3",
             "cpe": "cpe:2.3:a:*:libgcrypt20:1.10.1-3:*:*:*:*:*:*:*",
@@ -1089,9 +1089,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=-&package-id=84b96243191ac130",
+            "bom-ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
             "name": "libgmp10",
-            "purl": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2:6.2.1+dfsg1-1.1",
             "cpe": "cpe:2.3:a:*:libgmp10:2:6.2.1+dfsg1-1.1:*:*:*:*:*:*:*",
@@ -1116,9 +1116,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=-&package-id=d33934f7f9ed127f",
+            "bom-ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
             "name": "libgnutls30",
-            "purl": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=-",
+            "purl": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.7.9-2+deb12u4",
             "cpe": "cpe:2.3:a:*:libgnutls30:3.7.9-2+deb12u4:*:*:*:*:*:*:*",
@@ -1143,9 +1143,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=-&package-id=0970e59257285b36",
+            "bom-ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
             "name": "libgpg-error0",
-            "purl": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.46-1",
             "cpe": "cpe:2.3:a:*:libgpg-error0:1.46-1:*:*:*:*:*:*:*",
@@ -1170,9 +1170,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=-&package-id=1359d5b5a3d82c27",
+            "bom-ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
             "name": "libhogweed6",
-            "purl": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.8.1-2",
             "cpe": "cpe:2.3:a:*:libhogweed6:3.8.1-2:*:*:*:*:*:*:*",
@@ -1197,9 +1197,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=-&package-id=a70806382df606f7",
+            "bom-ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
             "name": "libidn2-0",
-            "purl": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.3.3-1+b1",
             "cpe": "cpe:2.3:a:*:libidn2-0:2.3.3-1+b1:*:*:*:*:*:*:*",
@@ -1224,9 +1224,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=-&package-id=ac6ee460d67c71cb",
+            "bom-ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
             "name": "liblz4-1",
-            "purl": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.9.4-1",
             "cpe": "cpe:2.3:a:*:liblz4-1:1.9.4-1:*:*:*:*:*:*:*",
@@ -1251,9 +1251,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=-&package-id=7fb02d616bc29b51",
+            "bom-ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
             "name": "liblzma5",
-            "purl": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=-",
+            "purl": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "5.4.1-0.2",
             "cpe": "cpe:2.3:a:*:liblzma5:5.4.1-0.2:*:*:*:*:*:*:*",
@@ -1278,9 +1278,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=-&package-id=3e344cf0113fa217",
+            "bom-ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12&package-id=3e344cf0113fa217",
             "name": "libmd0",
-            "purl": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.0.4-2",
             "cpe": "cpe:2.3:a:*:libmd0:1.0.4-2:*:*:*:*:*:*:*",
@@ -1305,9 +1305,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=e1dcaa6c850f468d",
+            "bom-ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=e1dcaa6c850f468d",
             "name": "libmount1",
-            "purl": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:libmount1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -1332,9 +1332,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=-&package-id=dac38d2437f49b3b",
+            "bom-ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
             "name": "libnettle8",
-            "purl": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.8.1-2",
             "cpe": "cpe:2.3:a:*:libnettle8:3.8.1-2:*:*:*:*:*:*:*",
@@ -1359,9 +1359,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=-&package-id=d72965b0742c3e2a",
+            "bom-ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
             "name": "libp11-kit0",
-            "purl": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "0.24.1-2",
             "cpe": "cpe:2.3:a:*:libp11-kit0:0.24.1-2:*:*:*:*:*:*:*",
@@ -1386,9 +1386,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=8175882549fbe58f",
+            "bom-ref": "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
             "name": "libpam-modules",
-            "purl": "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.5.2-6+deb12u1",
             "cpe": "cpe:2.3:a:*:libpam-modules:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
@@ -1413,9 +1413,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=9d6fe6d741141378",
+            "bom-ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=9d6fe6d741141378",
             "name": "libpam-modules-bin",
-            "purl": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.5.2-6+deb12u1",
             "cpe": "cpe:2.3:a:*:libpam-modules-bin:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
@@ -1440,9 +1440,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=-&package-id=eba9416f065d6cf2",
+            "bom-ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12&package-id=eba9416f065d6cf2",
             "name": "libpam-runtime",
-            "purl": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=-",
+            "purl": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12",
             "type": "library",
             "version": "1.5.2-6+deb12u1",
             "cpe": "cpe:2.3:a:*:libpam-runtime:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
@@ -1467,9 +1467,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=36309e59bd155c8f",
+            "bom-ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
             "name": "libpam0g",
-            "purl": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.5.2-6+deb12u1",
             "cpe": "cpe:2.3:a:*:libpam0g:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
@@ -1494,9 +1494,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=-&package-id=086640307b043302",
+            "bom-ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
             "name": "libpcre2-8-0",
-            "purl": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "10.42-1",
             "cpe": "cpe:2.3:a:*:libpcre2-8-0:10.42-1:*:*:*:*:*:*:*",
@@ -1521,9 +1521,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=-&package-id=04a5c57d5eca7490",
+            "bom-ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
             "name": "libseccomp2",
-            "purl": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.5.4-1+deb12u1",
             "cpe": "cpe:2.3:a:*:libseccomp2:2.5.4-1+deb12u1:*:*:*:*:*:*:*",
@@ -1548,9 +1548,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e",
+            "bom-ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
             "name": "libselinux1",
-            "purl": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-",
+            "purl": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.4-1+b6",
             "cpe": "cpe:2.3:a:*:libselinux1:3.4-1+b6:*:*:*:*:*:*:*",
@@ -1575,9 +1575,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=-&package-id=0740de66067116ec",
+            "bom-ref": "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=0740de66067116ec",
             "name": "libsemanage-common",
-            "purl": "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=-",
+            "purl": "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12",
             "type": "library",
             "version": "3.4-1",
             "cpe": "cpe:2.3:a:*:libsemanage-common:3.4-1:*:*:*:*:*:*:*",
@@ -1602,9 +1602,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=-&package-id=03bb31787909cd6b",
+            "bom-ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
             "name": "libsemanage2",
-            "purl": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=-",
+            "purl": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.4-1+b5",
             "cpe": "cpe:2.3:a:*:libsemanage2:3.4-1+b5:*:*:*:*:*:*:*",
@@ -1629,9 +1629,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=-&package-id=64f231aac4c44e97",
+            "bom-ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
             "name": "libsepol2",
-            "purl": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.4-2.1",
             "cpe": "cpe:2.3:a:*:libsepol2:3.4-2.1:*:*:*:*:*:*:*",
@@ -1656,9 +1656,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=1837393caba2884c",
+            "bom-ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c",
             "name": "libsmartcols1",
-            "purl": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:libsmartcols1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -1683,9 +1683,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=-&package-id=d789db5eff771251",
+            "bom-ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12&package-id=d789db5eff771251",
             "name": "libss2",
-            "purl": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.47.0-2",
             "cpe": "cpe:2.3:a:*:libss2:1.47.0-2:*:*:*:*:*:*:*",
@@ -1710,9 +1710,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=-&package-id=14a33ea24ce2768a",
+            "bom-ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
             "name": "libstdc++6",
-            "purl": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=-",
+            "purl": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "12.2.0-14",
             "cpe": "cpe:2.3:a:*:libstdc++6:12.2.0-14:*:*:*:*:*:*:*",
@@ -1737,9 +1737,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=-&package-id=ad72f267b1d351da",
+            "bom-ref": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
             "name": "libsystemd0",
-            "purl": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "252.33-1~deb12u1",
             "cpe": "cpe:2.3:a:*:libsystemd0:252.33-1~deb12u1:*:*:*:*:*:*:*",
@@ -1764,9 +1764,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=-&package-id=c8ef35fedbcc5308",
+            "bom-ref": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308",
             "name": "libtasn1-6",
-            "purl": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "4.19.0-2+deb12u1",
             "cpe": "cpe:2.3:a:*:libtasn1-6:4.19.0-2+deb12u1:*:*:*:*:*:*:*",
@@ -1791,9 +1791,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=-&package-id=cd28a186cb043baa",
+            "bom-ref": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=debian-12&package-id=cd28a186cb043baa",
             "name": "libtinfo6",
-            "purl": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "6.4-4",
             "cpe": "cpe:2.3:a:*:libtinfo6:6.4-4:*:*:*:*:*:*:*",
@@ -1818,9 +1818,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=-&package-id=2e1cb6c827061455",
+            "bom-ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
             "name": "libudev1",
-            "purl": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "252.33-1~deb12u1",
             "cpe": "cpe:2.3:a:*:libudev1:252.33-1~deb12u1:*:*:*:*:*:*:*",
@@ -1845,9 +1845,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=-&package-id=e79aa55acbcb711f",
+            "bom-ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
             "name": "libunistring2",
-            "purl": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.0-2",
             "cpe": "cpe:2.3:a:*:libunistring2:1.0-2:*:*:*:*:*:*:*",
@@ -1872,9 +1872,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=d04a02e3067fd84d",
+            "bom-ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=d04a02e3067fd84d",
             "name": "libuuid1",
-            "purl": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:libuuid1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -1899,9 +1899,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=-&package-id=6ed0eff4f5152e90",
+            "bom-ref": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90",
             "name": "libxxhash0",
-            "purl": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "0.8.1-1",
             "cpe": "cpe:2.3:a:*:libxxhash0:0.8.1-1:*:*:*:*:*:*:*",
@@ -1926,9 +1926,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=-&package-id=9c933be743032aae",
+            "bom-ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
             "name": "libzstd1",
-            "purl": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=-",
+            "purl": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.5.4+dfsg2-5",
             "cpe": "cpe:2.3:a:*:libzstd1:1.5.4+dfsg2-5:*:*:*:*:*:*:*",
@@ -1953,9 +1953,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/login@1:4.13+dfsg1-1+b1?arch=amd64&distro=-&package-id=2873332e16cf6e1e",
+            "bom-ref": "pkg:deb/login@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=2873332e16cf6e1e",
             "name": "login",
-            "purl": "pkg:deb/login@1:4.13+dfsg1-1+b1?arch=amd64&distro=-",
+            "purl": "pkg:deb/login@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:4.13+dfsg1-1+b1",
             "cpe": "cpe:2.3:a:*:login:1:4.13+dfsg1-1+b1:*:*:*:*:*:*:*",
@@ -1980,9 +1980,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=-&package-id=60642ad076d37d06",
+            "bom-ref": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06",
             "name": "logsave",
-            "purl": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=-",
+            "purl": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.47.0-2",
             "cpe": "cpe:2.3:a:*:logsave:1.47.0-2:*:*:*:*:*:*:*",
@@ -2007,9 +2007,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=-&package-id=fd51415680e07a73",
+            "bom-ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12&package-id=fd51415680e07a73",
             "name": "mawk",
-            "purl": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=-",
+            "purl": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.3.4.20200120-3.1",
             "cpe": "cpe:2.3:a:*:mawk:1.3.4.20200120-3.1:*:*:*:*:*:*:*",
@@ -2034,9 +2034,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/mount@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=14e5b7f7cc7920a5",
+            "bom-ref": "pkg:deb/mount@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=14e5b7f7cc7920a5",
             "name": "mount",
-            "purl": "pkg:deb/mount@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/mount@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:mount:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -2061,9 +2061,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/ncurses-base@6.4-4?arch=all&distro=-&package-id=c9b540b609c620ba",
+            "bom-ref": "pkg:deb/ncurses-base@6.4-4?arch=all&distro=debian-12&package-id=c9b540b609c620ba",
             "name": "ncurses-base",
-            "purl": "pkg:deb/ncurses-base@6.4-4?arch=all&distro=-",
+            "purl": "pkg:deb/ncurses-base@6.4-4?arch=all&distro=debian-12",
             "type": "library",
             "version": "6.4-4",
             "cpe": "cpe:2.3:a:*:ncurses-base:6.4-4:*:*:*:*:*:*:*",
@@ -2088,9 +2088,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/ncurses-bin@6.4-4?arch=amd64&distro=-&package-id=4548fdc34fa39aae",
+            "bom-ref": "pkg:deb/ncurses-bin@6.4-4?arch=amd64&distro=debian-12&package-id=4548fdc34fa39aae",
             "name": "ncurses-bin",
-            "purl": "pkg:deb/ncurses-bin@6.4-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/ncurses-bin@6.4-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "6.4-4",
             "cpe": "cpe:2.3:a:*:ncurses-bin:6.4-4:*:*:*:*:*:*:*",
@@ -2115,9 +2115,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=-&package-id=7ef3db1b790ac8f8",
+            "bom-ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8",
             "name": "passwd",
-            "purl": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=-",
+            "purl": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:4.13+dfsg1-1+b1",
             "cpe": "cpe:2.3:a:*:passwd:1:4.13+dfsg1-1+b1:*:*:*:*:*:*:*",
@@ -2142,9 +2142,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/perl-base@5.36.0-7+deb12u1?arch=amd64&distro=-&package-id=125d9c5d9ba4a5cd",
+            "bom-ref": "pkg:deb/perl-base@5.36.0-7+deb12u1?arch=amd64&distro=debian-12&package-id=125d9c5d9ba4a5cd",
             "name": "perl-base",
-            "purl": "pkg:deb/perl-base@5.36.0-7+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/perl-base@5.36.0-7+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "5.36.0-7+deb12u1",
             "cpe": "cpe:2.3:a:*:perl-base:5.36.0-7+deb12u1:*:*:*:*:*:*:*",
@@ -2169,9 +2169,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/sed@4.9-1?arch=amd64&distro=-&package-id=75dc7ed75223590e",
+            "bom-ref": "pkg:deb/sed@4.9-1?arch=amd64&distro=debian-12&package-id=75dc7ed75223590e",
             "name": "sed",
-            "purl": "pkg:deb/sed@4.9-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/sed@4.9-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "4.9-1",
             "cpe": "cpe:2.3:a:*:sed:4.9-1:*:*:*:*:*:*:*",
@@ -2196,9 +2196,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=-&package-id=73e5344f09681b10",
+            "bom-ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12&package-id=73e5344f09681b10",
             "name": "sysvinit-utils",
-            "purl": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=-",
+            "purl": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "3.06-4",
             "cpe": "cpe:2.3:a:*:sysvinit-utils:3.06-4:*:*:*:*:*:*:*",
@@ -2223,9 +2223,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=-&package-id=3092e0c57e5d8024",
+            "bom-ref": "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=debian-12&package-id=3092e0c57e5d8024",
             "name": "tar",
-            "purl": "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=-",
+            "purl": "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1.34+dfsg-1.2+deb12u1",
             "cpe": "cpe:2.3:a:*:tar:1.34+dfsg-1.2+deb12u1:*:*:*:*:*:*:*",
@@ -2250,9 +2250,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=-&package-id=4c510789e36a49e3",
+            "bom-ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12&package-id=4c510789e36a49e3",
             "name": "tzdata",
-            "purl": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=-",
+            "purl": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12",
             "type": "library",
             "version": "2024b-0+deb12u1",
             "cpe": "cpe:2.3:a:*:tzdata:2024b-0+deb12u1:*:*:*:*:*:*:*",
@@ -2277,9 +2277,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/usr-is-merged@37~deb12u1?arch=all&distro=-&package-id=79daf92ba8e39bb1",
+            "bom-ref": "pkg:deb/usr-is-merged@37~deb12u1?arch=all&distro=debian-12&package-id=79daf92ba8e39bb1",
             "name": "usr-is-merged",
-            "purl": "pkg:deb/usr-is-merged@37~deb12u1?arch=all&distro=-",
+            "purl": "pkg:deb/usr-is-merged@37~deb12u1?arch=all&distro=debian-12",
             "type": "library",
             "version": "37~deb12u1",
             "cpe": "cpe:2.3:a:*:usr-is-merged:37~deb12u1:*:*:*:*:*:*:*",
@@ -2304,9 +2304,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=a86c03b5da387af4",
+            "bom-ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=a86c03b5da387af4",
             "name": "util-linux",
-            "purl": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:util-linux:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -2331,9 +2331,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=52b0a88e18b4fefe",
+            "bom-ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe",
             "name": "util-linux-extra",
-            "purl": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=-",
+            "purl": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "2.38.1-5+deb12u3",
             "cpe": "cpe:2.3:a:*:util-linux-extra:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
@@ -2358,9 +2358,9 @@
             ]
         },
         {
-            "bom-ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=-&package-id=c7541648e19e4daa",
+            "bom-ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
             "name": "zlib1g",
-            "purl": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=-",
+            "purl": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12",
             "type": "library",
             "version": "1:1.2.13.dfsg-1",
             "cpe": "cpe:2.3:a:*:zlib1g:1:1.2.13.dfsg-1:*:*:*:*:*:*:*",
@@ -2387,473 +2387,473 @@
     ],
     "dependencies": [
         {
-            "ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=-&package-id=eba9416f065d6cf2",
+            "ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12&package-id=90e650df84381b25",
             "dependsOn": [
-                "pkg:deb/debconf@1.5.82?arch=all&distro=-&package-id=2a95b98bb39533d2",
-                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=8175882549fbe58f"
+                "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12&package-id=2045c018e654b9b7",
+                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574"
             ]
         },
         {
-            "ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=52b0a88e18b4fefe",
+            "ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=1837393caba2884c",
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=-&package-id=50226d74c8c8236d",
+            "ref": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=debian-12&package-id=cd28a186cb043baa",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=e1dcaa6c850f468d",
+            "ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
             "dependsOn": [
-                "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=c17ff013b5cb2f8f",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=-&package-id=38db0e164e39d207",
+            "ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12&package-id=73e5344f09681b10",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=-&package-id=84b96243191ac130",
+            "ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
+                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+                "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
+                "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90"
             ]
         },
         {
-            "ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=-&package-id=03bb31787909cd6b",
+            "ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12&package-id=61387bccff2fd18d",
             "dependsOn": [
-                "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=-&package-id=0740de66067116ec",
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=-&package-id=77a806ce07c391c6",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e",
-                "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=-&package-id=64f231aac4c44e97"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=d04a02e3067fd84d",
+            "ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
+                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207"
             ]
         },
         {
-            "ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=-&package-id=73e5344f09681b10",
+            "ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=-&package-id=bd99401c8506eff9",
+            "ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
             "dependsOn": [
-                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=-&package-id=9c933be743032aae",
-                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=-&package-id=77a806ce07c391c6",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-&package-id=ba4ec38abfa53c27",
-                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=-&package-id=7fb02d616bc29b51",
-                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=-&package-id=ad72f267b1d351da",
-                "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=-&package-id=2e1cb6c827061455",
-                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=-&package-id=146d529dac7b949c",
-                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=-&package-id=ac6ee460d67c71cb",
-                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=-&package-id=14a33ea24ce2768a",
-                "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=-&package-id=6ed0eff4f5152e90",
-                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=-&package-id=c7541648e19e4daa"
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
             ]
         },
         {
-            "ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
+            "ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
             "dependsOn": [
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-&package-id=ba4ec38abfa53c27"
+                "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49",
+            "ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
             "dependsOn": [
-                "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=-&package-id=aa1580f769241070",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=-&package-id=8ac37f98cf34e8b5"
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
             ]
         },
         {
-            "ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=-&package-id=61387bccff2fd18d",
+            "ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=d04a02e3067fd84d",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=-&package-id=7ef3db1b790ac8f8",
+            "ref": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06",
             "dependsOn": [
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=-&package-id=38db0e164e39d207",
-                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=36309e59bd155c8f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e",
-                "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=-&package-id=03bb31787909cd6b",
-                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=8175882549fbe58f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=-&package-id=e7bc5e9c87a3f8ec",
+            "ref": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b",
             "dependsOn": [
-                "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=-&package-id=60642ad076d37d06"
+                "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=debian-12&package-id=3092e0c57e5d8024"
             ]
         },
         {
-            "ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=-&package-id=f273a44764dc5e89",
+            "ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
             "dependsOn": [
-                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=-&package-id=77a806ce07c391c6",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=-&package-id=146d529dac7b949c",
-                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=-&package-id=0970e59257285b36",
-                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=-&package-id=c7541648e19e4daa"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=c17ff013b5cb2f8f",
+            "ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=-&package-id=7fb02d616bc29b51",
+            "ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=-&package-id=0970e59257285b36",
+            "ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=36309e59bd155c8f",
+            "ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12&package-id=c0f223ed77627dae",
             "dependsOn": [
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/debconf@1.5.82?arch=all&distro=-&package-id=2a95b98bb39533d2"
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
             ]
         },
         {
-            "ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=-&package-id=4c510789e36a49e3",
+            "ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
             "dependsOn": [
-                "pkg:deb/debconf@1.5.82?arch=all&distro=-&package-id=2a95b98bb39533d2"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=-&package-id=77a806ce07c391c6",
+            "ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=-&package-id=d33934f7f9ed127f",
+            "ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
             "dependsOn": [
-                "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=-&package-id=c8ef35fedbcc5308",
-                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=-&package-id=e79aa55acbcb711f",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=-&package-id=84b96243191ac130",
-                "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=-&package-id=1359d5b5a3d82c27",
-                "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=-&package-id=a70806382df606f7",
-                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=-&package-id=dac38d2437f49b3b",
-                "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=-&package-id=d72965b0742c3e2a"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=-&package-id=64f231aac4c44e97",
+            "ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=a86c03b5da387af4",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe"
             ]
         },
         {
-            "ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=-&package-id=2e1cb6c827061455",
+            "ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=-&package-id=6ed0eff4f5152e90",
+            "ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=a86c03b5da387af4",
+            "ref": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308",
             "dependsOn": [
-                "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=52b0a88e18b4fefe"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=-&package-id=90e650df84381b25",
+            "ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12&package-id=3a77edf12e8ff074",
             "dependsOn": [
-                "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=-&package-id=2045c018e654b9b7",
-                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=-&package-id=82236db65ac2f574"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=-&package-id=dd1b2909c9c51c7d",
+            "ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
             "dependsOn": [
-                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=-&package-id=82236db65ac2f574",
-                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=-&package-id=476727d5c343219b"
+                "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
+                "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12&package-id=aa1580f769241070",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=-&package-id=ac6ee460d67c71cb",
+            "ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36"
             ]
         },
         {
-            "ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=-&package-id=d789db5eff771251",
+            "ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
             "dependsOn": [
-                "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=-&package-id=c1e5c6fbe3502a11",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=-&package-id=3b94635eadfd0b6a",
+            "ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe",
             "dependsOn": [
-                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=-&package-id=476727d5c343219b"
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c"
             ]
         },
         {
-            "ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=-&package-id=e6b3528df3c40bff",
+            "ref": "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8"
             ]
         },
         {
-            "ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=-&package-id=146d529dac7b949c",
+            "ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
             "dependsOn": [
-                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=-&package-id=0970e59257285b36",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
+                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa"
             ]
         },
         {
-            "ref": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=-&package-id=60642ad076d37d06",
+            "ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12&package-id=3b94635eadfd0b6a",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
             ]
         },
         {
-            "ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=-&package-id=3a77edf12e8ff074",
+            "ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12&package-id=7d4d16397179656e",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=-&package-id=f3d7c1c203490183",
+            "ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12&package-id=3e344cf0113fa217",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=-&package-id=7d4d16397179656e",
+            "ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12&package-id=cb298c58c3a6b975",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=-&package-id=ad72f267b1d351da",
+            "ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
             "dependsOn": [
-                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=-&package-id=ac6ee460d67c71cb",
-                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=-&package-id=7fb02d616bc29b51",
-                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=-&package-id=9c933be743032aae",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=-&package-id=e6b3528df3c40bff",
-                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=-&package-id=146d529dac7b949c"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
+                "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=0740de66067116ec",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6"
             ]
         },
         {
-            "ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=-&package-id=c0f223ed77627dae",
+            "ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
             "dependsOn": [
-                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=-&package-id=476727d5c343219b"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=-&package-id=c1e5c6fbe3502a11",
+            "ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=-&package-id=1359d5b5a3d82c27",
+            "ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12&package-id=41f8164eac096820",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=-&package-id=84b96243191ac130",
-                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=-&package-id=dac38d2437f49b3b"
+                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+                "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
+                "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
+                "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
+                "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
+                "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
+                "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12&package-id=3bab0fc5c261c89a",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
             ]
         },
         {
-            "ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=-&package-id=a70806382df606f7",
+            "ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12&package-id=21200f8b39328bd5",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=-&package-id=e79aa55acbcb711f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
             ]
         },
         {
-            "ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=-&package-id=3e344cf0113fa217",
+            "ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=50226d74c8c8236d",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=-&package-id=cd28a186cb043baa",
+            "ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/adduser@3.134?arch=all&distro=-&package-id=9ba85d23e4669888",
+            "ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12&package-id=d789db5eff771251",
             "dependsOn": [
-                "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=-&package-id=7ef3db1b790ac8f8"
+                "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=-&package-id=41f8164eac096820",
+            "ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12&package-id=fd51415680e07a73",
             "dependsOn": [
-                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=-&package-id=14a33ea24ce2768a",
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-&package-id=ba4ec38abfa53c27",
-                "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=-&package-id=d33934f7f9ed127f",
-                "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=-&package-id=04a5c57d5eca7490",
-                "pkg:deb/adduser@3.134?arch=all&distro=-&package-id=9ba85d23e4669888",
-                "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=-&package-id=f273a44764dc5e89",
-                "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=-&package-id=bd99401c8506eff9",
-                "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=-&package-id=3bab0fc5c261c89a",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=-&package-id=ad72f267b1d351da"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=-&package-id=e79aa55acbcb711f",
+            "ref": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=-&package-id=1837393caba2884c",
+            "ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12&package-id=dd1b2909c9c51c7d",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574",
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
             ]
         },
         {
-            "ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=-&package-id=d72965b0742c3e2a",
+            "ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=-&package-id=2a3eec1614b68fb8"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b"
             ]
         },
         {
-            "ref": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=-&package-id=c8ef35fedbcc5308",
+            "ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=-&package-id=476727d5c343219b",
+            "ref": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
             "dependsOn": [
-                "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=-&package-id=3092e0c57e5d8024"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae"
             ]
         },
         {
-            "ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=-&package-id=dac38d2437f49b3b",
+            "ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12&package-id=4c510789e36a49e3",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
             ]
         },
         {
-            "ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-&package-id=ba4ec38abfa53c27",
+            "ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
             "dependsOn": [
-                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=-&package-id=38044bc0ea31b1f9",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=9d6fe6d741141378",
+            "ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=-&package-id=38db0e164e39d207",
-                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=-&package-id=36309e59bd155c8f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e",
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=-&package-id=9dfe26e3db7efe49"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f"
             ]
         },
         {
-            "ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=-&package-id=04a5c57d5eca7490",
+            "ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=e1dcaa6c850f468d",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
             ]
         },
         {
-            "ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=-&package-id=14a33ea24ce2768a",
+            "ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
             "dependsOn": [
-                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=-&package-id=38044bc0ea31b1f9",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=-&package-id=ba4ec38abfa53c27"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=-&package-id=c7541648e19e4daa",
+            "ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=-&package-id=cb298c58c3a6b975",
+            "ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
             ]
         },
         {
-            "ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=-&package-id=2a3eec1614b68fb8",
+            "ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12&package-id=e7bc5e9c87a3f8ec",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06"
             ]
         },
         {
-            "ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=-&package-id=086640307b043302",
+            "ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e",
+            "ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=9d6fe6d741141378",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=-&package-id=086640307b043302"
+                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=-&package-id=21200f8b39328bd5",
+            "ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12&package-id=eba9416f065d6cf2",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=-&package-id=f3d7c1c203490183",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=-&package-id=7137a646bab8447e"
+                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
             ]
         },
         {
-            "ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=-&package-id=8ac37f98cf34e8b5",
+            "ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=-&package-id=9c933be743032aae",
+            "ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+                "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
+                "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
+                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
+                "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
+                "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308"
             ]
         },
         {
-            "ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=-&package-id=fd51415680e07a73",
+            "ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
             "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=-&package-id=8cea8cd2cef2406f"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         }
     ]

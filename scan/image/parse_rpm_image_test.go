@@ -25,8 +25,8 @@ func TestParseImageFile(t *testing.T) {
 		imagePath string
 	}{
 		{
-			name:      "测试fedora镜像",
-			imagePath: "f7b31b439cbe274a1f3402632e9bfd81f6647a5ca4097a5f99821832d643826d",
+			name:      "测试ubuntu镜像",
+			imagePath: "edbfe74c41f8a3501ce542e137cf28ea04dd03e6df8c9d66519b6ad761c2598a",
 		},
 	}
 

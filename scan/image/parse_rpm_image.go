@@ -205,9 +205,9 @@ func ParseImageFile(path string) error {
 	var pkgInfo *pkg.Pkg
 	switch {
 	case strings.HasSuffix(targetPath, "dpkg-status"):
-		pkgInfo, err = parseDpkgStatus(targetPath)
+		pkgInfo, err = parseDpkgStatus(targetPath, path)
 	case strings.HasSuffix(targetPath, "rpmdb.sqlite"):
-		pkgInfo, err = parseRpmSqlite(targetPath)
+		pkgInfo, err = parseRpmSqlite(targetPath, path)
 	case strings.HasSuffix(targetPath, "Packages.db"):
 		pkgInfo, err = parseRpmDb(targetPath, path)
 	}
@@ -255,8 +255,8 @@ func ParseImageFile(path string) error {
 	return nil
 }
 
-// parseDpkgStatus 解析 Ubuntu/Debian 的 dpkg status 文件
-func parseDpkgStatus(filePath string) (*pkg.Pkg, error) {
+// parseDpkgStatus 解析dpkg状态文件
+func parseDpkgStatus(filePath string, imagePath string) (*pkg.Pkg, error) {
 	content, err := os.ReadFile(filePath)
 	if err != nil {
 		return nil, fmt.Errorf("读取dpkg status文件失败: %v", err)
@@ -265,6 +265,21 @@ func parseDpkgStatus(filePath string) (*pkg.Pkg, error) {
 	// 直接使用字符串读取，确保处理所有包
 	contentStr := string(content)
 	fmt.Printf("status文件大小: %d 字节\n", len(contentStr))
+
+	// 获取系统信息用于生成 PURL
+	var namespace, distro string
+
+	// 尝试获取系统信息
+	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", "/etc/os-release")
+	if err == nil {
+		namespace, distro = parseOsInfo(osReleaseOutput)
+		fmt.Printf("获取到系统信息：namespace=%s, distro=%s\n", namespace, distro)
+	} else {
+		// 如果获取失败，使用默认值
+		namespace = "debian"
+		distro = "debian"
+		fmt.Printf("获取系统信息失败，使用默认值: namespace=%s, distro=%s\n", namespace, distro)
+	}
 
 	// 按"Package: "前缀分割，更准确地分隔每个包
 	// 先用一个特殊标记替换所有"Package: "，然后按这个标记分割
@@ -401,7 +416,6 @@ func parseDpkgStatus(filePath string) (*pkg.Pkg, error) {
 			metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", pkgName, metadata.Version)
 
 			// 生成PURL
-			_, distro := parseOsInfo("/etc/os-release") // 从OS信息获取发行版
 			metadata.PURL = fmt.Sprintf("pkg:deb/%s@%s?arch=%s&distro=%s", pkgName, metadata.Version, metadata.Architecture, distro)
 
 			// 生成BOMRef和包ID
@@ -518,15 +532,43 @@ func generatePackageId(name string, version string) string {
 }
 
 // parseRpmSqlite 解析 Fedora 的 rpmdb.sqlite 文件
-func parseRpmSqlite(filePath string) (*pkg.Pkg, error) {
-	// 打开 SQLite 数据库
+func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
+	// 尝试使用SQLite方式打开
 	db, err := sql.Open("sqlite3", filePath)
 	if err != nil {
-		return nil, fmt.Errorf("打开SQLite数据库失败: %v", err)
+		// SQLite访问失败，尝试使用Docker命令替代方法
+		fmt.Println("SQLite访问失败: ", err)
+		fmt.Println("尝试使用Docker命令替代方法解析Fedora包信息...")
+		return parseRpmViaDocker(imagePath)
 	}
+
+	// 检查连接是否真的成功
+	err = db.Ping()
+	if err != nil {
+		fmt.Println("SQLite连接失败: ", err)
+		fmt.Println("尝试使用Docker命令替代方法解析Fedora包信息...")
+		db.Close()
+		return parseRpmViaDocker(imagePath)
+	}
+
 	defer db.Close()
 
 	fmt.Println("开始解析 Fedora RPM 数据库...")
+
+	// 获取系统信息用于生成 PURL
+	var namespace, distro string
+
+	// 尝试获取系统信息
+	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", "/etc/os-release")
+	if err == nil {
+		namespace, distro = parseOsInfo(osReleaseOutput)
+		fmt.Printf("获取到系统信息：namespace=%s, distro=%s\n", namespace, distro)
+	} else {
+		// 如果获取失败，使用默认值
+		namespace = "fedora"
+		distro = "fedora"
+		fmt.Printf("获取系统信息失败，使用默认值: namespace=%s, distro=%s\n", namespace, distro)
+	}
 
 	pkgInfo := &pkg.Pkg{
 		Metadata: &pkg.Metadata{
@@ -535,112 +577,332 @@ func parseRpmSqlite(filePath string) (*pkg.Pkg, error) {
 		Depends: &[]pkg.Depend{},
 	}
 
-	// 创建一个包集合来存储所有找到的包
-	allPackages := []*pkg.Metadata{}
+	// 清空全局包列表（替代局部allPackages变量）
+	allDiscoveredPackages = make([]*pkg.Metadata, 0)
 
-	// 查询包信息
+	// 查询所有已安装的包
 	rows, err := db.Query(`
         SELECT 
-            name, version, release, arch, 
-            summary, vendor, buildtime, buildhost,
-            sourcerpm, license
+            name, 
+            version, 
+            release, 
+            arch, 
+            license, 
+            summary, 
+            description 
         FROM packages
     `)
 	if err != nil {
-		return nil, fmt.Errorf("查询包信息失败: %v", err)
+		// 如果查询失败，使用替代方法
+		fmt.Println("SQLite查询失败: ", err)
+		fmt.Println("尝试使用Docker命令替代方法解析Fedora包信息...")
+		return parseRpmViaDocker(imagePath)
 	}
 	defer rows.Close()
 
-	var totalPackages int
-
-	// 先计算包的总数
-	countRow := db.QueryRow("SELECT COUNT(*) FROM packages")
-	if err := countRow.Scan(&totalPackages); err != nil {
-		fmt.Println("警告: 无法获取包总数:", err)
-	} else {
-		fmt.Printf("发现 %d 个软件包\n", totalPackages)
-	}
-
+	// 处理查询结果
 	var processedPackages int
 	var packagesWithLicense int
 
 	for rows.Next() {
-		var name, version, release, arch string
-		var summary, vendor, buildhost, sourcerpm string
-		var buildtime int64
-		var license string
+		var entry struct {
+			Name        string
+			Version     string
+			Release     string
+			Arch        string
+			License     string
+			Summary     string
+			Description string
+			// 其他字段...
+		}
 
-		err := rows.Scan(&name, &version, &release, &arch,
-			&summary, &vendor, &buildtime, &buildhost, &sourcerpm,
-			&license)
-		if err != nil {
-			return nil, fmt.Errorf("读取包信息失败: %v", err)
+		if err := rows.Scan(&entry.Name, &entry.Version, &entry.Release, &entry.Arch,
+			&entry.License, &entry.Summary, &entry.Description); err != nil {
+			fmt.Printf("扫描行失败: %v\n", err)
+			continue
 		}
 
 		processedPackages++
 
 		metadata := &pkg.Metadata{
-			Name:         name,
-			Version:      version,
-			Release:      release,
-			Architecture: arch,
-			Description:  summary,
-			Packager:     vendor,
-			BuildTime:    time.Unix(buildtime, 0).Format("2006-01-02 15:04:05"),
-			BuildHost:    buildhost,
-			SourcePkg:    sourcerpm,
+			Name:         entry.Name,
+			Version:      entry.Version,
+			Release:      entry.Release,
+			Architecture: entry.Arch,
+			Description:  entry.Summary,
+			// 其他字段...
 		}
 
-		// 添加许可证信息并记录
-		if license != "" {
-			metadata.License = []string{license}
+		// 添加许可证信息
+		if entry.License != "" {
+			metadata.License = []string{entry.License}
 			packagesWithLicense++
-			fmt.Printf("软件包 %s 的许可证: %s\n", name, license)
 		} else {
-			fmt.Printf("警告：软件包 %s 没有许可证信息\n", name)
+			metadata.License = []string{}
+			fmt.Printf("警告：软件包 %s 没有许可证信息\n", entry.Name)
 		}
 
-		// 生成 CPE
-		metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", name, version)
+		// 生成CPE
+		metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*",
+			metadata.Name, metadata.Version)
 
-		// 生成 PURL
-		namespace := "fedora" // 假设是 Fedora
-		distro := "fedora-" + version
-		purl := pkg.RpmPackageURL(packageurl.TypeRPM, namespace, name, arch, sourcerpm, version, release, distro)
-		metadata.PURL = purl
+		// 生成PURL
+		metadata.PURL = fmt.Sprintf("pkg:rpm/%s/%s@%s?arch=%s&release=%s&distro=%s",
+			namespace, metadata.Name, metadata.Version, metadata.Architecture,
+			metadata.Release, distro)
 
-		// 生成 BOMRef
-		bomRef, err := pkg.GetBomRef(purl, struct {
-			Name         string
-			Version      string
-			Architecture string
-			timestamp    time.Time
-		}{
-			Name:         name,
-			Version:      version,
-			Architecture: arch,
-			timestamp:    time.Now(),
-		}, "package-id")
-		if err != nil {
-			return nil, fmt.Errorf("生成BOMRef失败: %v", err)
+		// 生成BOMRef
+		packageId := generatePackageId(metadata.Name, metadata.Version)
+		metadata.BomRef = fmt.Sprintf("pkg:rpm/%s/%s@%s?arch=%s&distro=%s&upstream=%s-%s.src.rpm&package-id=%s",
+			namespace, metadata.Name, metadata.Version, metadata.Architecture,
+			distro, metadata.Name, metadata.Version, packageId)
+
+		// 将包添加到全局列表
+		allDiscoveredPackages = append(allDiscoveredPackages, metadata)
+
+		// 如果第一个包，设置为主包
+		if len(allDiscoveredPackages) == 1 {
+			pkgInfo.Metadata = metadata
 		}
-		metadata.BomRef = bomRef
-
-		// 将包添加到集合
-		allPackages = append(allPackages, metadata)
-
-		fmt.Printf("解析到软件包: %s (版本: %s-%s)\n", metadata.Name, metadata.Version, metadata.Release)
 	}
 
-	// 设置第一个包为主包
-	if len(allPackages) > 0 {
-		pkgInfo.Metadata = allPackages[0]
+	if err = rows.Err(); err != nil {
+		fmt.Printf("遍历行时出错: %v\n", err)
 	}
 
-	fmt.Printf("成功处理 %d 个软件包中的 %d 个\n", totalPackages, processedPackages)
-	fmt.Printf("其中有 %d 个软件包包含许可证信息\n", packagesWithLicense)
+	// 使用全局变量，确保ScanResult能正确获取所有包
+	fmt.Printf("成功处理 %d 个软件包，其中 %d 个有许可证信息\n",
+		processedPackages, packagesWithLicense)
 
 	return pkgInfo, nil
+}
+
+// parseRpmViaDocker 使用Docker命令获取RPM包信息
+func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
+	// 创建包对象
+	pkgInfo := &pkg.Pkg{
+		Metadata: &pkg.Metadata{
+			Lifecycle: pkg.InstalledLifecycle,
+		},
+		Depends: &[]pkg.Depend{},
+	}
+
+	// 获取系统信息用于生成 PURL
+	var namespace, distro string
+
+	// 尝试获取系统信息
+	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", "/etc/os-release")
+	if err == nil {
+		namespace, distro = parseOsInfo(osReleaseOutput)
+		fmt.Printf("获取到系统信息：namespace=%s, distro=%s\n", namespace, distro)
+	} else {
+		// 如果获取失败，使用默认值
+		namespace = "fedora"
+		distro = "fedora"
+		fmt.Printf("获取系统信息失败，使用默认值: namespace=%s, distro=%s\n", namespace, distro)
+	}
+
+	// 获取所有已安装的包名称
+	fmt.Println("使用Docker命令获取RPM包列表...")
+	packagesOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qa", "--queryformat", "%{NAME}\\n")
+	if err != nil {
+		return nil, fmt.Errorf("获取包列表失败: %v", err)
+	}
+
+	// 清理和分割输出
+	packages := strings.Split(strings.TrimSpace(packagesOutput), "\n")
+	fmt.Printf("获取到 %d 个RPM包\n", len(packages))
+
+	// 清空全局包列表和映射
+	allDiscoveredPackages = make([]*pkg.Metadata, 0)
+	globalPackageInfoMap = make(map[string]*PackageInfo)
+
+	// 依赖关系数组
+	var allDependencies []pkg.Depend
+
+	// 处理每个包，获取详细信息
+	// 限制处理的包数量，避免执行时间过长
+	maxPackages := 50000
+	if len(packages) > maxPackages {
+		fmt.Printf("包数量过多，限制处理前 %d 个包\n", maxPackages)
+		packages = packages[:maxPackages]
+	}
+
+	// 是否设置了主包
+	hasSetMainPackage := false
+
+	// 已处理的包名，避免重复
+	processedPackages := make(map[string]bool)
+
+	for _, pkgName := range packages {
+		if pkgName == "" || processedPackages[pkgName] {
+			continue
+		}
+
+		processedPackages[pkgName] = true
+
+		// 获取包详细信息
+		fmt.Printf("获取包 %s 的详细信息...\n", pkgName)
+		infoOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qi", pkgName)
+		if err != nil {
+			fmt.Printf("获取 %s 包信息失败，跳过: %v\n", pkgName, err)
+			continue
+		}
+
+		// 解析包信息，传递namespace和distro
+		metadata := parseRpmInfo(infoOutput)
+		if metadata == nil {
+			fmt.Printf("解析 %s 包信息失败，跳过\n", pkgName)
+			continue
+		}
+
+		// 使用正确的namespace和distro重新设置PURL和BOMRef
+		metadata.PURL = fmt.Sprintf("pkg:rpm/%s/%s@%s?arch=%s&release=%s&distro=%s",
+			namespace, metadata.Name, metadata.Version, metadata.Architecture,
+			metadata.Release, distro)
+
+		// 重新生成BomRef
+		packageId := generatePackageId(metadata.Name, metadata.Version)
+		metadata.BomRef = fmt.Sprintf("pkg:rpm/%s/%s@%s?arch=%s&distro=%s&upstream=%s-%s.src.rpm&package-id=%s",
+			namespace, metadata.Name, metadata.Version, metadata.Architecture,
+			distro, metadata.Name, metadata.Version, packageId)
+
+		// 保存到全局列表
+		allDiscoveredPackages = append(allDiscoveredPackages, metadata)
+
+		// 获取依赖关系
+		dependsOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qR", pkgName)
+		if err == nil {
+			// 解析依赖
+			depends := parseRpmDependencies(dependsOutput)
+
+			// 添加到全局包信息映射
+			packageInfo := &PackageInfo{
+				BOMRef:   metadata.BomRef,
+				Name:     metadata.Name,
+				Depends:  depends,
+				Provides: []string{metadata.Name}, // 简单处理，包名即为提供的功能
+			}
+			globalPackageInfoMap[metadata.Name] = packageInfo
+
+			// 如果有依赖，创建依赖对象
+			if len(depends) > 0 {
+				depObj := pkg.Depend{
+					Metadata: *metadata, // 注意这里是复制，不是引用
+				}
+				allDependencies = append(allDependencies, depObj)
+			}
+		}
+
+		// 如果还没有设置主包，则设置第一个找到的包为主包
+		if !hasSetMainPackage {
+			pkgInfo.Metadata = metadata
+			hasSetMainPackage = true
+		}
+
+		// 每处理10个包打印一次进度
+		if len(allDiscoveredPackages)%10 == 0 {
+			fmt.Printf("已处理 %d/%d 个包...\n", len(allDiscoveredPackages), len(packages))
+		}
+	}
+
+	// 设置依赖关系
+	*pkgInfo.Depends = allDependencies
+
+	fmt.Printf("成功解析了 %d 个RPM包，包含 %d 个依赖关系\n",
+		len(allDiscoveredPackages), len(allDependencies))
+
+	return pkgInfo, nil
+}
+
+// parseRpmInfo 解析rpm -qi命令输出的包信息
+func parseRpmInfo(infoOutput string) *pkg.Metadata {
+	// 创建元数据对象
+	metadata := &pkg.Metadata{
+		Lifecycle: pkg.InstalledLifecycle,
+		License:   []string{}, // 初始化为空数组
+	}
+
+	// 解析rpm -qi输出的每一行
+	lines := strings.Split(infoOutput, "\n")
+	for _, line := range lines {
+		parts := strings.SplitN(line, ":", 2)
+		if len(parts) != 2 {
+			continue
+		}
+
+		key := strings.TrimSpace(parts[0])
+		value := strings.TrimSpace(parts[1])
+
+		switch key {
+		case "Name":
+			metadata.Name = value
+		case "Version":
+			metadata.Version = value
+		case "Release":
+			metadata.Release = value
+		case "Architecture":
+			metadata.Architecture = value
+		case "License":
+			metadata.License = []string{value}
+		case "Summary":
+			metadata.Description = value
+		case "Description":
+			// 如果已有Summary，可以追加或替换
+			if metadata.Description != "" {
+				metadata.Description += "\n" + value
+			} else {
+				metadata.Description = value
+			}
+		}
+	}
+
+	// 必须有包名和版本
+	if metadata.Name == "" || metadata.Version == "" {
+		return nil
+	}
+
+	// 生成CPE
+	metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*",
+		metadata.Name, metadata.Version)
+
+	// 注意：我们不再在这里生成PURL和BOMRef
+	// 它们将由调用者根据获取的系统信息设置
+
+	return metadata
+}
+
+// parseRpmDependencies 解析rpm -qR命令输出的依赖关系
+func parseRpmDependencies(dependsOutput string) []string {
+	var depends []string
+
+	// 解析每一行
+	lines := strings.Split(dependsOutput, "\n")
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if line == "" {
+			continue
+		}
+
+		// 提取基本包名（去除版本和其他条件）
+		parts := strings.Fields(line)
+		if len(parts) > 0 {
+			// rpm依赖通常格式为：pkgname >= version
+			// 或者 rpmlib(xxx) 形式的特殊依赖
+			depName := parts[0]
+
+			// 过滤掉rpmlib依赖和系统提供的特殊依赖
+			if strings.HasPrefix(depName, "rpmlib(") ||
+				strings.HasPrefix(depName, "/") ||
+				strings.Contains(depName, "(") {
+				continue
+			}
+
+			depends = append(depends, depName)
+		}
+	}
+
+	return depends
 }
 
 // parseRpmDb 解析 OpenEuler 的 Packages.db 文件
@@ -934,7 +1196,7 @@ func convertToSBOMFormat(result *ScanResult) *outputSBOM {
 	fmt.Printf("开始处理软件包，初始组件数量: %d\n", initialSize)
 
 	// 处理所有软件包 - 先使用AllPackages字段
-	if result.AllPackages != nil && len(result.AllPackages) > 0 {
+	if len(result.AllPackages) > 0 {
 		fmt.Printf("处理 %d 个全局软件包...\n", len(result.AllPackages))
 
 		// 遍历所有包并添加到SBOM，每100个包打印一次日志
@@ -980,7 +1242,7 @@ func convertToSBOMFormat(result *ScanResult) *outputSBOM {
 	}
 
 	// 处理包之间的依赖关系
-	if result.PackageMap != nil && len(result.PackageMap) > 0 {
+	if len(result.PackageMap) > 0 {
 		processDependencies(sbom, result.PackageMap)
 	}
 
@@ -1081,6 +1343,23 @@ func createPackageComponent(metadata *pkg.Metadata) ComponentOutput {
 		component.PURL = metadata.PURL
 	}
 
+	// 添加许可证信息
+	if len(metadata.License) > 0 {
+		var licenses []map[string]interface{}
+		for _, license := range metadata.License {
+			if license != "" {
+				licenses = append(licenses, map[string]interface{}{
+					"license": map[string]string{
+						"id": license,
+					},
+				})
+			}
+		}
+		if len(licenses) > 0 {
+			component.Licenses = licenses
+		}
+	}
+
 	// 添加属性
 	properties := []map[string]string{}
 
@@ -1138,6 +1417,23 @@ func createDependencyComponent(dep *pkg.Depend) ComponentOutput {
 	// 添加CPE（如果有）
 	if dep.Metadata.CPE != "" {
 		depComponent.CPE = dep.Metadata.CPE
+	}
+
+	// 添加许可证信息
+	if len(dep.Metadata.License) > 0 {
+		var licenses []map[string]interface{}
+		for _, license := range dep.Metadata.License {
+			if license != "" {
+				licenses = append(licenses, map[string]interface{}{
+					"license": map[string]string{
+						"id": license,
+					},
+				})
+			}
+		}
+		if len(licenses) > 0 {
+			depComponent.Licenses = licenses
+		}
 	}
 
 	// 使用cyclonedx属性
