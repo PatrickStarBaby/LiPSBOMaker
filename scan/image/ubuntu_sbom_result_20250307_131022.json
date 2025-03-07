@@ -1,0 +1,2964 @@
+{
+    "components": [
+        {
+            "bom-ref": "pkg:kernel/linux@5.15.153.1-microsoft-standard-WSL2?arch=x86_64",
+            "name": "linux-5.15.153.1-microsoft-standard-WSL2",
+            "type": "linux_kernel",
+            "version": "5.15.153.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "buildTime": "#1 SMP Fri Mar 29 23:14:13 UTC 2024"
+        },
+        {
+            "bom-ref": "pkg:deb/apt@2.7.14build2?arch=amd64&distro=-&package-id=54ce0451b65ed519",
+            "name": "apt",
+            "purl": "pkg:deb/apt@2.7.14build2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.7.14build2",
+            "cpe": "cpe:2.3:a:*:apt:2.7.14build2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=-&package-id=5002d823c0a16c7a",
+            "name": "base-files",
+            "purl": "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=-",
+            "type": "library",
+            "version": "13ubuntu10",
+            "cpe": "cpe:2.3:a:*:base-files:13ubuntu10:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=-&package-id=dd74da63308f3d05",
+            "name": "base-passwd",
+            "purl": "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.6.3build1",
+            "cpe": "cpe:2.3:a:*:base-passwd:3.6.3build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/bash@5.2.21-2ubuntu4?arch=amd64&distro=-&package-id=01726d7c6caaff40",
+            "name": "bash",
+            "purl": "pkg:deb/bash@5.2.21-2ubuntu4?arch=amd64&distro=-",
+            "type": "library",
+            "version": "5.2.21-2ubuntu4",
+            "cpe": "cpe:2.3:a:*:bash:5.2.21-2ubuntu4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "shells"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/bsdutils@1:2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=d4e684f6c5aa4ff9",
+            "name": "bsdutils",
+            "purl": "pkg:deb/bsdutils@1:2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:bsdutils:1:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/coreutils@9.4-3ubuntu6?arch=amd64&distro=-&package-id=0b097ba74217c8a5",
+            "name": "coreutils",
+            "purl": "pkg:deb/coreutils@9.4-3ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "9.4-3ubuntu6",
+            "cpe": "cpe:2.3:a:*:coreutils:9.4-3ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/dash@0.5.12-6ubuntu5?arch=amd64&distro=-&package-id=2c276a34c6be79be",
+            "name": "dash",
+            "purl": "pkg:deb/dash@0.5.12-6ubuntu5?arch=amd64&distro=-",
+            "type": "library",
+            "version": "0.5.12-6ubuntu5",
+            "cpe": "cpe:2.3:a:*:dash:0.5.12-6ubuntu5:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "shells"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=-&package-id=f9c21bb9f2ad2846",
+            "name": "debconf",
+            "purl": "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=-",
+            "type": "library",
+            "version": "1.5.86ubuntu1",
+            "cpe": "cpe:2.3:a:*:debconf:1.5.86ubuntu1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/debianutils@5.17build1?arch=amd64&distro=-&package-id=e7d2b9bacd79c494",
+            "name": "debianutils",
+            "purl": "pkg:deb/debianutils@5.17build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "5.17build1",
+            "cpe": "cpe:2.3:a:*:debianutils:5.17build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/diffutils@1:3.10-1build1?arch=amd64&distro=-&package-id=ae702ed69bf52eb7",
+            "name": "diffutils",
+            "purl": "pkg:deb/diffutils@1:3.10-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:3.10-1build1",
+            "cpe": "cpe:2.3:a:*:diffutils:1:3.10-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=-&package-id=0be6360e0e949445",
+            "name": "dpkg",
+            "purl": "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.22.6ubuntu6",
+            "cpe": "cpe:2.3:a:*:dpkg:1.22.6ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/e2fsprogs@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=eef75bc4169e1546",
+            "name": "e2fsprogs",
+            "purl": "pkg:deb/e2fsprogs@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.47.0-2.4~exp1ubuntu4",
+            "cpe": "cpe:2.3:a:*:e2fsprogs:1.47.0-2.4~exp1ubuntu4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/findutils@4.9.0-5build1?arch=amd64&distro=-&package-id=a3a4cdbc32ccf395",
+            "name": "findutils",
+            "purl": "pkg:deb/findutils@4.9.0-5build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "4.9.0-5build1",
+            "cpe": "cpe:2.3:a:*:findutils:4.9.0-5build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c1b88cdf9aa210b1",
+            "name": "gcc-14-base",
+            "purl": "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "14-20240412-0ubuntu1",
+            "cpe": "cpe:2.3:a:*:gcc-14-base:14-20240412-0ubuntu1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=-&package-id=51170bad8ff34825",
+            "name": "gpgv",
+            "purl": "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.4.4-2ubuntu17",
+            "cpe": "cpe:2.3:a:*:gpgv:2.4.4-2ubuntu17:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/grep@3.11-4build1?arch=amd64&distro=-&package-id=0dfcead190010a55",
+            "name": "grep",
+            "purl": "pkg:deb/grep@3.11-4build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.11-4build1",
+            "cpe": "cpe:2.3:a:*:grep:3.11-4build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/gzip@1.12-1ubuntu3?arch=amd64&distro=-&package-id=faf1e02840817840",
+            "name": "gzip",
+            "purl": "pkg:deb/gzip@1.12-1ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.12-1ubuntu3",
+            "cpe": "cpe:2.3:a:*:gzip:1.12-1ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/hostname@3.23+nmu2ubuntu2?arch=amd64&distro=-&package-id=82967441c643ede3",
+            "name": "hostname",
+            "purl": "pkg:deb/hostname@3.23+nmu2ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.23+nmu2ubuntu2",
+            "cpe": "cpe:2.3:a:*:hostname:3.23+nmu2ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/init-system-helpers@1.66ubuntu1?arch=all&distro=-&package-id=e300c2a95b05d726",
+            "name": "init-system-helpers",
+            "purl": "pkg:deb/init-system-helpers@1.66ubuntu1?arch=all&distro=-",
+            "type": "library",
+            "version": "1.66ubuntu1",
+            "cpe": "cpe:2.3:a:*:init-system-helpers:1.66ubuntu1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libacl1@2.3.2-1build1?arch=amd64&distro=-&package-id=cdcbb7766873ea91",
+            "name": "libacl1",
+            "purl": "pkg:deb/libacl1@2.3.2-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.3.2-1build1",
+            "cpe": "cpe:2.3:a:*:libacl1:2.3.2-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=-&package-id=b7c073d391fd039c",
+            "name": "libapt-pkg6.0t64",
+            "purl": "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.7.14build2",
+            "cpe": "cpe:2.3:a:*:libapt-pkg6.0t64:2.7.14build2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=-&package-id=8bf0133d7bfe8557",
+            "name": "libassuan0",
+            "purl": "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.5.6-1build1",
+            "cpe": "cpe:2.3:a:*:libassuan0:2.5.6-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libattr1@1:2.5.2-1build1?arch=amd64&distro=-&package-id=d0bc3406133de03c",
+            "name": "libattr1",
+            "purl": "pkg:deb/libattr1@1:2.5.2-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:2.5.2-1build1",
+            "cpe": "cpe:2.3:a:*:libattr1:1:2.5.2-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libaudit-common@1:3.1.2-2.1build1?arch=all&distro=-&package-id=e87f4a90e4516988",
+            "name": "libaudit-common",
+            "purl": "pkg:deb/libaudit-common@1:3.1.2-2.1build1?arch=all&distro=-",
+            "type": "library",
+            "version": "1:3.1.2-2.1build1",
+            "cpe": "cpe:2.3:a:*:libaudit-common:1:3.1.2-2.1build1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-&package-id=e33d6507841145cc",
+            "name": "libaudit1",
+            "purl": "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:3.1.2-2.1build1",
+            "cpe": "cpe:2.3:a:*:libaudit1:1:3.1.2-2.1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=80b4f224190ac613",
+            "name": "libblkid1",
+            "purl": "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:libblkid1:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=-&package-id=d3bd0ee861065488",
+            "name": "libbz2-1.0",
+            "purl": "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.0.8-5.1",
+            "cpe": "cpe:2.3:a:*:libbz2-1.0:1.0.8-5.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libc-bin@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=2f971981670ad34e",
+            "name": "libc-bin",
+            "purl": "pkg:deb/libc-bin@2.39-0ubuntu8.2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39-0ubuntu8.2",
+            "cpe": "cpe:2.3:a:*:libc-bin:2.39-0ubuntu8.2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+            "name": "libc6",
+            "purl": "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39-0ubuntu8.2",
+            "cpe": "cpe:2.3:a:*:libc6:2.39-0ubuntu8.2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=-&package-id=a13fb462cda1c132",
+            "name": "libcap-ng0",
+            "purl": "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "0.8.4-2build2",
+            "cpe": "cpe:2.3:a:*:libcap-ng0:0.8.4-2build2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=-&package-id=ce7eab6f7920387e",
+            "name": "libcap2",
+            "purl": "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:2.66-5ubuntu2",
+            "cpe": "cpe:2.3:a:*:libcap2:1:2.66-5ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=f89fb17c6678370f",
+            "name": "libcom-err2",
+            "purl": "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.47.0-2.4~exp1ubuntu4",
+            "cpe": "cpe:2.3:a:*:libcom-err2:1.47.0-2.4~exp1ubuntu4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=-&package-id=d092400c66d07b79",
+            "name": "libcrypt1",
+            "purl": "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:4.4.36-4build1",
+            "cpe": "cpe:2.3:a:*:libcrypt1:1:4.4.36-4build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libdb5.3t64@5.3.28+dfsg2-7?arch=amd64&distro=-&package-id=66e3fb7f5235dfa8",
+            "name": "libdb5.3t64",
+            "purl": "pkg:deb/libdb5.3t64@5.3.28+dfsg2-7?arch=amd64&distro=-",
+            "type": "library",
+            "version": "5.3.28+dfsg2-7",
+            "cpe": "cpe:2.3:a:*:libdb5.3t64:5.3.28+dfsg2-7:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=-&package-id=694893ef8f16a549",
+            "name": "libdebconfclient0",
+            "purl": "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "0.271ubuntu3",
+            "cpe": "cpe:2.3:a:*:libdebconfclient0:0.271ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libext2fs2t64@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=8c65a5bd281d39cd",
+            "name": "libext2fs2t64",
+            "purl": "pkg:deb/libext2fs2t64@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.47.0-2.4~exp1ubuntu4",
+            "cpe": "cpe:2.3:a:*:libext2fs2t64:1.47.0-2.4~exp1ubuntu4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libffi8@3.4.6-1build1?arch=amd64&distro=-&package-id=9694477638cd66b5",
+            "name": "libffi8",
+            "purl": "pkg:deb/libffi8@3.4.6-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.4.6-1build1",
+            "cpe": "cpe:2.3:a:*:libffi8:3.4.6-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c35fa31989c69de4",
+            "name": "libgcc-s1",
+            "purl": "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "14-20240412-0ubuntu1",
+            "cpe": "cpe:2.3:a:*:libgcc-s1:14-20240412-0ubuntu1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=-&package-id=dda60a0e4d6c19dd",
+            "name": "libgcrypt20",
+            "purl": "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.10.3-2build1",
+            "cpe": "cpe:2.3:a:*:libgcrypt20:1.10.3-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=-&package-id=e69e61defad954bf",
+            "name": "libgmp10",
+            "purl": "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2:6.3.0+dfsg-2ubuntu6",
+            "cpe": "cpe:2.3:a:*:libgmp10:2:6.3.0+dfsg-2ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=-&package-id=ba448460f4a31742",
+            "name": "libgnutls30t64",
+            "purl": "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.8.3-1.1ubuntu3.1",
+            "cpe": "cpe:2.3:a:*:libgnutls30t64:3.8.3-1.1ubuntu3.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=-&package-id=de5cb06c6e322d74",
+            "name": "libgpg-error0",
+            "purl": "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.47-3build2",
+            "cpe": "cpe:2.3:a:*:libgpg-error0:1.47-3build2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libhogweed6t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=1cd7934cfca4b5e8",
+            "name": "libhogweed6t64",
+            "purl": "pkg:deb/libhogweed6t64@3.9.1-2.2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.9.1-2.2build1",
+            "cpe": "cpe:2.3:a:*:libhogweed6t64:3.9.1-2.2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=-&package-id=7aac96b902b1a423",
+            "name": "libidn2-0",
+            "purl": "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.3.7-2build1",
+            "cpe": "cpe:2.3:a:*:libidn2-0:2.3.7-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=-&package-id=08e3493da4aee7d6",
+            "name": "liblz4-1",
+            "purl": "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.9.4-1build1",
+            "cpe": "cpe:2.3:a:*:liblz4-1:1.9.4-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=-&package-id=1c66368cd68b78f4",
+            "name": "liblzma5",
+            "purl": "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "5.6.1+really5.4.5-1",
+            "cpe": "cpe:2.3:a:*:liblzma5:5.6.1+really5.4.5-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libmd0@1.1.0-2build1?arch=amd64&distro=-&package-id=bc233696231b772e",
+            "name": "libmd0",
+            "purl": "pkg:deb/libmd0@1.1.0-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.1.0-2build1",
+            "cpe": "cpe:2.3:a:*:libmd0:1.1.0-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libmount1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=e182fd4213b64532",
+            "name": "libmount1",
+            "purl": "pkg:deb/libmount1@2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:libmount1:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libncursesw6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=7abe3dcd206439ce",
+            "name": "libncursesw6",
+            "purl": "pkg:deb/libncursesw6@6.4+20240113-1ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "6.4+20240113-1ubuntu2",
+            "cpe": "cpe:2.3:a:*:libncursesw6:6.4+20240113-1ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=985140bfc5338c3f",
+            "name": "libnettle8t64",
+            "purl": "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.9.1-2.2build1",
+            "cpe": "cpe:2.3:a:*:libnettle8t64:3.9.1-2.2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=-&package-id=4639c82626cb9901",
+            "name": "libnpth0t64",
+            "purl": "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.6-3.1build1",
+            "cpe": "cpe:2.3:a:*:libnpth0t64:1.6-3.1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libp11-kit0@0.25.3-4ubuntu2?arch=amd64&distro=-&package-id=2e234954d2518db0",
+            "name": "libp11-kit0",
+            "purl": "pkg:deb/libp11-kit0@0.25.3-4ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "0.25.3-4ubuntu2",
+            "cpe": "cpe:2.3:a:*:libp11-kit0:0.25.3-4ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=7c01923681876491",
+            "name": "libpam-modules",
+            "purl": "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.5.3-5ubuntu5.1",
+            "cpe": "cpe:2.3:a:*:libpam-modules:1.5.3-5ubuntu5.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam-modules-bin@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=05d9cf71535c0e7a",
+            "name": "libpam-modules-bin",
+            "purl": "pkg:deb/libpam-modules-bin@1.5.3-5ubuntu5.1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.5.3-5ubuntu5.1",
+            "cpe": "cpe:2.3:a:*:libpam-modules-bin:1.5.3-5ubuntu5.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam-runtime@1.5.3-5ubuntu5.1?arch=all&distro=-&package-id=fa968b7c1187b9bf",
+            "name": "libpam-runtime",
+            "purl": "pkg:deb/libpam-runtime@1.5.3-5ubuntu5.1?arch=all&distro=-",
+            "type": "library",
+            "version": "1.5.3-5ubuntu5.1",
+            "cpe": "cpe:2.3:a:*:libpam-runtime:1.5.3-5ubuntu5.1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=885629b65afcdf3b",
+            "name": "libpam0g",
+            "purl": "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.5.3-5ubuntu5.1",
+            "cpe": "cpe:2.3:a:*:libpam0g:1.5.3-5ubuntu5.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpcre2-8-0@10.42-4ubuntu2?arch=amd64&distro=-&package-id=96531873c95ca1c0",
+            "name": "libpcre2-8-0",
+            "purl": "pkg:deb/libpcre2-8-0@10.42-4ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "10.42-4ubuntu2",
+            "cpe": "cpe:2.3:a:*:libpcre2-8-0:10.42-4ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=-&package-id=3e491a133fe69df2",
+            "name": "libproc2-0",
+            "purl": "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2:4.0.4-4ubuntu3",
+            "cpe": "cpe:2.3:a:*:libproc2-0:2:4.0.4-4ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=-&package-id=70436b500b04ee61",
+            "name": "libseccomp2",
+            "purl": "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.5.5-1ubuntu3",
+            "cpe": "cpe:2.3:a:*:libseccomp2:2.5.5-1ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5",
+            "name": "libselinux1",
+            "purl": "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.5-2ubuntu2",
+            "cpe": "cpe:2.3:a:*:libselinux1:3.5-2ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsemanage-common@3.5-1build5?arch=all&distro=-&package-id=e92f7f7605c8cba5",
+            "name": "libsemanage-common",
+            "purl": "pkg:deb/libsemanage-common@3.5-1build5?arch=all&distro=-",
+            "type": "library",
+            "version": "3.5-1build5",
+            "cpe": "cpe:2.3:a:*:libsemanage-common:3.5-1build5:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=-&package-id=b006167fe1e9633c",
+            "name": "libsemanage2",
+            "purl": "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.5-1build5",
+            "cpe": "cpe:2.3:a:*:libsemanage2:3.5-1build5:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsepol2@3.5-2build1?arch=amd64&distro=-&package-id=f85f8eeab6229825",
+            "name": "libsepol2",
+            "purl": "pkg:deb/libsepol2@3.5-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.5-2build1",
+            "cpe": "cpe:2.3:a:*:libsepol2:3.5-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsmartcols1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=49bce4775bb2325f",
+            "name": "libsmartcols1",
+            "purl": "pkg:deb/libsmartcols1@2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:libsmartcols1:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libss2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=a368f09d18bd4619",
+            "name": "libss2",
+            "purl": "pkg:deb/libss2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.47.0-2.4~exp1ubuntu4",
+            "cpe": "cpe:2.3:a:*:libss2:1.47.0-2.4~exp1ubuntu4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libssl3t64@3.0.13-0ubuntu3.2?arch=amd64&distro=-&package-id=d1041641aadaea1f",
+            "name": "libssl3t64",
+            "purl": "pkg:deb/libssl3t64@3.0.13-0ubuntu3.2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.0.13-0ubuntu3.2",
+            "cpe": "cpe:2.3:a:*:libssl3t64:3.0.13-0ubuntu3.2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=1b983c65bd344471",
+            "name": "libstdc++6",
+            "purl": "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "14-20240412-0ubuntu1",
+            "cpe": "cpe:2.3:a:*:libstdc++6:14-20240412-0ubuntu1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863",
+            "name": "libsystemd0",
+            "purl": "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "255.4-1ubuntu8.2",
+            "cpe": "cpe:2.3:a:*:libsystemd0:255.4-1ubuntu8.2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=-&package-id=3acc9a03a03adb7d",
+            "name": "libtasn1-6",
+            "purl": "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "4.19.0-3build1",
+            "cpe": "cpe:2.3:a:*:libtasn1-6:4.19.0-3build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=67d32894b6f2391a",
+            "name": "libtinfo6",
+            "purl": "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "6.4+20240113-1ubuntu2",
+            "cpe": "cpe:2.3:a:*:libtinfo6:6.4+20240113-1ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=6ab8c7ad9d72968a",
+            "name": "libudev1",
+            "purl": "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "255.4-1ubuntu8.2",
+            "cpe": "cpe:2.3:a:*:libudev1:255.4-1ubuntu8.2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=-&package-id=2f4c7eb8289cdfcb",
+            "name": "libunistring5",
+            "purl": "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.1-2build1",
+            "cpe": "cpe:2.3:a:*:libunistring5:1.1-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libuuid1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=4bab1f68a223db50",
+            "name": "libuuid1",
+            "purl": "pkg:deb/libuuid1@2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:libuuid1:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=-&package-id=b3e00850301cbf0a",
+            "name": "libxxhash0",
+            "purl": "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "0.8.2-2build1",
+            "cpe": "cpe:2.3:a:*:libxxhash0:0.8.2-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=-&package-id=dbc8c06eb7b97f8d",
+            "name": "libzstd1",
+            "purl": "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.5.5+dfsg2-2build1",
+            "cpe": "cpe:2.3:a:*:libzstd1:1.5.5+dfsg2-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/login@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=-&package-id=784090265bfdd9db",
+            "name": "login",
+            "purl": "pkg:deb/login@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:4.13+dfsg1-4ubuntu3",
+            "cpe": "cpe:2.3:a:*:login:1:4.13+dfsg1-4ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/logsave@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=4d9b5ec42e038851",
+            "name": "logsave",
+            "purl": "pkg:deb/logsave@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.47.0-2.4~exp1ubuntu4",
+            "cpe": "cpe:2.3:a:*:logsave:1.47.0-2.4~exp1ubuntu4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/mawk@1.3.4.20240123-1build1?arch=amd64&distro=-&package-id=aadb802e6a70f8e8",
+            "name": "mawk",
+            "purl": "pkg:deb/mawk@1.3.4.20240123-1build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.3.4.20240123-1build1",
+            "cpe": "cpe:2.3:a:*:mawk:1.3.4.20240123-1build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "interpreters"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/mount@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=1c8de4956741ee64",
+            "name": "mount",
+            "purl": "pkg:deb/mount@2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:mount:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/ncurses-base@6.4+20240113-1ubuntu2?arch=all&distro=-&package-id=1c6ba8499b50bf63",
+            "name": "ncurses-base",
+            "purl": "pkg:deb/ncurses-base@6.4+20240113-1ubuntu2?arch=all&distro=-",
+            "type": "library",
+            "version": "6.4+20240113-1ubuntu2",
+            "cpe": "cpe:2.3:a:*:ncurses-base:6.4+20240113-1ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "misc"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/ncurses-bin@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=ea556a4c62a3530a",
+            "name": "ncurses-bin",
+            "purl": "pkg:deb/ncurses-bin@6.4+20240113-1ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "6.4+20240113-1ubuntu2",
+            "cpe": "cpe:2.3:a:*:ncurses-bin:6.4+20240113-1ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/passwd@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=-&package-id=1752b9f432da54bc",
+            "name": "passwd",
+            "purl": "pkg:deb/passwd@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:4.13+dfsg1-4ubuntu3",
+            "cpe": "cpe:2.3:a:*:passwd:1:4.13+dfsg1-4ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/perl-base@5.38.2-3.2build2?arch=amd64&distro=-&package-id=d36689f9103a5cc7",
+            "name": "perl-base",
+            "purl": "pkg:deb/perl-base@5.38.2-3.2build2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "5.38.2-3.2build2",
+            "cpe": "cpe:2.3:a:*:perl-base:5.38.2-3.2build2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "perl"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/procps@2:4.0.4-4ubuntu3?arch=amd64&distro=-&package-id=f51f68420087141a",
+            "name": "procps",
+            "purl": "pkg:deb/procps@2:4.0.4-4ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2:4.0.4-4ubuntu3",
+            "cpe": "cpe:2.3:a:*:procps:2:4.0.4-4ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/sed@4.9-2build1?arch=amd64&distro=-&package-id=98ccc84f25ed7070",
+            "name": "sed",
+            "purl": "pkg:deb/sed@4.9-2build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "4.9-2build1",
+            "cpe": "cpe:2.3:a:*:sed:4.9-2build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/sensible-utils@0.0.22?arch=all&distro=-&package-id=405e89d479c7bac9",
+            "name": "sensible-utils",
+            "purl": "pkg:deb/sensible-utils@0.0.22?arch=all&distro=-",
+            "type": "library",
+            "version": "0.0.22",
+            "cpe": "cpe:2.3:a:*:sensible-utils:0.0.22:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/sysvinit-utils@3.08-6ubuntu3?arch=amd64&distro=-&package-id=a55e4e81cd36758a",
+            "name": "sysvinit-utils",
+            "purl": "pkg:deb/sysvinit-utils@3.08-6ubuntu3?arch=amd64&distro=-",
+            "type": "library",
+            "version": "3.08-6ubuntu3",
+            "cpe": "cpe:2.3:a:*:sysvinit-utils:3.08-6ubuntu3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/tar@1.35+dfsg-3build1?arch=amd64&distro=-&package-id=b2f6c95e0feb6c19",
+            "name": "tar",
+            "purl": "pkg:deb/tar@1.35+dfsg-3build1?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1.35+dfsg-3build1",
+            "cpe": "cpe:2.3:a:*:tar:1.35+dfsg-3build1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/ubuntu-keyring@2023.11.28.1?arch=all&distro=-&package-id=22b22f0f99b54c02",
+            "name": "ubuntu-keyring",
+            "purl": "pkg:deb/ubuntu-keyring@2023.11.28.1?arch=all&distro=-",
+            "type": "library",
+            "version": "2023.11.28.1",
+            "cpe": "cpe:2.3:a:*:ubuntu-keyring:2023.11.28.1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Dimitri John Ledkov <dimitri.ledkov@canonical.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "misc"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/util-linux@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=a2652eadc2c42728",
+            "name": "util-linux",
+            "purl": "pkg:deb/util-linux@2.39.3-9ubuntu6?arch=amd64&distro=-",
+            "type": "library",
+            "version": "2.39.3-9ubuntu6",
+            "cpe": "cpe:2.3:a:*:util-linux:2.39.3-9ubuntu6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=-&package-id=005a133229ce7799",
+            "name": "zlib1g",
+            "purl": "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=-",
+            "type": "library",
+            "version": "1:1.3.dfsg-3.1ubuntu2",
+            "cpe": "cpe:2.3:a:*:zlib1g:1:1.3.dfsg-3.1ubuntu2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "pkg:deb/libsepol2@3.5-2build1?arch=amd64&distro=-&package-id=f85f8eeab6229825",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-&package-id=e33d6507841145cc",
+            "dependsOn": [
+                "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=-&package-id=a13fb462cda1c132",
+                "pkg:deb/libaudit-common@1:3.1.2-2.1build1?arch=all&distro=-&package-id=e87f4a90e4516988",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc-bin@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=2f971981670ad34e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libmount1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=e182fd4213b64532",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5",
+                "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=80b4f224190ac613"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libp11-kit0@0.25.3-4ubuntu2?arch=amd64&distro=-&package-id=2e234954d2518db0",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libffi8@3.4.6-1build1?arch=amd64&distro=-&package-id=9694477638cd66b5"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-runtime@1.5.3-5ubuntu5.1?arch=all&distro=-&package-id=fa968b7c1187b9bf",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=-&package-id=f9c21bb9f2ad2846",
+                "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=7c01923681876491"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=-&package-id=ce7eab6f7920387e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=-&package-id=2f4c7eb8289cdfcb",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=-&package-id=5002d823c0a16c7a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=-&package-id=d092400c66d07b79"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863",
+            "dependsOn": [
+                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=-&package-id=dda60a0e4d6c19dd",
+                "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=-&package-id=08e3493da4aee7d6",
+                "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=-&package-id=1c66368cd68b78f4",
+                "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=-&package-id=dbc8c06eb7b97f8d",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=-&package-id=ce7eab6f7920387e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libuuid1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=4bab1f68a223db50",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=f89fb17c6678370f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdb5.3t64@5.3.28+dfsg2-7?arch=amd64&distro=-&package-id=66e3fb7f5235dfa8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c35fa31989c69de4",
+            "dependsOn": [
+                "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c1b88cdf9aa210b1",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=-&package-id=08e3493da4aee7d6",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libncursesw6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=7abe3dcd206439ce",
+            "dependsOn": [
+                "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=67d32894b6f2391a",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/bash@5.2.21-2ubuntu4?arch=amd64&distro=-&package-id=01726d7c6caaff40",
+            "dependsOn": [
+                "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=-&package-id=5002d823c0a16c7a",
+                "pkg:deb/debianutils@5.17build1?arch=amd64&distro=-&package-id=e7d2b9bacd79c494"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dash@0.5.12-6ubuntu5?arch=amd64&distro=-&package-id=2c276a34c6be79be",
+            "dependsOn": [
+                "pkg:deb/debianutils@5.17build1?arch=amd64&distro=-&package-id=e7d2b9bacd79c494",
+                "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=-&package-id=0be6360e0e949445"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=-&package-id=d3bd0ee861065488",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=-&package-id=b006167fe1e9633c",
+            "dependsOn": [
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5",
+                "pkg:deb/libsepol2@3.5-2build1?arch=amd64&distro=-&package-id=f85f8eeab6229825",
+                "pkg:deb/libsemanage-common@3.5-1build5?arch=all&distro=-&package-id=e92f7f7605c8cba5",
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-&package-id=e33d6507841145cc",
+                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=-&package-id=d3bd0ee861065488",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=-&package-id=b3e00850301cbf0a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsmartcols1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=49bce4775bb2325f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gzip@1.12-1ubuntu3?arch=amd64&distro=-&package-id=faf1e02840817840",
+            "dependsOn": [
+                "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=-&package-id=0be6360e0e949445"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=-&package-id=a13fb462cda1c132",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libmd0@1.1.0-2build1?arch=amd64&distro=-&package-id=bc233696231b772e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/sysvinit-utils@3.08-6ubuntu3?arch=amd64&distro=-&package-id=a55e4e81cd36758a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=-&package-id=005a133229ce7799",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=-&package-id=0be6360e0e949445",
+            "dependsOn": [
+                "pkg:deb/tar@1.35+dfsg-3build1?arch=amd64&distro=-&package-id=b2f6c95e0feb6c19"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=-&package-id=51170bad8ff34825",
+            "dependsOn": [
+                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=-&package-id=de5cb06c6e322d74",
+                "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=-&package-id=4639c82626cb9901",
+                "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=-&package-id=005a133229ce7799",
+                "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=-&package-id=8bf0133d7bfe8557",
+                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=-&package-id=d3bd0ee861065488",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=-&package-id=dda60a0e4d6c19dd"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=-&package-id=8bf0133d7bfe8557",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=-&package-id=de5cb06c6e322d74"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=-&package-id=1c66368cd68b78f4",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/mawk@1.3.4.20240123-1build1?arch=amd64&distro=-&package-id=aadb802e6a70f8e8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=-&package-id=e69e61defad954bf",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=-&package-id=7aac96b902b1a423",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=-&package-id=2f4c7eb8289cdfcb"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=-&package-id=dbc8c06eb7b97f8d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libhogweed6t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=1cd7934cfca4b5e8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=-&package-id=e69e61defad954bf",
+                "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=985140bfc5338c3f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=-&package-id=70436b500b04ee61",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=1b983c65bd344471",
+            "dependsOn": [
+                "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c1b88cdf9aa210b1",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c35fa31989c69de4"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=-&package-id=b7c073d391fd039c",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=-&package-id=dda60a0e4d6c19dd",
+                "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=-&package-id=08e3493da4aee7d6",
+                "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=1b983c65bd344471",
+                "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=-&package-id=b3e00850301cbf0a",
+                "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=-&package-id=dbc8c06eb7b97f8d",
+                "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=-&package-id=005a133229ce7799",
+                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=-&package-id=d3bd0ee861065488",
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c35fa31989c69de4",
+                "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=-&package-id=1c66368cd68b78f4",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863",
+                "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=6ab8c7ad9d72968a"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=-&package-id=d092400c66d07b79",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libssl3t64@3.0.13-0ubuntu3.2?arch=amd64&distro=-&package-id=d1041641aadaea1f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=-&package-id=de5cb06c6e322d74",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/procps@2:4.0.4-4ubuntu3?arch=amd64&distro=-&package-id=f51f68420087141a",
+            "dependsOn": [
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863",
+                "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=67d32894b6f2391a",
+                "pkg:deb/init-system-helpers@1.66ubuntu1?arch=all&distro=-&package-id=e300c2a95b05d726",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libncursesw6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=7abe3dcd206439ce",
+                "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=-&package-id=3e491a133fe69df2"
+            ]
+        },
+        {
+            "ref": "pkg:deb/e2fsprogs@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=eef75bc4169e1546",
+            "dependsOn": [
+                "pkg:deb/logsave@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=4d9b5ec42e038851"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=-&package-id=dda60a0e4d6c19dd",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=-&package-id=de5cb06c6e322d74"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=-&package-id=ba448460f4a31742",
+            "dependsOn": [
+                "pkg:deb/libhogweed6t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=1cd7934cfca4b5e8",
+                "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=-&package-id=7aac96b902b1a423",
+                "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=985140bfc5338c3f",
+                "pkg:deb/libp11-kit0@0.25.3-4ubuntu2?arch=amd64&distro=-&package-id=2e234954d2518db0",
+                "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=-&package-id=3acc9a03a03adb7d",
+                "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=-&package-id=2f4c7eb8289cdfcb",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=-&package-id=e69e61defad954bf"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=-&package-id=694893ef8f16a549",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libffi8@3.4.6-1build1?arch=amd64&distro=-&package-id=9694477638cd66b5",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/logsave@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=4d9b5ec42e038851",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=-&package-id=3acc9a03a03adb7d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/passwd@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=-&package-id=1752b9f432da54bc",
+            "dependsOn": [
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5",
+                "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=-&package-id=b006167fe1e9633c",
+                "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=7c01923681876491",
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=-&package-id=d092400c66d07b79",
+                "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=885629b65afcdf3b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libacl1@2.3.2-1build1?arch=amd64&distro=-&package-id=cdcbb7766873ea91",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libattr1@1:2.5.2-1build1?arch=amd64&distro=-&package-id=d0bc3406133de03c",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c35fa31989c69de4"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpcre2-8-0@10.42-4ubuntu2?arch=amd64&distro=-&package-id=96531873c95ca1c0",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=-&package-id=dd74da63308f3d05",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=-&package-id=694893ef8f16a549",
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=-&package-id=985140bfc5338c3f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libpcre2-8-0@10.42-4ubuntu2?arch=amd64&distro=-&package-id=96531873c95ca1c0"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=-&package-id=80b4f224190ac613",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=885629b65afcdf3b",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=-&package-id=f9c21bb9f2ad2846"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=-&package-id=67d32894b6f2391a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=6ab8c7ad9d72968a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=-&package-id=ce7eab6f7920387e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=-&package-id=4639c82626cb9901",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-modules-bin@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=05d9cf71535c0e7a",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=-&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=-&package-id=d092400c66d07b79",
+                "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=-&package-id=885629b65afcdf3b",
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=-&package-id=73966470f861aee5",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=-&package-id=3e491a133fe69df2",
+            "dependsOn": [
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/apt@2.7.14build2?arch=amd64&distro=-&package-id=54ce0451b65ed519",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=c35fa31989c69de4",
+                "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=-&package-id=1b983c65bd344471",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=-&package-id=87f18c2c378de863",
+                "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=-&package-id=b7c073d391fd039c",
+                "pkg:deb/ubuntu-keyring@2023.11.28.1?arch=all&distro=-&package-id=22b22f0f99b54c02",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606",
+                "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=-&package-id=70436b500b04ee61",
+                "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=-&package-id=dd74da63308f3d05",
+                "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=-&package-id=51170bad8ff34825",
+                "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=-&package-id=ba448460f4a31742"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libext2fs2t64@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=8c65a5bd281d39cd",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libss2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=a368f09d18bd4619",
+            "dependsOn": [
+                "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=-&package-id=f89fb17c6678370f",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=-&package-id=baf9cd384131e606"
+            ]
+        }
+    ]
+}

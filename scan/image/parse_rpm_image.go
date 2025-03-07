@@ -2,9 +2,12 @@ package image
 
 import (
 	"bytes"
+	"crypto/sha1"
 	"database/sql"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"io"
 	"os"
 	"path/filepath"
 	pkg "slp/package"
@@ -45,11 +48,12 @@ type outputSBOM struct {
 	Dependencies []DependencyOutput `json:"dependencies,omitempty"`
 }
 
-// ScanResult 用于内部处理中间结果
+// ScanResult 存储扫描结果
 type ScanResult struct {
-	Kernel     *pkg.LinuxKernel        `json:"kernel,omitempty"`
-	Packages   *pkg.Pkg                `json:"packages,omitempty"`
-	PackageMap map[string]*PackageInfo `json:"package_map,omitempty"` // 添加包映射字段
+	Kernel      *pkg.LinuxKernel        `json:"kernel,omitempty"`
+	Packages    *pkg.Pkg                `json:"packages,omitempty"`
+	PackageMap  map[string]*PackageInfo `json:"package_map,omitempty"` // 添加包映射字段
+	AllPackages []*pkg.Metadata         `json:"-"`                     // 存储所有包的元数据，不输出到JSON
 }
 
 // PackageInfo 存储软件包信息用于依赖分析
@@ -60,21 +64,19 @@ type PackageInfo struct {
 	Depends  []string // 包依赖的功能
 }
 
-// 全局包信息映射，用于存储所有包的依赖和提供信息
-var globalPackageInfoMap map[string]*PackageInfo
+// 全局变量定义
+var (
+	globalPackageInfoMap  map[string]*PackageInfo // 全局包信息映射
+	allDiscoveredPackages []*pkg.Metadata         // 存储所有发现的包信息
+)
 
 func init() {
 	// 初始化全局变量
 	globalPackageInfoMap = make(map[string]*PackageInfo)
+	allDiscoveredPackages = make([]*pkg.Metadata, 0)
 }
 
-// ParseImageFile 解析Docker镜像并生成SBOM
 func ParseImageFile(path string) error {
-	return ParseImageFileWithOutput(path, "")
-}
-
-// ParseImageFileWithOutput 解析Docker镜像并生成SBOM，可以指定输出文件名
-func ParseImageFileWithOutput(path string, outputFilename string) error {
 	// 检查 docker image 是否存在
 	_, err := scan_utils.RunCommand("docker", "inspect", path)
 	if err != nil {
@@ -153,6 +155,9 @@ func ParseImageFileWithOutput(path string, outputFilename string) error {
 	case "debian", "ubuntu": // Debian/Ubuntu使用相同的路径
 		dbPath = "/var/lib/dpkg/status"
 		targetPath = filepath.Join(tmpDir, "dpkg-status")
+
+		// 对于Ubuntu/Debian，用一个更宽松的安装状态判断条件
+		fmt.Println("Debian/Ubuntu系统：使用dpkg status文件进行扫描")
 	case "fedora": // Fedora
 		dbPath = "/var/lib/rpm/rpmdb.sqlite"
 		targetPath = filepath.Join(tmpDir, "rpmdb.sqlite")
@@ -210,15 +215,23 @@ func ParseImageFileWithOutput(path string, outputFilename string) error {
 		return fmt.Errorf("解析包管理数据库失败: %v", err)
 	}
 
-	// 组合扫描结果
-	result := &ScanResult{
-		Kernel:     kernelInfo,
-		Packages:   pkgInfo,
-		PackageMap: globalPackageInfoMap, // 使用全局变量
+	// 创建扫描结果结构体
+	scanResult := &ScanResult{
+		Kernel:      kernelInfo,
+		Packages:    pkgInfo,
+		PackageMap:  globalPackageInfoMap,  // 使用全局变量
+		AllPackages: allDiscoveredPackages, // 使用全局包数组
 	}
 
+	// 输出诊断信息，检查软件包数量
+	fmt.Printf("==== 诊断信息 ====\n")
+	fmt.Printf("全局包列表大小: %d\n", len(allDiscoveredPackages))
+	fmt.Printf("全局映射大小: %d\n", len(globalPackageInfoMap))
+	fmt.Printf("scanResult.AllPackages大小: %d\n", len(scanResult.AllPackages))
+	fmt.Printf("===============\n")
+
 	// 将结果转换为SBOM格式
-	sbomOutput := convertToSBOMFormat(result)
+	sbomOutput := convertToSBOMFormat(scanResult)
 
 	// 使用自定义编码器来避免转义URL中的&字符
 	buffer := &bytes.Buffer{}
@@ -229,10 +242,8 @@ func ParseImageFileWithOutput(path string, outputFilename string) error {
 		return fmt.Errorf("转换JSON失败: %v", err)
 	}
 
-	// 如果没有指定输出文件名，则使用默认格式生成
-	if outputFilename == "" {
-		outputFilename = fmt.Sprintf("sbom_result_%s.json", time.Now().Format("20060102_150405"))
-	}
+	// 正确定义输出文件名
+	outputFilename := fmt.Sprintf("sbom_result_%s.json", time.Now().Format("20060102_150405"))
 
 	// 创建输出文件
 	err = os.WriteFile(outputFilename, buffer.Bytes(), 0644)
@@ -246,17 +257,34 @@ func ParseImageFileWithOutput(path string, outputFilename string) error {
 
 // parseDpkgStatus 解析 Ubuntu/Debian 的 dpkg status 文件
 func parseDpkgStatus(filePath string) (*pkg.Pkg, error) {
-	// 读取 status 文件内容
 	content, err := os.ReadFile(filePath)
 	if err != nil {
 		return nil, fmt.Errorf("读取dpkg status文件失败: %v", err)
 	}
 
-	fmt.Println("开始解析 Debian/Ubuntu 包信息...")
+	// 直接使用字符串读取，确保处理所有包
+	contentStr := string(content)
+	fmt.Printf("status文件大小: %d 字节\n", len(contentStr))
 
-	var totalPackages int
-	var processedPackages int
+	// 按"Package: "前缀分割，更准确地分隔每个包
+	// 先用一个特殊标记替换所有"Package: "，然后按这个标记分割
+	// 由于第一个包前面也有"Package: "，我们先加一个标记以保留
+	specialMarker := "###PACKAGE_MARKER###"
+	markedContent := strings.Replace(contentStr, "Package: ", specialMarker+"Package: ", -1)
 
+	// 分割后的包块
+	pkgBlocks := strings.Split(markedContent, specialMarker)
+	// 第一个元素是空的，因为文件开头就有"Package: "，去掉它
+	if len(pkgBlocks) > 0 && pkgBlocks[0] == "" {
+		pkgBlocks = pkgBlocks[1:]
+	}
+
+	fmt.Printf("找到 %d 个软件包信息块\n", len(pkgBlocks))
+
+	// 清空全局包列表
+	allDiscoveredPackages = make([]*pkg.Metadata, 0)
+
+	// 创建主包对象
 	pkgInfo := &pkg.Pkg{
 		Metadata: &pkg.Metadata{
 			Lifecycle: pkg.InstalledLifecycle,
@@ -264,33 +292,54 @@ func parseDpkgStatus(filePath string) (*pkg.Pkg, error) {
 		Depends: &[]pkg.Depend{},
 	}
 
-	// 创建一个包数组用于存储所有包
-	packages := strings.Split(string(content), "\n\n")
-	totalPackages = len(packages)
-	fmt.Printf("发现 %d 个软件包\n", totalPackages)
+	// 是否设置了主包
+	hasSetMainPackage := false
 
-	// 创建一个包集合来存储所有找到的包
-	allPackages := []*pkg.Metadata{}
+	// 依赖关系数组
+	var allDependencies []pkg.Depend
 
-	for _, pkgContent := range packages {
-		if strings.TrimSpace(pkgContent) == "" {
+	// 已经处理过的包名，避免重复
+	processedPackages := make(map[string]bool)
+
+	// 在函数开始处添加
+	defer func() {
+		// 输出解析结果统计信息
+		fmt.Printf("状态文件解析完成：\n")
+		fmt.Printf("  - 发现包信息块: %d\n", len(pkgBlocks))
+		fmt.Printf("  - 成功解析的包: %d\n", len(allDiscoveredPackages))
+		fmt.Printf("  - 依赖关系数量: %d\n", len(allDependencies))
+	}()
+
+	// 在解析包信息块的循环中添加计数器
+	totalBlocks := len(pkgBlocks)
+	parsedCount := 0
+	skippedCount := 0
+
+	// 处理每个软件包信息块
+	for _, block := range pkgBlocks {
+		if strings.TrimSpace(block) == "" {
 			continue
 		}
 
 		// 解析包信息
 		info := make(map[string]string)
 		var lastKey string
-		for _, line := range strings.Split(pkgContent, "\n") {
+		var pkgName string
+
+		lines := strings.Split(block, "\n")
+		for _, line := range lines {
 			if strings.TrimSpace(line) == "" {
 				continue
 			}
+
 			if strings.HasPrefix(line, " ") {
-				// 多行字段的延续
+				// 多行字段的续行
 				if lastKey != "" {
 					info[lastKey] += "\n" + strings.TrimSpace(line)
 				}
 				continue
 			}
+
 			parts := strings.SplitN(line, ":", 2)
 			if len(parts) != 2 {
 				continue
@@ -299,67 +348,173 @@ func parseDpkgStatus(filePath string) (*pkg.Pkg, error) {
 			value := strings.TrimSpace(parts[1])
 			info[key] = value
 			lastKey = key
+
+			// 特别记录包名
+			if key == "Package" {
+				pkgName = value
+			}
 		}
 
-		// 只处理有 Package 字段的条目
-		if name, ok := info["Package"]; ok {
-			processedPackages++
+		// 检查是否已经处理过这个包
+		if processedPackages[pkgName] {
+			fmt.Printf("警告: 重复的包 %s 被跳过\n", pkgName)
+			skippedCount++
+			continue
+		}
+
+		// 检查是否已安装的状态
+		status, ok := info["Status"]
+		if !ok {
+			skippedCount++
+			continue
+		}
+
+		// Debian/Ubuntu的status字段通常是"install ok installed"，但我们使用更宽松的条件
+		// 只要字段中包含"installed"，并且不包含"not-installed"或"config-files"就视为已安装
+		if !strings.Contains(status, "installed") ||
+			strings.Contains(status, "not-installed") ||
+			strings.Contains(status, "config-files") {
+			skippedCount++
+			continue
+		}
+
+		// 处理有包名称的条目
+		if pkgName != "" {
+			// 标记为已处理
+			processedPackages[pkgName] = true
+
+			// 创建元数据
 			metadata := &pkg.Metadata{
-				Name:         name,
+				Name:         pkgName,
 				Version:      info["Version"],
 				Architecture: info["Architecture"],
 				Description:  info["Description"],
 				Maintainer:   info["Maintainer"],
 				Section:      info["Section"],
-				SourcePkg:    info["Source"],
 				Priority:     info["Priority"],
+				SourcePkg:    info["Source"],
+				Lifecycle:    pkg.InstalledLifecycle,
+				License:      []string{}, // 设置为空数组，而不是尝试解析
 			}
 
-			// 添加许可证信息（如果有）
-			if lic, ok := info["License"]; ok {
-				metadata.License = []string{lic}
+			// 生成CPE
+			metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", pkgName, metadata.Version)
+
+			// 生成PURL
+			_, distro := parseOsInfo("/etc/os-release") // 从OS信息获取发行版
+			metadata.PURL = fmt.Sprintf("pkg:deb/%s@%s?arch=%s&distro=%s", pkgName, metadata.Version, metadata.Architecture, distro)
+
+			// 生成BOMRef和包ID
+			packageId := generatePackageId(pkgName, metadata.Version)
+			metadata.BomRef = fmt.Sprintf("pkg:deb/%s@%s?arch=%s&distro=%s&package-id=%s",
+				pkgName, metadata.Version, metadata.Architecture, distro, packageId)
+
+			// 处理Provides字段
+			var packageProvides []string
+			if provides, ok := info["Provides"]; ok && provides != "" {
+				// 解析Provides字段
+				providesList := strings.Split(provides, ",")
+				for _, provide := range providesList {
+					provide = strings.TrimSpace(provide)
+					if provide != "" {
+						// 处理可能的版本限定等
+						provideParts := strings.Split(provide, " ")
+						packageProvides = append(packageProvides, provideParts[0])
+					}
+				}
 			}
 
-			// 生成 CPE
-			metadata.CPE = fmt.Sprintf("cpe:2.3:a:*:%s:%s:*:*:*:*:*:*:*", metadata.Name, metadata.Version)
+			// 提取依赖信息
+			var packageDepends []string
+			if depends, ok := info["Depends"]; ok && depends != "" {
+				// 解析Depends字段，格式通常为: pkg1, pkg2 (>= 1.0) | pkg3, ...
+				deps := strings.Split(depends, ",")
+				for _, dep := range deps {
+					dep = strings.TrimSpace(dep)
+					if dep == "" {
+						continue
+					}
 
-			// 获取系统信息并生成 PURL
-			namespace, distro := parseOsInfo(info["Version"]) // 从版本信息推断发行版
-			purl := pkg.RpmPackageURL(packageurl.TypeDebian, namespace, metadata.Name, metadata.Architecture, metadata.SourcePkg, metadata.Version, "", distro)
-			metadata.PURL = purl
-
-			// 生成 BOMRef
-			bomRef, err := pkg.GetBomRef(purl, struct {
-				Name         string
-				Version      string
-				Architecture string
-				timestamp    time.Time
-			}{
-				Name:         metadata.Name,
-				Version:      metadata.Version,
-				Architecture: metadata.Architecture,
-				timestamp:    time.Now(),
-			}, "package-id")
-			if err != nil {
-				return nil, fmt.Errorf("生成BOMRef失败: %v", err)
+					// 提取基本包名（去除版本和其他条件）
+					depParts := strings.Split(dep, " ")
+					if len(depParts) > 0 {
+						// 处理可选依赖 (包含 | 符号)
+						alternatives := strings.Split(depParts[0], "|")
+						for _, alt := range alternatives {
+							altName := strings.TrimSpace(alt)
+							if altName != "" {
+								packageDepends = append(packageDepends, altName)
+							}
+						}
+					}
+				}
 			}
-			metadata.BomRef = bomRef
 
-			// 将包添加到集合
-			allPackages = append(allPackages, metadata)
+			// 添加到全局包信息映射
+			packageInfo := &PackageInfo{
+				BOMRef:   metadata.BomRef,
+				Name:     pkgName,
+				Depends:  packageDepends,  // 保存依赖列表
+				Provides: packageProvides, // 保存提供列表
+			}
+			globalPackageInfoMap[pkgName] = packageInfo
 
-			fmt.Printf("解析到软件包: %s (版本: %s)\n", metadata.Name, metadata.Version)
+			// 添加到全局包列表
+			allDiscoveredPackages = append(allDiscoveredPackages, metadata)
+
+			// 为此包创建依赖对象
+			if len(packageDepends) > 0 {
+				depObj := pkg.Depend{
+					Metadata: pkg.Metadata{
+						Name:    pkgName,
+						Version: metadata.Version,
+						BomRef:  metadata.BomRef,
+					},
+					DebDependType: "Depends",
+				}
+				allDependencies = append(allDependencies, depObj)
+			}
+
+			// 如果还没有设置主包，则设置第一个找到的包为主包
+			if !hasSetMainPackage {
+				pkgInfo.Metadata = metadata
+				hasSetMainPackage = true
+			}
+		}
+
+		// 在循环内部，处理每个块之后
+		parsedCount++
+		if parsedCount%100 == 0 || parsedCount == totalBlocks {
+			fmt.Printf("  已处理 %d/%d 个块 (已解析: %d, 已跳过: %d)\n",
+				parsedCount, totalBlocks, len(allDiscoveredPackages), skippedCount)
 		}
 	}
 
-	// 设置第一个包为主包
-	if len(allPackages) > 0 {
-		pkgInfo.Metadata = allPackages[0]
+	// 在函数结束前，检查解析数量
+	if len(allDiscoveredPackages) < 500 && totalBlocks > 500 {
+		fmt.Printf("警告：解析的包数量(%d)远小于预期(%d)\n",
+			len(allDiscoveredPackages), totalBlocks)
 	}
 
-	fmt.Printf("成功处理 %d 个软件包中的 %d 个\n", totalPackages, processedPackages)
+	// 如果没有找到包，可能是解析问题
+	if len(allDiscoveredPackages) == 0 {
+		return nil, fmt.Errorf("没有解析到任何软件包信息")
+	}
+
+	// 设置依赖关系
+	*pkgInfo.Depends = allDependencies
+
+	fmt.Printf("成功解析了 %d 个 Debian 软件包, 包含 %d 个依赖关系\n",
+		len(allDiscoveredPackages), len(allDependencies))
 
 	return pkgInfo, nil
+}
+
+// 生成一个简单的包ID
+func generatePackageId(name string, version string) string {
+	h := sha1.New()
+	io.WriteString(h, name+version)
+	return hex.EncodeToString(h.Sum(nil)[:8])
 }
 
 // parseRpmSqlite 解析 Fedora 的 rpmdb.sqlite 文件
@@ -755,80 +910,89 @@ func createTempContainer(imageName string) (string, error) {
 
 // convertToSBOMFormat 将扫描结果转换为SBOM格式
 func convertToSBOMFormat(result *ScanResult) *outputSBOM {
+	// 创建SBOM输出结构
 	sbom := &outputSBOM{
 		Components:   []ComponentOutput{},
 		Dependencies: []DependencyOutput{},
 	}
 
-	// 添加内核信息作为组件
+	// 添加内核组件
 	if result.Kernel != nil {
-		// 为内核创建一个结构体以输出特定的格式，调整字段顺序
-		kernelComponent := ComponentOutput{
-			BOMRef:       result.Kernel.BomRef,
-			Name:         result.Kernel.Name,
-			Version:      result.Kernel.Version,
+		component := ComponentOutput{
+			BOMRef:       fmt.Sprintf("pkg:kernel/linux@%s?arch=%s", result.Kernel.Version, result.Kernel.Architecture),
+			Name:         fmt.Sprintf("linux-%s", result.Kernel.Version),
 			Type:         "linux_kernel",
+			Version:      result.Kernel.Version,
 			Architecture: result.Kernel.Architecture,
-			BuildTime:    result.Kernel.BuildTime,
+			BuildTime:    parseBuildTime(result.Kernel.BuildTime),
 		}
+		sbom.Components = append(sbom.Components, component)
+	}
 
-		// 添加可选的编译器信息
-		if result.Kernel.Compiler != "" {
-			kernelComponent.Properties = []map[string]string{
-				{
-					"name":  "compiler",
-					"value": result.Kernel.Compiler,
-				},
+	// 添加组件前记录初始大小
+	initialSize := len(sbom.Components)
+	fmt.Printf("开始处理软件包，初始组件数量: %d\n", initialSize)
+
+	// 处理所有软件包 - 先使用AllPackages字段
+	if result.AllPackages != nil && len(result.AllPackages) > 0 {
+		fmt.Printf("处理 %d 个全局软件包...\n", len(result.AllPackages))
+
+		// 遍历所有包并添加到SBOM，每100个包打印一次日志
+		batchSize := 100
+		batchCount := 0
+
+		for i, metadata := range result.AllPackages {
+			component := createPackageComponent(metadata)
+			sbom.Components = append(sbom.Components, component)
+
+			batchCount++
+			if batchCount >= batchSize {
+				fmt.Printf("  已处理 %d/%d 个包...\n", i+1, len(result.AllPackages))
+				batchCount = 0
 			}
 		}
 
-		sbom.Components = append(sbom.Components, kernelComponent)
-	}
+		// 添加组件后检查大小
+		addedComponents := len(sbom.Components) - initialSize
+		fmt.Printf("添加了 %d 个软件包组件 (期望 %d 个)\n",
+			addedComponents, len(result.AllPackages))
 
-	fmt.Println("\n开始将软件包信息转换为SBOM格式...")
-
-	// 处理所有软件包和依赖
-	if result.Packages != nil {
-		// 为每个组件创建BOMRef到组件的映射，用于后续处理依赖关系
-		bomRefToComponent := make(map[string]int)
-
-		// 添加主包
-		if result.Packages.Metadata != nil {
-			pkgComponent := createPackageComponent(result.Packages.Metadata)
-			sbom.Components = append(sbom.Components, pkgComponent)
-			fmt.Printf("添加主包到SBOM: %s\n", result.Packages.Metadata.Name)
-
-			// 保存BOMRef到组件索引的映射
-			bomRefToComponent[pkgComponent.BOMRef] = len(sbom.Components) - 1
+		// 如果添加的组件数量少于预期，打印警告
+		if addedComponents < len(result.AllPackages) {
+			fmt.Printf("警告：有 %d 个软件包未被添加到组件列表\n",
+				len(result.AllPackages)-addedComponents)
 		}
+	} else if result.Packages != nil && result.Packages.Metadata != nil {
+		// 备用：使用packages.Metadata
+		fmt.Println("使用主包信息...")
 
-		// 添加依赖包
-		if result.Packages.Depends != nil && len(*result.Packages.Depends) > 0 {
-			fmt.Printf("添加 %d 个依赖包到SBOM\n", len(*result.Packages.Depends))
+		component := createPackageComponent(result.Packages.Metadata)
+		sbom.Components = append(sbom.Components, component)
+
+		// 处理依赖
+		if result.Packages.Depends != nil {
+			fmt.Println("处理包依赖信息...")
 			for _, dep := range *result.Packages.Depends {
-				// 显示所有依赖
-				fmt.Printf("  - 依赖: %s\n", dep.Metadata.Name)
-
-				depComponent := createDependencyComponent(&dep)
-				sbom.Components = append(sbom.Components, depComponent)
-
-				// 保存BOMRef到组件索引的映射
-				bomRefToComponent[depComponent.BOMRef] = len(sbom.Components) - 1
+				component := createDependencyComponent(&dep)
+				sbom.Components = append(sbom.Components, component)
 			}
-		} else {
-			fmt.Println("没有发现依赖包")
-		}
-
-		// 处理依赖关系
-		fmt.Println("\n开始建立软件包依赖关系...")
-		if len(result.PackageMap) > 0 {
-			processDependencies(sbom, result.PackageMap)
-		} else {
-			fmt.Println("警告: 未找到包依赖信息")
 		}
 	}
 
-	fmt.Printf("SBOM生成完成，共包含 %d 个组件\n", len(sbom.Components))
+	// 处理包之间的依赖关系
+	if result.PackageMap != nil && len(result.PackageMap) > 0 {
+		processDependencies(sbom, result.PackageMap)
+	}
+
+	fmt.Printf("SBOM生成完成，包含 %d 个组件和 %d 个依赖关系\n",
+		len(sbom.Components), len(sbom.Dependencies))
+
+	// 检查JSON输出大小
+	jsonBytes, err := json.Marshal(sbom)
+	if err == nil {
+		fmt.Printf("JSON大小: %.2f MB\n", float64(len(jsonBytes))/(1024*1024))
+	}
+
 	return sbom
 }
 
@@ -842,6 +1006,9 @@ func processDependencies(sbom *outputSBOM, pkgInfoMap map[string]*PackageInfo) {
 		for _, provide := range pkgInfo.Provides {
 			providesMap[provide] = append(providesMap[provide], pkgInfo.BOMRef)
 		}
+
+		// 对于Debian/Ubuntu包，包名本身也是一种"提供"
+		providesMap[pkgInfo.Name] = append(providesMap[pkgInfo.Name], pkgInfo.BOMRef)
 	}
 
 	// 处理每个包的依赖
@@ -899,54 +1066,62 @@ func processDependencies(sbom *outputSBOM, pkgInfoMap map[string]*PackageInfo) {
 
 // createPackageComponent 从软件包元数据创建组件
 func createPackageComponent(metadata *pkg.Metadata) ComponentOutput {
-	// 创建包组件并按特定顺序添加字段
-	pkgComponent := ComponentOutput{
-		BOMRef:  metadata.BomRef,
-		Name:    metadata.Name,
-		PURL:    metadata.PURL,
-		Type:    string(cyclonedx.ComponentTypeLibrary), // 使用标准类型常量
-		Version: metadata.Version,
+	// 创建基本组件信息
+	component := ComponentOutput{
+		BOMRef:       metadata.BomRef,
+		Name:         metadata.Name,
+		Type:         "library",
+		Version:      metadata.Version,
+		Architecture: metadata.Architecture,
+		CPE:          metadata.CPE,
 	}
 
-	// 添加可选字段
-	if metadata.CPE != "" {
-		pkgComponent.CPE = metadata.CPE
+	// 添加PURL
+	if metadata.PURL != "" {
+		component.PURL = metadata.PURL
 	}
 
+	// 添加属性
+	properties := []map[string]string{}
+
+	// 架构信息
 	if metadata.Architecture != "" {
-		pkgComponent.Architecture = metadata.Architecture
+		properties = append(properties, map[string]string{
+			"name":  "architecture",
+			"value": metadata.Architecture,
+		})
 	}
 
-	// 添加许可证信息（如果有）
-	if len(metadata.License) > 0 {
-		var licenses []map[string]interface{}
-		for _, lic := range metadata.License {
-			licenses = append(licenses, map[string]interface{}{
-				"license": map[string]string{
-					"name": lic,
-				},
-			})
-		}
-		pkgComponent.Licenses = licenses
-		fmt.Printf("为组件 %s 添加许可证信息: %v\n", metadata.Name, metadata.License)
-	} else {
-		fmt.Printf("组件 %s 没有许可证信息可添加\n", metadata.Name)
+	// 维护者信息
+	if metadata.Maintainer != "" {
+		properties = append(properties, map[string]string{
+			"name":  "maintainer",
+			"value": metadata.Maintainer,
+		})
 	}
 
-	// 使用cyclonedx属性
-	properties := getMetadataComponentProperties(metadata)
-	if properties != nil && len(*properties) > 0 {
-		var props []map[string]string
-		for _, prop := range *properties {
-			props = append(props, map[string]string{
-				"name":  prop.Name,
-				"value": prop.Value,
-			})
-		}
-		pkgComponent.Properties = props
+	// 分类信息
+	if metadata.Section != "" {
+		properties = append(properties, map[string]string{
+			"name":  "section",
+			"value": metadata.Section,
+		})
 	}
 
-	return pkgComponent
+	// 优先级信息
+	if metadata.Priority != "" {
+		properties = append(properties, map[string]string{
+			"name":  "priority",
+			"value": metadata.Priority,
+		})
+	}
+
+	// 只有在存在属性时才添加properties字段
+	if len(properties) > 0 {
+		component.Properties = properties
+	}
+
+	return component
 }
 
 // createDependencyComponent 从依赖项创建组件
@@ -1016,22 +1191,6 @@ func createDependencyComponent(dep *pkg.Depend) ComponentOutput {
 		if len(props) > 0 {
 			depComponent.Properties = props
 		}
-	}
-
-	// 添加许可证信息（如果有）
-	if len(dep.Metadata.License) > 0 {
-		var licenses []map[string]interface{}
-		for _, lic := range dep.Metadata.License {
-			licenses = append(licenses, map[string]interface{}{
-				"license": map[string]string{
-					"name": lic,
-				},
-			})
-		}
-		depComponent.Licenses = licenses
-		fmt.Printf("为依赖组件 %s 添加许可证信息: %v\n", dep.Metadata.Name, dep.Metadata.License)
-	} else {
-		fmt.Printf("依赖组件 %s 没有许可证信息可添加\n", dep.Metadata.Name)
 	}
 
 	return depComponent
