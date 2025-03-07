@@ -2,8 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"slp/scan/image"
+
+	"github.com/spf13/cobra"
 )
 
 func init() {
@@ -20,7 +21,7 @@ var imageCmd = &cobra.Command{
 			fmt.Println("slp image [SOURCE]")
 		} else {
 			fmt.Println("Generate SBOM for Linux image for", args[0])
-			err := image.ParseRpmDB(args[0])
+			err := image.ParseImageFile(args[0])
 			if err != nil {
 				fmt.Println(err)
 			}

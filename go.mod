@@ -13,6 +13,7 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/klauspost/compress v1.17.8
 	github.com/knqyf263/go-rpmdb v0.1.1
+	github.com/mattn/go-sqlite3 v1.14.24
 	github.com/mitchellh/hashstructure/v2 v2.0.2
 	github.com/package-url/packageurl-go v0.1.3
 	github.com/sassoftware/go-rpmutils v0.4.0
@@ -35,7 +36,7 @@ require (
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
+	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	pault.ag/go/topsort v0.1.1 // indirect
 )
