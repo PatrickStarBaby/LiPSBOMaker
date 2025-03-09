@@ -22,7 +22,7 @@ func WriteCycloneDX(bom *cyclonedx.BOM, fileName string) error {
 	if err := encoder.Encode(bom); err != nil {
 		return fmt.Errorf("failed to Write file: %v", err)
 	}
-	fmt.Println("BOM 数据已写入到 " + fileName + " 文件")
+	fmt.Println("SBOM 数据已写入到 " + fileName + " 文件")
 
 	return nil
 }
