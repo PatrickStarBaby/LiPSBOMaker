@@ -114,6 +114,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://tiswww.case.edu/php/chet/bash/bashtop.html"
+                }
             ]
         },
         {
@@ -140,6 +146,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux (2.39.3-9ubuntu6)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -168,6 +184,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gnu.org/software/coreutils"
+                }
             ]
         },
         {
@@ -194,6 +216,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gondor.apana.org.au/~herbert/dash/"
                 }
             ]
         },
@@ -276,6 +304,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/diffutils/"
+                }
             ]
         },
         {
@@ -302,6 +336,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://wiki.debian.org/Teams/Dpkg"
                 }
             ]
         },
@@ -330,6 +370,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
             ]
         },
         {
@@ -357,6 +403,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.gnu.org/projects/findutils/"
+                }
             ]
         },
         {
@@ -383,6 +435,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gcc-14"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
                 }
             ]
         },
@@ -410,6 +472,16 @@
                 {
                     "name": "priority",
                     "value": "important"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gnupg2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/"
                 }
             ]
         },
@@ -438,6 +510,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/grep/"
+                }
             ]
         },
         {
@@ -464,6 +542,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/gzip/"
                 }
             ]
         },
@@ -545,6 +629,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "acl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.nongnu.org/projects/acl/"
                 }
             ]
         },
@@ -572,6 +666,10 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "apt"
                 }
             ]
         },
@@ -599,6 +697,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libassuan"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/related_software/libassuan/index.html"
                 }
             ]
         },
@@ -626,6 +734,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "attr"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.nongnu.org/projects/attr/"
                 }
             ]
         },
@@ -653,6 +771,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "audit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/audit/"
                 }
             ]
         },
@@ -680,6 +808,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "audit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/audit/"
                 }
             ]
         },
@@ -707,6 +845,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -734,6 +882,16 @@
                 {
                     "name": "priority",
                     "value": "important"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "bzip2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sourceware.org/bzip2/"
                 }
             ]
         },
@@ -761,6 +919,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "glibc"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libc/libc.html"
                 }
             ]
         },
@@ -788,6 +956,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "glibc"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libc/libc.html"
                 }
             ]
         },
@@ -815,6 +993,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libcap-ng"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/libcap-ng"
                 }
             ]
         },
@@ -843,6 +1031,12 @@
                     "name": "priority",
                     "value": "optional"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sites.google.com/site/fullycapable/"
+                }
             ]
         },
         {
@@ -869,6 +1063,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -896,6 +1100,10 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libxcrypt"
                 }
             ]
         },
@@ -923,6 +1131,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "db5.3"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html"
                 }
             ]
         },
@@ -950,6 +1168,10 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "cdebconf"
                 }
             ]
         },
@@ -977,6 +1199,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -1004,6 +1236,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libffi"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sourceware.org/libffi/"
                 }
             ]
         },
@@ -1031,6 +1273,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gcc-14"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
                 }
             ]
         },
@@ -1059,6 +1311,12 @@
                     "name": "priority",
                     "value": "optional"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://gnupg.org/software/libgcrypt/"
+                }
             ]
         },
         {
@@ -1085,6 +1343,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gmp"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://gmplib.org/"
                 }
             ]
         },
@@ -1112,6 +1380,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gnutls28"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnutls.org/"
                 }
             ]
         },
@@ -1139,6 +1417,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libgpg-error"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/related_software/libgpg-error/"
                 }
             ]
         },
@@ -1166,6 +1454,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "nettle"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.lysator.liu.se/~nisse/nettle/"
                 }
             ]
         },
@@ -1193,6 +1491,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libidn2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libidn/#libidn2"
                 }
             ]
         },
@@ -1220,6 +1528,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "lz4"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/lz4/lz4"
                 }
             ]
         },
@@ -1247,6 +1565,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "xz-utils"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://tukaani.org/xz/"
                 }
             ]
         },
@@ -1274,6 +1602,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libmd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.hadrons.org/software/libmd/"
                 }
             ]
         },
@@ -1301,6 +1639,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -1328,6 +1676,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -1355,6 +1713,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "nettle"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.lysator.liu.se/~nisse/nettle/"
                 }
             ]
         },
@@ -1382,6 +1750,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "npth"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/"
                 }
             ]
         },
@@ -1409,6 +1787,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "p11-kit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://p11-glue.github.io/p11-glue/p11-kit.html"
                 }
             ]
         },
@@ -1436,6 +1824,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1463,6 +1861,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1490,6 +1898,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1517,6 +1935,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1544,6 +1972,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pcre2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://pcre.org/"
                 }
             ]
         },
@@ -1571,6 +2009,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "procps"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://gitlab.com/procps-ng/procps"
                 }
             ]
         },
@@ -1598,6 +2046,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libseccomp"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/seccomp/libseccomp"
                 }
             ]
         },
@@ -1625,6 +2083,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libselinux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1652,6 +2120,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libsemanage"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1679,6 +2157,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libsemanage"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1706,6 +2194,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libsepol"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1733,6 +2231,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -1760,6 +2268,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -1787,6 +2305,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "openssl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.openssl.org/"
                 }
             ]
         },
@@ -1814,6 +2342,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gcc-14"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
                 }
             ]
         },
@@ -1841,6 +2379,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "systemd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.freedesktop.org/wiki/Software/systemd"
                 }
             ]
         },
@@ -1869,6 +2417,12 @@
                     "name": "priority",
                     "value": "optional"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libtasn1/"
+                }
             ]
         },
         {
@@ -1895,6 +2449,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -1922,6 +2486,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "systemd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.freedesktop.org/wiki/Software/systemd"
                 }
             ]
         },
@@ -1949,6 +2523,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libunistring"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libunistring/"
                 }
             ]
         },
@@ -1976,6 +2560,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -2003,6 +2597,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "xxhash"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://cyan4973.github.io/xxHash"
                 }
             ]
         },
@@ -2030,6 +2634,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libzstd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/facebook/zstd"
                 }
             ]
         },
@@ -2057,6 +2671,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "shadow"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/shadow-maint/shadow"
                 }
             ]
         },
@@ -2084,6 +2708,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -2112,6 +2746,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/mawk/"
+                }
             ]
         },
         {
@@ -2138,6 +2778,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -2165,6 +2815,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -2192,6 +2852,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -2219,6 +2889,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "shadow"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/shadow-maint/shadow"
                 }
             ]
         },
@@ -2246,6 +2926,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "perl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://dev.perl.org/perl5/"
                 }
             ]
         },
@@ -2274,6 +2964,12 @@
                     "name": "priority",
                     "value": "important"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://gitlab.com/procps-ng/procps"
+                }
             ]
         },
         {
@@ -2300,6 +2996,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/sed/"
                 }
             ]
         },
@@ -2354,6 +3056,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "sysvinit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/slicer69/sysvinit"
                 }
             ]
         },
@@ -2381,6 +3093,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/tar/"
                 }
             ]
         },
@@ -2436,6 +3154,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
             ]
         },
         {
@@ -2462,32 +3186,49 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "zlib"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://zlib.net/"
                 }
             ]
         }
     ],
     "dependencies": [
         {
-            "ref": "pkg:deb/libdb5.3t64@5.3.28+dfsg2-7?arch=amd64&distro=ubuntu-24.04&package-id=66e3fb7f5235dfa8",
+            "ref": "pkg:deb/libpam-runtime@1.5.3-5ubuntu5.1?arch=all&distro=ubuntu-24.04&package-id=fa968b7c1187b9bf",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=ubuntu-24.04&package-id=f9c21bb9f2ad2846",
+                "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=7c01923681876491"
+            ]
+        },
+        {
+            "ref": "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=ubuntu-24.04&package-id=5002d823c0a16c7a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=ubuntu-24.04&package-id=a13fb462cda1c132",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
         },
         {
-            "ref": "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
-            "dependsOn": [
-                "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c1b88cdf9aa210b1",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpcre2-8-0@10.42-4ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=96531873c95ca1c0",
+            "ref": "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
         },
         {
-            "ref": "pkg:deb/sysvinit-utils@3.08-6ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=a55e4e81cd36758a",
+            "ref": "pkg:deb/libmd0@1.1.0-2build1?arch=amd64&distro=ubuntu-24.04&package-id=bc233696231b772e",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
@@ -2500,125 +3241,7 @@
             ]
         },
         {
-            "ref": "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=b3e00850301cbf0a",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/bash@5.2.21-2ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=01726d7c6caaff40",
-            "dependsOn": [
-                "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=ubuntu-24.04&package-id=5002d823c0a16c7a",
-                "pkg:deb/debianutils@5.17build1?arch=amd64&distro=ubuntu-24.04&package-id=e7d2b9bacd79c494"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=ubuntu-24.04&package-id=b7c073d391fd039c",
-            "dependsOn": [
-                "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=005a133229ce7799",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
-                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
-                "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=6ab8c7ad9d72968a",
-                "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=1b983c65bd344471",
-                "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=b3e00850301cbf0a",
-                "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dbc8c06eb7b97f8d",
-                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=ubuntu-24.04&package-id=d3bd0ee861065488",
-                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
-                "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=ubuntu-24.04&package-id=08e3493da4aee7d6",
-                "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=ubuntu-24.04&package-id=1c66368cd68b78f4"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=ubuntu-24.04&package-id=7aac96b902b1a423",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=ubuntu-24.04&package-id=2f4c7eb8289cdfcb"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpam-modules-bin@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=05d9cf71535c0e7a",
-            "dependsOn": [
-                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5",
-                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
-                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79",
-                "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=885629b65afcdf3b"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpam-runtime@1.5.3-5ubuntu5.1?arch=all&distro=ubuntu-24.04&package-id=fa968b7c1187b9bf",
-            "dependsOn": [
-                "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=ubuntu-24.04&package-id=f9c21bb9f2ad2846",
-                "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=7c01923681876491"
-            ]
-        },
-        {
-            "ref": "pkg:deb/logsave@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=4d9b5ec42e038851",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=694893ef8f16a549",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libacl1@2.3.2-1build1?arch=amd64&distro=ubuntu-24.04&package-id=cdcbb7766873ea91",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
             "ref": "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=ubuntu-24.04&package-id=985140bfc5338c3f",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=1b983c65bd344471",
-            "dependsOn": [
-                "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c1b88cdf9aa210b1",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=ubuntu-24.04&package-id=2f4c7eb8289cdfcb",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=ubuntu-24.04&package-id=5002d823c0a16c7a",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libssl3t64@3.0.13-0ubuntu3.2?arch=amd64&distro=ubuntu-24.04&package-id=d1041641aadaea1f",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dbc8c06eb7b97f8d",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
@@ -2630,125 +3253,7 @@
             ]
         },
         {
-            "ref": "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=885629b65afcdf3b",
-            "dependsOn": [
-                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=ubuntu-24.04&package-id=f9c21bb9f2ad2846"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=3e491a133fe69df2",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libss2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=a368f09d18bd4619",
-            "dependsOn": [
-                "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=f89fb17c6678370f",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libuuid1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=4bab1f68a223db50",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=ubuntu-24.04&package-id=51170bad8ff34825",
-            "dependsOn": [
-                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
-                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74",
-                "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=ubuntu-24.04&package-id=4639c82626cb9901",
-                "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=005a133229ce7799",
-                "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=ubuntu-24.04&package-id=8bf0133d7bfe8557",
-                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=ubuntu-24.04&package-id=d3bd0ee861065488",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=ubuntu-24.04&package-id=8bf0133d7bfe8557",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74"
-            ]
-        },
-        {
-            "ref": "pkg:deb/procps@2:4.0.4-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=f51f68420087141a",
-            "dependsOn": [
-                "pkg:deb/init-system-helpers@1.66ubuntu1?arch=all&distro=ubuntu-24.04&package-id=e300c2a95b05d726",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libncursesw6@6.4+20240113-1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=7abe3dcd206439ce",
-                "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=3e491a133fe69df2",
-                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
-                "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=67d32894b6f2391a"
-            ]
-        },
-        {
-            "ref": "pkg:deb/dash@0.5.12-6ubuntu5?arch=amd64&distro=ubuntu-24.04&package-id=2c276a34c6be79be",
-            "dependsOn": [
-                "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=0be6360e0e949445",
-                "pkg:deb/debianutils@5.17build1?arch=amd64&distro=ubuntu-24.04&package-id=e7d2b9bacd79c494"
-            ]
-        },
-        {
-            "ref": "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=005a133229ce7799",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libattr1@1:2.5.2-1build1?arch=amd64&distro=ubuntu-24.04&package-id=d0bc3406133de03c",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=ubuntu-24.04&package-id=1c66368cd68b78f4",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=80b4f224190ac613",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libmd0@1.1.0-2build1?arch=amd64&distro=ubuntu-24.04&package-id=bc233696231b772e",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=ubuntu-24.04&package-id=4639c82626cb9901",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=ce7eab6f7920387e",
-                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
-                "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=ubuntu-24.04&package-id=08e3493da4aee7d6",
-                "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=ubuntu-24.04&package-id=1c66368cd68b78f4",
-                "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dbc8c06eb7b97f8d"
-            ]
-        },
-        {
-            "ref": "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=ubuntu-24.04&package-id=08e3493da4aee7d6",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=67d32894b6f2391a",
+            "ref": "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dbc8c06eb7b97f8d",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
@@ -2760,16 +3265,194 @@
             ]
         },
         {
-            "ref": "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=ubuntu-24.04&package-id=ba448460f4a31742",
+            "ref": "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
             "dependsOn": [
-                "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=ubuntu-24.04&package-id=985140bfc5338c3f",
-                "pkg:deb/libp11-kit0@0.25.3-4ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=2e234954d2518db0",
-                "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=ubuntu-24.04&package-id=3acc9a03a03adb7d",
-                "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=ubuntu-24.04&package-id=2f4c7eb8289cdfcb",
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=e69e61defad954bf",
-                "pkg:deb/libhogweed6t64@3.9.1-2.2build1?arch=amd64&distro=ubuntu-24.04&package-id=1cd7934cfca4b5e8",
-                "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=ubuntu-24.04&package-id=7aac96b902b1a423"
+                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74"
+            ]
+        },
+        {
+            "ref": "pkg:deb/mawk@1.3.4.20240123-1build1?arch=amd64&distro=ubuntu-24.04&package-id=aadb802e6a70f8e8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/procps@2:4.0.4-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=f51f68420087141a",
+            "dependsOn": [
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
+                "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=67d32894b6f2391a",
+                "pkg:deb/init-system-helpers@1.66ubuntu1?arch=all&distro=ubuntu-24.04&package-id=e300c2a95b05d726",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libncursesw6@6.4+20240113-1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=7abe3dcd206439ce",
+                "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=3e491a133fe69df2"
+            ]
+        },
+        {
+            "ref": "pkg:deb/apt@2.7.14build2?arch=amd64&distro=ubuntu-24.04&package-id=54ce0451b65ed519",
+            "dependsOn": [
+                "pkg:deb/ubuntu-keyring@2023.11.28.1?arch=all&distro=ubuntu-24.04&package-id=22b22f0f99b54c02",
+                "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=1b983c65bd344471",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
+                "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=ubuntu-24.04&package-id=ba448460f4a31742",
+                "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=70436b500b04ee61",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
+                "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=ubuntu-24.04&package-id=dd74da63308f3d05",
+                "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=ubuntu-24.04&package-id=51170bad8ff34825",
+                "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=ubuntu-24.04&package-id=b7c073d391fd039c"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc-bin@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=2f971981670ad34e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
+            "dependsOn": [
+                "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c1b88cdf9aa210b1",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dash@0.5.12-6ubuntu5?arch=amd64&distro=ubuntu-24.04&package-id=2c276a34c6be79be",
+            "dependsOn": [
+                "pkg:deb/debianutils@5.17build1?arch=amd64&distro=ubuntu-24.04&package-id=e7d2b9bacd79c494",
+                "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=0be6360e0e949445"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsmartcols1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=49bce4775bb2325f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libproc2-0@2:4.0.4-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=3e491a133fe69df2",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=1b983c65bd344471",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
+                "pkg:deb/gcc-14-base@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c1b88cdf9aa210b1",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=ubuntu-24.04&package-id=8bf0133d7bfe8557",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=885629b65afcdf3b",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.86ubuntu1?arch=all&distro=ubuntu-24.04&package-id=f9c21bb9f2ad2846",
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=ubuntu-24.04&package-id=1c66368cd68b78f4",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
+            "dependsOn": [
+                "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dbc8c06eb7b97f8d",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=ce7eab6f7920387e",
+                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
+                "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=ubuntu-24.04&package-id=08e3493da4aee7d6",
+                "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=ubuntu-24.04&package-id=1c66368cd68b78f4"
+            ]
+        },
+        {
+            "ref": "pkg:deb/logsave@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=4d9b5ec42e038851",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=80b4f224190ac613",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libffi8@3.4.6-1build1?arch=amd64&distro=ubuntu-24.04&package-id=9694477638cd66b5",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=70436b500b04ee61",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libss2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=a368f09d18bd4619",
+            "dependsOn": [
+                "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=f89fb17c6678370f",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libtinfo6@6.4+20240113-1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=67d32894b6f2391a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libattr1@1:2.5.2-1build1?arch=amd64&distro=ubuntu-24.04&package-id=d0bc3406133de03c",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=ubuntu-24.04&package-id=7aac96b902b1a423",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=ubuntu-24.04&package-id=2f4c7eb8289cdfcb"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=b3e00850301cbf0a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/passwd@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=1752b9f432da54bc",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79",
+                "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=885629b65afcdf3b",
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5",
+                "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=ubuntu-24.04&package-id=b006167fe1e9633c",
+                "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=7c01923681876491"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-modules-bin@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=05d9cf71535c0e7a",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79",
+                "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=885629b65afcdf3b",
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863"
             ]
         },
         {
@@ -2780,30 +3463,130 @@
             ]
         },
         {
+            "ref": "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=ubuntu-24.04&package-id=3acc9a03a03adb7d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libmount1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=e182fd4213b64532",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5",
+                "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=80b4f224190ac613"
+            ]
+        },
+        {
             "ref": "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=ubuntu-24.04&package-id=b006167fe1e9633c",
             "dependsOn": [
+                "pkg:deb/libsemanage-common@3.5-1build5?arch=all&distro=ubuntu-24.04&package-id=e92f7f7605c8cba5",
+                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
                 "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=ubuntu-24.04&package-id=d3bd0ee861065488",
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
                 "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5",
-                "pkg:deb/libsepol2@3.5-2build1?arch=amd64&distro=ubuntu-24.04&package-id=f85f8eeab6229825",
-                "pkg:deb/libsemanage-common@3.5-1build5?arch=all&distro=ubuntu-24.04&package-id=e92f7f7605c8cba5",
-                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc"
+                "pkg:deb/libsepol2@3.5-2build1?arch=amd64&distro=ubuntu-24.04&package-id=f85f8eeab6229825"
             ]
         },
         {
-            "ref": "pkg:deb/mawk@1.3.4.20240123-1build1?arch=amd64&distro=ubuntu-24.04&package-id=aadb802e6a70f8e8",
+            "ref": "pkg:deb/sysvinit-utils@3.08-6ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=a55e4e81cd36758a",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
         },
         {
-            "ref": "pkg:deb/libc-bin@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=2f971981670ad34e",
+            "ref": "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=ubuntu-24.04&package-id=ba448460f4a31742",
             "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+                "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=ubuntu-24.04&package-id=2f4c7eb8289cdfcb",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=e69e61defad954bf",
+                "pkg:deb/libhogweed6t64@3.9.1-2.2build1?arch=amd64&distro=ubuntu-24.04&package-id=1cd7934cfca4b5e8",
+                "pkg:deb/libidn2-0@2.3.7-2build1?arch=amd64&distro=ubuntu-24.04&package-id=7aac96b902b1a423",
+                "pkg:deb/libnettle8t64@3.9.1-2.2build1?arch=amd64&distro=ubuntu-24.04&package-id=985140bfc5338c3f",
+                "pkg:deb/libp11-kit0@0.25.3-4ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=2e234954d2518db0",
+                "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=ubuntu-24.04&package-id=3acc9a03a03adb7d"
             ]
         },
         {
             "ref": "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=ce7eab6f7920387e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=694893ef8f16a549",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
+            "dependsOn": [
+                "pkg:deb/libaudit-common@1:3.1.2-2.1build1?arch=all&distro=ubuntu-24.04&package-id=e87f4a90e4516988",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=ubuntu-24.04&package-id=a13fb462cda1c132"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdb5.3t64@5.3.28+dfsg2-7?arch=amd64&distro=ubuntu-24.04&package-id=66e3fb7f5235dfa8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libext2fs2t64@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=8c65a5bd281d39cd",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=e69e61defad954bf",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=ubuntu-24.04&package-id=b7c073d391fd039c",
+            "dependsOn": [
+                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=ubuntu-24.04&package-id=d3bd0ee861065488",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
+                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
+                "pkg:deb/liblzma5@5.6.1+really5.4.5-1?arch=amd64&distro=ubuntu-24.04&package-id=1c66368cd68b78f4",
+                "pkg:deb/libxxhash0@0.8.2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=b3e00850301cbf0a",
+                "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=005a133229ce7799",
+                "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=ubuntu-24.04&package-id=08e3493da4aee7d6",
+                "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=1b983c65bd344471",
+                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863",
+                "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=6ab8c7ad9d72968a",
+                "pkg:deb/libzstd1@1.5.5+dfsg2-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dbc8c06eb7b97f8d"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=ubuntu-24.04&package-id=4639c82626cb9901",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libssl3t64@3.0.13-0ubuntu3.2?arch=amd64&distro=ubuntu-24.04&package-id=d1041641aadaea1f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libunistring5@1.1-2build1?arch=amd64&distro=ubuntu-24.04&package-id=2f4c7eb8289cdfcb",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=0be6360e0e949445",
+            "dependsOn": [
+                "pkg:deb/tar@1.35+dfsg-3build1?arch=amd64&distro=ubuntu-24.04&package-id=b2f6c95e0feb6c19"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libacl1@2.3.2-1build1?arch=amd64&distro=ubuntu-24.04&package-id=cdcbb7766873ea91",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
@@ -2817,27 +3600,7 @@
             ]
         },
         {
-            "ref": "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=70436b500b04ee61",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libsmartcols1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=49bce4775bb2325f",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=ubuntu-24.04&package-id=dd74da63308f3d05",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=694893ef8f16a549",
-                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=f89fb17c6678370f",
+            "ref": "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=005a133229ce7799",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
@@ -2849,45 +3612,24 @@
             ]
         },
         {
-            "ref": "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-            "dependsOn": [
-                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=ubuntu-24.04&package-id=a13fb462cda1c132",
+            "ref": "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
             ]
         },
         {
-            "ref": "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
+            "ref": "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=6ab8c7ad9d72968a",
             "dependsOn": [
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74"
+                "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=ce7eab6f7920387e"
             ]
         },
         {
-            "ref": "pkg:deb/libmount1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=e182fd4213b64532",
+            "ref": "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=ubuntu-24.04&package-id=dd74da63308f3d05",
             "dependsOn": [
-                "pkg:deb/libblkid1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=80b4f224190ac613",
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+                "pkg:deb/libdebconfclient0@0.271ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=694893ef8f16a549",
                 "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5"
-            ]
-        },
-        {
-            "ref": "pkg:deb/apt@2.7.14build2?arch=amd64&distro=ubuntu-24.04&package-id=54ce0451b65ed519",
-            "dependsOn": [
-                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libgnutls30t64@3.8.3-1.1ubuntu3.1?arch=amd64&distro=ubuntu-24.04&package-id=ba448460f4a31742",
-                "pkg:deb/libseccomp2@2.5.5-1ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=70436b500b04ee61",
-                "pkg:deb/libstdc++6@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=1b983c65bd344471",
-                "pkg:deb/base-passwd@3.6.3build1?arch=amd64&distro=ubuntu-24.04&package-id=dd74da63308f3d05",
-                "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=ubuntu-24.04&package-id=51170bad8ff34825",
-                "pkg:deb/libapt-pkg6.0t64@2.7.14build2?arch=amd64&distro=ubuntu-24.04&package-id=b7c073d391fd039c",
-                "pkg:deb/ubuntu-keyring@2023.11.28.1?arch=all&distro=ubuntu-24.04&package-id=22b22f0f99b54c02",
-                "pkg:deb/libsystemd0@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=87f18c2c378de863"
             ]
         },
         {
@@ -2904,60 +3646,52 @@
             ]
         },
         {
-            "ref": "pkg:deb/passwd@1:4.13+dfsg1-4ubuntu3?arch=amd64&distro=ubuntu-24.04&package-id=1752b9f432da54bc",
+            "ref": "pkg:deb/libpcre2-8-0@10.42-4ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=96531873c95ca1c0",
             "dependsOn": [
-                "pkg:deb/libpam-modules@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=7c01923681876491",
-                "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libuuid1@2.39.3-9ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=4bab1f68a223db50",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@14-20240412-0ubuntu1?arch=amd64&distro=ubuntu-24.04&package-id=c35fa31989c69de4"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcom-err2@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=f89fb17c6678370f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblz4-1@1.9.4-1build1?arch=amd64&distro=ubuntu-24.04&package-id=08e3493da4aee7d6",
+            "dependsOn": [
+                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+            ]
+        },
+        {
+            "ref": "pkg:deb/bash@5.2.21-2ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=01726d7c6caaff40",
+            "dependsOn": [
+                "pkg:deb/base-files@13ubuntu10?arch=amd64&distro=ubuntu-24.04&package-id=5002d823c0a16c7a",
+                "pkg:deb/debianutils@5.17build1?arch=amd64&distro=ubuntu-24.04&package-id=e7d2b9bacd79c494"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gpgv@2.4.4-2ubuntu17?arch=amd64&distro=ubuntu-24.04&package-id=51170bad8ff34825",
+            "dependsOn": [
+                "pkg:deb/libnpth0t64@1.6-3.1build1?arch=amd64&distro=ubuntu-24.04&package-id=4639c82626cb9901",
+                "pkg:deb/zlib1g@1:1.3.dfsg-3.1ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=005a133229ce7799",
+                "pkg:deb/libassuan0@2.5.6-1build1?arch=amd64&distro=ubuntu-24.04&package-id=8bf0133d7bfe8557",
+                "pkg:deb/libbz2-1.0@1.0.8-5.1?arch=amd64&distro=ubuntu-24.04&package-id=d3bd0ee861065488",
                 "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libcrypt1@1:4.4.36-4build1?arch=amd64&distro=ubuntu-24.04&package-id=d092400c66d07b79",
-                "pkg:deb/libpam0g@1.5.3-5ubuntu5.1?arch=amd64&distro=ubuntu-24.04&package-id=885629b65afcdf3b",
-                "pkg:deb/libselinux1@3.5-2ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=73966470f861aee5",
-                "pkg:deb/libsemanage2@3.5-1build5?arch=amd64&distro=ubuntu-24.04&package-id=b006167fe1e9633c"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libtasn1-6@4.19.0-3build1?arch=amd64&distro=ubuntu-24.04&package-id=3acc9a03a03adb7d",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libudev1@255.4-1ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=6ab8c7ad9d72968a",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libcap2@1:2.66-5ubuntu2?arch=amd64&distro=ubuntu-24.04&package-id=ce7eab6f7920387e"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libaudit1@1:3.1.2-2.1build1?arch=amd64&distro=ubuntu-24.04&package-id=e33d6507841145cc",
-            "dependsOn": [
-                "pkg:deb/libaudit-common@1:3.1.2-2.1build1?arch=all&distro=ubuntu-24.04&package-id=e87f4a90e4516988",
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606",
-                "pkg:deb/libcap-ng0@0.8.4-2build2?arch=amd64&distro=ubuntu-24.04&package-id=a13fb462cda1c132"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libffi8@3.4.6-1build1?arch=amd64&distro=ubuntu-24.04&package-id=9694477638cd66b5",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgmp10@2:6.3.0+dfsg-2ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=e69e61defad954bf",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
-            ]
-        },
-        {
-            "ref": "pkg:deb/dpkg@1.22.6ubuntu6?arch=amd64&distro=ubuntu-24.04&package-id=0be6360e0e949445",
-            "dependsOn": [
-                "pkg:deb/tar@1.35+dfsg-3build1?arch=amd64&distro=ubuntu-24.04&package-id=b2f6c95e0feb6c19"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libext2fs2t64@1.47.0-2.4~exp1ubuntu4?arch=amd64&distro=ubuntu-24.04&package-id=8c65a5bd281d39cd",
-            "dependsOn": [
-                "pkg:deb/libc6@2.39-0ubuntu8.2?arch=amd64&distro=ubuntu-24.04&package-id=baf9cd384131e606"
+                "pkg:deb/libgcrypt20@1.10.3-2build1?arch=amd64&distro=ubuntu-24.04&package-id=dda60a0e4d6c19dd",
+                "pkg:deb/libgpg-error0@1.47-3build2?arch=amd64&distro=ubuntu-24.04&package-id=de5cb06c6e322d74"
             ]
         }
     ]

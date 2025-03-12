@@ -140,6 +140,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "bash (5.2.15-2)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://tiswww.case.edu/php/chet/bash/bashtop.html"
                 }
             ]
         },
@@ -167,6 +177,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux (2.38.1-5+deb12u3)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -195,6 +215,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gnu.org/software/coreutils"
+                }
             ]
         },
         {
@@ -221,6 +247,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gondor.apana.org.au/~herbert/dash/"
                 }
             ]
         },
@@ -330,6 +362,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/diffutils/"
+                }
             ]
         },
         {
@@ -356,6 +394,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://wiki.debian.org/Teams/Dpkg"
                 }
             ]
         },
@@ -384,6 +428,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
             ]
         },
         {
@@ -411,6 +461,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.gnu.org/projects/findutils/"
+                }
             ]
         },
         {
@@ -437,6 +493,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gcc-12"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
                 }
             ]
         },
@@ -464,6 +530,16 @@
                 {
                     "name": "priority",
                     "value": "important"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gnupg2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/"
                 }
             ]
         },
@@ -492,6 +568,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/grep/"
+                }
             ]
         },
         {
@@ -518,6 +600,12 @@
                 {
                     "name": "priority",
                     "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/gzip/"
                 }
             ]
         },
@@ -599,6 +687,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "acl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.nongnu.org/projects/acl/"
                 }
             ]
         },
@@ -626,6 +724,10 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "apt"
                 }
             ]
         },
@@ -653,6 +755,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "attr"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.nongnu.org/projects/attr/"
                 }
             ]
         },
@@ -680,6 +792,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "audit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/audit/"
                 }
             ]
         },
@@ -707,6 +829,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "audit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/audit/"
                 }
             ]
         },
@@ -734,6 +866,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -761,6 +903,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "bzip2 (1.0.8-5)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sourceware.org/bzip2/"
                 }
             ]
         },
@@ -788,6 +940,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "glibc"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libc/libc.html"
                 }
             ]
         },
@@ -815,6 +977,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "glibc"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libc/libc.html"
                 }
             ]
         },
@@ -842,6 +1014,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libcap-ng (0.8.3-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/libcap-ng"
                 }
             ]
         },
@@ -870,6 +1052,12 @@
                     "name": "priority",
                     "value": "optional"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sites.google.com/site/fullycapable/"
+                }
             ]
         },
         {
@@ -896,6 +1084,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -923,6 +1121,10 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libxcrypt"
                 }
             ]
         },
@@ -950,6 +1152,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "db5.3"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html"
                 }
             ]
         },
@@ -977,6 +1189,10 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "cdebconf"
                 }
             ]
         },
@@ -1004,6 +1220,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -1031,6 +1257,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libffi"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sourceware.org/libffi/"
                 }
             ]
         },
@@ -1058,6 +1294,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gcc-12"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
                 }
             ]
         },
@@ -1086,6 +1332,12 @@
                     "name": "priority",
                     "value": "optional"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://directory.fsf.org/project/libgcrypt/"
+                }
             ]
         },
         {
@@ -1112,6 +1364,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gmp"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://gmplib.org/"
                 }
             ]
         },
@@ -1139,6 +1401,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gnutls28"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnutls.org/"
                 }
             ]
         },
@@ -1166,6 +1438,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libgpg-error"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/related_software/libgpg-error/"
                 }
             ]
         },
@@ -1193,6 +1475,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "nettle"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.lysator.liu.se/~nisse/nettle/"
                 }
             ]
         },
@@ -1220,6 +1512,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libidn2 (2.3.3-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libidn/#libidn2"
                 }
             ]
         },
@@ -1247,6 +1549,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "lz4"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/lz4/lz4"
                 }
             ]
         },
@@ -1274,6 +1586,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "xz-utils"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://tukaani.org/xz/"
                 }
             ]
         },
@@ -1301,6 +1623,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libmd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.hadrons.org/software/libmd/"
                 }
             ]
         },
@@ -1328,6 +1660,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -1355,6 +1697,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "nettle"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.lysator.liu.se/~nisse/nettle/"
                 }
             ]
         },
@@ -1382,6 +1734,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "p11-kit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://p11-glue.github.io/p11-glue/p11-kit.html"
                 }
             ]
         },
@@ -1409,6 +1771,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1436,6 +1808,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1463,6 +1845,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1490,6 +1882,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
                 }
             ]
         },
@@ -1517,6 +1919,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "pcre2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://pcre.org/"
                 }
             ]
         },
@@ -1544,6 +1956,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libseccomp"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/seccomp/libseccomp"
                 }
             ]
         },
@@ -1571,6 +1993,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libselinux (3.4-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1598,6 +2030,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libsemanage"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1625,6 +2067,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libsemanage (3.4-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1652,6 +2104,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libsepol"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
                 }
             ]
         },
@@ -1679,6 +2141,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -1706,6 +2178,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -1733,6 +2215,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "gcc-12"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
                 }
             ]
         },
@@ -1760,6 +2252,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "systemd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.freedesktop.org/wiki/Software/systemd"
                 }
             ]
         },
@@ -1788,6 +2290,12 @@
                     "name": "priority",
                     "value": "optional"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libtasn1/"
+                }
             ]
         },
         {
@@ -1814,6 +2322,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -1841,6 +2359,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "systemd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.freedesktop.org/wiki/Software/systemd"
                 }
             ]
         },
@@ -1868,6 +2396,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libunistring"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libunistring/"
                 }
             ]
         },
@@ -1895,6 +2433,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -1922,6 +2470,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "xxhash"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://cyan4973.github.io/xxHash"
                 }
             ]
         },
@@ -1949,6 +2507,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "libzstd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/facebook/zstd"
                 }
             ]
         },
@@ -1976,6 +2544,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "shadow (1:4.13+dfsg1-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/shadow-maint/shadow"
                 }
             ]
         },
@@ -2003,6 +2581,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
                 }
             ]
         },
@@ -2031,6 +2619,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/mawk/"
+                }
             ]
         },
         {
@@ -2057,6 +2651,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -2084,6 +2688,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -2111,6 +2725,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
                 }
             ]
         },
@@ -2138,6 +2762,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "shadow (1:4.13+dfsg1-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/shadow-maint/shadow"
                 }
             ]
         },
@@ -2165,6 +2799,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "perl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://dev.perl.org/perl5/"
                 }
             ]
         },
@@ -2193,6 +2837,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/sed/"
+                }
             ]
         },
         {
@@ -2219,6 +2869,16 @@
                 {
                     "name": "priority",
                     "value": "required"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "sysvinit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/slicer69/sysvinit"
                 }
             ]
         },
@@ -2247,6 +2907,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/tar/"
+                }
             ]
         },
         {
@@ -2274,6 +2940,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.iana.org/time-zones"
+                }
             ]
         },
         {
@@ -2300,6 +2972,16 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "usrmerge"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://wiki.debian.org/UsrMerge"
                 }
             ]
         },
@@ -2328,6 +3010,12 @@
                     "name": "priority",
                     "value": "required"
                 }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
             ]
         },
         {
@@ -2354,6 +3042,16 @@
                 {
                     "name": "priority",
                     "value": "standard"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
                 }
             ]
         },
@@ -2381,21 +3079,367 @@
                 {
                     "name": "priority",
                     "value": "optional"
+                },
+                {
+                    "name": "sourcePackage",
+                    "value": "zlib"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://zlib.net/"
                 }
             ]
         }
     ],
     "dependencies": [
         {
-            "ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12&package-id=90e650df84381b25",
+            "ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12&package-id=21200f8b39328bd5",
             "dependsOn": [
-                "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12&package-id=2045c018e654b9b7",
-                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574"
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12&package-id=3a77edf12e8ff074",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12&package-id=eba9416f065d6cf2",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2",
+                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12&package-id=e7bc5e9c87a3f8ec",
+            "dependsOn": [
+                "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12&package-id=3b94635eadfd0b6a",
+            "dependsOn": [
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12&package-id=cb298c58c3a6b975",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+            "dependsOn": [
+                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
             "ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
             "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12&package-id=61387bccff2fd18d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+            "dependsOn": [
+                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=9d6fe6d741141378",
+            "dependsOn": [
+                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12&package-id=c0f223ed77627dae",
+            "dependsOn": [
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=50226d74c8c8236d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12&package-id=4c510789e36a49e3",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=e1dcaa6c850f468d",
+            "dependsOn": [
+                "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12&package-id=fd51415680e07a73",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+            "dependsOn": [
+                "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12&package-id=aa1580f769241070",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
+            "dependsOn": [
+                "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
+                "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308",
+                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+                "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
+                "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
+                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
+                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49"
+            ]
+        },
+        {
+            "ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12&package-id=73e5344f09681b10",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12&package-id=41f8164eac096820",
+            "dependsOn": [
+                "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
+                "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12&package-id=3bab0fc5c261c89a",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+                "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
+                "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
+                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+                "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
+                "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12&package-id=7d4d16397179656e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
+            "dependsOn": [
+                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+                "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
+                "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
+                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36"
+            ]
+        },
+        {
+            "ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=d04a02e3067fd84d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=a86c03b5da387af4",
+            "dependsOn": [
+                "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
+            "dependsOn": [
+                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12&package-id=d789db5eff771251",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
+            "dependsOn": [
+                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
+                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
@@ -2406,81 +3450,33 @@
             ]
         },
         {
-            "ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
+            "ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12&package-id=90e650df84381b25",
+            "dependsOn": [
+                "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12&package-id=2045c018e654b9b7",
+                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12&package-id=dd1b2909c9c51c7d",
+            "dependsOn": [
+                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574",
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12&package-id=73e5344f09681b10",
+            "ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         },
         {
-            "ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
-            "dependsOn": [
-                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
-                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
-                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
-                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
-                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
-                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
-                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
-                "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
-                "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12&package-id=61387bccff2fd18d",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8",
-            "dependsOn": [
-                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
-                "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
-                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207"
-            ]
-        },
-        {
-            "ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-            "dependsOn": [
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
-            "dependsOn": [
-                "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
-            "dependsOn": [
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=d04a02e3067fd84d",
+            "ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
@@ -2498,68 +3494,7 @@
             ]
         },
         {
-            "ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
-            "dependsOn": [
-                "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12&package-id=c0f223ed77627dae",
-            "dependsOn": [
-                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=a86c03b5da387af4",
-            "dependsOn": [
-                "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
+            "ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
@@ -2571,38 +3506,9 @@
             ]
         },
         {
-            "ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12&package-id=3a77edf12e8ff074",
+            "ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
-            "dependsOn": [
-                "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
-                "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12&package-id=aa1580f769241070",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe",
-            "dependsOn": [
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c"
             ]
         },
         {
@@ -2612,106 +3518,7 @@
             ]
         },
         {
-            "ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
-            "dependsOn": [
-                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
-                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
-                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa"
-            ]
-        },
-        {
-            "ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12&package-id=3b94635eadfd0b6a",
-            "dependsOn": [
-                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12&package-id=7d4d16397179656e",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12&package-id=3e344cf0113fa217",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12&package-id=cb298c58c3a6b975",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
-                "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
-                "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=0740de66067116ec",
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12&package-id=41f8164eac096820",
-            "dependsOn": [
-                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
-                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
-                "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
-                "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
-                "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
-                "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
-                "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
-                "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12&package-id=3bab0fc5c261c89a",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
-            ]
-        },
-        {
-            "ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12&package-id=21200f8b39328bd5",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=50226d74c8c8236d",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12&package-id=d789db5eff771251",
-            "dependsOn": [
-                "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12&package-id=fd51415680e07a73",
+            "ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
@@ -2723,24 +3530,27 @@
             ]
         },
         {
-            "ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12&package-id=dd1b2909c9c51c7d",
-            "dependsOn": [
-                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574",
-                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
-                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b"
-            ]
-        },
-        {
-            "ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+            "ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12&package-id=3e344cf0113fa217",
             "dependsOn": [
                 "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
+            "dependsOn": [
+                "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=0740de66067116ec",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97"
             ]
         },
         {
@@ -2752,108 +3562,6 @@
                 "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
                 "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
                 "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae"
-            ]
-        },
-        {
-            "ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12&package-id=4c510789e36a49e3",
-            "dependsOn": [
-                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=e1dcaa6c850f468d",
-            "dependsOn": [
-                "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
-            "dependsOn": [
-                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
-            ]
-        },
-        {
-            "ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12&package-id=e7bc5e9c87a3f8ec",
-            "dependsOn": [
-                "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=9d6fe6d741141378",
-            "dependsOn": [
-                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
-                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
-                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
-                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12&package-id=eba9416f065d6cf2",
-            "dependsOn": [
-                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
-                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
-            "dependsOn": [
-                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
-            "dependsOn": [
-                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
-                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
-                "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
-                "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
-                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
-                "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
-                "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308"
-            ]
-        },
-        {
-            "ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
-            "dependsOn": [
-                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
             ]
         }
     ]

@@ -17,21 +17,21 @@ func TestParseImageFile(t *testing.T) {
 	// 记录测试开始时间，用于稍后检查文件
 	testStartTime := time.Now()
 
-	// 清理之前可能存在的测试文件
-	cleanupOldTestFiles()
-
 	tests := []struct {
 		name      string
 		imagePath string
 	}{
 		{
-			name:      "测试ubuntu镜像",
-			imagePath: "edbfe74c41f8a3501ce542e137cf28ea04dd03e6df8c9d66519b6ad761c2598a",
+			name:      "测试debian镜像",
+			imagePath: "debian",
 		},
 	}
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
+			// 移除超时设置，允许测试运行任意长的时间以处理所有数据
+			fmt.Println("开始处理镜像，将处理所有包和依赖关系，这可能需要较长时间...")
+
 			err := ParseImageFile(test.imagePath)
 			// 错误处理：如果有错误，使测试失败
 			if err != nil {
@@ -47,20 +47,6 @@ func TestParseImageFile(t *testing.T) {
 				t.Logf("成功找到生成的JSON文件")
 			}
 		})
-	}
-}
-
-// 清理旧的测试文件
-func cleanupOldTestFiles() {
-	files, err := os.ReadDir(".")
-	if err != nil {
-		return
-	}
-
-	for _, file := range files {
-		if !file.IsDir() && strings.HasPrefix(file.Name(), "sbom_result_") && strings.HasSuffix(file.Name(), ".json") {
-			os.Remove(file.Name())
-		}
 	}
 }
 
