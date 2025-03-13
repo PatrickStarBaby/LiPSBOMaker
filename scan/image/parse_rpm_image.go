@@ -15,7 +15,10 @@ import (
 	"strings"
 	"time"
 
+	"regexp"
+
 	"github.com/CycloneDX/cyclonedx-go"
+	"github.com/google/uuid"
 	rpmdb "github.com/knqyf263/go-rpmdb/pkg"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/package-url/packageurl-go"
@@ -44,8 +47,26 @@ type DependencyOutput struct {
 	DependsOn []string `json:"dependsOn"`
 }
 
+// 工具组件结构体
+type ToolComponent struct {
+	Type    string `json:"type"`
+	Name    string `json:"name"`
+	Version string `json:"version"`
+}
+
+// 工具信息结构体
+type ToolsInfo struct {
+	Components []ToolComponent `json:"components"`
+}
+
 // SBOM格式的输出结构
 type outputSBOM struct {
+	Schema       string             `json:"$schema"`
+	BomFormat    string             `json:"bomFormat"`
+	SpecVersion  string             `json:"specVersion"`
+	SerialNumber string             `json:"serialNumber"`
+	Version      int                `json:"version"`
+	Tools        ToolsInfo          `json:"tools"`
 	Components   []ComponentOutput  `json:"components"`
 	Dependencies []DependencyOutput `json:"dependencies,omitempty"`
 }
@@ -92,46 +113,39 @@ func ParseImageFile(path string) error {
 	}
 	defer os.RemoveAll(tmpDir)
 
-	// 获取系统类型信息 - 直接使用docker run而不是在容器中执行
+	// 获取系统类型信息 - 直接使用docker run获取/etc/os-release
 	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", path, "cat", "/etc/os-release")
-	var osRelease string
-	var osType string
 	if err != nil {
-		// 如果无法获取/etc/os-release，尝试其他方法
-		fmt.Println("尝试获取/etc/os-release失败，尝试其他方法...")
+		return fmt.Errorf("无法获取系统信息: %v", err)
+	}
 
-		// 尝试redhat-release
-		redhatOutput, redhatErr := scan_utils.RunCommand("docker", "run", "--rm", path, "cat", "/etc/redhat-release")
-		if redhatErr == nil {
-			osRelease = strings.ToLower(redhatOutput)
-			if strings.Contains(osRelease, "fedora") {
-				osType = "fedora"
-			} else {
-				osType = "rpm-based"
-			}
-		} else {
-			// 尝试rpm命令
-			_, rpmErr := scan_utils.RunCommand("docker", "run", "--rm", path, "rpm", "--version")
-			if rpmErr == nil {
-				// 如果有rpm命令，假设是rpm系统
-				osRelease = "rpm-based"
-				osType = "rpm-based"
-			} else {
-				// 尝试dpkg命令
-				_, dpkgErr := scan_utils.RunCommand("docker", "run", "--rm", path, "dpkg", "--version")
-				if dpkgErr == nil {
-					// 如果有dpkg命令，假设是Debian/Ubuntu系统
-					osRelease = "dpkg-based"
-					osType = "debian"
-				} else {
-					return fmt.Errorf("无法确定镜像的操作系统类型")
-				}
-			}
+	// 解析os-release输出获取NAME字段
+	osRelease := strings.ToLower(osReleaseOutput)
+	var osType string
+
+	// 从os-release中解析NAME字段
+	namePattern := regexp.MustCompile(`(?m)^NAME="([^"]+)"`)
+	nameMatches := namePattern.FindStringSubmatch(osReleaseOutput)
+
+	if len(nameMatches) >= 2 {
+		nameValue := strings.ToLower(nameMatches[1])
+		fmt.Printf("获取到系统NAME: %s\n", nameMatches[1])
+
+		// 根据NAME字段确定操作系统类型
+		switch {
+		case strings.Contains(nameValue, "debian"):
+			osType = "debian"
+		case strings.Contains(nameValue, "ubuntu"):
+			osType = "ubuntu"
+		case strings.Contains(nameValue, "fedora"):
+			osType = "fedora"
+		case strings.Contains(nameValue, "openeuler"):
+			osType = "openeuler"
+		default:
+			return fmt.Errorf("不支持的操作系统类型: %s", nameMatches[1])
 		}
 	} else {
-		osRelease = strings.ToLower(osReleaseOutput)
-
-		// 解析os-release获取发行版类型
+		// 如果无法提取NAME字段，尝试从整个os-release内容判断
 		if strings.Contains(osRelease, "debian") {
 			osType = "debian"
 		} else if strings.Contains(osRelease, "ubuntu") {
@@ -141,7 +155,6 @@ func ParseImageFile(path string) error {
 		} else if strings.Contains(osRelease, "openeuler") {
 			osType = "openeuler"
 		} else {
-			// 如果无法确定，返回错误
 			return fmt.Errorf("不支持的操作系统类型: %s", osRelease)
 		}
 	}
@@ -158,7 +171,7 @@ func ParseImageFile(path string) error {
 		dbPath = "/var/lib/dpkg/status"
 		targetPath = filepath.Join(tmpDir, "dpkg-status")
 
-		// 对于Ubuntu/Debian，用一个更宽松的安装状态判断条件
+		// 对于Ubuntu/Debian
 		fmt.Println("Debian/Ubuntu系统：使用dpkg status文件进行扫描")
 	case "fedora": // Fedora
 		dbPath = "/var/lib/rpm/rpmdb.sqlite"
@@ -225,13 +238,6 @@ func ParseImageFile(path string) error {
 		AllPackages: allDiscoveredPackages, // 使用全局包数组
 	}
 
-	// 输出诊断信息，检查软件包数量
-	fmt.Printf("==== 诊断信息 ====\n")
-	fmt.Printf("全局包列表大小: %d\n", len(allDiscoveredPackages))
-	fmt.Printf("全局映射大小: %d\n", len(globalPackageInfoMap))
-	fmt.Printf("scanResult.AllPackages大小: %d\n", len(scanResult.AllPackages))
-	fmt.Printf("===============\n")
-
 	// 将结果转换为SBOM格式
 	sbomOutput := convertToSBOMFormat(scanResult)
 
@@ -245,7 +251,7 @@ func ParseImageFile(path string) error {
 	}
 
 	// 正确定义输出文件名
-	outputFilename := fmt.Sprintf("sbom_result_%s.json", time.Now().Format("20060102_150405"))
+	outputFilename := fmt.Sprintf(osType+"_sbom_result_%s.json", time.Now().Format("20060102_150405"))
 
 	// 创建输出文件
 	err = os.WriteFile(outputFilename, buffer.Bytes(), 0644)
@@ -386,8 +392,6 @@ func parseDpkgStatus(filePath string, imagePath string) (*pkg.Pkg, error) {
 			continue
 		}
 
-		// Debian/Ubuntu的status字段通常是"install ok installed"，但我们使用更宽松的条件
-		// 只要字段中包含"installed"，并且不包含"not-installed"或"config-files"就视为已安装
 		if !strings.Contains(status, "installed") ||
 			strings.Contains(status, "not-installed") ||
 			strings.Contains(status, "config-files") {
@@ -411,7 +415,16 @@ func parseDpkgStatus(filePath string, imagePath string) (*pkg.Pkg, error) {
 				Priority:     info["Priority"],
 				SourcePkg:    info["Source"],
 				Lifecycle:    pkg.InstalledLifecycle,
-				License:      []string{}, // 设置为空数组，而不是尝试解析
+				License:      []string{}, // 初始化为空数组
+			}
+
+			// 尝试从copyright文件获取许可证信息
+			licenseInfo, err := getLicenseFromCopyright(imagePath, pkgName)
+			if err == nil && len(licenseInfo) > 0 {
+				metadata.License = licenseInfo
+				fmt.Printf("获取到软件包 %s 的许可证信息: %v\n", pkgName, licenseInfo)
+			} else {
+				fmt.Printf("无法获取软件包 %s 的许可证信息: %v\n", pkgName, err)
 			}
 
 			// 添加Homepage作为URL
@@ -530,6 +543,83 @@ func parseDpkgStatus(filePath string, imagePath string) (*pkg.Pkg, error) {
 		len(allDiscoveredPackages), len(allDependencies))
 
 	return pkgInfo, nil
+}
+
+// 新增函数：从copyright文件获取许可证信息
+func getLicenseFromCopyright(imagePath string, packageName string) ([]string, error) {
+	// copyright文件的路径
+	copyrightPath := fmt.Sprintf("/usr/share/doc/%s/copyright", packageName)
+
+	// 使用docker命令获取copyright文件内容
+	output, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", copyrightPath)
+	if err != nil {
+		return nil, fmt.Errorf("获取copyright文件失败: %v", err)
+	}
+
+	if output == "" {
+		return nil, fmt.Errorf("copyright文件为空")
+	}
+
+	// 解析copyright文件，提取许可证信息
+	licenses := parseCopyrightLicense(output)
+
+	return licenses, nil
+}
+
+// 解析copyright文件中的许可证信息
+func parseCopyrightLicense(content string) []string {
+	// 用于存储找到的许可证信息
+	licenseMap := make(map[string]bool)
+
+	// 按行解析内容
+	lines := strings.Split(content, "\n")
+
+	for i := 0; i < len(lines); i++ {
+		line := lines[i]
+		// 查找以"License:"开头的行
+		if strings.HasPrefix(line, "License:") {
+			// 提取许可证名称
+			licenseName := strings.TrimSpace(strings.TrimPrefix(line, "License:"))
+
+			// 检查许可证名称是否为空，可能是多行许可证描述的开始
+			if licenseName == "" && i+1 < len(lines) {
+				// 获取下一行作为许可证名称
+				nextLine := strings.TrimSpace(lines[i+1])
+				if nextLine != "" && !strings.HasPrefix(nextLine, "License:") && !strings.HasPrefix(nextLine, "Files:") {
+					licenseName = nextLine
+					i++ // 跳过下一行，因为已经处理过了
+				}
+			}
+
+			// 如果许可证名称非空且尚未添加，则添加到集合中（去重）
+			if licenseName != "" && !licenseMap[licenseName] {
+				// 去除许可证名称中可能的注释或额外信息
+				if idx := strings.Index(licenseName, " "); idx > 0 {
+					// 只保留第一部分作为许可证标识符
+					licenseType := licenseName[:idx]
+					// 一些常见的许可证简写
+					switch licenseType {
+					case "GPL-2", "GPL-2+", "GPL-3", "GPL-3+", "LGPL-2", "LGPL-2+", "LGPL-3", "LGPL-3+",
+						"BSD-3-clause", "BSD-2-clause", "MIT", "Apache-2.0", "MPL-2.0", "Expat":
+						licenseMap[licenseType] = true
+					default:
+						// 如果不是常见的简写，保留完整的许可证标识符
+						licenseMap[licenseName] = true
+					}
+				} else {
+					licenseMap[licenseName] = true
+				}
+			}
+		}
+	}
+
+	// 将许可证集合转换为切片
+	var licenses []string
+	for license := range licenseMap {
+		licenses = append(licenses, license)
+	}
+
+	return licenses
 }
 
 // 生成一个简单的包ID
@@ -1370,6 +1460,20 @@ func createTempContainer(imageName string) (string, error) {
 func convertToSBOMFormat(result *ScanResult) *outputSBOM {
 	// 创建SBOM输出结构
 	sbom := &outputSBOM{
+		Schema:       "http://cyclonedx.org/schema/bom-1.6.schema.json",
+		BomFormat:    "CycloneDX",
+		SpecVersion:  "1.6",
+		SerialNumber: uuid.New().URN(),
+		Version:      1,
+		Tools: ToolsInfo{
+			Components: []ToolComponent{
+				{
+					Type:    string(cyclonedx.ComponentTypeApplication),
+					Name:    "SLP",
+					Version: "1.0",
+				},
+			},
+		},
 		Components:   []ComponentOutput{},
 		Dependencies: []DependencyOutput{},
 	}
@@ -1522,6 +1626,137 @@ func processDependencies(sbom *outputSBOM, pkgInfoMap map[string]*PackageInfo) {
 	fmt.Printf("共建立 %d 个依赖关系\n", len(sbom.Dependencies))
 }
 
+// formatLicenses 格式化许可证信息，应用SPDX格式化
+func formatLicenses(licenses []string) []map[string]interface{} {
+	if len(licenses) == 0 {
+		return nil
+	}
+
+	// 规范化所有许可证
+	var normalizedLicenses []string
+	for _, license := range licenses {
+		license = strings.TrimSpace(license)
+		if license == "" {
+			continue
+		}
+		normalizedLicense := normalizeLicenseId(license)
+		if normalizedLicense != "" {
+			normalizedLicenses = append(normalizedLicenses, normalizedLicense)
+		}
+	}
+
+	// 如果没有有效的许可证，返回nil
+	if len(normalizedLicenses) == 0 {
+		return nil
+	}
+
+	// 连接所有许可证为一个字符串，用" AND "连接
+	combinedLicense := strings.Join(normalizedLicenses, " AND ")
+
+	// 返回单个许可证对象
+	return []map[string]interface{}{
+		{
+			"license": map[string]string{
+				"name": combinedLicense,
+			},
+		},
+	}
+}
+
+// normalizeLicenseId 规范化许可证ID到SPDX格式
+func normalizeLicenseId(license string) string {
+	// 规范化常见的非标准许可证标识符到SPDX格式
+	licenseMap := map[string]string{
+		"GPL-2":         "GPL-2.0-only",
+		"GPL-2+":        "GPL-2.0-or-later",
+		"GPL-3":         "GPL-3.0-only",
+		"GPL-3+":        "GPL-3.0-or-later",
+		"LGPL-2":        "LGPL-2.0-only",
+		"LGPL-2+":       "LGPL-2.0-or-later",
+		"LGPL-3":        "LGPL-3.0-only",
+		"LGPL-3+":       "LGPL-3.0-or-later",
+		"BSD-3-clause":  "BSD-3-Clause",
+		"BSD-2-clause":  "BSD-2-Clause",
+		"MIT":           "MIT",
+		"Apache-2.0":    "Apache-2.0",
+		"MPL-2.0":       "MPL-2.0",
+		"Expat":         "MIT",
+		"Public Domain": "CC0-1.0",
+		"GPLv2":         "GPL-2.0-only",
+		"GPLv2+":        "GPL-2.0-or-later",
+		"GPLv3":         "GPL-3.0-only",
+		"GPLv3+":        "GPL-3.0-or-later",
+		"LGPLv2":        "LGPL-2.0-only",
+		"LGPLv2+":       "LGPL-2.0-or-later",
+		"LGPLv3":        "LGPL-3.0-only",
+		"LGPLv3+":       "LGPL-3.0-or-later",
+		"BSD":           "BSD-3-Clause",
+		"ASL 2.0":       "Apache-2.0",
+		"zlib":          "Zlib",
+		"Boost":         "BSL-1.0",
+		"Mulan PSL v2":  "MulanPSL-2.0",
+	}
+
+	// 处理常见组合格式
+	if strings.Contains(license, " and ") {
+		parts := strings.Split(license, " and ")
+		var normalizedParts []string
+		for _, part := range parts {
+			normalized := normalizeLicenseId(strings.TrimSpace(part))
+			if normalized != "" {
+				normalizedParts = append(normalizedParts, normalized)
+			} else {
+				normalizedParts = append(normalizedParts, strings.TrimSpace(part))
+			}
+		}
+		return strings.Join(normalizedParts, " AND ")
+	} else if strings.Contains(license, " or ") {
+		parts := strings.Split(license, " or ")
+		var normalizedParts []string
+		for _, part := range parts {
+			normalized := normalizeLicenseId(strings.TrimSpace(part))
+			if normalized != "" {
+				normalizedParts = append(normalizedParts, normalized)
+			} else {
+				normalizedParts = append(normalizedParts, strings.TrimSpace(part))
+			}
+		}
+		return strings.Join(normalizedParts, " OR ")
+	}
+
+	// 直接映射
+	if spdxId, ok := licenseMap[license]; ok {
+		return spdxId
+	}
+
+	// 如果是SPDX标准格式，直接返回
+	if isSPDXFormat(license) {
+		return license
+	}
+
+	return license
+}
+
+// isSPDXFormat 检查许可证ID是否已经是SPDX格式
+func isSPDXFormat(license string) bool {
+	// 简单检查是否符合SPDX常见的格式模式
+	spdxPatterns := []string{
+		"^[A-Z]+-[0-9]+\\.[0-9]+-only$",
+		"^[A-Z]+-[0-9]+\\.[0-9]+-or-later$",
+		"^[A-Z]+-[0-9]+\\.[0-9]+$",
+		"^[A-Z]+-[0-9]+-Clause$",
+	}
+
+	for _, pattern := range spdxPatterns {
+		matched, _ := regexp.MatchString(pattern, license)
+		if matched {
+			return true
+		}
+	}
+
+	return false
+}
+
 // createPackageComponent 从软件包元数据创建组件
 func createPackageComponent(metadata *pkg.Metadata) ComponentOutput {
 	// 创建基本组件信息
@@ -1539,21 +1774,9 @@ func createPackageComponent(metadata *pkg.Metadata) ComponentOutput {
 		component.PURL = metadata.PURL
 	}
 
-	// 添加许可证信息
+	// 添加许可证信息 - 使用新的格式化函数
 	if len(metadata.License) > 0 {
-		var licenses []map[string]interface{}
-		for _, license := range metadata.License {
-			if license != "" {
-				licenses = append(licenses, map[string]interface{}{
-					"license": map[string]string{
-						"id": license,
-					},
-				})
-			}
-		}
-		if len(licenses) > 0 {
-			component.Licenses = licenses
-		}
+		component.Licenses = formatLicenses(metadata.License)
 	}
 
 	// 添加外部引用（URL）
@@ -1633,21 +1856,9 @@ func createDependencyComponent(dep *pkg.Depend) ComponentOutput {
 		depComponent.CPE = dep.Metadata.CPE
 	}
 
-	// 添加许可证信息
+	// 添加许可证信息 - 使用新的格式化函数
 	if len(dep.Metadata.License) > 0 {
-		var licenses []map[string]interface{}
-		for _, license := range dep.Metadata.License {
-			if license != "" {
-				licenses = append(licenses, map[string]interface{}{
-					"license": map[string]string{
-						"id": license,
-					},
-				})
-			}
-		}
-		if len(licenses) > 0 {
-			depComponent.Licenses = licenses
-		}
+		depComponent.Licenses = formatLicenses(dep.Metadata.License)
 	}
 
 	// 添加外部引用（URL）
