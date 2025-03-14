@@ -137,7 +137,7 @@ func ParseImageFile(path string) error {
 	// 检查 docker image 是否存在
 	_, err := scan_utils.RunCommand("docker", "inspect", path)
 	if err != nil {
-		return fmt.Errorf("docker镜像不存在: %v", err)
+		return fmt.Errorf("\ndocker镜像不存在: %v", err)
 	}
 
 	// 显示进度 - 镜像检查完成
@@ -146,7 +146,7 @@ func ParseImageFile(path string) error {
 	// 创建临时目录用于保存提取的文件
 	tmpDir, err := os.MkdirTemp("", "docker_files_*")
 	if err != nil {
-		return fmt.Errorf("创建临时目录失败: %v", err)
+		return fmt.Errorf("\n创建临时目录失败: %v", err)
 	}
 	defer os.RemoveAll(tmpDir)
 
@@ -154,7 +154,7 @@ func ParseImageFile(path string) error {
 	showProgress(10)
 	containerID, err := scan_utils.RunCommand("docker", "create", path)
 	if err != nil {
-		return fmt.Errorf("创建临时容器失败: %v", err)
+		return fmt.Errorf("\n创建临时容器失败: %v", err)
 	}
 	containerID = strings.TrimSpace(containerID)
 
@@ -194,7 +194,7 @@ func ParseImageFile(path string) error {
 		case strings.Contains(nameValue, "openeuler"):
 			osType = "openeuler"
 		default:
-			return fmt.Errorf("不支持的操作系统类型: %s", nameMatches[1])
+			return fmt.Errorf("\n不支持的操作系统类型: %s", nameMatches[1])
 		}
 	} else {
 		// 如果无法提取NAME字段，尝试从整个os-release内容判断
@@ -208,7 +208,7 @@ func ParseImageFile(path string) error {
 			osType = "openeuler"
 		} else {
 			// 如果无法从os-release判断，不应该假设系统类型
-			return fmt.Errorf("无法确定操作系统类型，不支持的系统")
+			return fmt.Errorf("\n无法确定操作系统类型，不支持的系统")
 		}
 	}
 
@@ -224,14 +224,14 @@ func ParseImageFile(path string) error {
 		showProgress(30)
 		kernelInfo, err := parseKernelInfo(path)
 		if err != nil {
-			return fmt.Errorf("获取内核信息失败: %v", err)
+			return fmt.Errorf("\n获取内核信息失败: %v", err)
 		}
 
 		// 解析RPM包信息
 		showProgress(35)
 		pkgInfo, err := parseRpmViaDocker(path)
 		if err != nil {
-			return fmt.Errorf("解析Fedora包信息失败: %v", err)
+			return fmt.Errorf("\n解析Fedora包信息失败: %v", err)
 		}
 
 		// 创建扫描结果结构体
@@ -252,7 +252,7 @@ func ParseImageFile(path string) error {
 		encoder.SetEscapeHTML(false) // 这是关键设置：不转义HTML字符如&
 		encoder.SetIndent("", "    ")
 		if err := encoder.Encode(sbomOutput); err != nil {
-			return fmt.Errorf("转换JSON失败: %v", err)
+			return fmt.Errorf("\n转换JSON失败: %v", err)
 		}
 
 		// 正确定义输出文件名
@@ -261,7 +261,7 @@ func ParseImageFile(path string) error {
 		// 创建输出文件
 		err = os.WriteFile(outputFilename, buffer.Bytes(), 0644)
 		if err != nil {
-			return fmt.Errorf("写入结果文件失败: %v", err)
+			return fmt.Errorf("\n写入结果文件失败: %v", err)
 		}
 
 		// 显示100%进度并输出完成信息
@@ -287,25 +287,25 @@ func ParseImageFile(path string) error {
 		targetDbPath = "/var/lib/rpm/Packages.db"
 		localDbPath = filepath.Join(tmpDir, "Packages.db")
 	default:
-		return fmt.Errorf("不支持的操作系统类型: %s", osType)
+		return fmt.Errorf("\n不支持的操作系统类型: %s", osType)
 	}
 
 	showProgress(25)
 	_, err = scan_utils.RunCommand("docker", "cp", fmt.Sprintf("%s:%s", containerID, targetDbPath), localDbPath)
 	if err != nil {
-		return fmt.Errorf("复制数据库文件失败: %v", err)
+		return fmt.Errorf("\n复制数据库文件失败: %v", err)
 	}
 
 	// 检查目标文件是否存在
 	if _, err := os.Stat(localDbPath); os.IsNotExist(err) {
-		return fmt.Errorf("复制数据库文件后目标文件不存在: %s", localDbPath)
+		return fmt.Errorf("\n复制数据库文件后目标文件不存在: %s", localDbPath)
 	}
 
 	// 获取内核信息 - 使用容器命令
 	showProgress(30)
 	kernelInfo, err := parseKernelInfo(path)
 	if err != nil {
-		return fmt.Errorf("获取内核信息失败: %v", err)
+		return fmt.Errorf("\n获取内核信息失败: %v", err)
 	}
 
 	// 解析包管理数据库
@@ -343,7 +343,7 @@ func ParseImageFile(path string) error {
 
 	// 如果解析失败
 	if err != nil {
-		return fmt.Errorf("解析包管理数据库失败: %v", err)
+		return fmt.Errorf("\n解析包管理数据库失败: %v", err)
 	}
 
 	showProgress(70)
@@ -366,7 +366,7 @@ func ParseImageFile(path string) error {
 	encoder.SetEscapeHTML(false) // 这是关键设置：不转义HTML字符如&
 	encoder.SetIndent("", "    ")
 	if err := encoder.Encode(sbomOutput); err != nil {
-		return fmt.Errorf("转换JSON失败: %v", err)
+		return fmt.Errorf("\n转换JSON失败: %v", err)
 	}
 
 	showProgress(90)
@@ -376,7 +376,7 @@ func ParseImageFile(path string) error {
 	// 创建输出文件
 	err = os.WriteFile(outputFilename, buffer.Bytes(), 0644)
 	if err != nil {
-		return fmt.Errorf("写入结果文件失败: %v", err)
+		return fmt.Errorf("\n写入结果文件失败: %v", err)
 	}
 
 	// 更新进度为100%并显示完成信息
@@ -414,7 +414,7 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 	// 读取dpkg status文件
 	content, err := os.ReadFile(filePath)
 	if err != nil {
-		return nil, fmt.Errorf("读取dpkg status文件失败: %v", err)
+		return nil, fmt.Errorf("\n读取dpkg status文件失败: %v", err)
 	}
 
 	// 直接使用字符串读取，确保处理所有包
@@ -674,14 +674,14 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 	// 尝试使用SQLite方式打开
 	db, err := sql.Open("sqlite3", filePath)
 	if err != nil {
-		return nil, fmt.Errorf("SQLite访问失败: %v", err)
+		return nil, fmt.Errorf("\nSQLite访问失败: %v", err)
 	}
 
 	// 检查连接是否真的成功
 	err = db.Ping()
 	if err != nil {
 		db.Close()
-		return nil, fmt.Errorf("SQLite连接失败: %v", err)
+		return nil, fmt.Errorf("\nSQLite连接失败: %v", err)
 	}
 
 	defer db.Close()
@@ -730,7 +730,7 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
     `)
 	if err != nil {
 		// 如果查询失败，返回错误
-		return nil, fmt.Errorf("SQLite查询失败: %v", err)
+		return nil, fmt.Errorf("\nSQLite查询失败: %v", err)
 	}
 	defer rows.Close()
 
@@ -842,13 +842,13 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 	// 使用rpmdb库打开包数据库
 	db, err := rpmdb.Open(filePath)
 	if err != nil {
-		return nil, fmt.Errorf("解析rpmdb数据库信息时出错：%v", err)
+		return nil, fmt.Errorf("\n解析rpmdb数据库信息时出错：%v", err)
 	}
 	defer db.Close()
 
 	packages, err := db.ListPackages()
 	if err != nil {
-		return nil, fmt.Errorf("解析rpmdb数据库包列表信息时出错：%v", err)
+		return nil, fmt.Errorf("\n解析rpmdb数据库包列表信息时出错：%v", err)
 	}
 
 	// 获取系统信息用于生成 PURL
@@ -934,7 +934,7 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 			timestamp:    time.Now(),
 		}, "package-id")
 		if err != nil {
-			return nil, fmt.Errorf("生成BOMRef失败: %v", err)
+			return nil, fmt.Errorf("\n生成BOMRef失败: %v", err)
 		}
 		metadata.BomRef = bomRef
 
@@ -1538,7 +1538,7 @@ func parseLicensesFromCopyright(filePath string) ([]string, error) {
 	// 打开文件
 	file, err := os.Open(filePath)
 	if err != nil {
-		return nil, fmt.Errorf("failed to open file: %w", err)
+		return nil, fmt.Errorf("\nfailed to open file: %w", err)
 	}
 	defer file.Close()
 
@@ -1587,7 +1587,7 @@ func parseLicensesFromCopyright(filePath string) ([]string, error) {
 
 	// 检查扫描错误
 	if err := scanner.Err(); err != nil {
-		return nil, fmt.Errorf("error reading Copyright file: %v", err)
+		return nil, fmt.Errorf("\nerror reading Copyright file: %v", err)
 	}
 
 	// 将许可证集合转换为切片
@@ -1634,7 +1634,7 @@ func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
 	// 获取所有已安装的包名称
 	packagesOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qa", "--queryformat", "%{NAME}\\n")
 	if err != nil {
-		return nil, fmt.Errorf("获取包列表失败: %v", err)
+		return nil, fmt.Errorf("\n获取包列表失败: %v", err)
 	}
 
 	// 清理和分割输出
