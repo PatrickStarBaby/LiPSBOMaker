@@ -1,0 +1,4191 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:4caf728f-d23a-4c6d-92db-5e24230d8b05",
+    "version": 1,
+    "tools": {
+        "components": [
+            {
+                "type": "application",
+                "name": "SLP",
+                "version": "1.0"
+            }
+        ]
+    },
+    "components": [
+        {
+            "bom-ref": "pkg:kernel/linux@5.15.153.1-microsoft-standard-WSL2?arch=x86_64",
+            "name": "linux-5.15.153.1-microsoft-standard-WSL2",
+            "type": "linux_kernel",
+            "version": "5.15.153.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "buildTime": "#1 SMP Fri Mar 29 23:14:13 UTC 2024"
+        },
+        {
+            "bom-ref": "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
+            "name": "adduser",
+            "purl": "pkg:deb/adduser@3.134?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "3.134",
+            "cpe": "cpe:2.3:a:*:adduser:3.134:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian Adduser Developers <adduser@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12&package-id=41f8164eac096820",
+            "name": "apt",
+            "purl": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.6.1",
+            "cpe": "cpe:2.3:a:*:apt:2.6.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND MIT AND GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "APT Development Team <deity@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12&package-id=2045c018e654b9b7",
+            "name": "base-files",
+            "purl": "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "12.4+deb12u9",
+            "cpe": "cpe:2.3:a:*:base-files:12.4+deb12u9:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Santiago Vila <sanvila@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12&package-id=21200f8b39328bd5",
+            "name": "base-passwd",
+            "purl": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.6.1",
+            "cpe": "cpe:2.3:a:*:base-passwd:3.6.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2. AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Colin Watson <cjwatson@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12&package-id=90e650df84381b25",
+            "name": "bash",
+            "purl": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "5.2.15-2+b7",
+            "cpe": "cpe:2.3:a:*:bash:5.2.15-2+b7:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-4-clause-UC AND BSD-4-clause-UC AND MIT-like AND GFDL-1.3 AND GFDL-NIV-1.3 AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND Latex2e AND MIT-like AND permissive"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Matthias Klose <doko@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "shells"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "bash (5.2.15-2)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://tiswww.case.edu/php/chet/bash/bashtop.html"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/bsdutils@1:2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=8d5758ac73acb15f",
+            "name": "bsdutils",
+            "purl": "pkg:deb/bsdutils@1:2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:bsdutils:1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux (2.38.1-5+deb12u3)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/coreutils@9.1-1?arch=amd64&distro=debian-12&package-id=e535df04f445508c",
+            "name": "coreutils",
+            "purl": "pkg:deb/coreutils@9.1-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "9.1-1",
+            "cpe": "cpe:2.3:a:*:coreutils:9.1-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-4-clause-UC AND FSFULLR AND GFDL-1.3 AND GFDL-NIV-1.3 AND GPL-3.0-only AND GPL-3.0-or-later AND ISC"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Michael Stone <mstone@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gnu.org/software/coreutils"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12&package-id=dd1b2909c9c51c7d",
+            "name": "dash",
+            "purl": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "0.5.12-2",
+            "cpe": "cpe:2.3:a:*:dash:0.5.12-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Andrej Shadura <andrewsh@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "shells"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gondor.apana.org.au/~herbert/dash/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2",
+            "name": "debconf",
+            "purl": "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "1.5.82",
+            "cpe": "cpe:2.3:a:*:debconf:1.5.82:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debconf Developers <debconf-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12&package-id=3bab0fc5c261c89a",
+            "name": "debian-archive-keyring",
+            "purl": "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "2023.3+deb12u1",
+            "cpe": "cpe:2.3:a:*:debian-archive-keyring:2023.3+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian Release Team <packages@release.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "misc"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574",
+            "name": "debianutils",
+            "purl": "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "5.7-0.5~deb12u1",
+            "cpe": "cpe:2.3:a:*:debianutils:5.7-0.5~deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-or-later AND GPL-2. AND SMAIL-GPL AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Clint Adams <clint@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/diffutils@1:3.8-4?arch=amd64&distro=debian-12&package-id=80fd8f2e267c3889",
+            "name": "diffutils",
+            "purl": "pkg:deb/diffutils@1:3.8-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:3.8-4",
+            "cpe": "cpe:2.3:a:*:diffutils:1:3.8-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "FSFAP AND FSFULLR AND GFDL-1.3 AND GFDL-NIV-1.3 AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.0-only AND LGPL-2.0+ AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0+ AND LGPL-3.0+ OR GPL-2.0-or-later AND X11 AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Santiago Vila <sanvila@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/diffutils/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b",
+            "name": "dpkg",
+            "purl": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.21.22",
+            "cpe": "cpe:2.3:a:*:dpkg:1.21.22:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND public-domain-s-s-d"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Dpkg Developers <debian-dpkg@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://wiki.debian.org/Teams/Dpkg"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12&package-id=e7bc5e9c87a3f8ec",
+            "name": "e2fsprogs",
+            "purl": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.47.0-2",
+            "cpe": "cpe:2.3:a:*:e2fsprogs:1.47.0-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2 AND Apache-2.0 AND BSD-3-Clause AND GPL AND GPL OR MIT-US-export AND GPL-2.0-only AND GPL-2.0-or-later AND ISC AND Kazlib AND LGPL-2.0-only AND Latex2e"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Theodore Y. Ts'o <tytso@mit.edu>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/findutils@4.9.0-4?arch=amd64&distro=debian-12&package-id=0e57adc3f8682bcb",
+            "name": "findutils",
+            "purl": "pkg:deb/findutils@4.9.0-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "4.9.0-4",
+            "cpe": "cpe:2.3:a:*:findutils:4.9.0-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND FSFAP AND FSFULLR AND GFDL-1.3 AND GFDL-NIV-1.3+ AND GPL with automake exception AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND ISC AND ISC and/or LGPL-2.1+ AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND X11 AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Andreas Metzler <ametzler@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.gnu.org/projects/findutils/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+            "name": "gcc-12-base",
+            "purl": "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "12.2.0-14",
+            "cpe": "cpe:2.3:a:*:gcc-12-base:12.2.0-14:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Artistic AND GFDL-1.2 AND GPL AND GPL-2.0-only AND GPL-3.0-only AND GPL. AND LGPL."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "gcc-12"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
+            "name": "gpgv",
+            "purl": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.2.40-1.1",
+            "cpe": "cpe:2.3:a:*:gpgv:2.2.40-1.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND CC0-1.0 AND CC0-1.0. AND MIT AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND RFC-Reference AND TinySCHEME AND permissive"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "important"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "gnupg2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12&package-id=c0f223ed77627dae",
+            "name": "grep",
+            "purl": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.8-5",
+            "cpe": "cpe:2.3:a:*:grep:3.8-5:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-3.0-or-later AND GPL-3."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Anibal Monsalve Salazar <anibal@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/grep/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12&package-id=3b94635eadfd0b6a",
+            "name": "gzip",
+            "purl": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.12-1",
+            "cpe": "cpe:2.3:a:*:gzip:1.12-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "FSF-manpages AND GFDL-1.3+-no-invariant AND GFDL-3 AND GPL-3.0-only AND GPL-3.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Milan Kupcevic <milan@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/gzip/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/hostname@3.23+nmu1?arch=amd64&distro=debian-12&package-id=3ca9c66dd4e8db5b",
+            "name": "hostname",
+            "purl": "pkg:deb/hostname@3.23+nmu1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.23+nmu1",
+            "cpe": "cpe:2.3:a:*:hostname:3.23+nmu1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Michael Meskes <meskes@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/init-system-helpers@1.65.2?arch=all&distro=debian-12&package-id=2e66c36365f06e4d",
+            "name": "init-system-helpers",
+            "purl": "pkg:deb/init-system-helpers@1.65.2?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "1.65.2",
+            "cpe": "cpe:2.3:a:*:init-system-helpers:1.65.2:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12&package-id=cb298c58c3a6b975",
+            "name": "libacl1",
+            "purl": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.3.1-3",
+            "cpe": "cpe:2.3:a:*:libacl1:2.3.1-3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Guillem Jover <guillem@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "acl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.nongnu.org/projects/acl/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
+            "name": "libapt-pkg6.0",
+            "purl": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.6.1",
+            "cpe": "cpe:2.3:a:*:libapt-pkg6.0:2.6.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND MIT AND GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "APT Development Team <deity@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "apt"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12&package-id=3a77edf12e8ff074",
+            "name": "libattr1",
+            "purl": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:2.5.1-4",
+            "cpe": "cpe:2.3:a:*:libattr1:1:2.5.1-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Guillem Jover <guillem@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "attr"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://savannah.nongnu.org/projects/attr/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12&package-id=aa1580f769241070",
+            "name": "libaudit-common",
+            "purl": "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "1:3.0.9-1",
+            "cpe": "cpe:2.3:a:*:libaudit-common:1:3.0.9-1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-1 AND GPL-2.0-only AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Laurent Bigonville <bigon@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "audit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/audit/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+            "name": "libaudit1",
+            "purl": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:3.0.9-1",
+            "cpe": "cpe:2.3:a:*:libaudit1:1:3.0.9-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-1 AND GPL-2.0-only AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Laurent Bigonville <bigon@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "audit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/audit/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
+            "name": "libblkid1",
+            "purl": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:libblkid1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+            "name": "libbz2-1.0",
+            "purl": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.0.8-5+b1",
+            "cpe": "cpe:2.3:a:*:libbz2-1.0:1.0.8-5+b1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-variant AND GPL-2.0-only AND GPL-2."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Anibal Monsalve Salazar <anibal@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "bzip2 (1.0.8-5)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sourceware.org/bzip2/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=50226d74c8c8236d",
+            "name": "libc-bin",
+            "purl": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.36-9+deb12u9",
+            "cpe": "cpe:2.3:a:*:libc-bin:2.36-9+deb12u9:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "glibc"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libc/libc.html"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+            "name": "libc6",
+            "purl": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.36-9+deb12u9",
+            "cpe": "cpe:2.3:a:*:libc6:2.36-9+deb12u9:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "glibc"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libc/libc.html"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
+            "name": "libcap-ng0",
+            "purl": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "0.8.3-1+b3",
+            "cpe": "cpe:2.3:a:*:libcap-ng0:0.8.3-1+b3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND LGPL-2.1 AND LGPL-2.1+"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Håvard F. Aasen <havard.f.aasen@pfft.no>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libcap-ng (0.8.3-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://people.redhat.com/sgrubb/libcap-ng"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
+            "name": "libcap2",
+            "purl": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:2.66-4",
+            "cpe": "cpe:2.3:a:*:libcap2:1:2.66-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Christian Kastner <ckk@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sites.google.com/site/fullycapable/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
+            "name": "libcom-err2",
+            "purl": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.47.0-2",
+            "cpe": "cpe:2.3:a:*:libcom-err2:1.47.0-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2 AND Apache-2.0 AND BSD-3-Clause AND GPL AND GPL OR MIT-US-export AND GPL-2.0-only AND GPL-2.0-or-later AND ISC AND Kazlib AND LGPL-2.0-only AND Latex2e"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Theodore Y. Ts'o <tytso@mit.edu>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+            "name": "libcrypt1",
+            "purl": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:4.4.33-2",
+            "cpe": "cpe:2.3:a:*:libcrypt1:1:4.4.33-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Marco d'Itri <md@linux.it>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libxcrypt"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12&package-id=61387bccff2fd18d",
+            "name": "libdb5.3",
+            "purl": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "5.3.28+dfsg2-1",
+            "cpe": "cpe:2.3:a:*:libdb5.3:5.3.28+dfsg2-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Artistic AND Artistic OR BSD-3-Clause AND BSD-3-Clause AND BSD-3-clause-fjord AND GPL AND GPL OR Artistic AND GPL-3.0-only AND MIT-old AND Ms-PL AND Sleepycat AND Sleepycat AND BSD-3-Clause AND TCL-like AND X11 AND Zlib"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Bastian Germann <bage@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "db5.3"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
+            "name": "libdebconfclient0",
+            "purl": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "0.270",
+            "cpe": "cpe:2.3:a:*:libdebconfclient0:0.270:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause AND BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian Install System Team <debian-boot@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "cdebconf"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12&package-id=7d4d16397179656e",
+            "name": "libext2fs2",
+            "purl": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.47.0-2",
+            "cpe": "cpe:2.3:a:*:libext2fs2:1.47.0-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2 AND Apache-2.0 AND BSD-3-Clause AND GPL AND GPL OR MIT-US-export AND GPL-2.0-only AND GPL-2.0-or-later AND ISC AND Kazlib AND LGPL-2.0-only AND Latex2e"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Theodore Y. Ts'o <tytso@mit.edu>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
+            "name": "libffi8",
+            "purl": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.4.4-1",
+            "cpe": "cpe:2.3:a:*:libffi8:3.4.4-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "MIT AND GPL AND GPL-2.0-or-later AND GPL-3.0-or-later AND MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1+ AND X11 AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libffi"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://sourceware.org/libffi/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+            "name": "libgcc-s1",
+            "purl": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "12.2.0-14",
+            "cpe": "cpe:2.3:a:*:libgcc-s1:12.2.0-14:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Artistic AND GFDL-1.2 AND GPL AND GPL-2.0-only AND GPL-3.0-only AND GPL. AND LGPL."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "gcc-12"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+            "name": "libgcrypt20",
+            "purl": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.10.1-3",
+            "cpe": "cpe:2.3:a:*:libgcrypt20:1.10.1-3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND LGPL"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://directory.fsf.org/project/libgcrypt/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+            "name": "libgmp10",
+            "purl": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2:6.2.1+dfsg1-1.1",
+            "cpe": "cpe:2.3:a:*:libgmp10:2:6.2.1+dfsg1-1.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-or-later AND GPL-2. AND GPL-3.0-or-later AND GPL-3. AND LGPL-3.0-or-later AND LGPL-3."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "gmp"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://gmplib.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
+            "name": "libgnutls30",
+            "purl": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.7.9-2+deb12u4",
+            "cpe": "cpe:2.3:a:*:libgnutls30:3.7.9-2+deb12u4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2.0 AND BSD-3-Clause AND CC0 license AND MIT AND GFDL-1.3. AND GPL AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-3.0-only AND LGPLv2.1+ AND LGPLv3+_or_GPLv2+ AND The main library is licensed under GNU Lesser"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "gnutls28"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnutls.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
+            "name": "libgpg-error0",
+            "purl": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.46-1",
+            "cpe": "cpe:2.3:a:*:libgpg-error0:1.46-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND GPL-3.0-or-later AND GPL-3. AND LGPL-2.1+ AND LGPL-2.1+ OR BSD-3-Clause AND LGPL-2.1. AND g10-permissive"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libgpg-error"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnupg.org/related_software/libgpg-error/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
+            "name": "libhogweed6",
+            "purl": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.8.1-2",
+            "cpe": "cpe:2.3:a:*:libhogweed6:3.8.1-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "MIT AND GAP AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-2. AND GPL-3.0-or-later AND GPL. AND LGPL-2.0-or-later AND LGPL-2. AND LGPL-3.0-or-later AND LGPL. AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Magnus Holmgren <holmgren@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "nettle"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.lysator.liu.se/~nisse/nettle/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
+            "name": "libidn2-0",
+            "purl": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.3.3-1+b1",
+            "cpe": "cpe:2.3:a:*:libidn2-0:2.3.3-1+b1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-or-later AND GPL-2. AND GPL-3.0-or-later AND GPL-3. AND LGPL-3.0-or-later AND LGPL-3. AND Unicode"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian Libidn team <help-libidn@gnu.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libidn2 (2.3.3-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libidn/#libidn2"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+            "name": "liblz4-1",
+            "purl": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.9.4-1",
+            "cpe": "cpe:2.3:a:*:liblz4-1:1.9.4-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Nobuhiro Iwamatsu <iwamatsu@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "lz4"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/lz4/lz4"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+            "name": "liblzma5",
+            "purl": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "5.4.1-0.2",
+            "cpe": "cpe:2.3:a:*:liblzma5:5.4.1-0.2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Autoconf AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND LGPL-2.0-only AND LGPL-2.1 AND LGPL-2.1+ AND PD AND PD-debian AND config-h AND noderivs AND none AND permissive-fsf AND permissive-nowarranty AND probably-PD"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Jonathan Nieder <jrnieder@gmail.com>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "xz-utils"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://tukaani.org/xz/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12&package-id=3e344cf0113fa217",
+            "name": "libmd0",
+            "purl": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.0.4-2",
+            "cpe": "cpe:2.3:a:*:libmd0:1.0.4-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause AND BSD-2-clause-NetBSD AND BSD-3-Clause AND BSD-3-clause-Aaron-D-Gifford AND Beerware AND ISC AND public-domain-md4 AND public-domain-md5 AND public-domain-sha1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Guillem Jover <guillem@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libmd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.hadrons.org/software/libmd/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=e1dcaa6c850f468d",
+            "name": "libmount1",
+            "purl": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:libmount1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
+            "name": "libnettle8",
+            "purl": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.8.1-2",
+            "cpe": "cpe:2.3:a:*:libnettle8:3.8.1-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "MIT AND GAP AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-2. AND GPL-3.0-or-later AND GPL. AND LGPL-2.0-or-later AND LGPL-2. AND LGPL-3.0-or-later AND LGPL. AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Magnus Holmgren <holmgren@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "nettle"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.lysator.liu.se/~nisse/nettle/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
+            "name": "libp11-kit0",
+            "purl": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "0.24.1-2",
+            "cpe": "cpe:2.3:a:*:libp11-kit0:0.24.1-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2.0 AND BSD-3-Clause AND ISC AND ISC+IBM AND LGPL-2.1 AND LGPL-2.1+ AND permissive-like-automake-output AND same-as-rest-of-p11kit"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "p11-kit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://p11-glue.github.io/p11-glue/p11-kit.html"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
+            "name": "libpam-modules",
+            "purl": "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.5.2-6+deb12u1",
+            "cpe": "cpe:2.3:a:*:libpam-modules:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-tcp_wrappers AND Beerware AND GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Sam Hartman <hartmans@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=9d6fe6d741141378",
+            "name": "libpam-modules-bin",
+            "purl": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.5.2-6+deb12u1",
+            "cpe": "cpe:2.3:a:*:libpam-modules-bin:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-tcp_wrappers AND Beerware AND GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Sam Hartman <hartmans@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12&package-id=eba9416f065d6cf2",
+            "name": "libpam-runtime",
+            "purl": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "1.5.2-6+deb12u1",
+            "cpe": "cpe:2.3:a:*:libpam-runtime:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-tcp_wrappers AND Beerware AND GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Sam Hartman <hartmans@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+            "name": "libpam0g",
+            "purl": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.5.2-6+deb12u1",
+            "cpe": "cpe:2.3:a:*:libpam0g:1.5.2-6+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-tcp_wrappers AND Beerware AND GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Sam Hartman <hartmans@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "pam"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://www.linux-pam.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
+            "name": "libpcre2-8-0",
+            "purl": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "10.42-1",
+            "cpe": "cpe:2.3:a:*:libpcre2-8-0:10.42-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause AND BSD-3-Clause AND BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception AND X11 AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Matthew Vernon <matthew@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "pcre2"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://pcre.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
+            "name": "libseccomp2",
+            "purl": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.5.4-1+deb12u1",
+            "cpe": "cpe:2.3:a:*:libseccomp2:2.5.4-1+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Kees Cook <kees@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libseccomp"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/seccomp/libseccomp"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+            "name": "libselinux1",
+            "purl": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.4-1+b6",
+            "cpe": "cpe:2.3:a:*:libselinux1:3.4-1+b6:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libselinux (3.4-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=0740de66067116ec",
+            "name": "libsemanage-common",
+            "purl": "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "3.4-1",
+            "cpe": "cpe:2.3:a:*:libsemanage-common:3.4-1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL AND LGPL"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libsemanage"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
+            "name": "libsemanage2",
+            "purl": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.4-1+b5",
+            "cpe": "cpe:2.3:a:*:libsemanage2:3.4-1+b5:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL AND LGPL"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libsemanage (3.4-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
+            "name": "libsepol2",
+            "purl": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.4-2.1",
+            "cpe": "cpe:2.3:a:*:libsepol2:3.4-2.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND Zlib"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libsepol"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://selinuxproject.org"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c",
+            "name": "libsmartcols1",
+            "purl": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:libsmartcols1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12&package-id=d789db5eff771251",
+            "name": "libss2",
+            "purl": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.47.0-2",
+            "cpe": "cpe:2.3:a:*:libss2:1.47.0-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2 AND Apache-2.0 AND BSD-3-Clause AND GPL AND GPL OR MIT-US-export AND GPL-2.0-only AND GPL-2.0-or-later AND ISC AND Kazlib AND LGPL-2.0-only AND Latex2e"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Theodore Y. Ts'o <tytso@mit.edu>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+            "name": "libstdc++6",
+            "purl": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "12.2.0-14",
+            "cpe": "cpe:2.3:a:*:libstdc++6:12.2.0-14:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Artistic AND GFDL-1.2 AND GPL AND GPL-2.0-only AND GPL-3.0-only AND GPL. AND LGPL."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "gcc-12"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://gcc.gnu.org/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+            "name": "libsystemd0",
+            "purl": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "252.33-1~deb12u1",
+            "cpe": "cpe:2.3:a:*:libsystemd0:252.33-1~deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "CC0-1.0 AND MIT AND GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "systemd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.freedesktop.org/wiki/Software/systemd"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308",
+            "name": "libtasn1-6",
+            "purl": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "4.19.0-2+deb12u1",
+            "cpe": "cpe:2.3:a:*:libtasn1-6:4.19.0-2+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GFDL-1.3. AND GPL-3. AND LGPL AND LGPL-2.1"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libtasn1/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=debian-12&package-id=cd28a186cb043baa",
+            "name": "libtinfo6",
+            "purl": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "6.4-4",
+            "cpe": "cpe:2.3:a:*:libtinfo6:6.4-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND MIT/X11 AND X11"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Craig Small <csmall@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
+            "name": "libudev1",
+            "purl": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "252.33-1~deb12u1",
+            "cpe": "cpe:2.3:a:*:libudev1:252.33-1~deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "CC0-1.0 AND MIT AND GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "systemd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.freedesktop.org/wiki/Software/systemd"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
+            "name": "libunistring2",
+            "purl": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.0-2",
+            "cpe": "cpe:2.3:a:*:libunistring2:1.0-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "FreeSoftware AND GFDL-1.2 AND GFDL-1.2+ AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Jörg Frings-Fürst <debian@jff.email>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libunistring"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/libunistring/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=d04a02e3067fd84d",
+            "name": "libuuid1",
+            "purl": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:libuuid1:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90",
+            "name": "libxxhash0",
+            "purl": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "0.8.1-1",
+            "cpe": "cpe:2.3:a:*:libxxhash0:0.8.1-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-2-Clause AND GPL-2.0-only"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Josue Ortega <josue@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "xxhash"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://cyan4973.github.io/xxHash"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
+            "name": "libzstd1",
+            "purl": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.5.4+dfsg2-5",
+            "cpe": "cpe:2.3:a:*:libzstd1:1.5.4+dfsg2-5:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND MIT AND GPL-2.0-only AND Zlib"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "RPM packaging team <team+pkg-rpm@tracker.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "libzstd"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/facebook/zstd"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/login@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=2873332e16cf6e1e",
+            "name": "login",
+            "purl": "pkg:deb/login@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:4.13+dfsg1-1+b1",
+            "cpe": "cpe:2.3:a:*:login:1:4.13+dfsg1-1+b1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND GPL-1 AND GPL-2.0-only AND GPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "shadow (1:4.13+dfsg1-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/shadow-maint/shadow"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06",
+            "name": "logsave",
+            "purl": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.47.0-2",
+            "cpe": "cpe:2.3:a:*:logsave:1.47.0-2:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Apache-2 AND Apache-2.0 AND BSD-3-Clause AND GPL AND GPL OR MIT-US-export AND GPL-2.0-only AND GPL-2.0-or-later AND ISC AND Kazlib AND LGPL-2.0-only AND Latex2e"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Theodore Y. Ts'o <tytso@mit.edu>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "e2fsprogs"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://e2fsprogs.sourceforge.net"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12&package-id=fd51415680e07a73",
+            "name": "mawk",
+            "purl": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.3.4.20200120-3.1",
+            "cpe": "cpe:2.3:a:*:mawk:1.3.4.20200120-3.1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "CC-BY-3.0 AND GPL-2.0-only AND X11"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Boyuan Yang <byang@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "interpreters"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/mawk/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/mount@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=14e5b7f7cc7920a5",
+            "name": "mount",
+            "purl": "pkg:deb/mount@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:mount:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/ncurses-base@6.4-4?arch=all&distro=debian-12&package-id=c9b540b609c620ba",
+            "name": "ncurses-base",
+            "purl": "pkg:deb/ncurses-base@6.4-4?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "6.4-4",
+            "cpe": "cpe:2.3:a:*:ncurses-base:6.4-4:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND MIT/X11 AND X11"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Craig Small <csmall@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "misc"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/ncurses-bin@6.4-4?arch=amd64&distro=debian-12&package-id=4548fdc34fa39aae",
+            "name": "ncurses-bin",
+            "purl": "pkg:deb/ncurses-bin@6.4-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "6.4-4",
+            "cpe": "cpe:2.3:a:*:ncurses-bin:6.4-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND MIT/X11 AND X11"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Craig Small <csmall@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "ncurses"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://invisible-island.net/ncurses/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8",
+            "name": "passwd",
+            "purl": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:4.13+dfsg1-1+b1",
+            "cpe": "cpe:2.3:a:*:passwd:1:4.13+dfsg1-1+b1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND GPL-1 AND GPL-2.0-only AND GPL-2.0-or-later AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "shadow (1:4.13+dfsg1-1)"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/shadow-maint/shadow"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/perl-base@5.36.0-7+deb12u1?arch=amd64&distro=debian-12&package-id=125d9c5d9ba4a5cd",
+            "name": "perl-base",
+            "purl": "pkg:deb/perl-base@5.36.0-7+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "5.36.0-7+deb12u1",
+            "cpe": "cpe:2.3:a:*:perl-base:5.36.0-7+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Artistic AND Artistic OR GPL-1+ OR Artistic-dist AND Artistic-2 AND Artistic-dist AND BSD-3-Clause AND BSD-3-clause-GENERIC AND BSD-3-clause-with-weird-numbering AND BSD-4-clause-POWERDOG AND BZIP AND CC0-1.0 AND DONT-CHANGE-THE-GPL AND MIT AND GPL-1 AND GPL-1+ AND GPL-1+ OR Artistic AND GPL-1+ OR Artistic OR Artistic-dist AND GPL-1+ OR Artistic, AND BSD-3-clause-GENERIC AND GPL-1+ OR Artistic, AND BSD-4-clause-POWERDOG AND GPL-1+ OR Artistic, AND MIT AND GPL-1+ OR Artistic, AND Unicode AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3+-WITH-BISON-EXCEPTION AND HSIEH-BSD AND HSIEH-DERIVATIVE AND LGPL-2.1 AND REGCOMP AND REGCOMP, AND GPL-1+ OR Artistic AND RRA-KEEP-THIS-NOTICE AND SDBM-PUBLIC-DOMAIN AND TEXT-TABS AND Unicode AND ZLIB"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Niko Tyni <ntyni@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "perl"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "perl"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://dev.perl.org/perl5/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/sed@4.9-1?arch=amd64&distro=debian-12&package-id=75dc7ed75223590e",
+            "name": "sed",
+            "purl": "pkg:deb/sed@4.9-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "4.9-1",
+            "cpe": "cpe:2.3:a:*:sed:4.9-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-4-clause-UC AND BSL-1 AND GFDL-1.3 AND GFDL-NIV-1.3+ AND GPL-3.0-only AND GPL-3.0-or-later AND ISC AND X11 AND pcre"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Clint Adams <clint@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/sed/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12&package-id=73e5344f09681b10",
+            "name": "sysvinit-utils",
+            "purl": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "3.06-4",
+            "cpe": "cpe:2.3:a:*:sysvinit-utils:3.06-4:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2. AND GPL-2.0 AND GPL-2.0+ AND GPL-3. AND GPL-3.0"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Debian sysvinit maintainers <debian-init-diversity@chiark.greenend.org.uk>"
+                },
+                {
+                    "name": "section",
+                    "value": "admin"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "sysvinit"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/slicer69/sysvinit"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=debian-12&package-id=3092e0c57e5d8024",
+            "name": "tar",
+            "purl": "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1.34+dfsg-1.2+deb12u1",
+            "cpe": "cpe:2.3:a:*:tar:1.34+dfsg-1.2+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-or-later AND GPL-2. AND GPL-3.0-or-later AND GPL-3. AND LGPL-3.0-or-later AND LGPL-3."
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Janos Lenart <ocsi@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.gnu.org/software/tar/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12&package-id=4c510789e36a49e3",
+            "name": "tzdata",
+            "purl": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "2024b-0+deb12u1",
+            "cpe": "cpe:2.3:a:*:tzdata:2024b-0+deb12u1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "localization"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.iana.org/time-zones"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/usr-is-merged@37~deb12u1?arch=all&distro=debian-12&package-id=79daf92ba8e39bb1",
+            "name": "usr-is-merged",
+            "purl": "pkg:deb/usr-is-merged@37~deb12u1?arch=all&distro=debian-12",
+            "type": "library",
+            "version": "37~deb12u1",
+            "cpe": "cpe:2.3:a:*:usr-is-merged:37~deb12u1:*:*:*:*:*:*:*",
+            "architecture": "all",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "GPL-2.0-only AND GPL-2.0-or-later"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "all"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Marco d'Itri <md@linux.it>"
+                },
+                {
+                    "name": "section",
+                    "value": "oldlibs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "usrmerge"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://wiki.debian.org/UsrMerge"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=a86c03b5da387af4",
+            "name": "util-linux",
+            "purl": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:util-linux:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "required"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe",
+            "name": "util-linux-extra",
+            "purl": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "2.38.1-5+deb12u3",
+            "cpe": "cpe:2.3:a:*:util-linux-extra:2.38.1-5+deb12u3:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "BSD-3-Clause AND BSD-4-clause AND BSLA AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND public-domain"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "util-linux packagers <util-linux@packages.debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "utils"
+                },
+                {
+                    "name": "priority",
+                    "value": "standard"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "util-linux"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.kernel.org/pub/linux/utils/util-linux/"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+            "name": "zlib1g",
+            "purl": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12",
+            "type": "library",
+            "version": "1:1.2.13.dfsg-1",
+            "cpe": "cpe:2.3:a:*:zlib1g:1:1.2.13.dfsg-1:*:*:*:*:*:*:*",
+            "architecture": "amd64",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "Zlib"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "architecture",
+                    "value": "amd64"
+                },
+                {
+                    "name": "maintainer",
+                    "value": "Mark Brown <broonie@debian.org>"
+                },
+                {
+                    "name": "section",
+                    "value": "libs"
+                },
+                {
+                    "name": "priority",
+                    "value": "optional"
+                },
+                {
+                    "name": "sourcePkg",
+                    "value": "zlib"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "http://zlib.net/"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888",
+            "dependsOn": [
+                "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8"
+            ]
+        },
+        {
+            "ref": "pkg:deb/e2fsprogs@1.47.0-2?arch=amd64&distro=debian-12&package-id=e7bc5e9c87a3f8ec",
+            "dependsOn": [
+                "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gzip@1.12-1?arch=amd64&distro=debian-12&package-id=3b94635eadfd0b6a",
+            "dependsOn": [
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libacl1@2.3.1-3?arch=amd64&distro=debian-12&package-id=cb298c58c3a6b975",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libext2fs2@1.47.0-2?arch=amd64&distro=debian-12&package-id=7d4d16397179656e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
+            "dependsOn": [
+                "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
+                "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308",
+                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+                "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
+                "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
+                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libtasn1-6@4.19.0-2+deb12u1?arch=amd64&distro=debian-12&package-id=c8ef35fedbcc5308",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libtinfo6@6.4-4?arch=amd64&distro=debian-12&package-id=cd28a186cb043baa",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b",
+            "dependsOn": [
+                "pkg:deb/tar@1.34+dfsg-1.2+deb12u1?arch=amd64&distro=debian-12&package-id=3092e0c57e5d8024"
+            ]
+        },
+        {
+            "ref": "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
+            "dependsOn": [
+                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
+            "dependsOn": [
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+                "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
+                "pkg:deb/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=0740de66067116ec",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libsepol2@3.4-2.1?arch=amd64&distro=debian-12&package-id=64f231aac4c44e97",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/passwd@1:4.13+dfsg1-1+b1?arch=amd64&distro=debian-12&package-id=7ef3db1b790ac8f8",
+            "dependsOn": [
+                "pkg:deb/libsemanage2@3.4-1+b5?arch=amd64&distro=debian-12&package-id=03bb31787909cd6b",
+                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f",
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/base-passwd@3.6.1?arch=amd64&distro=debian-12&package-id=21200f8b39328bd5",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libdebconfclient0@0.270?arch=amd64&distro=debian-12&package-id=f3d7c1c203490183",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libmd0@1.0.4-2?arch=amd64&distro=debian-12&package-id=3e344cf0113fa217",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/logsave@1.47.0-2?arch=amd64&distro=debian-12&package-id=60642ad076d37d06",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/dash@0.5.12-2?arch=amd64&distro=debian-12&package-id=dd1b2909c9c51c7d",
+            "dependsOn": [
+                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574",
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libp11-kit0@0.24.1-2?arch=amd64&distro=debian-12&package-id=d72965b0742c3e2a",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libffi8@3.4.4-1?arch=amd64&distro=debian-12&package-id=2a3eec1614b68fb8"
+            ]
+        },
+        {
+            "ref": "pkg:deb/grep@3.8-5?arch=amd64&distro=debian-12&package-id=c0f223ed77627dae",
+            "dependsOn": [
+                "pkg:deb/dpkg@1.21.22?arch=amd64&distro=debian-12&package-id=476727d5c343219b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libattr1@1:2.5.1-4?arch=amd64&distro=debian-12&package-id=3a77edf12e8ff074",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap2@1:2.66-4?arch=amd64&distro=debian-12&package-id=e6b3528df3c40bff",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libhogweed6@3.8.1-2?arch=amd64&distro=debian-12&package-id=1359d5b5a3d82c27",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+                "pkg:deb/libnettle8@3.8.1-2?arch=amd64&distro=debian-12&package-id=dac38d2437f49b3b"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
+            "dependsOn": [
+                "pkg:deb/liblzma5@5.4.1-0.2?arch=amd64&distro=debian-12&package-id=7fb02d616bc29b51",
+                "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90",
+                "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+                "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+                "pkg:deb/libudev1@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=2e1cb6c827061455",
+                "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+                "pkg:deb/libbz2-1.0@1.0.8-5+b1?arch=amd64&distro=debian-12&package-id=77a806ce07c391c6",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/util-linux@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=a86c03b5da387af4",
+            "dependsOn": [
+                "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgmp10@2:6.2.1+dfsg1-1.1?arch=amd64&distro=debian-12&package-id=84b96243191ac130",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-modules-bin@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=9d6fe6d741141378",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+                "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcrypt1@1:4.4.33-2?arch=amd64&distro=debian-12&package-id=38db0e164e39d207",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+            "dependsOn": [
+                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/sysvinit-utils@3.06-4?arch=amd64&distro=debian-12&package-id=73e5344f09681b10",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/apt@2.6.1?arch=amd64&distro=debian-12&package-id=41f8164eac096820",
+            "dependsOn": [
+                "pkg:deb/libapt-pkg6.0@2.6.1?arch=amd64&distro=debian-12&package-id=bd99401c8506eff9",
+                "pkg:deb/debian-archive-keyring@2023.3+deb12u1?arch=all&distro=debian-12&package-id=3bab0fc5c261c89a",
+                "pkg:deb/libsystemd0@252.33-1~deb12u1?arch=amd64&distro=debian-12&package-id=ad72f267b1d351da",
+                "pkg:deb/gpgv@2.2.40-1.1?arch=amd64&distro=debian-12&package-id=f273a44764dc5e89",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+                "pkg:deb/libgnutls30@3.7.9-2+deb12u4?arch=amd64&distro=debian-12&package-id=d33934f7f9ed127f",
+                "pkg:deb/libseccomp2@2.5.4-1+deb12u1?arch=amd64&distro=debian-12&package-id=04a5c57d5eca7490",
+                "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+                "pkg:deb/adduser@3.134?arch=all&distro=debian-12&package-id=9ba85d23e4669888"
+            ]
+        },
+        {
+            "ref": "pkg:deb/bash@5.2.15-2+b7?arch=amd64&distro=debian-12&package-id=90e650df84381b25",
+            "dependsOn": [
+                "pkg:deb/base-files@12.4+deb12u9?arch=amd64&distro=debian-12&package-id=2045c018e654b9b7",
+                "pkg:deb/debianutils@5.7-0.5~deb12u1?arch=amd64&distro=debian-12&package-id=82236db65ac2f574"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgcrypt20@1.10.1-3?arch=amd64&distro=debian-12&package-id=146d529dac7b949c",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libgpg-error0@1.46-1?arch=amd64&distro=debian-12&package-id=0970e59257285b36",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam-runtime@1.5.2-6+deb12u1?arch=all&distro=debian-12&package-id=eba9416f065d6cf2",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2",
+                "pkg:deb/libpam-modules@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=8175882549fbe58f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libss2@1.47.0-2?arch=amd64&distro=debian-12&package-id=d789db5eff771251",
+            "dependsOn": [
+                "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libstdc++6@12.2.0-14?arch=amd64&distro=debian-12&package-id=14a33ea24ce2768a",
+            "dependsOn": [
+                "pkg:deb/libgcc-s1@12.2.0-14?arch=amd64&distro=debian-12&package-id=ba4ec38abfa53c27",
+                "pkg:deb/gcc-12-base@12.2.0-14?arch=amd64&distro=debian-12&package-id=38044bc0ea31b1f9",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/util-linux-extra@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=52b0a88e18b4fefe",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libsmartcols1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=1837393caba2884c"
+            ]
+        },
+        {
+            "ref": "pkg:deb/zlib1g@1:1.2.13.dfsg-1?arch=amd64&distro=debian-12&package-id=c7541648e19e4daa",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/tzdata@2024b-0+deb12u1?arch=all&distro=debian-12&package-id=4c510789e36a49e3",
+            "dependsOn": [
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libdb5.3@5.3.28+dfsg2-1?arch=amd64&distro=debian-12&package-id=61387bccff2fd18d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/liblz4-1@1.9.4-1?arch=amd64&distro=debian-12&package-id=ac6ee460d67c71cb",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpam0g@1.5.2-6+deb12u1?arch=amd64&distro=debian-12&package-id=36309e59bd155c8f",
+            "dependsOn": [
+                "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/debconf@1.5.82?arch=all&distro=debian-12&package-id=2a95b98bb39533d2"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libuuid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=d04a02e3067fd84d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libzstd1@1.5.4+dfsg2-5?arch=amd64&distro=debian-12&package-id=9c933be743032aae",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libc-bin@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=50226d74c8c8236d",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libmount1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=e1dcaa6c850f468d",
+            "dependsOn": [
+                "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libselinux1@3.4-1+b6?arch=amd64&distro=debian-12&package-id=7137a646bab8447e"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libblkid1@2.38.1-5+deb12u3?arch=amd64&distro=debian-12&package-id=c17ff013b5cb2f8f",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libcom-err2@1.47.0-2?arch=amd64&distro=debian-12&package-id=c1e5c6fbe3502a11",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libaudit1@1:3.0.9-1?arch=amd64&distro=debian-12&package-id=9dfe26e3db7efe49",
+            "dependsOn": [
+                "pkg:deb/libaudit-common@1:3.0.9-1?arch=all&distro=debian-12&package-id=aa1580f769241070",
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libcap-ng0@0.8.3-1+b3?arch=amd64&distro=debian-12&package-id=8ac37f98cf34e8b5"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libidn2-0@2.3.3-1+b1?arch=amd64&distro=debian-12&package-id=a70806382df606f7",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f",
+                "pkg:deb/libunistring2@1.0-2?arch=amd64&distro=debian-12&package-id=e79aa55acbcb711f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libpcre2-8-0@10.42-1?arch=amd64&distro=debian-12&package-id=086640307b043302",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/libxxhash0@0.8.1-1?arch=amd64&distro=debian-12&package-id=6ed0eff4f5152e90",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        },
+        {
+            "ref": "pkg:deb/mawk@1.3.4.20200120-3.1?arch=amd64&distro=debian-12&package-id=fd51415680e07a73",
+            "dependsOn": [
+                "pkg:deb/libc6@2.36-9+deb12u9?arch=amd64&distro=debian-12&package-id=8cea8cd2cef2406f"
+            ]
+        }
+    ]
+}

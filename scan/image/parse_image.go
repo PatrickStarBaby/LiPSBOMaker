@@ -92,20 +92,46 @@ type PackageInfo struct {
 var (
 	globalPackageInfoMap  map[string]*PackageInfo // 全局包信息映射
 	allDiscoveredPackages []*pkg.Metadata         // 存储所有发现的包信息
+	quietMode             bool                    // 安静模式标志
 )
+
+// 添加进度条显示函数
+func showProgress(percent int) {
+	if quietMode {
+		return
+	}
+	const width = 50
+	progress := width * percent / 100
+	fmt.Printf("\r[%s%s] %d%%",
+		strings.Repeat("=", progress),
+		strings.Repeat(" ", width-progress),
+		percent)
+}
+
+// 设置安静模式
+func SetQuietMode(quiet bool) {
+	quietMode = quiet
+}
 
 func init() {
 	// 初始化全局变量
 	globalPackageInfoMap = make(map[string]*PackageInfo)
 	allDiscoveredPackages = make([]*pkg.Metadata, 0)
+	quietMode = false // 默认非安静模式
 }
 
 func ParseImageFile(path string) error {
+	// 初始化进度为0%
+	showProgress(0)
+
 	// 检查 docker image 是否存在
 	_, err := scan_utils.RunCommand("docker", "inspect", path)
 	if err != nil {
 		return fmt.Errorf("docker镜像不存在: %v", err)
 	}
+
+	// 显示进度 - 镜像检查完成
+	showProgress(5)
 
 	// 创建临时目录用于保存提取的文件
 	tmpDir, err := os.MkdirTemp("", "docker_files_*")
@@ -115,7 +141,7 @@ func ParseImageFile(path string) error {
 	defer os.RemoveAll(tmpDir)
 
 	// 创建一个临时容器
-	fmt.Println("正在创建临时容器...")
+	showProgress(10)
 	containerID, err := scan_utils.RunCommand("docker", "create", path)
 	if err != nil {
 		return fmt.Errorf("创建临时容器失败: %v", err)
@@ -125,14 +151,14 @@ func ParseImageFile(path string) error {
 	// 使用完后删除容器
 	defer func() {
 		_, _ = scan_utils.RunCommand("docker", "rm", "-f", containerID)
-		fmt.Println("已删除临时容器")
 	}()
 
+	// 更新进度 - 容器创建完成
+	showProgress(15)
+
 	// 直接使用docker命令获取系统信息，而不是复制文件
-	fmt.Println("正在获取系统信息...")
 	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", path, "cat", "/etc/os-release")
 	if err != nil {
-		fmt.Printf("警告：无法获取系统信息，将尝试根据文件类型判断: %v\n", err)
 		osReleaseOutput = ""
 	}
 
@@ -146,7 +172,6 @@ func ParseImageFile(path string) error {
 
 	if len(nameMatches) >= 2 {
 		nameValue := strings.ToLower(nameMatches[1])
-		fmt.Printf("获取到系统NAME: %s\n", nameMatches[1])
 
 		// 根据NAME字段确定操作系统类型
 		switch {
@@ -177,27 +202,25 @@ func ParseImageFile(path string) error {
 		}
 	}
 
-	// 打印获取到的系统信息
-	fmt.Printf("检测到系统类型: %s\n", osType)
+	// 更新进度 - 系统类型确定
+	showProgress(20)
 
-	var targetDbPath string
-	var localDbPath string
+	// 根据发行版类型处理
+	if osType == "fedora" {
+		// 显示Fedora系统类型
+		if !quietMode {
+			fmt.Println("\n开始解析Fedora系统，这将需要一些时间...")
+		}
 
-	// 根据发行版类型设置对应的数据库文件路径
-	switch osType {
-	case "debian", "ubuntu": // Debian/Ubuntu使用相同的路径
-		targetDbPath = "/var/lib/dpkg/status"
-		localDbPath = filepath.Join(tmpDir, "dpkg-status")
-		// 对于Ubuntu/Debian
-		fmt.Println("Debian/Ubuntu系统：使用dpkg status文件进行扫描")
-	case "fedora": // Fedora
-		fmt.Println("Fedora系统：使用Docker命令直接解析RPM包")
 		// 获取内核信息
+		showProgress(25)
 		kernelInfo, err := parseKernelInfo(path)
 		if err != nil {
 			return fmt.Errorf("获取内核信息失败: %v", err)
 		}
 
+		// 解析RPM包信息
+		showProgress(30)
 		pkgInfo, err := parseRpmViaDocker(path)
 		if err != nil {
 			return fmt.Errorf("解析Fedora包信息失败: %v", err)
@@ -212,6 +235,7 @@ func ParseImageFile(path string) error {
 		}
 
 		// 将结果转换为SBOM格式
+		showProgress(95)
 		sbomOutput := convertToSBOMFormat(scanResult)
 
 		// 使用自定义编码器来避免转义URL中的&字符
@@ -224,7 +248,7 @@ func ParseImageFile(path string) error {
 		}
 
 		// 正确定义输出文件名
-		outputFilename := fmt.Sprintf(osType+"_sbom_result_%s.json", time.Now().Format("20060102_150405"))
+		outputFilename := fmt.Sprintf(osType + "-SBOM.json")
 
 		// 创建输出文件
 		err = os.WriteFile(outputFilename, buffer.Bytes(), 0644)
@@ -232,17 +256,32 @@ func ParseImageFile(path string) error {
 			return fmt.Errorf("写入结果文件失败: %v", err)
 		}
 
-		fmt.Printf("扫描结果已保存到: %s\n", outputFilename)
+		// 显示100%进度并输出完成信息
+		showProgress(100)
+		if !quietMode {
+			fmt.Println("\nSBOM文件已生成：" + outputFilename)
+		}
 		return nil
+	}
+
+	// 其他系统类型的处理...
+	// 保留原有代码
+	var targetDbPath string
+	var localDbPath string
+
+	// 根据发行版类型设置对应的数据库文件路径
+	switch osType {
+	case "debian", "ubuntu": // Debian/Ubuntu使用相同的路径
+		targetDbPath = "/var/lib/dpkg/status"
+		localDbPath = filepath.Join(tmpDir, "dpkg-status")
 	case "openeuler": // OpenEuler
 		targetDbPath = "/var/lib/rpm/Packages.db"
 		localDbPath = filepath.Join(tmpDir, "Packages.db")
-		fmt.Println("OpenEuler系统：使用Packages.db文件进行扫描")
 	default:
 		return fmt.Errorf("不支持的操作系统类型: %s", osType)
 	}
 
-	fmt.Printf("正在从容器复制数据库文件 %s...\n", targetDbPath)
+	showProgress(25)
 	_, err = scan_utils.RunCommand("docker", "cp", fmt.Sprintf("%s:%s", containerID, targetDbPath), localDbPath)
 	if err != nil {
 		return fmt.Errorf("复制数据库文件失败: %v", err)
@@ -254,6 +293,7 @@ func ParseImageFile(path string) error {
 	}
 
 	// 获取内核信息 - 使用容器命令
+	showProgress(30)
 	kernelInfo, err := parseKernelInfo(path)
 	if err != nil {
 		return fmt.Errorf("获取内核信息失败: %v", err)
@@ -261,42 +301,28 @@ func ParseImageFile(path string) error {
 
 	// 解析包管理数据库
 	var pkgInfo *pkg.Pkg
+	showProgress(35)
 	switch {
 	case strings.HasSuffix(localDbPath, "dpkg-status"):
 		// 对于Debian/Ubuntu，需要获取copyright文件信息
 		// 创建一个本地目录存放copyright文件
 		copyrightDir := filepath.Join(tmpDir, "copyright")
 		err = os.MkdirAll(copyrightDir, 0755)
-		if err != nil {
-			fmt.Printf("创建copyright目录失败，将忽略许可证信息: %v\n", err)
-		} else {
+		if err == nil {
 			// 获取已安装的软件包列表
-			fmt.Println("正在获取已安装的软件包列表...")
 			installedPkgs, err := getInstalledPackages(localDbPath)
-			if err != nil {
-				fmt.Printf("获取已安装软件包列表失败: %v\n", err)
-			} else {
-				// 开始逐个复制copyright文件
-				fmt.Println("开始逐个复制copyright文件...")
-				startTime := time.Now()
-
-				successCount := 0
-				for _, pkgName := range installedPkgs {
+			if err == nil {
+				// 逐个复制copyright文件
+				totalPkgs := len(installedPkgs)
+				for i, pkgName := range installedPkgs {
 					srcPath := fmt.Sprintf("%s:/usr/share/doc/%s/copyright", containerID, pkgName)
 					destPath := filepath.Join(copyrightDir, pkgName)
+					_, _ = scan_utils.RunCommand("docker", "cp", srcPath, destPath)
 
-					_, err := scan_utils.RunCommand("docker", "cp", srcPath, destPath)
-					if err == nil {
-						successCount++
-						if successCount%50 == 0 {
-							fmt.Printf("已成功复制 %d 个copyright文件...\n", successCount)
-						}
-					}
+					// 更新进度 - 更细致的进度展示
+					progress := 35 + int(float64(i+1)/float64(totalPkgs)*25)
+					showProgress(progress)
 				}
-
-				endTime := time.Now()
-				fmt.Printf("复制copyright文件完成，共复制 %d/%d 个文件，耗时: %v\n",
-					successCount, len(installedPkgs), endTime.Sub(startTime))
 			}
 		}
 		pkgInfo, err = parseDpkgStatus(localDbPath, copyrightDir, path)
@@ -311,6 +337,8 @@ func ParseImageFile(path string) error {
 		return fmt.Errorf("解析包管理数据库失败: %v", err)
 	}
 
+	showProgress(70)
+
 	// 创建扫描结果结构体
 	scanResult := &ScanResult{
 		Kernel:      kernelInfo,
@@ -320,6 +348,7 @@ func ParseImageFile(path string) error {
 	}
 
 	// 将结果转换为SBOM格式
+	showProgress(80)
 	sbomOutput := convertToSBOMFormat(scanResult)
 
 	// 使用自定义编码器来避免转义URL中的&字符
@@ -331,8 +360,9 @@ func ParseImageFile(path string) error {
 		return fmt.Errorf("转换JSON失败: %v", err)
 	}
 
+	showProgress(90)
 	// 正确定义输出文件名
-	outputFilename := fmt.Sprintf(osType+"_sbom_result_%s.json", time.Now().Format("20060102_150405"))
+	outputFilename := fmt.Sprintf(osType + "-SBOM.json")
 
 	// 创建输出文件
 	err = os.WriteFile(outputFilename, buffer.Bytes(), 0644)
@@ -340,7 +370,11 @@ func ParseImageFile(path string) error {
 		return fmt.Errorf("写入结果文件失败: %v", err)
 	}
 
-	fmt.Printf("扫描结果已保存到: %s\n", outputFilename)
+	// 更新进度为100%并显示完成信息
+	showProgress(100)
+	if !quietMode {
+		fmt.Println("\nSBOM文件已生成：" + outputFilename)
+	}
 	return nil
 }
 
@@ -375,21 +409,18 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 
 	// 直接使用字符串读取，确保处理所有包
 	contentStr := string(content)
-	fmt.Printf("status文件大小: %d 字节\n", len(contentStr))
 
 	// 获取系统信息用于生成 PURL
-	var namespace, distro string
+	var distro string
 
 	// 尝试获取系统信息从docker命令
 	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", "/etc/os-release")
 	if err == nil {
-		namespace, distro = parseOsInfo(osReleaseOutput)
-		fmt.Printf("获取到系统信息：namespace=%s, distro=%s\n", namespace, distro)
+		// 仅获取distro部分
+		_, distro = parseOsInfo(osReleaseOutput)
 	} else {
 		// 如果获取失败，使用默认值
-		namespace = "debian"
 		distro = "debian"
-		fmt.Printf("获取系统信息失败，使用默认值: namespace=%s, distro=%s\n", namespace, distro)
 	}
 
 	// 按"Package: "前缀分割，更准确地分隔每个包
@@ -404,8 +435,6 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 	if len(pkgBlocks) > 0 && pkgBlocks[0] == "" {
 		pkgBlocks = pkgBlocks[1:]
 	}
-
-	fmt.Printf("找到 %d 个软件包信息块\n", len(pkgBlocks))
 
 	// 清空全局包列表
 	allDiscoveredPackages = make([]*pkg.Metadata, 0)
@@ -427,17 +456,7 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 	// 重置已处理的包名映射
 	processedPkgMap := make(map[string]bool)
 
-	// 在函数开始处添加
-	defer func() {
-		// 输出解析结果统计信息
-		fmt.Printf("状态文件解析完成：\n")
-		fmt.Printf("  - 发现包信息块: %d\n", len(pkgBlocks))
-		fmt.Printf("  - 成功解析的包: %d\n", len(allDiscoveredPackages))
-		fmt.Printf("  - 依赖关系数量: %d\n", len(allDependencies))
-	}()
-
-	// 在解析包信息块的循环中添加计数器
-	totalBlocks := len(pkgBlocks)
+	// 解析包信息块的计数器
 	parsedCount := 0
 	skippedCount := 0
 
@@ -483,7 +502,6 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 
 		// 检查是否已经处理过这个包
 		if processedPkgMap[pkgName] {
-			fmt.Printf("警告: 重复的包 %s 被跳过\n", pkgName)
 			skippedCount++
 			continue
 		}
@@ -529,28 +547,18 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 					licenseInfo, err := parseLicensesFromCopyright(copyrightFilePath)
 					if err == nil && len(licenseInfo) > 0 {
 						metadata.License = licenseInfo
-						fmt.Printf("获取到软件包 %s 的许可证信息: %v\n", pkgName, licenseInfo)
-					} else {
-						fmt.Printf("无法解析软件包 %s 的许可证信息: %v\n", pkgName, err)
 					}
 				} else {
 					// 如果无法找到copyright文件，尝试寻找类似名称的目录
-					var matchFound bool
 					copyrightDirEntries, _ := os.ReadDir(copyrightDir)
 					for _, entry := range copyrightDirEntries {
 						if strings.Contains(entry.Name(), pkgName) {
 							alternativePath := filepath.Join(copyrightDir, entry.Name())
 							if licenseInfo, err := parseLicensesFromCopyright(alternativePath); err == nil && len(licenseInfo) > 0 {
 								metadata.License = licenseInfo
-								fmt.Printf("通过替代路径获取到软件包 %s 的许可证信息: %v\n", pkgName, licenseInfo)
-								matchFound = true
 								break
 							}
 						}
-					}
-
-					if !matchFound {
-						fmt.Printf("无法找到软件包 %s 的copyright文件\n", pkgName)
 					}
 				}
 			}
@@ -558,7 +566,6 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 			// 添加Homepage作为URL
 			if homepage, ok := info["Homepage"]; ok && homepage != "" {
 				metadata.Url = strings.TrimSpace(homepage)
-				fmt.Printf("软件包 %s 的主页: %s\n", pkgName, metadata.Url)
 			}
 
 			// 生成CPE
@@ -613,11 +620,8 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 				}
 			}
 
-			// 输出包及其依赖
-			parsedCount++
-			fmt.Printf("[%d/%d] 解析到软件包: %s (版本: %s)\n", parsedCount, totalBlocks, metadata.Name, metadata.Version)
-
 			// 将包添加到全局列表中
+			parsedCount++
 			allDiscoveredPackages = append(allDiscoveredPackages, metadata)
 
 			// 保存包的provides和depends信息到全局映射
@@ -649,12 +653,14 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 		*pkgInfo.Depends = append(*pkgInfo.Depends, allDependencies...)
 	}
 
-	fmt.Printf("成功解析 %d 个软件包，跳过 %d 个块\n", parsedCount, skippedCount)
 	return pkgInfo, nil
 }
 
 // parseRpmSqlite 解析RPM数据库sqlite文件
 func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
+	// 显示进度-开始解析SQLite数据库
+	showProgress(40)
+
 	// 尝试使用SQLite方式打开
 	db, err := sql.Open("sqlite3", filePath)
 	if err != nil {
@@ -670,7 +676,12 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 
 	defer db.Close()
 
-	fmt.Println("开始解析 Fedora RPM 数据库...")
+	if !quietMode {
+		fmt.Println("\n开始解析RPM数据库...")
+	}
+
+	// 显示进度-数据库连接成功
+	showProgress(45)
 
 	// 获取系统信息用于生成 PURL
 	var namespace, distro string
@@ -679,13 +690,14 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", "/etc/os-release")
 	if err == nil {
 		namespace, distro = parseOsInfo(osReleaseOutput)
-		fmt.Printf("获取到系统信息：namespace=%s, distro=%s\n", namespace, distro)
 	} else {
 		// 如果获取失败，使用默认值
 		namespace = "fedora"
 		distro = "fedora"
-		fmt.Printf("获取系统信息失败，使用默认值: namespace=%s, distro=%s\n", namespace, distro)
 	}
+
+	// 显示进度-获取系统信息完成
+	showProgress(50)
 
 	pkgInfo := &pkg.Pkg{
 		Metadata: &pkg.Metadata{
@@ -697,47 +709,8 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 	// 清空全局包列表
 	allDiscoveredPackages = make([]*pkg.Metadata, 0)
 
-	// 用于存储源码包信息的映射
-	sourcePackages := make(map[string]string) // sourceRpm -> URL
-
-	// 首先尝试查找所有源码包，并获取它们的URL
-	rows, err := db.Query(`
-        SELECT DISTINCT sourcerpm 
-        FROM packages 
-        WHERE sourcerpm IS NOT NULL AND sourcerpm != ''
-    `)
-	if err == nil {
-		defer rows.Close()
-
-		for rows.Next() {
-			var sourceRpm string
-			if err := rows.Scan(&sourceRpm); err != nil {
-				continue
-			}
-
-			if !strings.HasSuffix(sourceRpm, ".src.rpm") {
-				continue
-			}
-
-			// 提取源码包名称
-			sourceName := strings.TrimSuffix(sourceRpm, ".src.rpm")
-			parts := strings.Split(sourceName, "-")
-			if len(parts) < 2 {
-				continue
-			}
-
-			// 尝试获取源码包URL
-			baseSourceName := parts[0]
-			urlOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-q", "--qf", "%{URL}", baseSourceName)
-			if err == nil && urlOutput != "" && urlOutput != "(none)" {
-				sourcePackages[sourceRpm] = strings.TrimSpace(urlOutput)
-				fmt.Printf("获取到源码包 %s 的URL: %s\n", sourceRpm, urlOutput)
-			}
-		}
-	}
-
 	// 查询所有已安装的包
-	rows, err = db.Query(`
+	rows, err := db.Query(`
         SELECT 
             name, 
             version, 
@@ -755,9 +728,16 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 	}
 	defer rows.Close()
 
+	// 显示进度-开始处理包查询结果
+	showProgress(55)
+
 	// 处理查询结果
 	var processedPackages int
 	var packagesWithLicense int
+	var packagesList []*pkg.Metadata
+
+	// 计算每10%的包的进度
+	progressStep := 5 // 处理包的总计进度20% (从55%到75%)
 
 	for rows.Next() {
 		var entry struct {
@@ -773,7 +753,6 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 
 		if err := rows.Scan(&entry.Name, &entry.Version, &entry.Release, &entry.Arch,
 			&entry.License, &entry.Summary, &entry.Description, &entry.SourceRpm); err != nil {
-			fmt.Printf("扫描行失败: %v\n", err)
 			continue
 		}
 
@@ -794,12 +773,6 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 			packagesWithLicense++
 		} else {
 			metadata.License = []string{}
-			fmt.Printf("警告：软件包 %s 没有许可证信息\n", entry.Name)
-		}
-
-		// 从sourcePackages中查找URL
-		if url, ok := sourcePackages[entry.SourceRpm]; ok && url != "" {
-			metadata.Url = url
 		}
 
 		// 生成CPE
@@ -817,21 +790,43 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 			namespace, metadata.Name, metadata.Version, metadata.Architecture,
 			distro, metadata.Name, metadata.Version, packageId)
 
-		// 将包添加到全局列表
-		allDiscoveredPackages = append(allDiscoveredPackages, metadata)
+		// 将包添加到列表
+		packagesList = append(packagesList, metadata)
 
-		// 如果第一个包，设置为主包
-		if len(allDiscoveredPackages) == 1 {
-			pkgInfo.Metadata = metadata
+		// 每处理100个包更新一次进度
+		if processedPackages%100 == 0 {
+			// 计算处理进度
+			currentProgress := 55 + int(float64(processedPackages)/1000.0*float64(progressStep))
+			// 确保不超过上限
+			if currentProgress > 75 {
+				currentProgress = 75
+			}
+			showProgress(currentProgress)
 		}
 	}
 
-	if err = rows.Err(); err != nil {
-		fmt.Printf("遍历行时出错: %v\n", err)
+	// 处理完所有包
+	showProgress(75)
+
+	// 将所有处理好的包添加到全局列表
+	allDiscoveredPackages = append(allDiscoveredPackages, packagesList...)
+
+	// 如果有包，设置第一个为主包
+	if len(packagesList) > 0 {
+		pkgInfo.Metadata = packagesList[0]
 	}
 
-	fmt.Printf("成功处理 %d 个软件包，其中 %d 个有许可证信息\n",
-		processedPackages, packagesWithLicense)
+	if err = rows.Err(); err != nil {
+		if !quietMode {
+			fmt.Printf("遍历行时出错: %v\n", err)
+		}
+	}
+
+	// 处理依赖关系
+	showProgress(80)
+
+	// 完成处理
+	showProgress(85)
 
 	return pkgInfo, nil
 }
@@ -844,8 +839,6 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 		return nil, fmt.Errorf("解析rpmdb数据库信息时出错：%v", err)
 	}
 	defer db.Close()
-
-	fmt.Println("开始解析 RPM 数据库...")
 
 	packages, err := db.ListPackages()
 	if err != nil {
@@ -877,12 +870,6 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 
 	// 存储每个包的提供和依赖信息
 	packageInfoMap := make(map[string]*PackageInfo)
-
-	// 用于存储源码包信息的映射
-	// sourcePackages := make(map[string]string) // sourceRpm -> URL - 未使用，暂时注释
-
-	totalPackages := len(packages)
-	fmt.Printf("发现 %d 个软件包\n", totalPackages)
 
 	var processedPackages int
 	var packagesWithLicense int
@@ -917,7 +904,6 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 		if entry.License != "" {
 			metadata.License = []string{entry.License}
 			packagesWithLicense++
-			fmt.Printf("软件包 %s 的许可证: %s\n", entry.Name, entry.License)
 		} else {
 			fmt.Printf("警告：软件包 %s 没有许可证信息\n", entry.Name)
 		}
@@ -977,7 +963,6 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 		packageInfoMap[metadata.Name] = pkgInfo
 		globalPackageInfoMap[metadata.Name] = pkgInfo // 同时保存到全局映射
 
-		fmt.Printf("解析到软件包: %s (版本: %s-%s)\n", metadata.Name, metadata.Version, metadata.Release)
 	}
 
 	// 设置所有包，而不仅仅是第一个
@@ -1003,9 +988,6 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 
 	// 使用全局变量保存所有包
 	allDiscoveredPackages = allPackages
-
-	fmt.Printf("成功处理 %d 个软件包中的 %d 个\n", totalPackages, processedPackages)
-	fmt.Printf("其中有 %d 个软件包包含许可证信息\n", packagesWithLicense)
 
 	return pkgInfo, nil
 }
@@ -1134,49 +1116,19 @@ func convertToSBOMFormat(result *ScanResult) *outputSBOM {
 		sbom.Components = append(sbom.Components, component)
 	}
 
-	// 添加组件前记录初始大小
-	initialSize := len(sbom.Components)
-	fmt.Printf("开始处理软件包，初始组件数量: %d\n", initialSize)
-
 	// 处理所有软件包 - 先使用AllPackages字段
 	if len(result.AllPackages) > 0 {
-		fmt.Printf("处理 %d 个全局软件包...\n", len(result.AllPackages))
-
-		// 遍历所有包并添加到SBOM，每100个包打印一次日志
-		batchSize := 100
-		batchCount := 0
-
-		for i, metadata := range result.AllPackages {
+		for _, metadata := range result.AllPackages {
 			component := createPackageComponent(metadata)
 			sbom.Components = append(sbom.Components, component)
-
-			batchCount++
-			if batchCount >= batchSize {
-				fmt.Printf("  已处理 %d/%d 个包...\n", i+1, len(result.AllPackages))
-				batchCount = 0
-			}
-		}
-
-		// 添加组件后检查大小
-		addedComponents := len(sbom.Components) - initialSize
-		fmt.Printf("添加了 %d 个软件包组件 (期望 %d 个)\n",
-			addedComponents, len(result.AllPackages))
-
-		// 如果添加的组件数量少于预期，打印警告
-		if addedComponents < len(result.AllPackages) {
-			fmt.Printf("警告：有 %d 个软件包未被添加到组件列表\n",
-				len(result.AllPackages)-addedComponents)
 		}
 	} else if result.Packages != nil && result.Packages.Metadata != nil {
 		// 备用：使用packages.Metadata
-		fmt.Println("使用主包信息...")
-
 		component := createPackageComponent(result.Packages.Metadata)
 		sbom.Components = append(sbom.Components, component)
 
 		// 处理依赖
 		if result.Packages.Depends != nil {
-			fmt.Println("处理包依赖信息...")
 			for _, dep := range *result.Packages.Depends {
 				component := createDependencyComponent(&dep)
 				sbom.Components = append(sbom.Components, component)
@@ -1187,15 +1139,6 @@ func convertToSBOMFormat(result *ScanResult) *outputSBOM {
 	// 处理包之间的依赖关系
 	if len(result.PackageMap) > 0 {
 		processDependencies(sbom, result.PackageMap)
-	}
-
-	fmt.Printf("SBOM生成完成，包含 %d 个组件和 %d 个依赖关系\n",
-		len(sbom.Components), len(sbom.Dependencies))
-
-	// 检查JSON输出大小
-	jsonBytes, err := json.Marshal(sbom)
-	if err == nil {
-		fmt.Printf("JSON大小: %.2f MB\n", float64(len(jsonBytes))/(1024*1024))
 	}
 
 	return sbom
@@ -1260,13 +1203,9 @@ func processDependencies(sbom *outputSBOM, pkgInfoMap map[string]*PackageInfo) {
 			if !dependencyAdded[dependencyKey] {
 				sbom.Dependencies = append(sbom.Dependencies, dependency)
 				dependencyAdded[dependencyKey] = true
-
-				fmt.Printf("添加依赖关系: %s 依赖于 %d 个包\n", pkgInfo.Name, len(uniqueDependsList))
 			}
 		}
 	}
-
-	fmt.Printf("共建立 %d 个依赖关系\n", len(sbom.Dependencies))
 }
 
 // formatLicenses 格式化许可证信息，应用SPDX格式化
@@ -1667,6 +1606,9 @@ func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
 		Depends: &[]pkg.Depend{},
 	}
 
+	// 显示进度-开始解析
+	showProgress(30)
+
 	// 获取系统信息用于生成 PURL
 	var namespace, distro string
 
@@ -1674,16 +1616,16 @@ func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
 	osReleaseOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "cat", "/etc/os-release")
 	if err == nil {
 		namespace, distro = parseOsInfo(osReleaseOutput)
-		fmt.Printf("获取到系统信息：namespace=%s, distro=%s\n", namespace, distro)
 	} else {
 		// 如果获取失败，使用默认值
 		namespace = "fedora"
 		distro = "fedora"
-		fmt.Printf("获取系统信息失败，使用默认值: namespace=%s, distro=%s\n", namespace, distro)
 	}
 
+	// 显示进度-获取系统信息完成
+	showProgress(35)
+
 	// 获取所有已安装的包名称
-	fmt.Println("使用Docker命令获取RPM包列表...")
 	packagesOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qa", "--queryformat", "%{NAME}\\n")
 	if err != nil {
 		return nil, fmt.Errorf("获取包列表失败: %v", err)
@@ -1691,92 +1633,52 @@ func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
 
 	// 清理和分割输出
 	packages := strings.Split(strings.TrimSpace(packagesOutput), "\n")
-	fmt.Printf("获取到 %d 个RPM包\n", len(packages))
 
 	// 清空全局包列表和映射
 	allDiscoveredPackages = make([]*pkg.Metadata, 0)
 	globalPackageInfoMap = make(map[string]*PackageInfo)
 
-	// 用于存储源码包信息的映射
-	sourcePackages := make(map[string]string) // sourceRpm -> URL
+	// 显示进度-获取包列表完成
+	showProgress(40)
+
+	// 更新总体进度
+	showProgress(45)
 
 	// 依赖关系数组
 	var allDependencies []pkg.Depend
 
-	// 处理每个包，获取详细信息
-	// 移除限制处理的包数量的代码，处理所有包
 	// 是否设置了主包
 	hasSetMainPackage := false
 
 	// 已处理的包名，避免重复
 	processedPackages := make(map[string]bool)
 
-	// 使用批量命令获取源码包信息，减少Docker调用
-	// 移除源码包数量限制，处理所有源码包
-	for _, pkgName := range packages {
-		if pkgName == "" || processedPackages[pkgName] {
-			continue
-		}
-
-		// 获取源码包名称
-		sourceRpmOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-q", "--qf", "%{SOURCERPM}", pkgName)
-		if err != nil || sourceRpmOutput == "" || sourceRpmOutput == "(none)" {
-			continue
-		}
-
-		sourceRpm := strings.TrimSpace(sourceRpmOutput)
-		if sourceRpm == "" || !strings.HasSuffix(sourceRpm, ".src.rpm") {
-			continue
-		}
-
-		// 检查是否已经获取过URL
-		if _, exists := sourcePackages[sourceRpm]; exists {
-			continue
-		}
-
-		// 提取源码包基本名称
-		sourceName := strings.TrimSuffix(sourceRpm, ".src.rpm")
-		parts := strings.Split(sourceName, "-")
-		if len(parts) < 2 {
-			continue
-		}
-
-		// 尝试获取源码包URL
-		baseSourceName := parts[0]
-		urlOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-q", "--qf", "%{URL}", baseSourceName)
-		if err == nil && urlOutput != "" && urlOutput != "(none)" {
-			sourcePackages[sourceRpm] = strings.TrimSpace(urlOutput)
-			fmt.Printf("获取到源码包 %s 的URL: %s\n", sourceRpm, urlOutput)
-		}
-	}
-
-	// 清空已处理的包名，以便重新处理每个包
-	for k := range processedPackages {
-		delete(processedPackages, k)
-	}
-
 	// 批量获取包的信息和依赖关系
-	// 移除限制依赖处理的代码，改为处理所有包的依赖
-	// 批量获取PURL和源码包信息，减少Docker调用
-	for _, pkgName := range packages {
+	totalPackages := len(packages)
+
+	// 计算每个包的进度增量 - 处理包信息总共占据45%的进度(从45%到90%)
+	packageIncrement := 45.0 / float64(totalPackages)
+
+	for i, pkgName := range packages {
 		if pkgName == "" || processedPackages[pkgName] {
 			continue
 		}
 
 		processedPackages[pkgName] = true
 
+		// 更新进度 - 更加细粒度的进度展示
+		currentProgress := 45 + int(float64(i)*packageIncrement)
+		showProgress(currentProgress)
+
 		// 获取包详细信息
-		fmt.Printf("获取包 %s 的详细信息...\n", pkgName)
 		infoOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qi", pkgName)
 		if err != nil {
-			fmt.Printf("获取 %s 包信息失败，跳过: %v\n", pkgName, err)
 			continue
 		}
 
-		// 解析包信息，传递namespace和distro
+		// 解析包信息
 		metadata := parseRpmInfo(infoOutput)
 		if metadata == nil {
-			fmt.Printf("解析 %s 包信息失败，跳过\n", pkgName)
 			continue
 		}
 
@@ -1807,7 +1709,6 @@ func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
 		allDiscoveredPackages = append(allDiscoveredPackages, metadata)
 
 		// 获取所有包的完整依赖关系
-		// 获取依赖关系
 		dependsOutput, err := scan_utils.RunCommand("docker", "run", "--rm", imagePath, "rpm", "-qR", pkgName)
 		var depends []string
 		if err == nil && dependsOutput != "" {
@@ -1839,30 +1740,14 @@ func parseRpmViaDocker(imagePath string) (*pkg.Pkg, error) {
 		}
 	}
 
-	// 人工添加一些依赖关系，确保总有dependencies字段
-	if len(allDependencies) == 0 && len(allDiscoveredPackages) >= 2 {
-		fmt.Println("添加基本依赖关系以确保dependencies字段存在...")
-		// 至少添加一个依赖关系
-		if len(allDiscoveredPackages) >= 2 {
-			pkg1 := allDiscoveredPackages[0]
-			pkg2 := allDiscoveredPackages[1]
-
-			// 添加一个人工依赖关系
-			globalPackageInfoMap[pkg1.Name].Depends = append(
-				globalPackageInfoMap[pkg1.Name].Depends,
-				pkg2.Name,
-			)
-
-			// 创建依赖对象
-			depObj := pkg.Depend{
-				Metadata: *pkg1,
-			}
-			allDependencies = append(allDependencies, depObj)
-		}
-	}
+	// 完成包处理
+	showProgress(90)
 
 	// 设置依赖关系
 	*pkgInfo.Depends = allDependencies
+
+	// 准备生成SBOM
+	showProgress(95)
 
 	return pkgInfo, nil
 }

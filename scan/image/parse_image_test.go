@@ -12,15 +12,15 @@ func TestParseImageFile(t *testing.T) {
 		imagePath string
 	}{
 		{
-			name:      "测试fedora镜像",
-			imagePath: "f7b31b439cbe274a1f3402632e9bfd81f6647a5ca4097a5f99821832d643826d",
+			name:      "测试debian镜像",
+			imagePath: "debian",
 		},
 	}
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 
-			fmt.Println("开始处理镜像，将处理所有包和依赖关系，这可能需要较长时间...")
+			fmt.Println("开始处理镜像...")
 
 			err := ParseImageFile(test.imagePath)
 			// 错误处理：如果有错误，使测试失败
