@@ -1,4 +1,4 @@
-// This program downloads the latest CPE dictionary from NIST and processes it into a JSON file that can be embedded into Syft for more accurate CPE results.
+// This program downloads the latest CPE dictionary from NIST and processes it into a JSON file that can be embedded into slp for more accurate CPE results.
 package main
 
 import (

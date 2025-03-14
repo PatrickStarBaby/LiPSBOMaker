@@ -34,7 +34,6 @@ func isMoreSpecific(i, j Attributes) bool {
 	}
 
 	// if score and length are equal then text sort
-	// note that we are not using String from the syft pkg
 	// as we are not encoding/decoding this Attributes string so we don't
 	// need the proper quoted version of the Attributes.
 	return i.BindToFmtString() < j.BindToFmtString()
