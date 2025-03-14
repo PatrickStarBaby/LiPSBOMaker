@@ -96,12 +96,22 @@ var (
 )
 
 // 添加进度条显示函数
-func showProgress(percent int) {
+func showProgress(percent int, message ...string) {
 	if quietMode {
 		return
 	}
 	const width = 50
 	progress := width * percent / 100
+
+	// 如果有消息需要显示
+	if len(message) > 0 && message[0] != "" {
+		// 先清除当前行
+		fmt.Print("\r" + strings.Repeat(" ", 80) + "\r")
+		// 显示消息
+		fmt.Println(message[0])
+	}
+
+	// 显示进度条
 	fmt.Printf("\r[%s%s] %d%%",
 		strings.Repeat("=", progress),
 		strings.Repeat(" ", width-progress),
@@ -207,20 +217,18 @@ func ParseImageFile(path string) error {
 
 	// 根据发行版类型处理
 	if osType == "fedora" {
-		// 显示Fedora系统类型
-		if !quietMode {
-			fmt.Println("\n开始解析Fedora系统，这将需要一些时间...")
-		}
+		// 显示Fedora系统类型，同时更新进度为25%
+		showProgress(25, "开始解析Fedora系统，这将需要一些时间...")
 
 		// 获取内核信息
-		showProgress(25)
+		showProgress(30)
 		kernelInfo, err := parseKernelInfo(path)
 		if err != nil {
 			return fmt.Errorf("获取内核信息失败: %v", err)
 		}
 
 		// 解析RPM包信息
-		showProgress(30)
+		showProgress(35)
 		pkgInfo, err := parseRpmViaDocker(path)
 		if err != nil {
 			return fmt.Errorf("解析Fedora包信息失败: %v", err)
@@ -259,6 +267,7 @@ func ParseImageFile(path string) error {
 		// 显示100%进度并输出完成信息
 		showProgress(100)
 		if !quietMode {
+			// 添加换行并显示完成信息
 			fmt.Println("\nSBOM文件已生成：" + outputFilename)
 		}
 		return nil
@@ -373,6 +382,7 @@ func ParseImageFile(path string) error {
 	// 更新进度为100%并显示完成信息
 	showProgress(100)
 	if !quietMode {
+		// 添加换行并显示完成信息
 		fmt.Println("\nSBOM文件已生成：" + outputFilename)
 	}
 	return nil
@@ -659,7 +669,7 @@ func parseDpkgStatus(filePath string, copyrightDir string, imagePath string) (*p
 // parseRpmSqlite 解析RPM数据库sqlite文件
 func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 	// 显示进度-开始解析SQLite数据库
-	showProgress(40)
+	showProgress(40, "开始解析RPM数据库...")
 
 	// 尝试使用SQLite方式打开
 	db, err := sql.Open("sqlite3", filePath)
@@ -675,10 +685,6 @@ func parseRpmSqlite(filePath string, imagePath string) (*pkg.Pkg, error) {
 	}
 
 	defer db.Close()
-
-	if !quietMode {
-		fmt.Println("\n开始解析RPM数据库...")
-	}
 
 	// 显示进度-数据库连接成功
 	showProgress(45)
