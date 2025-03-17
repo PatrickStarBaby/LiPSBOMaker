@@ -8,30 +8,30 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/CycloneDX/cyclonedx-go"
+	"github.com/google/uuid"
+	rpmdb "github.com/knqyf263/go-rpmdb/pkg"
+	"github.com/package-url/packageurl-go"
 	"io"
+	_ "modernc.org/sqlite" // 替换 mattn/go-sqlite3 驱动
 	"os"
 	"path/filepath"
 	"regexp"
+	_package "slp/package"
 	pkg "slp/package"
 	scan_utils "slp/utils"
 	"sort"
 	"strings"
 	"time"
-
-	"github.com/CycloneDX/cyclonedx-go"
-	"github.com/google/uuid"
-	rpmdb "github.com/knqyf263/go-rpmdb/pkg"
-	"github.com/package-url/packageurl-go"
-	_ "modernc.org/sqlite" // 替换 mattn/go-sqlite3 驱动
 )
 
 // 添加自定义结构体用于确保输出的JSON字段顺序正确
 type ComponentOutput struct {
-	BOMRef       string                   `json:"bom-ref"`
-	Name         string                   `json:"name"`
+	BOMRef       string                   `json:"bom-ref,omitempty"`
+	Name         string                   `json:"name,omitempty"`
 	PURL         string                   `json:"purl,omitempty"`
-	Type         string                   `json:"type"`
-	Version      string                   `json:"version"`
+	Type         string                   `json:"type,omitempty"`
+	Version      string                   `json:"version,omitempty"`
 	CPE          string                   `json:"cpe,omitempty"`
 	Architecture string                   `json:"architecture,omitempty"`
 	Licenses     []map[string]interface{} `json:"licenses,omitempty"`
@@ -60,6 +60,12 @@ type ToolsInfo struct {
 	Components []ToolComponent `json:"components"`
 }
 
+type MainMetadata struct {
+	CraeateTime string          `json:"timestamp"`
+	Tools       ToolsInfo       `json:"tools"`
+	Component   ComponentOutput `json:"component"`
+}
+
 // SBOM格式的输出结构
 type outputSBOM struct {
 	Schema       string             `json:"$schema"`
@@ -67,13 +73,14 @@ type outputSBOM struct {
 	SpecVersion  string             `json:"specVersion"`
 	SerialNumber string             `json:"serialNumber"`
 	Version      int                `json:"version"`
-	Tools        ToolsInfo          `json:"tools"`
+	MainMetadata MainMetadata       `json:"metadata"`
 	Components   []ComponentOutput  `json:"components"`
 	Dependencies []DependencyOutput `json:"dependencies,omitempty"`
 }
 
 // ScanResult 存储扫描结果
 type ScanResult struct {
+	OsType      string                  `json:"osType"`
 	Kernel      *pkg.LinuxKernel        `json:"kernel,omitempty"`
 	Packages    *pkg.Pkg                `json:"packages,omitempty"`
 	PackageMap  map[string]*PackageInfo `json:"package_map,omitempty"` // 添加包映射字段
@@ -350,6 +357,7 @@ func ParseImageFile(path string) error {
 
 	// 创建扫描结果结构体
 	scanResult := &ScanResult{
+		OsType:      osType,
 		Kernel:      kernelInfo,
 		Packages:    pkgInfo,
 		PackageMap:  globalPackageInfoMap,  // 使用全局变量
@@ -1089,6 +1097,10 @@ func parseBuildTime(timeStr string) string {
 
 // convertToSBOMFormat 将扫描结果转换为SBOM格式
 func convertToSBOMFormat(result *ScanResult) *outputSBOM {
+	mainBomRef, err := _package.IDByHash(result)
+	if err != nil {
+		fmt.Println("mainBomRef获取错误", err)
+	}
 	// 创建SBOM输出结构
 	sbom := &outputSBOM{
 		Schema:       "http://cyclonedx.org/schema/bom-1.6.schema.json",
@@ -1096,13 +1108,21 @@ func convertToSBOMFormat(result *ScanResult) *outputSBOM {
 		SpecVersion:  "1.6",
 		SerialNumber: uuid.New().URN(),
 		Version:      1,
-		Tools: ToolsInfo{
-			Components: []ToolComponent{
-				{
-					Type:    string(cyclonedx.ComponentTypeApplication),
-					Name:    "SLP",
-					Version: "1.0",
+		MainMetadata: MainMetadata{
+			CraeateTime: time.Now().Format(time.RFC3339),
+			Tools: ToolsInfo{
+				Components: []ToolComponent{
+					{
+						Type:    string(cyclonedx.ComponentTypeApplication),
+						Name:    "SLP",
+						Version: "1.0",
+					},
 				},
+			},
+			Component: ComponentOutput{
+				BOMRef: mainBomRef,
+				Name:   result.OsType,
+				Type:   string(cyclonedx.ComponentTypeContainer),
 			},
 		},
 		Components:   []ComponentOutput{},
