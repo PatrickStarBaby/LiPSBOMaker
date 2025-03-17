@@ -97,8 +97,8 @@ func FetchRpmBuildDep(rpmSourcePkgPath string) (error, *RpmBuildEnv) {
 func getRPMProvider(provide string) (error, []_package.Pkg) {
 	res, err := scan_utils.RunCommand("rpm", "-q", "--whatprovides", provide)
 	if err != nil {
-		fmt.Println(res)
-		return fmt.Errorf("rpm -q --whatprovides 命令执行"), nil
+		//fmt.Println(res)
+		return fmt.Errorf("rpm -q --whatprovides 命令执行失败：%v", err), nil
 	}
 	lines := strings.Split(res, "\n")
 	var providerList []_package.Pkg
