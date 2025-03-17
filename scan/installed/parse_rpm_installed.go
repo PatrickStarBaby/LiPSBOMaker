@@ -2,12 +2,13 @@ package installed
 
 import (
 	"fmt"
-	"github.com/CycloneDX/cyclonedx-go"
-	"github.com/package-url/packageurl-go"
 	_package "slp/package"
 	scan_utils "slp/utils"
 	"strings"
 	"time"
+
+	"github.com/CycloneDX/cyclonedx-go"
+	"github.com/package-url/packageurl-go"
 )
 
 func ParseInstalledRpm(pkgName string) (error, *_package.Pkg) {
@@ -72,7 +73,7 @@ func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
 		if trimmedLine != "" {                                        // 过滤空白行
 			metadataList, err := getProvider(trimmedLine)
 			if err != nil {
-				fmt.Println(err)
+				// fmt.Println(err)
 				//continue
 			}
 			var temp []_package.Depend
@@ -93,8 +94,8 @@ func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
 func getProvider(provide string) ([]_package.Metadata, error) {
 	res, err := scan_utils.RunCommand("rpm", "-q", "--whatprovides", provide)
 	if err != nil {
-		fmt.Println(res)
-		return nil, fmt.Errorf("rpm -q --whatprovides 命令执行失败：%v", err)
+		// fmt.Println(res)
+		// return nil, fmt.Errorf("rpm -q --whatprovides 命令执行")
 	}
 	lines := strings.Split(res, "\n")
 	var providerList []_package.Metadata
