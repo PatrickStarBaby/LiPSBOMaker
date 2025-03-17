@@ -79,7 +79,7 @@ func FetchRpmBuildDep(rpmSourcePkgPath string) (error, *RpmBuildEnv) {
 		err, provider := getRPMProvider(v)
 		// 发生错误时，例如出现rpmlib(CompressedFileNames)等，还是插入到列表中
 		if err != nil {
-			fmt.Println(err)
+			//fmt.Println(err)
 			//continue
 		}
 		buildRequires = append(buildRequires, buildDepProviderGroup{
