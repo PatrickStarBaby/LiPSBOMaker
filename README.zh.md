@@ -2,7 +2,7 @@
 
 LiPSBOMaker是一个针对Linux发行版的SBOM生成工具，可以为Linux软件包生成多阶段的SBOM，包含源码阶段、发布阶段、使用阶段
 
-[English doc](README.zh.md)
+[English doc](README.md)
  
 
 ### 一、命令总览
