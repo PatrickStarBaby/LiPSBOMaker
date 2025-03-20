@@ -106,7 +106,7 @@ func ReadRPMFile(rpmPath string) (specFileContent string, patchInfoMaps map[stri
 
 		//查找并解析.patch文件、.diff文件
 		if strings.HasSuffix(header.Name, ".patch") || strings.HasSuffix(header.Name, ".diff") {
-			fmt.Println("文件名：", header.Name)
+			fmt.Println("patch file Name: ", header.Name)
 			var patchFileContent strings.Builder
 			if _, err := io.Copy(&patchFileContent, cpioReader); err != nil {
 				return "", nil, fmt.Errorf("failed to read patch file: %v", err)
