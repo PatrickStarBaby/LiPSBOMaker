@@ -1,18 +1,35 @@
 # LiPSBOMaker
 
-LiPSBOMaker是一个针对Linux发行版的SBOM生成工具，可以为Linux软件包生成多阶段的SBOM，包含源码阶段、发布阶段、使用阶段
+LiPSBOMaker是一个针对Linux发行版的SBOM生成工具，是一个命令行工具，可以为Linux软件包生成多阶段的SBOM，包含源码阶段、发布阶段、使用阶段
 
 [English doc](README.md)
 
 ### 一、安装
 
-1、直接使用仓库中已经编译好的二进制可执行文件：
+##### 1、直接使用仓库中已经编译好的二进制可执行文件：
 
-Windows平台使用
+Windows平台使用：slp.exe
 
-2、下载源码后编译构建
+Linux系统使用：slp
 
-下载源码后直接使用
+##### 2、下载源码后编译构建
+
+首先确保本地已经配置好了go语言环境
+
+直接在项目根目录使用go build构建
+
+在不同系统中会自动构建为该平台下的可执行文件
+
+##### 3、运行工具
+
+LiPSBOMaker是一个命令行工具，可以通过以下方式直接调用可执行文件
+
+```bash
+Windows：./slp.exe --help
+Linux：./slp --help
+```
+
+==**注意**：以下使用说明中均默认省略 "./"==
 
 
 
@@ -23,6 +40,7 @@ slp version
 slp image [SOURCE] --output=[Filename]
 slp package --lifecycle=["source"/"release"/"installed"] [SOURCE] --output=[Filename]
 slp record [SOURCE]
+slp --help
 ```
 
 

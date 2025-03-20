@@ -1,21 +1,56 @@
 # LiPSBOMaker
 
-**LiPSBOMaker** is an SBOM generation tool for Linux distributions that can generate multi-stage SBOMs for Linux packages, including the source stage, release stage, and usage stage.
+**LiPSBOMaker** is an SBOM generation tool for Linux distributions.
+
+It is a command-line tool that can generate multi-stage SBOMs for Linux packages, including the source stage, release stage, and usage stage.
 
 [中文文档](README.zh.md)
 
 
-### 1. Command Overview
+
+### 1. Installation
+
+##### (1) Using precompiled binary executables from the repository:
+
+- For Windows: Use **`slp.exe`**
+- For Linux: Use **`slp`**
+
+##### (2) Downloading and compiling from source:
+
+- Ensure that the **Go** environment is properly configured on your system.
+
+- Navigate to the project root directory and use **`go build`** to compile.
+
+- The build process will automatically generate an executable file suitable for the current platform.
+
+##### (3) Running the tool
+
+LiPSBOMaker is a command-line tool and can be executed using the following commands:
+
+```
+# For Windows:
+./slp.exe --help
+
+# For Linux:
+./slp --help
+```
+
+**Note:** In the following usage instructions, `"./"` is omitted by default.
+
+
+
+### 2. Command Overview
 
 ```bash
 slp version
 slp package --lifecycle=["source"/"release"/"installed"] [SOURCE] --output=[Filename]
 slp record [SOURCE]
+slp --help
 ```
 
 
 
-### 2. Commands for Different Requirements
+### 3. Commands for Different Requirements
 
 #### (1) Generate SBOM
 
@@ -67,7 +102,7 @@ slp record xxx
 
 
 
-### 3. Best Practices
+### 4. Best Practices
 
 #### (1). For the RPM system:
 
