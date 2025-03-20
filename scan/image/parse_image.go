@@ -850,13 +850,13 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 	// 使用rpmdb库打开包数据库
 	db, err := rpmdb.Open(filePath)
 	if err != nil {
-		return nil, fmt.Errorf("\n解析rpmdb数据库信息时出错：%v", err)
+		return nil, fmt.Errorf("\nAn error occurred while parsing the RPM database information:%v", err)
 	}
 	defer db.Close()
 
 	packages, err := db.ListPackages()
 	if err != nil {
-		return nil, fmt.Errorf("\n解析rpmdb数据库包列表信息时出错：%v", err)
+		return nil, fmt.Errorf("\nAn error occurred while parsing the RPM database package list information: %v", err)
 	}
 
 	// 获取系统信息用于生成 PURL
@@ -919,7 +919,7 @@ func parseRpmDb(filePath string, imagePath string) (*pkg.Pkg, error) {
 			metadata.License = []string{entry.License}
 			packagesWithLicense++
 		} else {
-			fmt.Printf("警告：软件包 %s 没有许可证信息\n", entry.Name)
+			fmt.Printf("Warning: The package %s does not have license information.\n", entry.Name)
 		}
 
 		// 生成 CPE

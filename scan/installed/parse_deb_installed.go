@@ -122,7 +122,7 @@ func GetInstalledDebInfo(pkgName string) (map[string]string, error) {
 	res, err := scan_utils.RunCommand("dpkg", "-s", pkgName)
 	if err != nil {
 		fmt.Println(res)
-		return nil, fmt.Errorf("dpkg -s 命令执行失败：%v", err)
+		return nil, fmt.Errorf("The 'dpkg -s' command execution failed: %v", err)
 	}
 
 	pkgInfo := make(map[string]string)
@@ -235,7 +235,7 @@ func installAptRdepends() error {
 func getOsInfo() (namespace, distro string) {
 	res, err := scan_utils.RunCommand("cat", "/etc/os-release")
 	if err != nil {
-		fmt.Println(fmt.Errorf("dpkg -s命令执行失败：%v", err))
+		fmt.Println(fmt.Errorf("The 'cat /etc/os-release' command execution failed: %v", err))
 		return "", ""
 	}
 

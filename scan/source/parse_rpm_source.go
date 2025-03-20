@@ -143,7 +143,7 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	// Getting metadata
 	nevra, err := rpm.Header.GetNEVRA()
 	if err != nil {
-		panic(fmt.Errorf("读取nevra时报错：%v", err))
+		panic(fmt.Errorf("failed to read nevra:%v", err))
 	}
 	fmt.Println("Name: ", nevra.Name)
 	fmt.Println("Version: ", nevra.Version)
@@ -174,71 +174,70 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	//-------licenses-------
 	licenses, err := rpm.Header.GetStrings(rpmutils.LICENSE)
 	if err != nil {
-		panic(fmt.Errorf("读取licenses时报错：%v", err))
+		panic(fmt.Errorf("failed to read licenses:%v", err))
 	}
 	fmt.Println("licenses: ", licenses, len(licenses))
 
 	//-------url-------
 	url, err := rpm.Header.GetStrings(rpmutils.URL)
 	if err != nil {
-		panic(fmt.Errorf("读取url时报错：%v", err))
+		panic(fmt.Errorf("failed to read url:%v", err))
 	}
 	fmt.Println("url: ", url)
 
 	//-------rpmVersion-------
 	rpmVersion, err := rpm.Header.GetStrings(rpmutils.RPMVERSION)
 	if err != nil {
-		panic(fmt.Errorf("读取rpmVersion时报错：%v", err))
+		panic(fmt.Errorf("failed to read rpmVersion:%v", err))
 	}
 	fmt.Println("rpmVersion: ", rpmVersion)
 
 	//-------description-------
 	description, err := rpm.Header.GetStrings(rpmutils.DESCRIPTION)
 	if err != nil {
-		panic(fmt.Errorf("读取description时报错：%v", err))
+		panic(fmt.Errorf("failed to read description:%v", err))
 	}
 	fmt.Println("description: ", description)
 
 	//-------packager-------
 	packager, err := rpm.Header.GetStrings(rpmutils.PACKAGER)
 	if err != nil {
-		panic(fmt.Errorf("读取packager时报错：%v", err))
+		panic(fmt.Errorf("failed to read packager:%v", err))
 	}
 	fmt.Println("packager: ", packager)
 
 	//-------source-------
 	sources, err := rpm.Header.GetStrings(rpmutils.SOURCE)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取source时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read source:%v", err))
 	}
 	fmt.Println("source: ", sources)
 
 	//-------provides,源码包能够构建提供的二进制包-------
 	provides, err := rpm.Header.GetStrings(rpmutils.PROVIDENAME)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取provides时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read provides:%v", err))
 	}
 
 	//-------provideVersion-------
 	provideVersion, err := rpm.Header.GetStrings(rpmutils.PROVIDEVERSION)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取provideVersion时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read provideVersion:%v", err))
 	}
 	//-------provideFlags，获取版本符号（>=，<=等）-------
 	provideFlags, err := rpm.Header.GetUint32s(rpmutils.PROVIDEFLAGS)
 	packageList := []string{}
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取provideFlags时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read provideFlags:%v", err))
 	}
 	if len(provides) == len(provideVersion) && len(provideVersion) == len(provideFlags) {
 		// 将可以打出的软件包名称和版本对应起来并输出
-		fmt.Println("提供的软件包名称和版本:")
 		for i := 0; i < len(provides); i++ {
 			packageList = append(packageList, provides[i]+scan_utils.GetOperator(provideFlags[i])+provideVersion[i])
-			fmt.Printf("名称: %s, 版本要求: %s %s\n", provides[i], scan_utils.GetOperator(provideFlags[i]), provideVersion[i])
+			fmt.Printf("pkgName: %s, version: %s %s\n", provides[i], scan_utils.GetOperator(provideFlags[i]), provideVersion[i])
 		}
 	} else {
-		fmt.Println("提供的软件包名称、版本、符号数量不一致")
+		fmt.Println("The provided package names, versions, and symbol counts are inconsistent.")
 	}
 
 	// ------------ 给pkg赋值 ------------
@@ -265,22 +264,21 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 	//buildRequire = removeItemFromSlice(buildRequire, "rpmlib(CompressedFileNames)")
 	//buildRequire = removeItemFromSlice(buildRequire, "rpmlib(FileDigests)")
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取buildRequire时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read buildRequire:%v", err))
 	}
 	//-------buildRequireFlags，获取版本符号（>=，<=等）-------
 	buildRequireFlags, err := rpm.Header.GetUint32s(rpmutils.REQUIREFLAGS)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取buildRequireFlags时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read buildRequireFlags:%v", err))
 	}
 	//-------buildRequireVersion-------
 	buildRequireVersion, err := rpm.Header.GetStrings(rpmutils.REQUIREVERSION)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取buildRequireVersion时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read buildRequireVersion:v", err))
 	}
 
 	if len(buildRequire) == len(buildRequireVersion) && len(buildRequireVersion) == len(buildRequireFlags) {
 		// 将依赖名称和版本对应起来并输出
-		fmt.Println("依赖名称和版本:")
 		for i := 0; i < len(buildRequire); i++ {
 			version := scan_utils.GetOperator(buildRequireFlags[i]) + buildRequireVersion[i]
 			buildRequireBomRef, _ := _package.GetBomRef("BuildRequire:"+buildRequire[i], struct {
@@ -300,28 +298,28 @@ func ParseSourceRpmFile(rpmPath string) (error, *_package.Pkg) {
 				},
 			})
 			dependencyBomref = append(dependencyBomref, buildRequireBomRef)
-			fmt.Printf("依赖: %s, 版本要求: %s %s\n", buildRequire[i], scan_utils.GetOperator(buildRequireFlags[i]), buildRequireVersion[i])
+			fmt.Printf("require: %s, version: %s %s\n", buildRequire[i], scan_utils.GetOperator(buildRequireFlags[i]), buildRequireVersion[i])
 		}
 	} else {
-		fmt.Println("依赖名称、版本、大小符号数量不一致")
+		fmt.Println("The provided package names, versions, and symbol counts are inconsistent.")
 	}
 
 	//-------patches-------
 	patches, err := rpm.Header.GetStrings(rpmutils.PATCH)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取patches时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read patches:%v", err))
 	}
 	fmt.Println("Patches: ", patches)
 	// 从rpm文件中解压并提取每一个patch文件的内容
 	_, patchInfoMap, err := ReadRPMFile(rpmPath)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取patch文件时报错：%v", err))
+		fmt.Println(fmt.Errorf("failed to read patchFile:%v", err))
 	}
 	fmt.Println("patchInfoMaps: ", patchInfoMap)
 	patchesList := []_package.Patch{}
 	for _, patch := range patches {
 		patchesList = append(patchesList, patchInfoMap[patch])
-		fmt.Println("patch对应：", patch, patchInfoMap[patch])
+		fmt.Println("patch:", patch, patchInfoMap[patch])
 	}
 
 	directDependency := cyclonedx.Dependency{

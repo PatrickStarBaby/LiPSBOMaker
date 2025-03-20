@@ -41,7 +41,7 @@ var softwareCmd = &cobra.Command{
 		// 按生命周期参数分别处理
 		switch lifecycle {
 		case "source":
-			fmt.Println("这是要生成源码阶段SBOM")
+			fmt.Println("This is to generate the source stage SBOM.")
 			if len(args) == 0 {
 				fmt.Println("Parameters are missing, Usage: ")
 				fmt.Println("slp package -l=[\"source\"/\"release\"/\"installed\"] [SOURCE] --output [FILENAME]")
@@ -49,7 +49,7 @@ var softwareCmd = &cobra.Command{
 				sourceScan(args[0], output)
 			}
 		case "release":
-			fmt.Println("这是要生成二进制交付阶段SBOM")
+			fmt.Println("This is to generate the release stage SBOM.")
 			if len(args) == 0 {
 				fmt.Println("Parameters are missing, Usage: ")
 				fmt.Println("slp package -l=[\"source\"/\"release\"/\"installed\"] [SOURCE] --output [FILENAME]")
@@ -57,7 +57,7 @@ var softwareCmd = &cobra.Command{
 				releaseScan(args[0], output)
 			}
 		case "installed":
-			fmt.Println("这是要生成二进制使用阶段SBOM")
+			fmt.Println("This is to generate the usage stage SBOM.")
 			if len(args) == 0 {
 				fmt.Println("Parameters are missing, Usage: ")
 				fmt.Println("slp package -l=[\"source\"/\"release\"/\"" +

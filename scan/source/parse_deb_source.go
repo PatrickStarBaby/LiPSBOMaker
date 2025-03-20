@@ -22,24 +22,24 @@ func readDscFileByPault(dscFilePath string) {
 	// 打开dsc文件
 	file, err := os.Open(dscFilePath) // 替换为你的dsc文件路径
 	if err != nil {
-		log.Fatalf("无法打开文件: %v", err)
+		log.Fatalf("Unable to open the file: %v", err)
 	}
 	defer file.Close()
 
 	// 解析dsc文件
 	var source control.DSC
 	if err := control.Unmarshal(&source, file); err != nil {
-		log.Fatalf("无法解析dsc文件: %v", err)
+		log.Fatalf("Unable to parse the dsc file: %v", err)
 	}
 
 	// 输出一些信息
-	fmt.Printf("包名: %s\n", source.Source)
-	fmt.Printf("版本: %s\n", source.Version)
-	fmt.Printf("维护者: %s\n", source.Maintainer)
-	fmt.Printf("上游维护者: %s\n", source.Origin)
+	fmt.Printf("Package Name: %s\n", source.Source)
+	fmt.Printf("Version: %s\n", source.Version)
+	fmt.Printf("Maintainer: %s\n", source.Maintainer)
+	fmt.Printf("Origin-Maintainer: %s\n", source.Origin)
 
-	fmt.Printf("构建依赖: %v\n", source.BuildDepends)
-	fmt.Printf("二进制包: %v\n", source.Binaries)
+	fmt.Printf("BuildDepends: %v\n", source.BuildDepends)
+	fmt.Printf("Binaries: %v\n", source.Binaries)
 	fmt.Printf("BuildDependsIndep: %v\n", source.BuildDependsIndep)
 	fmt.Printf("Files: %v\n", source.Files)
 	fmt.Printf("BuildDependsArch: %v\n", source.BuildDependsArch)
@@ -128,7 +128,7 @@ func parsePatchFiles(patchesDirPath string) (patches []_package.Patch, err error
 	patchPaths, err := readSeriesFile(filepath.Join(patchesDirPath, "series"))
 	patches = []_package.Patch{}
 	if err != nil {
-		return nil, fmt.Errorf("解析Series文件出错: %v", err)
+		return nil, fmt.Errorf("Unable to parse the Series file: %v", err)
 	}
 	for _, patchFile := range patchPaths {
 		patchPath := filepath.Join(patchesDirPath, patchFile)
@@ -154,14 +154,14 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 	// 打开dsc文件
 	file, err := os.Open(dscFilePath) // dsc文件路径
 	if err != nil {
-		return fmt.Errorf("无法打开dsc文件: %v", err), nil
+		return fmt.Errorf("Unable to open the dsc file.: %v", err), nil
 	}
 	defer file.Close()
 
 	// 三方包解析dsc文件
 	var dscFields control.DSC
 	if err := control.Unmarshal(&dscFields, file); err != nil {
-		return fmt.Errorf("无法解析dsc文件: %v", err), nil
+		return fmt.Errorf("Unable to parse the dsc file: %v", err), nil
 	}
 
 	// PURL
@@ -185,7 +185,7 @@ func ParseSourceDebFile(dscFilePath string, patchesDirPath string, copyrightFile
 
 	licenseList, err := parseLicensesFromCopyright(copyrightFilePath)
 	if err != nil {
-		fmt.Println("提取license发生错误：", err)
+		fmt.Println("An error occurred while extracting the license:", err)
 	}
 
 	metadata := _package.Metadata{}

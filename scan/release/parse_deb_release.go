@@ -263,7 +263,7 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 	if controlData["Depends"] != "" {
 		dep, err := dependency.Parse(controlData["Depends"])
 		if err != nil {
-			return fmt.Errorf("使用dependency解析Depends依赖发生错误: %v", err), nil
+			return fmt.Errorf("An error occurred while using the dependency parser to resolve Depends dependencies:%v", err), nil
 		}
 		//possibilities := dep.GetAllPossibilities()
 		for _, d := range dep.Relations {
@@ -298,7 +298,7 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 	if controlData["Pre-Depends"] != "" {
 		dep, err := dependency.Parse(controlData["Pre-Depends"])
 		if err != nil {
-			return fmt.Errorf("使用dependency解析Pre-Depends依赖发生错误: %v", err), nil
+			return fmt.Errorf("An error occurred while using the dependency parser to resolve Pre-Depends dependencies: %v", err), nil
 		}
 		//possibilities := dep.GetAllPossibilities()
 		for _, d := range dep.Relations {
@@ -333,7 +333,7 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 	if controlData["Built-Using"] != "" {
 		dep, err := dependency.Parse(controlData["Built-Using"])
 		if err != nil {
-			return fmt.Errorf("使用dependency解析Built-Using依赖发生错误: %v", err), nil
+			return fmt.Errorf("An error occurred while using the dependency parser to resolve Built-Using dependencies: %v", err), nil
 		}
 		//possibilities := dep.GetAllPossibilities()
 		for _, d := range dep.Relations {

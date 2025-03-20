@@ -37,27 +37,27 @@ func RecordRpmBuildEnvInformation(rpmSourcePkgPath string) error {
 		return err
 	}
 
-	fmt.Println("-----------------写入文件--------------------")
+	fmt.Println("-----------------Write to file--------------------")
 	// 将结构体转换为JSON格式（格式化缩进）
 	jsonData, err := json.MarshalIndent(rpmBuildEnv, "", "  ")
 	if err != nil {
-		return fmt.Errorf("JSON 序列化失败: %v", err)
+		return fmt.Errorf("JSON serialization failed: %v", err)
 	}
 
 	// 创建 JSON 文件
 	file, err := os.Create("buildEnv.json")
 	if err != nil {
-		return fmt.Errorf("创建文件失败: %v", err)
+		return fmt.Errorf("Failed to create file: %v", err)
 	}
 	defer file.Close()
 
 	// 将 JSON 数据写入文件
 	_, err = file.Write(jsonData)
 	if err != nil {
-		return fmt.Errorf("写入文件失败: %v", err)
+		return fmt.Errorf("Failed to write to file: %v", err)
 	}
 
-	fmt.Println("构建环境信息写入成功！")
+	fmt.Println("Build environment information written successfully!！")
 	return nil
 }
 
@@ -98,7 +98,7 @@ func getRPMProvider(provide string) (error, []_package.Pkg) {
 	res, err := scan_utils.RunCommand("rpm", "-q", "--whatprovides", provide)
 	if err != nil {
 		//fmt.Println(res)
-		return fmt.Errorf("rpm -q --whatprovides 命令执行失败：%v", err), nil
+		return fmt.Errorf("rpm -q --whatprovides Command execution failed:%v", err), nil
 	}
 	lines := strings.Split(res, "\n")
 	var providerList []_package.Pkg
@@ -130,23 +130,23 @@ func RecordDebBuildEnvInformation(dscFilePath string) error {
 	// 将结构体转换为JSON格式（格式化缩进）
 	jsonData, err := json.MarshalIndent(debBuildEnv, "", "  ")
 	if err != nil {
-		return fmt.Errorf("JSON 序列化失败: %v", err)
+		return fmt.Errorf("JSON serialization failed: %v", err)
 	}
 
 	// 创建 JSON 文件
 	file, err := os.Create("buildEnv.json")
 	if err != nil {
-		return fmt.Errorf("创建文件失败: %v", err)
+		return fmt.Errorf("Failed to create file: %v", err)
 	}
 	defer file.Close()
 
 	// 将 JSON 数据写入文件
 	_, err = file.Write(jsonData)
 	if err != nil {
-		return fmt.Errorf("写入文件失败: %v", err)
+		return fmt.Errorf("Failed to write to file: %v", err)
 	}
 
-	fmt.Println("构建环境信息写入成功！")
+	fmt.Println("Build environment information written successfully!！")
 	return nil
 }
 
@@ -154,14 +154,14 @@ func FetchDebBuildDep(dscFilePath string) (error, *DebBuildEnv) {
 	// 打开dsc文件
 	file, err := os.Open(dscFilePath) // dsc文件路径
 	if err != nil {
-		return fmt.Errorf("无法打开dsc文件: %v", err), nil
+		return fmt.Errorf("Unable to open the .dsc file: %v", err), nil
 	}
 	defer file.Close()
 
 	// 三方包解析dsc文件
 	var dscFields control.DSC
 	if err := control.Unmarshal(&dscFields, file); err != nil {
-		return fmt.Errorf("无法解析dsc文件: %v", err), nil
+		return fmt.Errorf("Unable to parse the .dsc file: %v", err), nil
 	}
 
 	buildDeps := []BuildDepPkgGroup{}

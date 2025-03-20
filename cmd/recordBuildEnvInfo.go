@@ -17,7 +17,7 @@ var recordBuildEnvInfoCmd = &cobra.Command{
 	Long:  `record the build environment information for Linux source packages`,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		fmt.Println("这是在记录源码包的本地构建信息")
+		fmt.Println("This is recording the local build information of the source package...")
 		if len(args) == 0 {
 			fmt.Println("Parameters are missing, Usage: ")
 			fmt.Println("slp record [SOURCE]")

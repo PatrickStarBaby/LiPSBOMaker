@@ -29,34 +29,34 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	// Getting metadata
 	nevra, err := rpm.Header.GetNEVRA()
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取nevra时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the nevra:%v", err))
 	}
 
 	//-------OS-------
 	os, err := rpm.Header.GetStrings(rpmutils.OS)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取OS时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the OS:%v", err))
 	}
 	fmt.Println("OS: ", os)
 
 	//-------sourceRPM-------
 	sourceRPM, err := rpm.Header.GetStrings(rpmutils.SOURCERPM)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取sourceRPM时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the sourceRPM:%v", err))
 	}
 	fmt.Println("Source RPM: ", sourceRPM)
 
 	//-------buildHost-------
 	buildHost, err := rpm.Header.GetStrings(rpmutils.BUILDHOST)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取buildHost时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the buildHost:%v", err))
 	}
 	fmt.Println("buildHost: ", buildHost)
 
 	//-------buildTime-------
 	buildTime, err := rpm.Header.GetUint32s(rpmutils.BUILDTIME)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取buildTime时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the buildTime:%v", err))
 	}
 	buildDate := time.Unix(int64(buildTime[0]), 0)
 	fmt.Println("buildTime: ", buildDate)
@@ -87,63 +87,63 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	//-------licenses-------
 	licenses, err := rpm.Header.GetStrings(rpmutils.LICENSE)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取licenses时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the licenses:%v", err))
 	}
 	fmt.Println("licenses: ", licenses)
 
 	//-------url-------
 	url, err := rpm.Header.GetStrings(rpmutils.URL)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取url时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the url:%v", err))
 	}
 	fmt.Println("url: ", url)
 
 	//-------rpmVersion-------
 	rpmVersion, err := rpm.Header.GetStrings(rpmutils.RPMVERSION)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取rpmVersion时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the rpmVersion:%v", err))
 	}
 	fmt.Println("rpmVersion: ", rpmVersion)
 
 	//-------description-------
 	description, err := rpm.Header.GetStrings(rpmutils.DESCRIPTION)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取description时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the description:%v", err))
 	}
 	fmt.Println("description: ", description)
 
 	//-------packager-------
 	packager, err := rpm.Header.GetStrings(rpmutils.PACKAGER)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取packager时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the packager:%v", err))
 	}
 	fmt.Println("packager: ", packager)
 
 	//-------provides,提供的二进制包-------
 	provides, err := rpm.Header.GetStrings(rpmutils.PROVIDENAME)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取provides时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the provides:%v", err))
 	}
 	//-------provideVersion-------
 	provideVersion, err := rpm.Header.GetStrings(rpmutils.PROVIDEVERSION)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取provideVersion时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the provideVersion:%v", err))
 	}
 	//-------provideFlags，获取版本符号（>=，<=等）-------
 	provideFlags, err := rpm.Header.GetUint32s(rpmutils.PROVIDEFLAGS)
 	packageList := []string{}
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取provideFlags时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the provideFlags:%v", err))
 	}
 	if len(provides) == len(provideVersion) && len(provideVersion) == len(provideFlags) {
 		// 将可以打出的软件包名称和版本对应起来并输出
-		fmt.Println("提供的软件包名称和版本:")
+		fmt.Println("The provided package name and version:")
 		for i := 0; i < len(provides); i++ {
 			packageList = append(packageList, provides[i]+scan_utils.GetOperator(provideFlags[i])+provideVersion[i])
-			fmt.Printf("名称: %s, 版本要求: %s %s\n", provides[i], scan_utils.GetOperator(provideFlags[i]), provideVersion[i])
+			fmt.Printf("Name: %s, Version: %s %s\n", provides[i], scan_utils.GetOperator(provideFlags[i]), provideVersion[i])
 		}
 	} else {
-		fmt.Println("提供的软件包名称、版本、符号数量不一致")
+		fmt.Println("The provided package name, version, and symbol count are inconsistent.")
 	}
 
 	// ------------ 给pkg赋值 ------------
@@ -175,28 +175,28 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	//require = removeItemFromSlice(require, "rpmlib(CompressedFileNames)")
 	//require = removeItemFromSlice(require, "rpmlib(FileDigests)")
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取require时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the require:%v", err))
 	}
 
 	//-------requireFlags，获取版本符号（>=，<=等）-------
 	requireFlags, err := rpm.Header.GetUint32s(rpmutils.REQUIREFLAGS)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取requireFlags时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the requireFlags:%v", err))
 	}
 	//-------requireVersion-------
 	requireVersion, err := rpm.Header.GetStrings(rpmutils.REQUIREVERSION)
 	if err != nil {
-		fmt.Println(fmt.Errorf("读取requireVersion时报错：%v", err))
+		fmt.Println(fmt.Errorf("An error occurred while reading the requireVersion:%v", err))
 	}
 	if len(require) == len(requireVersion) && len(requireVersion) == len(requireFlags) {
 		// 将依赖名称和版本对应起来并输出
-		fmt.Println("依赖名称和版本:")
+		fmt.Println("Require Name and Version:")
 		versions := []string{}
 		//拼接得到版本列表
 		for i := 0; i < len(require); i++ {
 			version := scan_utils.GetOperator(requireFlags[i]) + requireVersion[i]
 			versions = append(versions, version)
-			fmt.Printf("依赖: %s, 版本要求: %s\n", require[i], version)
+			fmt.Printf("Require: %s, Version: %s\n", require[i], version)
 		}
 		//注意要去重
 		uniqueNames, uniqueVersions := removeDuplicates(require, versions)
@@ -218,10 +218,10 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 				},
 			})
 			dependencyBomref = append(dependencyBomref, dependBomRef)
-			fmt.Printf("依赖: %s, 版本要求: %s\n", uniqueNames[i], uniqueVersions[i])
+			fmt.Printf("Require: %s, Version: %s\n", uniqueNames[i], uniqueVersions[i])
 		}
 	} else {
-		fmt.Println("依赖名称、版本、大小符号数量不一致")
+		fmt.Println("The require name, version, size, and symbol count are inconsistent.")
 	}
 
 	directDependency := cyclonedx.Dependency{
@@ -232,7 +232,7 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 	// 从rpm包中提取文件
 	reader, err := rpm.PayloadReader()
 	if err != nil {
-		fmt.Println(fmt.Errorf("rpm.PayloadReader()报错：%v", err))
+		fmt.Println(fmt.Errorf("rpm.PayloadReader() error:%v", err))
 	}
 	var buildDp []_package.BuildDepend
 	// 使用 reader 读取 RPM 包中的文件
@@ -242,7 +242,7 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 			if err.Error() == "EOF" {
 				break
 			}
-			fmt.Println(fmt.Errorf("使用 reader 读取 RPM 包中的文件时发生错误：%v", err))
+			fmt.Println(fmt.Errorf("An error occurred while using the reader to read files from the RPM package:%v", err))
 		}
 		// 从 buildEnv.json 文件中提取构建依赖精确补充信息
 		if strings.HasSuffix(header.Filename(), "buildEnv.json") {
@@ -251,7 +251,7 @@ func ParseReleaseRpmFile(rpmPath string) (error, *_package.Pkg) {
 			decoder := json.NewDecoder(reader)
 			err = decoder.Decode(&buildEnv)
 			if err != nil {
-				fmt.Println(fmt.Errorf("序列化buildEnv.json时发生错误：%v", err))
+				fmt.Println(fmt.Errorf("An error occurred while serializing the buildEnv.json file:%v", err))
 			}
 
 			for _, providers := range buildEnv.BuildRequires {

@@ -63,7 +63,7 @@ func GetRpmRequires(pkgName string) ([][]_package.Depend, error) {
 	res, err := scan_utils.RunCommand("rpm", "-qR", pkgName)
 	if err != nil {
 		fmt.Println(res)
-		return nil, fmt.Errorf("rpm -qR 命令执行失败：%v", err)
+		return nil, fmt.Errorf("The 'rpm -qR' command execution failed.%v", err)
 	}
 	pkgs := strings.Split(res, "\n")
 	pkgs = scan_utils.RemoveDuplicates(pkgs)
@@ -95,7 +95,7 @@ func getProvider(provide string) ([]_package.Metadata, error) {
 	res, err := scan_utils.RunCommand("rpm", "-q", "--whatprovides", provide)
 	if err != nil {
 		fmt.Println(res)
-		return nil, fmt.Errorf("rpm -q --whatprovides 命令执行")
+		return nil, fmt.Errorf("The 'rpm -q --whatprovides' command execution:")
 	}
 	lines := strings.Split(res, "\n")
 	var providerList []_package.Metadata
@@ -116,7 +116,7 @@ func getProvider(provide string) ([]_package.Metadata, error) {
 func GetInstalledRpmInfo(pkgName string) (*_package.Metadata, error) {
 	res, err := scan_utils.RunCommand("rpm", "-qi", pkgName)
 	if err != nil {
-		return nil, fmt.Errorf("rpm -qi命令执行：%v", err)
+		return nil, fmt.Errorf("The 'rpm -qi' command execution:%v", err)
 	}
 	pkgInfo := make(map[string]string)
 	lines := strings.Split(res, "\n")

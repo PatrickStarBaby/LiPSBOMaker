@@ -143,7 +143,7 @@ func SplitRPMName(rpmPkgName string) (*RPM_NEVRA, error) {
 	// 执行正则匹配
 	match := re.FindStringSubmatch(rpmPkgName)
 	if match == nil {
-		return nil, fmt.Errorf("SplitRPMName无法解析 RPM 文件名: %s", rpmPkgName)
+		return nil, fmt.Errorf("SplitRPMName failed to parse the RPM filename: %s", rpmPkgName)
 	}
 
 	// 提取命名组
@@ -173,7 +173,7 @@ func SplitRPMNameWithoutEpoch(rpmPkgName string) (*RPM_NEVRA, error) {
 	// 执行正则匹配
 	match := re.FindStringSubmatch(rpmPkgName)
 	if match == nil {
-		return nil, fmt.Errorf("SplitRPMNameWithoutEpoch无法解析 RPM 文件名: %s", rpmPkgName)
+		return nil, fmt.Errorf("SplitRPMNameWithoutEpoch failed to parse the RPM filename: %s", rpmPkgName)
 	}
 
 	// 提取命名组
