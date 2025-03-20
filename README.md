@@ -3,7 +3,7 @@
 **LiPSBOMaker** is an SBOM generation tool for Linux distributions that can generate multi-stage SBOMs for Linux packages, including the source stage, release stage, and usage stage.
 
 [中文文档]: README.zh.md
-
+[点击这里](README.zh.md)
 
 
 ### 1. Command Overview
