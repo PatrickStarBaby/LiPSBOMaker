@@ -1,167 +1,168 @@
 # LiPSBOMaker
 
-LiPSBOMaker是一个针对Linux发行版的SBOM生成工具，可以生成多粒度多阶段的SBOM
+**LiPSBOMaker** is an SBOM generation tool for Linux distributions that can generate multi-stage SBOMs for Linux packages, including the source stage, release stage, and usage stage.
 
 
 
-### 一、命令总览
+### 1. Command Overview
 
 ```bash
 slp version
-slp image [SOURCE] --output=[Filename]
 slp package --lifecycle=["source"/"release"/"installed"] [SOURCE] --output=[Filename]
 slp record [SOURCE]
 ```
 
 
 
-### 二、不同需求对应的命令：
+### 2. Commands for Different Requirements
 
-#### 生成SBOM
+#### (1) Generate SBOM
 
-##### 源码包阶段：
+##### Source stage：
 
 ```bash
-#rpm源码阶段，传入rpm源码包路径
+#For the RPM source stage, provide the path to the RPM source package.
 slp package -l=source "xxx.src.rpm" --output ./rpm-source.json
 
-#deb源码包阶段（解压源码包后，将.dsc文件移入主文件夹，然后输入.dsc文件的路径，例/apt-2.7.14build2/apt_2.7.14build2.dsc）
+#For the DEB source package stage (after extracting the source package, move the .dsc file to the main folder, then provide the path of the .dsc file, e.g., /apt-2.7.14build2/apt_2.7.14build2.dsc).
 slp package -l=source "xxx/xxx.dsc" --output ./deb-source.json
 ```
 
-##### 二进制发布阶段：
+##### Release stage：
 
 ```bash
-#rpm二进制发布阶段，传入rpm二进制包路径
+#For the RPM release stage, provide the path to the RPM binary package.
 slp package -l=release "xxx.rpm" --output ./rpm-release.json
 
-#deb二进制发布阶段，传入deb二进制包路径
+#For the DEB release stage, provide the path to the DEB binary package.
 slp package -l=release "xxx.deb" --output ./deb-release.json
 ```
 
-##### 二进制使用阶段：
+##### Usage stage：
 
-注意因为解析本地安装的软件包，所以需要依赖于本地环境，要在本地环境命令行中运行相关命令
+Please note that since the parsing of locally installed packages is dependent on the local environment, it is necessary to execute the relevant commands within the command line of the local environment.
 
 ```bash
-#rpm二进制使用阶段，传入要解析的rpm软件包名，例如要生成本地bash软件包的SBOM,xxx直接就是bash
+#For the RPM usage stage, provide the name of the RPM package to be analyzed. For example, to generate the SBOM for the local bash package, simply use bash.
 slp package -l=installed xxx --output ./rpm-installed.json
 
-#deb二进制使用阶段，传入deb软件包名
+#For the DEB usage stage, provide the name of the DEB package.
 slp package -l=installed xxx --output ./deb-installed.json
 ```
 
 
 
-#### 记录构建环境信息：
+#### (2) Record build environment information
 
-记录构建环境信息的命令只有一个参数，即rpm源码包路径，或者deb源码包的.dsc文件路径
+The command to record build environment information has only one parameter, which is either the path to the RPM source package or the path to the `.dsc` file of the DEB source package.
 
-记录的构建环境信息输出会以固定的名字“buildEnv.json”保存到执行当前命令的路径下
+The recorded build environment information will be saved with the fixed name **`buildEnv.json`** in the current directory where the command is executed.
 
 ```bash
-#rpm体系，传入rpm源码包的路径，例如./dnf-4.16.2-3.oe2403.src.rpm
-#deb体系，传入deb源码包的.dsc文件路径，例如./apt_2.7.14build2.dsc
+#For the RPM system, provide the path to the RPM source package, for example, ./dnf-4.16.2-3.oe2403.src.rpm.
+#For the DEB system, provide the path to the .dsc file of the DEB source package, for example, ./apt_2.7.14build2.dsc.
 slp record xxx
 ```
 
-### 三、最佳实践
 
-#### 1、对于RPM体系：
 
-我们以dnf软件包为例，演示LiPSBOMaker在rpm体系中的最佳实践
+### 3. Best Practices
 
-##### ①下载源码包
+#### (1). For the RPM system:
+
+Let's take the `dnf` package as an example to demonstrate the best practices of using LiPSBOMaker in the RPM system.
+
+##### ① Download the source package.
 
 ```bash
 dnf download --source dnf
 ```
 
-得到dnf-4.16.2-6.oe2403.src.rpm源码包
+get the **`dnf-4.16.2-6.oe2403.src.rpm`** source package.
 
-##### ②生成dnf源码阶段SBOM
+##### ② Generate the SBOM for the DNF source stage.
 
 ```bash
 slp package -l=source ./dnf-4.16.2-6.oe2403.src.rpm --output ./dnf-source-SBOM.json
 ```
 
-得到dnf源码阶段SBOM：dnf-source-SBOM.json（之后可以将源码阶段SBOM嵌入到dnf源码包中一起发布）
+The dnf source stage SBOM **`dnf-source-SBOM.json`** has been generated (it can later be embedded into the dnf source package for distribution).
 
-##### ③记录dnf源码包构建为二进制包过程中的编译环境信息
+##### ③ Record the build environment information for the dnf source package during the process of compiling it into a binary package.
 
-编译环境信息记录的整体流程：
+The overall process for recording the build environment information is as follows:
 
-①dnf源码包安装构建依赖、编译
+- Install the build dependencies for the DNF source package.
 
-②使用LiPSBOMaker工具，将dnf构建过程中所使用的构建依赖信息记录到buildEnv.json文件中
+- Use the LiPSBOMaker tool to record the build dependencies information used during the DNF build process into the **`buildEnv.json`** file.
 
-③将buildEnv.json文件嵌入到dnf二进制发布包中随其一起发布
+- Embed the **`buildEnv.json`** file into the DNF binary release package and release it together.
 
-④用户在下载到该dnf二进制发布包后，可以使用LiPSBOMaker扫描该二进制包，生成二进制使用阶段的SBOM，其中会对源码阶段使用的构建依赖信息进行补充。
+- After the user downloads the DNF binary release package, they can use the LiPSBOMaker tool to scan the binary package and generate the SBOM for the binary usage stage. This will supplement the build dependency information used in the source stage.
 
 
 
-**下面我们逐一介绍所使用到的命令：**
+**Next, we will introduce the commands used one by one:**
 
-准备构建环境
+Prepare the build environment:
 
 ```bash
-#安装必要的构建工具
+#Install the necessary build tools.
 sudo yum install rpm-build rpmdevtools
-#设置RPM构建环境
+#Set up the RPM build environment.
 rpmdev-setuptree
 ```
 
-解压dnf源码包，并将将源代码等文件放入到`SOURCES` 目录，将.spec文件放入`SPECS`目录
+Extract the DNF source package, and place the source code and other files into the **`SOURCES`** directory, while placing the **`.spec`** file into the **`SPECS`** directory:
 
 ```bash
-#解压dnf源码包
+#Extract the DNF source package.
 rpm2cpio dnf-4.16.2-6.oe2403.src.rpm | cpio -idmv
 cd SPECS
 ```
 
-安装dnf所需要的构建依赖，之后使用LiPSBOMaker记录构建依赖的详细信息,将生成的buildEnv.json文件移入SOURCES目录以便后续打包
+Install the build dependencies required by DNF. Afterward, use LiPSBOMaker to record the detailed build dependencies information. Move the generated **`buildEnv.json`** file into the **`SOURCES`** directory for later packaging:
 
 ```bash
-#安装构建依赖
+#Install the build dependencies.
 dnf builddep dnf.spec
 slp record dnf-4.16.2-6.oe2403.src.rpm
 mv buildEnv.json ./SOURCES
 ```
 
-修改dnf.spec文件，控制构建过程将buildEnv.json文件嵌入到最终生成的dnf二进制包中
+Modify the **`dnf.spec`** file to control the build process and embed the **`buildEnv.json`** file into the final generated DNF binary package:
 
 ```bash
-#将buildEnv.json加入spec文件的Source配置
+#Add the buildEnv.json file to the Source section of the .spec file.
 Source1:  buildEnv.json
-#在%install段中增加添加buildEnv.json的文件的命令
+#Add the command to include the buildEnv.json file in the %install section.
 mkdir -p %{buildroot}/usr/share/SBOM/
 cp %{SOURCE1} %{buildroot}/usr/share/SBOM/
-#在%files段添加以下内容，确保在构建过程中能够将buildEnv.json文件被包含在最终的二进制RPM包中：
+#Add the following content to the %files section to ensure that the buildEnv.json file is included in the final binary RPM package during the build process:
 /usr/share/SBOM/buildEnv.json
 ```
 
-构建RPM包
+Build the RPM package:
 
 ```bash
 rpmbuild -ba dnf.spec
 ```
 
-生成的二进制包会存放在RPMS文件夹中，可以进行解压验证
+The generated binary package will be stored in the **RPMS** folder, and you can extract it to verify.
 
-确认无误之后便可发布该dnf二进制包
+Once confirmed to be correct, the DNF binary package can be released.
 
-##### ④生成dnf二进制发布阶段SBOM
+##### ④ Generate the SBOM for the DNF release stage.
 
-在下载到嵌入了buildEnv.json文件的二进制发布包后，使用LiPSBOMaker生成二进制发布阶段SBOM
+After downloading the binary release package with the embedded **`buildEnv.json`** file, use LiPSBOMaker to generate the SBOM for the binary release stage.
 
 ```bash
 slp package -l=release dnf-4.16.2-6.noarch.rpm --output ./dnf-release-SBOM.json
 ```
 
-##### ⑤生成dnf二进制使用阶段SBOM
+##### ⑤ Generate the SBOM for the DNF usage stage.
 
-安装完dnf后，可以使用LiPSBOMaker生成二进制使用阶段SBOM
+After installing DNF, you can use LiPSBOMaker to generate the SBOM for the binary usage stage.
 
 ```bash
 slp package -l=installed dnf --output ./dnf-installed-SBOM.json
@@ -169,79 +170,79 @@ slp package -l=installed dnf --output ./dnf-installed-SBOM.json
 
 
 
-#### 2、对于Deb体系：
+#### (2) For the DEB system:
 
-这里以apt软件包为例
+Here, we will use the **apt** package as an example.
 
-##### ①下载源码包
+##### ① Download the source package.
 
 ```bash
 apt source apt
 ```
 
-执行命令后，会在本地下载apt-2.7.14build2  apt_2.7.14build2.dsc  apt_2.7.14build2.tar.xz 三个文件
+After executing the command, the following three files will be downloaded locally: `apt-2.7.14build2`  `apt_2.7.14build2.dsc`  `apt_2.7.14build2.tar.xz`
 
-##### ②生成apt源码阶段SBOM
+##### ② Generate the SBOM for the apt source stage.
 
-将.dsc文件拷贝到主目录apt-2.7.14build2
+Copy the **`.dsc`** file to the main directory **`apt-2.7.14build2`**:
 
 ```bash
 cp apt_2.7.14build2.dsc ./apt-2.7.14build2
 ```
 
-使用LiPSBOMaker生成源码阶段SBOM
+Use LiPSBOMaker to generate the SBOM for the source stage:
 
 ```bash
 slp package -l=source apt-2.7.14build2/apt_2.7.14build2.dsc --output ./apt-source-SBOM.json
 ```
 
-##### ③记录apt源码包构建信息
+##### ③ Record the build information for the apt source package.
 
 ```bash
-apt install dpkg-dev build-essential #安装必要的工具
-apt-get build-dep apt #下载构建依赖项
-slp record apt_2.7.14build2.dsc #记录构建依赖的详细信息
+apt install dpkg-dev build-essential #Install the necessary tools.
+apt-get build-dep apt #Download the build dependencies.
+slp record apt_2.7.14build2.dsc #Record the detailed information of the build dependencies.
 ```
 
-得到了buildEnv.json文件之后，将其拷贝到`源码主文件夹/debian/`中
+After obtaining the **`buildEnv.json`** file, copy it to the **`/debian/`** folder in the source main directory:
 
 ```bash
 cp buildEnv.json apt-2.7.14build2/debian/
 ```
 
-修改源码包的install文件，在打包过程中将buildEnv.json文件添加到生成的apt二进制包中
+Modify the **`install`** file of the source package to include the **`buildEnv.json`** file in the generated apt binary package during the packaging process:
 
 ```bash
-#在apt-2.7.14build2/debian/apt.install文件中添加以下配置
+#Add the following configuration to the apt-2.7.14build2/debian/apt.install file:
 debian/buildEnv.json /usr/share/SBOM/buildEnv.json
 ```
 
-进入到源码主目录，开始构建二进制包
+Enter the source main directory and begin building the binary package:
 
 ```bash
 cd apt-2.7.14build2
 dpkg-buildpackage -us -uc 
 ```
 
-在上层目录就能得到构建出来的二进制包apt_2.7.14build2_amd64.deb，可以解压该二进制包验证文件是否成功嵌入
+In the upper directory, you will find the built binary package **`apt_2.7.14build2_amd64.deb`**. You can extract this binary package to verify if the file has been successfully embedded:
 
 ```bash
- dpkg-deb -x apt_2.7.14build2_amd64.deb apt  #解压.deb文件到本地apt文件夹
+ dpkg-deb -x apt_2.7.14build2_amd64.deb apt  #Extract the .deb file to the local apt folder.
 ```
 
-验证无误后可以发布该apt二进制包
+Once verified, the **apt** binary package can be released.
 
-##### ④生成apt二进制发布阶段SBOM
+##### ④ Generate the SBOM for the apt release stage.
 
-下载嵌入buildEnv.json文件的apt二进制包后，直接用命令生成SBOM
+After downloading the apt binary package with the embedded **`buildEnv.json`** file, directly use the command to generate the SBOM:
 
 ```bash
 slp package -l=release apt_2.7.14build2_amd64.deb --output ./apt-release-SBOM.json
 ```
 
-##### ⑤生成apt二进制使用阶段SBOM
+##### ⑤ Generate the SBOM for the apt usage stage.
 
-安装完apt后，可以使用LiPSBOMaker生成二进制使用阶段SBOM
+After installing apt, you can use LiPSBOMaker to generate the SBOM for the binary usage stage:
 
 ```bash
 slp package -l=installed apt --output ./apt-installed-SBOM.json
