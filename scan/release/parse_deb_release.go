@@ -189,7 +189,7 @@ func parseBuildEnvFile(buildEnvData []byte) (error, *source.DebBuildEnv) {
 			return nil, &buildEnv
 		}
 	}
-	return fmt.Errorf("未发现buildEnv.json文件"), nil
+	return fmt.Errorf("do not have buildEnv.json file"), nil
 }
 
 func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
@@ -372,22 +372,22 @@ func ParseReleaseDebFile(debFilePath string) (error, *_package.Pkg) {
 
 	// Parse build-depends from buildEnv.json file
 	_, buildEnv, err := extractFileFromDeb(debFilePath, "data.tar")
-	if err != nil {
-		return fmt.Errorf("Failed to extract buildEnv.json file: %v", err), nil
-	}
 	var buildDeps []_package.BuildDepend
-
-	//依赖可能存在 "|" 的关系，所以bdList也可能有多项
-	for _, bdList := range buildEnv.BuildDepends {
-		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends")...)
-	}
-	for _, bdList := range buildEnv.BuildDependsIndep {
-		fmt.Println(bdList)
-		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends-Indep")...)
-	}
-	for _, bdList := range buildEnv.BuildDependsArch {
-		fmt.Println(bdList)
-		buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends-Arch")...)
+	if err != nil {
+		fmt.Println("Failed to extract buildEnv.json file: ", err)
+	} else {
+		//依赖可能存在 "|" 的关系，所以bdList也可能有多项
+		for _, bdList := range buildEnv.BuildDepends {
+			buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends")...)
+		}
+		for _, bdList := range buildEnv.BuildDependsIndep {
+			fmt.Println(bdList)
+			buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends-Indep")...)
+		}
+		for _, bdList := range buildEnv.BuildDependsArch {
+			fmt.Println(bdList)
+			buildDeps = append(buildDeps, envBdToBd(bdList, "Build-Depends-Arch")...)
+		}
 	}
 
 	return nil, &_package.Pkg{
