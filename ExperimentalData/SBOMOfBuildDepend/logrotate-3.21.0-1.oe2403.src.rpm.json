@@ -1,0 +1,445 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:2ca382a2-752d-457c-9725-17dffaca77c9",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:13:41Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/logrotate@3.21.0-1.oe2403?arch=x86_64&package-id=198351b76a82a348",
+      "type": "application",
+      "name": "logrotate",
+      "version": "3.21.0",
+      "description": "The logrotate utility is designed to simplify the administration of\nlog files on a system which generates a lot of log files.  Logrotate\nallows for the automatic rotation compression, removal and mailing of\nlog files.logrotate  Logrotate can be set to handle a log file daily, weekly,\nmonthly or when the log file gets to a certain size.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:logrotate:3.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/logrotate@3.21.0-1.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://github.com/logrotate/logrotate",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "logrotate-3.21.0.tar.xz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "logrotate=3.21.0-1.oe2403,logrotate-help=3.21.0-1.oe2403,logrotate-debuginfo=3.21.0-1.oe2403,logrotate-debugsource=3.21.0-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/acl@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=fd480ce4a6ec8a95",
+      "type": "application",
+      "name": "acl",
+      "version": "2.3.1",
+      "description": "\nThis package contains commands for manipulating POSIX access control lists,\nand the libacl.so dynamic library which contains the POSIX 1003.1e draft\nstandard 17 functions for manipulating access control lists.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:acl:2.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/acl@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/acl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "acl-2.3.1-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:46:10 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "acl"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=1922b628ed953ee5",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=8fe8f46db9d0e340",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libacl-devel@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=0d071d5df897aae0",
+      "type": "application",
+      "name": "libacl-devel",
+      "version": "2.3.1",
+      "description": "\nThis package contains header files for the POSIX ACL library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:acl:2.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libacl-devel@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/acl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "acl-2.3.1-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:46:10 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libacl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=84fc28c1c0f7259a",
+      "type": "application",
+      "name": "libselinux-devel",
+      "version": "3.5",
+      "description": "\nlibselinux provides an interface to get and set process and file\nsecurity contexts and to obtain security policy decisions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libselinux:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libselinux-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libselinux-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm&package-id=346f76adb28e923f",
+      "type": "application",
+      "name": "popt-devel",
+      "version": "1.19",
+      "description": "\nThe popt-devel package contains libraries and header files for\ndeveloping applications that use popt.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:popt:1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/popt/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "popt-1.19-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "popt-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/logrotate@3.21.0-1.oe2403?arch=x86_64&package-id=198351b76a82a348",
+      "dependsOn": [
+        "pkg:deb/acl@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=fd480ce4a6ec8a95",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=1922b628ed953ee5",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=8fe8f46db9d0e340",
+        "pkg:deb/libacl-devel@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=0d071d5df897aae0",
+        "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=84fc28c1c0f7259a",
+        "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm&package-id=346f76adb28e923f"
+      ]
+    }
+  ]
+}

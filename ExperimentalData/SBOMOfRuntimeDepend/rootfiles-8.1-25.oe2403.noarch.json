@@ -1,0 +1,197 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c18b4d43-5eae-41c0-834e-f5a34af77b2f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:40Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/rootfiles@8.1-25.oe2403?arch=noarch&distro=openEuler-24.03&upstream=rootfiles-8.1-25.oe2403.src.rpm&package-id=ee63c7db4f3fa3bf",
+      "type": "application",
+      "name": "rootfiles",
+      "version": "8.1",
+      "description": "\nThe rootfiles package contains basic required files that are placed\nin the root user's account. These files are basically the same as\nthose in /etc/skel, which are placed in regular users' home directories.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rootfiles:8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/rootfiles@8.1-25.oe2403?arch=noarch&distro=openEuler-24.03&upstream=rootfiles-8.1-25.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://src.fedoraproject.org/rpms/rootfiles/tree/master",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "25.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rootfiles-8.1-25.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:57:49 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=b6b2913b13923d18",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/rootfiles@8.1-25.oe2403?arch=noarch&distro=openEuler-24.03&upstream=rootfiles-8.1-25.oe2403.src.rpm&package-id=e27dce0445022527",
+      "type": "application",
+      "name": "rootfiles",
+      "version": "8.1",
+      "description": "\nThe rootfiles package contains basic required files that are placed\nin the root user's account. These files are basically the same as\nthose in /etc/skel, which are placed in regular users' home directories.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rootfiles:8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/rootfiles@8.1-25.oe2403?arch=noarch&distro=openEuler-24.03&upstream=rootfiles-8.1-25.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://src.fedoraproject.org/rpms/rootfiles/tree/master",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "25.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rootfiles-8.1-25.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:57:49 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(rootfiles)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/rootfiles@8.1-25.oe2403?arch=noarch&distro=openEuler-24.03&upstream=rootfiles-8.1-25.oe2403.src.rpm&package-id=ee63c7db4f3fa3bf",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=b6b2913b13923d18",
+        "pkg:rpm/openEuler/rootfiles@8.1-25.oe2403?arch=noarch&distro=openEuler-24.03&upstream=rootfiles-8.1-25.oe2403.src.rpm&package-id=e27dce0445022527"
+      ]
+    }
+  ]
+}

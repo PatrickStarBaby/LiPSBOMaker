@@ -1,0 +1,262 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:0b9c3782-fa76-44f8-a872-ce5ea15e4dde",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:14:25Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/npth@1.6-7.oe2403?arch=x86_64&package-id=f723ffdf685987b2",
+      "type": "application",
+      "name": "npth",
+      "version": "1.6",
+      "description": "The NPth package contains a very portable POSIX/ANSI-C based\nlibrary for Unix platforms which provides non-preemptive\npriority-based scheduling for multiple threads of execution\n(multithreading) inside event-driven applications. All threads\nrun in the same address space of the server application, but\neach thread has its own individual program-counter, run-time\nstack, signal mask and errno variable.",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:npth:1.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/npth@1.6-7.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "http://git.gnupg.org/cgi-bin/gitweb.cgi?p=npth.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "npth-1.6.tar.bz2"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "npth=1.6-7.oe2403,npth-devel=1.6-7.oe2403,npth-debuginfo=1.6-7.oe2403,npth-debugsource=1.6-7.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=68b2076145da6c7d",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=1e94eae1f3829526",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=fc988926c661863f",
+      "type": "application",
+      "name": "make",
+      "version": "4.4.1",
+      "description": "\nGNU Make is a tool which controls the generation of executables and other\nnon-source files of a program from the program's source files.\n\nMake gets its knowledge of how to build your program from a file called\nthe makefile, which lists each of the non-source files and how to compute\nit from other files. When you write a program, you should write a makefile\nfor it, so that it is possible to use Make to build and install the program.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:make:4.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/make/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "make-4.4.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb  5 15:26:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "make"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/npth@1.6-7.oe2403?arch=x86_64&package-id=f723ffdf685987b2",
+      "dependsOn": [
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=68b2076145da6c7d",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=1e94eae1f3829526",
+        "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=fc988926c661863f"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:c894e051-c24e-41ef-bb64-8c3b154ffe1f",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:55:09Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "openEuler-release-24.03LTS-55.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "type" : "application",
+      "bom-ref" : "fc6f2379-f582-4c18-84b9-44cf22725b0f"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "fc6f2379-f582-4c18-84b9-44cf22725b0f",
+      "dependsOn" : [ ]
+    }
+  ]
+}

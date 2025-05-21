@@ -1,0 +1,75 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ce6facfd-fb11-4821-b418-62c052b99cda",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:41Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/openEuler-gpg-keys@1.0-4.1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-4.1.oe2403.src.rpm&package-id=e9c4f96833a85ee5",
+      "type": "application",
+      "name": "openEuler-gpg-keys",
+      "version": "1.0",
+      "description": "\nThis package provides the RPM signature keys.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Mulan PSL v2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openEuler-repos:1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openEuler-gpg-keys@1.0-4.1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-4.1.oe2403.src.rpm",
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openEuler-repos-1.0-4.1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Oct 22 03:15:14 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/openEuler-gpg-keys@1.0-4.1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-4.1.oe2403.src.rpm&package-id=e9c4f96833a85ee5",
+      "dependsOn": []
+    }
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:f4b9010d-1935-4ba6-8179-8415a6fb6f65",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:48:54Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libssh-0.10.5-2.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.libssh.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "245d5ff8-00c8-4bf9-bb9e-8b67b7d6f1d3"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc-c++",
+      "version" : "12.3.1",
+      "description" : "This package adds C++ support to the GNU Compiler Collection. It includes support for most of the current C++ specification, including templates and exception handling.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "c2b99541-0d60-4f76-b593-eecff36303d2"
+    },
+    {
+      "name" : "openssh-clients",
+      "version" : "9.3p2",
+      "description" : "OpenSSH is a free version of SSH (Secure SHell), a program for logging into and executing commands on a remote machine. This package includes the clients necessary to make encrypted connections to SSH servers.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssh:9.3p2:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssh-clients@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.openssh.com/portable.html"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+    },
+    {
+      "name" : "openssh-server",
+      "version" : "9.3p2",
+      "description" : "OpenSSH is a free version of SSH (Secure SHell), a program for logging into and executing commands on a remote machine. This package contains the secure shell daemon (sshd). The sshd daemon allows SSH clients to securely connect to your SSH server.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssh:9.3p2:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssh-server@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.openssh.com/portable.html"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+    },
+    {
+      "name" : "openssl-devel",
+      "version" : "3.0.12",
+      "description" : "Development files for openssl.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.openssl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "8542c4f1-55c5-41d4-9bec-5a6eabd51e6f"
+    },
+    {
+      "name" : "zlib-devel",
+      "version" : "1.2.13",
+      "description" : "This package contains the static library, the header files, the tests user case and other development content.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "zlib and Boost"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.zlib.net"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "81402ae8-33df-4647-b8de-b488c1554a33"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "245d5ff8-00c8-4bf9-bb9e-8b67b7d6f1d3",
+      "dependsOn" : [
+        "c2b99541-0d60-4f76-b593-eecff36303d2",
+        "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f",
+        "12eb88ef-1a00-4070-97b5-b577ea67f4aa",
+        "8542c4f1-55c5-41d4-9bec-5a6eabd51e6f",
+        "81402ae8-33df-4647-b8de-b488c1554a33"
+      ]
+    },
+    {
+      "ref" : "c2b99541-0d60-4f76-b593-eecff36303d2",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "8542c4f1-55c5-41d4-9bec-5a6eabd51e6f",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "81402ae8-33df-4647-b8de-b488c1554a33",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "c2b99541-0d60-4f76-b593-eecff36303d2"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e10e50c8-51e4-4803-b895-4fde6b68dc88",
+      "id" : "CVE-2023-51767",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.0,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "OpenSSH through 9.6, when common types of DRAM are used, might allow row hammer attacks (for authentication bypass) because the integer value of authenticated in mm_answer_authpassword does not resist flips of a single bit. NOTE: this is applicable to a certain threat model of attacker-victim co-location in which the attacker has user privileges.",
+      "published" : "2023-12-24T07:15:00Z",
+      "updated" : "2024-11-21T08:38:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "4989f7be-dbca-4804-954f-0fd5879a0202",
+      "id" : "CVE-2008-3844",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.3,
+          "severity" : "high",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:C/I:C/A:C)"
+        }
+      ],
+      "cwes" : [
+        20
+      ],
+      "description" : "Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact. NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points. As of 20080827, no unofficial distributions of this software are known.",
+      "published" : "2008-08-27T20:41:00Z",
+      "updated" : "2024-11-21T00:50:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2a8ecf01-a466-4391-87c9-8caffe432d38",
+      "id" : "CVE-2007-2768",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:P/I:N/A:N)"
+        }
+      ],
+      "cwes" : [
+        200
+      ],
+      "description" : "OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, allows remote attackers to determine the existence of certain user accounts, which displays a different response if the user account exists and is configured to use one-time passwords (OTP), a similar issue to CVE-2007-2243.",
+      "published" : "2007-05-21T20:30:00Z",
+      "updated" : "2024-11-21T00:31:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f1c950c3-6198-4b1b-a13e-0a925ec3eda7",
+      "id" : "CVE-2024-6387",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.1,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        362
+      ],
+      "description" : "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time period.",
+      "published" : "2024-07-01T13:15:00Z",
+      "updated" : "2024-11-21T09:49:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9b565397-ab4a-45de-af05-7c8e4b8bf2ed",
+      "id" : "CVE-2023-48795",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.9,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        354
+      ],
+      "description" : "The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other products, allows remote attackers to bypass integrity checks such that some packets are omitted (from the extension negotiation message), and a client and server may consequently end up with a connection for which some security features have been downgraded or disabled, aka a Terrapin attack. This occurs because the SSH Binary Packet Protocol (BPP), implemented by these extensions, mishandles the handshake phase and mishandles use of sequence numbers. For example, there is an effective attack against SSH's use of ChaCha20-Poly1305 (and CBC with Encrypt-then-MAC). The bypass occurs in chacha20-poly1305@openssh.com and (if CBC is used) the -etm@openssh.com MAC algorithms. This also affects Maverick Synergy Java SSH API before 3.1.0-SNAPSHOT, Dropbear through 2022.83, Ssh before 5.1.1 in Erlang/OTP, PuTTY before 0.80, AsyncSSH before 2.14.2, golang.org/x/crypto before 0.17.0, libssh before 0.10.6, libssh2 through 1.11.0, Thorn Tech SFTP Gateway before 3.4.6, Tera Term before 5.1, Paramiko before 3.4.0, jsch before 0.2.15, SFTPGo before 2.5.6, Netgate pfSense Plus through 23.09.1, Netgate pfSense CE through 2.7.2, HPN-SSH through 18.2.0, ProFTPD before 1.3.8b (and before 1.3.9rc2), ORYX CycloneSSH before 2.3.4, NetSarang XShell 7 before Build 0144, CrushFTP before 10.6.0, ConnectBot SSH library before 2.2.22, Apache MINA sshd through 2.11.0, sshj through 0.37.0, TinySSH through 20230101, trilead-ssh2 6401, LANCOM LCOS and LANconfig, FileZilla before 3.66.4, Nova before 11.8, PKIX-SSH before 14.4, SecureCRT before 9.4.3, Transmit5 before 5.10.4, Win32-OpenSSH before 9.5.0.0p1-Beta, WinSCP before 6.2.2, Bitvise SSH Server before 9.32, Bitvise SSH Client before 9.33, KiTTY through 0.76.1.13, the net-ssh gem 7.2.0 for Ruby, the mscdex ssh2 module before 1.15.0 for Node.js, the thrussh library before 0.35.1 for Rust, and the Russh crate before 0.40.2 for Rust.",
+      "published" : "2023-12-18T16:15:00Z",
+      "updated" : "2024-12-02T14:54:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "52b7c117-798e-4c11-ad24-f13da236ea81",
+      "id" : "CVE-2023-51385",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        78
+      ],
+      "description" : "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations. For example, an untrusted Git repository can have a submodule with shell metacharacters in a user name or host name.",
+      "published" : "2023-12-18T19:15:00Z",
+      "updated" : "2024-11-21T08:37:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "99f1b400-35cc-43ad-9b49-5f42c590fc84",
+      "id" : "CVE-2023-51384",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "description" : "In ssh-agent in OpenSSH before 9.6, certain destination constraints can be incompletely applied. When destination constraints are specified during addition of PKCS#11-hosted private keys, these constraints are only applied to the first key, even if a PKCS#11 token returns multiple keys.",
+      "published" : "2023-12-18T19:15:00Z",
+      "updated" : "2024-11-21T08:37:00Z",
+      "affects" : [
+        {
+          "ref" : "0b268dba-da6a-4ca9-bb3a-aec1071bcc4f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f1c950c3-6198-4b1b-a13e-0a925ec3eda7",
+      "id" : "CVE-2024-6387",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.1,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        362
+      ],
+      "description" : "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time period.",
+      "published" : "2024-07-01T13:15:00Z",
+      "updated" : "2024-11-21T09:49:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9b565397-ab4a-45de-af05-7c8e4b8bf2ed",
+      "id" : "CVE-2023-48795",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.9,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        354
+      ],
+      "description" : "The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other products, allows remote attackers to bypass integrity checks such that some packets are omitted (from the extension negotiation message), and a client and server may consequently end up with a connection for which some security features have been downgraded or disabled, aka a Terrapin attack. This occurs because the SSH Binary Packet Protocol (BPP), implemented by these extensions, mishandles the handshake phase and mishandles use of sequence numbers. For example, there is an effective attack against SSH's use of ChaCha20-Poly1305 (and CBC with Encrypt-then-MAC). The bypass occurs in chacha20-poly1305@openssh.com and (if CBC is used) the -etm@openssh.com MAC algorithms. This also affects Maverick Synergy Java SSH API before 3.1.0-SNAPSHOT, Dropbear through 2022.83, Ssh before 5.1.1 in Erlang/OTP, PuTTY before 0.80, AsyncSSH before 2.14.2, golang.org/x/crypto before 0.17.0, libssh before 0.10.6, libssh2 through 1.11.0, Thorn Tech SFTP Gateway before 3.4.6, Tera Term before 5.1, Paramiko before 3.4.0, jsch before 0.2.15, SFTPGo before 2.5.6, Netgate pfSense Plus through 23.09.1, Netgate pfSense CE through 2.7.2, HPN-SSH through 18.2.0, ProFTPD before 1.3.8b (and before 1.3.9rc2), ORYX CycloneSSH before 2.3.4, NetSarang XShell 7 before Build 0144, CrushFTP before 10.6.0, ConnectBot SSH library before 2.2.22, Apache MINA sshd through 2.11.0, sshj through 0.37.0, TinySSH through 20230101, trilead-ssh2 6401, LANCOM LCOS and LANconfig, FileZilla before 3.66.4, Nova before 11.8, PKIX-SSH before 14.4, SecureCRT before 9.4.3, Transmit5 before 5.10.4, Win32-OpenSSH before 9.5.0.0p1-Beta, WinSCP before 6.2.2, Bitvise SSH Server before 9.32, Bitvise SSH Client before 9.33, KiTTY through 0.76.1.13, the net-ssh gem 7.2.0 for Ruby, the mscdex ssh2 module before 1.15.0 for Node.js, the thrussh library before 0.35.1 for Rust, and the Russh crate before 0.40.2 for Rust.",
+      "published" : "2023-12-18T16:15:00Z",
+      "updated" : "2024-12-02T14:54:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "52b7c117-798e-4c11-ad24-f13da236ea81",
+      "id" : "CVE-2023-51385",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        78
+      ],
+      "description" : "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations. For example, an untrusted Git repository can have a submodule with shell metacharacters in a user name or host name.",
+      "published" : "2023-12-18T19:15:00Z",
+      "updated" : "2024-11-21T08:37:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e10e50c8-51e4-4803-b895-4fde6b68dc88",
+      "id" : "CVE-2023-51767",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.0,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "OpenSSH through 9.6, when common types of DRAM are used, might allow row hammer attacks (for authentication bypass) because the integer value of authenticated in mm_answer_authpassword does not resist flips of a single bit. NOTE: this is applicable to a certain threat model of attacker-victim co-location in which the attacker has user privileges.",
+      "published" : "2023-12-24T07:15:00Z",
+      "updated" : "2024-11-21T08:38:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "4989f7be-dbca-4804-954f-0fd5879a0202",
+      "id" : "CVE-2008-3844",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.3,
+          "severity" : "high",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:C/I:C/A:C)"
+        }
+      ],
+      "cwes" : [
+        20
+      ],
+      "description" : "Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact. NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points. As of 20080827, no unofficial distributions of this software are known.",
+      "published" : "2008-08-27T20:41:00Z",
+      "updated" : "2024-11-21T00:50:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2a8ecf01-a466-4391-87c9-8caffe432d38",
+      "id" : "CVE-2007-2768",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:P/I:N/A:N)"
+        }
+      ],
+      "cwes" : [
+        200
+      ],
+      "description" : "OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, allows remote attackers to determine the existence of certain user accounts, which displays a different response if the user account exists and is configured to use one-time passwords (OTP), a similar issue to CVE-2007-2243.",
+      "published" : "2007-05-21T20:30:00Z",
+      "updated" : "2024-11-21T00:31:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "99f1b400-35cc-43ad-9b49-5f42c590fc84",
+      "id" : "CVE-2023-51384",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "description" : "In ssh-agent in OpenSSH before 9.6, certain destination constraints can be incompletely applied. When destination constraints are specified during addition of PKCS#11-hosted private keys, these constraints are only applied to the first key, even if a PKCS#11 token returns multiple keys.",
+      "published" : "2023-12-18T19:15:00Z",
+      "updated" : "2024-11-21T08:37:00Z",
+      "affects" : [
+        {
+          "ref" : "12eb88ef-1a00-4070-97b5-b577ea67f4aa"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "340b9a57-bcdb-4ac4-a317-83d342c11482",
+      "id" : "CVE-2024-0727",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack Impact summary: Applications loading files in the PKCS12 format from untrusted sources might terminate abruptly. A file in PKCS12 format can contain certificates and keys and may come from an untrusted source. The PKCS12 specification allows certain fields to be NULL, but OpenSSL does not correctly check for this case. This can lead to a NULL pointer dereference that results in OpenSSL crashing. If an application processes PKCS12 files from an untrusted source using the OpenSSL APIs then that application will be vulnerable to this issue. OpenSSL APIs that are vulnerable to this are: PKCS12_parse(), PKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes() and PKCS12_newpass(). We have also fixed a similar issue in SMIME_write_PKCS7(). However since this function is related to writing data we do not consider it security significant. The FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "published" : "2024-01-26T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "8542c4f1-55c5-41d4-9bec-5a6eabd51e6f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "20f576e4-996c-42ef-8a49-f4deddab73ef",
+      "id" : "CVE-2023-5678",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "cwes" : [
+        754
+      ],
+      "description" : "Issue summary: Generating excessively long X9.42 DH keys or checking excessively long X9.42 DH keys or parameters may be very slow. Impact summary: Applications that use the functions DH_generate_key() to generate an X9.42 DH key may experience long delays. Likewise, applications that use DH_check_pub_key(), DH_check_pub_key_ex() or EVP_PKEY_public_check() to check an X9.42 DH key or X9.42 DH parameters may experience long delays. Where the key or parameters that are being checked have been obtained from an untrusted source this may lead to a Denial of Service. While DH_check() performs all the necessary checks (as of CVE-2023-3817), DH_check_pub_key() doesn't make any of these checks, and is therefore vulnerable for excessively large P and Q parameters. Likewise, while DH_generate_key() performs a check for an excessively large P, it doesn't check for an excessively large Q. An application that calls DH_generate_key() or DH_check_pub_key() and supplies a key or parameters obtained from an untrusted source could be vulnerable to a Denial of Service attack. DH_generate_key() and DH_check_pub_key() are also called by a number of other OpenSSL functions. An application calling any of those other functions may similarly be affected. The other functions affected by this are DH_check_pub_key_ex(), EVP_PKEY_public_check(), and EVP_PKEY_generate(). Also vulnerable are the OpenSSL pkey command line application when using the \"-pubcheck\" option, as well as the OpenSSL genpkey command line application. The OpenSSL SSL/TLS implementation is not affected by this issue. The OpenSSL 3.0 and 3.1 FIPS providers are not affected by this issue.",
+      "published" : "2023-11-06T16:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "8542c4f1-55c5-41d4-9bec-5a6eabd51e6f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "906fcbca-3672-4200-a40f-12d47dda67ac",
+      "id" : "CVE-2023-6129",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Issue summary: The POLY1305 MAC (message authentication code) implementation contains a bug that might corrupt the internal state of applications running on PowerPC CPU based platforms if the CPU provides vector instructions. Impact summary: If an attacker can influence whether the POLY1305 MAC algorithm is used, the application state might be corrupted with various application dependent consequences. The POLY1305 MAC (message authentication code) implementation in OpenSSL for PowerPC CPUs restores the contents of vector registers in a different order than they are saved. Thus the contents of some of these vector registers are corrupted when returning to the caller. The vulnerable code is used only on newer PowerPC processors supporting the PowerISA 2.07 instructions. The consequences of this kind of internal application state corruption can be various - from no consequences, if the calling application does not depend on the contents of non-volatile XMM registers at all, to the worst consequences, where the attacker could get complete control of the application process. However unless the compiler uses the vector registers for storing pointers, the most likely consequence, if any, would be an incorrect result of some application dependent calculations or a crash leading to a denial of service. The POLY1305 MAC algorithm is most frequently used as part of the CHACHA20-POLY1305 AEAD (authenticated encryption with associated data) algorithm. The most common usage of this AEAD cipher is with TLS protocol versions 1.2 and 1.3. If this cipher is enabled on the server a malicious client can influence whether this AEAD cipher is used. This implies that TLS server applications using OpenSSL can be potentially impacted. However we are currently not aware of any concrete application that would be affected by this issue therefore we consider this a Low severity security issue.",
+      "published" : "2024-01-09T17:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "8542c4f1-55c5-41d4-9bec-5a6eabd51e6f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a1cda7a3-f5a6-4bae-b8a5-805623776404",
+      "id" : "CVE-2023-6992",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Cloudflare version of zlib library was found to be vulnerable to memory corruption issues affecting the deflation algorithm implementation (deflate.c). The issues resulted from improper input validation and heap-based buffer overflow. A local attacker could exploit the problem during compression using a crafted malicious file potentially leading to denial of service of the software. Patches: The issue has been patched in commit 8352d10 https://github.com/cloudflare/zlib/commit/8352d108c05db1bdc5ac3bdf834dad641694c13c . The upstream repository is not affected.",
+      "published" : "2024-01-04T12:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "81402ae8-33df-4647-b8de-b488c1554a33"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "50713749-e17a-4ac4-b4d8-71c3a4b8b188",
+      "id" : "CVE-2023-45853",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        190
+      ],
+      "description" : "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+      "published" : "2023-10-14T02:15:00Z",
+      "updated" : "2024-12-20T17:41:00Z",
+      "affects" : [
+        {
+          "ref" : "81402ae8-33df-4647-b8de-b488c1554a33"
+        }
+      ]
+    }
+  ]
+}

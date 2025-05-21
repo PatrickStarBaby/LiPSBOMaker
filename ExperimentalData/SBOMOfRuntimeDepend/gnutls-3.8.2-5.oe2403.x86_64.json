@@ -1,0 +1,824 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:508f97a7-b1b6-40ed-af95-e117f4cb373c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:31Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/gnutls@3.8.2-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-5.oe2403.src.rpm&package-id=362b92ffb1a2232c",
+      "type": "application",
+      "name": "gnutls",
+      "version": "3.8.2",
+      "description": "\nGnuTLS is a secure communications library implementing the SSL, TLS and DTLS\nprotocols and technologies around them. It provides a simple C language\napplication programming interface (API) to access the secure communications\nprotocols as well as APIs to parse and write X.509, PKCS #12, and other\nrequired structures.\nThe project strives to provide a secure communications back-end, simple to use\nand integrated with the rest of the base Linux libraries. A back-end designed\nto work and be secure out of the box, keeping the complexity of TLS and PKI out\nof application code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2.1+ and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gnutls:3.8.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gnutls@3.8.2-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnutls.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gnutls-3.8.2-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb 19 09:13:46 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm&package-id=fc110f35d3a36c30",
+      "type": "application",
+      "name": "crypto-policies",
+      "version": "20230614",
+      "description": "\nThis package provides update-crypto-policies, which is a tool that sets\nthe policy applicable for the various cryptographic back-ends, such as\nSSL/TLS libraries. The policy set by the tool will be the default policy\nused by these back-ends unless the application user configures them otherwise.\nhttps://fedoraproject.org/wiki/Changes/CryptoPolicy\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:crypto-policies:20230614:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/redhat-crypto/fedora-crypto-policies",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.git5f3458e.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:48:26 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "crypto-policies"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=99ed2f59f2e0b2de",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ld-linux-x86-64.so.2()(64bit), ld-linux-x86-64.so.2(GLIBC_2.3)(64bit), libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.25)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.8)(64bit), libm.so.6()(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=6d2b0776cb283368",
+      "type": "application",
+      "name": "libgcc",
+      "version": "12.3.1",
+      "description": "\nThis package contains GCC shared support library which is needed\ne.g. for exception handling support.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gmp@6.3.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gmp-6.3.0-3.oe2403.src.rpm&package-id=73d2384f212c52b8",
+      "type": "application",
+      "name": "gmp",
+      "version": "6.3.0",
+      "description": "\nGMP is a portable library written in C for arbitrary precision arithmetic\non integers, rational numbers, and floating-point numbers. It aims to provide\nthe fastest possible arithmetic for all applications that need higher\nprecision than is directly supported by the basic C types.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gmp:6.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gmp@6.3.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gmp-6.3.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gmplib.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gmp-6.3.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Aug  6 03:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgmp.so.10()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gnutls@3.8.2-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-4.oe2403.src.rpm&package-id=bd0ebb894bf18ad3",
+      "type": "application",
+      "name": "gnutls",
+      "version": "3.8.2",
+      "description": "\nGnuTLS is a secure communications library implementing the SSL, TLS and DTLS\nprotocols and technologies around them. It provides a simple C language\napplication programming interface (API) to access the secure communications\nprotocols as well as APIs to parse and write X.509, PKCS #12, and other\nrequired structures.\nThe project strives to provide a secure communications back-end, simple to use\nand integrated with the rest of the base Linux libraries. A back-end designed\nto work and be secure out of the box, keeping the complexity of TLS and PKI out\nof application code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2.1+ and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gnutls:3.8.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gnutls@3.8.2-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnutls.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gnutls-3.8.2-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:28 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgnutls.so.30()(64bit), libgnutls.so.30(GNUTLS_3_4)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/nettle@3.8.1-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=nettle-3.8.1-1.oe2403.src.rpm&package-id=71559300f77d45e2",
+      "type": "application",
+      "name": "nettle",
+      "version": "3.8.1",
+      "description": "\nNettle is a cryptographic library designed to fit any context:\nin crypto toolkits for object-oriented languages, in applications\nlike LSH or GnuPG, or even in kernel space.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv3+ or GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:nettle:3.8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/nettle@3.8.1-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=nettle-3.8.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.lysator.liu.se/~nisse/nettle/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "nettle-3.8.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:08 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libhogweed.so.6()(64bit), libhogweed.so.6(HOGWEED_6)(64bit), libnettle.so.8()(64bit), libnettle.so.8(NETTLE_8)(64bit), nettle"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libidn2@2.3.4-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libidn2-2.3.4-1.oe2403.src.rpm&package-id=2b5df05a552e9898",
+      "type": "application",
+      "name": "libidn2",
+      "version": "2.3.4",
+      "description": "\nLibidn2 is a free software implementation of IDNA2008, Punycode and TR46.\nIts purpose is to encode and decode internationalized domain names.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(GPLv2+ or LGPLv3+) and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libidn2:2.3.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libidn2@2.3.4-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libidn2-2.3.4-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/libidn/#libidn2",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libidn2-2.3.4-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libidn2.so.0()(64bit), libidn2.so.0(IDN2_0.0.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/p11-kit@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=de0725d5fb3648a9",
+      "type": "application",
+      "name": "p11-kit",
+      "version": "0.25.0",
+      "description": "\nProvides a way to load and enumerate PKCS#11 modules.\nProvides a standard configuration setup for installing\nPKCS#11 modules in such a way that they're discoverable.\nAlso solves problems with coordinating the use of PKCS#11\nby different components or libraries living in the same process.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:p11-kit:0.25.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/p11-kit@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://p11-glue.freedesktop.org/p11-kit.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "p11-kit-0.25.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:01:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libp11-kit.so.0()(64bit), libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=447b5c8d9ebfaff8",
+      "type": "application",
+      "name": "libstdc++",
+      "version": "12.3.1",
+      "description": "\nThe libstdc++ package contains a rewritten standard compliant GCC Standard\nC++ Library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libstdc++.so.6()(64bit), libstdc++.so.6(CXXABI_1.3)(64bit), libstdc++.so.6(CXXABI_1.3.9)(64bit), libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm&package-id=b5d32ef43bebb44a",
+      "type": "application",
+      "name": "libtasn1",
+      "version": "4.19.0",
+      "description": "\nLibtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages.\nThe goal of this implementation is to be highly portable, and only require an\nANSI C99 platform.This library provides Abstract Syntax Notation One (ASN.1,\nas specified by the X.680 ITU-T recommendation) parsing and structures management,\nand Distinguished Encoding Rules (DER, as per X.690) encoding and decoding functions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtasn1:4.19.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtasn1/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtasn1-4.19.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Feb 11 16:38:38 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtasn1, libtasn1.so.6()(64bit), libtasn1.so.6(LIBTASN1_0_3)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libunistring@1.1-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libunistring-1.1-2.oe2403.src.rpm&package-id=d972d5077e51bc15",
+      "type": "application",
+      "name": "libunistring",
+      "version": "1.1",
+      "description": "\nLibunistring is a library that provides functions for manipulating Unicode strings\nand for manipulating C strings according to the Unicode standard.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLV2+ or LGPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libunistring:1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libunistring@1.1-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libunistring-1.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libunistring/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libunistring-1.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:36:09 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libunistring.so.5()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=dd76cc993db7f52b",
+      "type": "application",
+      "name": "zlib",
+      "version": "1.2.13",
+      "description": "\nZlib is a free, general-purpose, not covered by any patents, lossless data-compression\nlibrary for use on virtually any computer hardware and operating system. The zlib data\nformat is itself portable across platforms.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libz.so.1()(64bit), libz.so.1(ZLIB_1.2.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/p11-kit-trust@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=8396e153b5bc61bf",
+      "type": "application",
+      "name": "p11-kit-trust",
+      "version": "0.25.0",
+      "description": "\nThis package contains PKCS#11 trust policy module.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:p11-kit:0.25.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/p11-kit-trust@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://p11-glue.freedesktop.org/p11-kit.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "p11-kit-0.25.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:01:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "p11-kit-trust"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/gnutls@3.8.2-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-5.oe2403.src.rpm&package-id=362b92ffb1a2232c",
+      "dependsOn": [
+        "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm&package-id=fc110f35d3a36c30",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=99ed2f59f2e0b2de",
+        "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=6d2b0776cb283368",
+        "pkg:rpm/openEuler/gmp@6.3.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gmp-6.3.0-3.oe2403.src.rpm&package-id=73d2384f212c52b8",
+        "pkg:rpm/openEuler/gnutls@3.8.2-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-4.oe2403.src.rpm&package-id=bd0ebb894bf18ad3",
+        "pkg:rpm/openEuler/nettle@3.8.1-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=nettle-3.8.1-1.oe2403.src.rpm&package-id=71559300f77d45e2",
+        "pkg:rpm/openEuler/libidn2@2.3.4-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libidn2-2.3.4-1.oe2403.src.rpm&package-id=2b5df05a552e9898",
+        "pkg:rpm/openEuler/p11-kit@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=de0725d5fb3648a9",
+        "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=447b5c8d9ebfaff8",
+        "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm&package-id=b5d32ef43bebb44a",
+        "pkg:rpm/openEuler/libunistring@1.1-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libunistring-1.1-2.oe2403.src.rpm&package-id=d972d5077e51bc15",
+        "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=dd76cc993db7f52b",
+        "pkg:rpm/openEuler/p11-kit-trust@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=8396e153b5bc61bf"
+      ]
+    }
+  ]
+}

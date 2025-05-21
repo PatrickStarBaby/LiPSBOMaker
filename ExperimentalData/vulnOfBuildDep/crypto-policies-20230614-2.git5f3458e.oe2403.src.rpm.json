@@ -1,0 +1,744 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:c1b9c9fd-dc4d-4d26-a707-7f5488a0cff3",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:38:22Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gitlab.com/redhat-crypto/fedora-crypto-policies"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "488b38ca-ecd6-4ea8-92d9-14195e4436f1"
+    }
+  },
+  "components" : [
+    {
+      "name" : "bind",
+      "version" : "9.18.21",
+      "description" : "BIND (Berkeley Internet Name Domain) is an implementation of the DNS (Domain Name System) protocols. BIND includes a DNS server (named), which resolves host names to IP addresses; a resolver library (routines for applications to use when interfacing with DNS); and tools for verifying that the DNS server is operating properly.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "MPLv2.0"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:bind:9.18.21:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/bind@9.18.21-4.oe2403?arch=x86_64&upstream=bind-9.18.21-4.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.isc.org/downloads/bind/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+    },
+    {
+      "name" : "gnutls-utils",
+      "version" : "3.8.2",
+      "description" : "GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. It provides a simple C language application programming interface (API) to access the secure communications protocols as well as APIs to parse and write X.509, PKCS #12, OpenPGP and other required structures. This package contains command line TLS client and server and certificate manipulation tools.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPL-3.0-or-later"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gnutls:3.8.2:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gnutls-utils@3.8.2-4.oe2403?arch=x86_64&upstream=gnutls-3.8.2-4.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.gnutls.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "d2b62c3e-d711-4bdd-8319-bda90e2033af"
+    },
+    {
+      "name" : "openssh-clients",
+      "version" : "9.3p2",
+      "description" : "OpenSSH is a free version of SSH (Secure SHell), a program for logging into and executing commands on a remote machine. This package includes the clients necessary to make encrypted connections to SSH servers.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssh:9.3p2:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssh-clients@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.openssh.com/portable.html"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "628fb248-1312-4653-9989-33360656b182"
+    },
+    {
+      "name" : "openssl",
+      "version" : "3.0.12",
+      "description" : "OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssl@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.openssl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "9e624a9e-e1e2-4933-9ef9-ffa1200286f1"
+    },
+    {
+      "name" : "perl",
+      "version" : "5.38.0",
+      "description" : "Perl 5 is a highly capable, feature-rich programming language with over 30 years of development. Perl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid prototyping and large scale development projects.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.perl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "926dae7f-e5f8-49c1-843b-443f820e93e8"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "488b38ca-ecd6-4ea8-92d9-14195e4436f1",
+      "dependsOn" : [
+        "053697fc-8ea4-4628-b5b0-5c3641616f72",
+        "d2b62c3e-d711-4bdd-8319-bda90e2033af",
+        "628fb248-1312-4653-9989-33360656b182",
+        "9e624a9e-e1e2-4933-9ef9-ffa1200286f1",
+        "926dae7f-e5f8-49c1-843b-443f820e93e8"
+      ]
+    },
+    {
+      "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "d2b62c3e-d711-4bdd-8319-bda90e2033af",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "628fb248-1312-4653-9989-33360656b182",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "9e624a9e-e1e2-4933-9ef9-ffa1200286f1",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "926dae7f-e5f8-49c1-843b-443f820e93e8",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "3dc6c5da-ba4e-45d9-b586-2039a43f1704",
+      "id" : "CVE-2023-4408",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "severity" : "unknown",
+          "method" : "other"
+        }
+      ],
+      "description" : "The DNS message parsing code in `named` includes a section whose computational complexity is overly high. It does not cause problems for typical DNS traffic, but crafted queries and responses may cause excessive CPU load on the affected `named` instance by exploiting this flaw. This issue affects both authoritative servers and recursive resolvers. This issue affects BIND 9 versions 9.0.0 through 9.16.45, 9.18.0 through 9.18.21, 9.19.0 through 9.19.19, 9.9.3-S1 through 9.11.37-S1, 9.16.8-S1 through 9.16.45-S1, and 9.18.11-S1 through 9.18.21-S1.",
+      "published" : "2024-02-13T14:15:00Z",
+      "updated" : "2024-11-21T08:35:00Z",
+      "affects" : [
+        {
+          "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "81ac5cf6-06d5-414d-830b-4b4917e4064a",
+      "id" : "CVE-2023-5517",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "severity" : "unknown",
+          "method" : "other"
+        }
+      ],
+      "cwes" : [
+        617
+      ],
+      "description" : "A flaw in query-handling code can cause `named` to exit prematurely with an assertion failure when: - `nxdomain-redirect <domain>;` is configured, and - the resolver receives a PTR query for an RFC 1918 address that would normally result in an authoritative NXDOMAIN response. This issue affects BIND 9 versions 9.12.0 through 9.16.45, 9.18.0 through 9.18.21, 9.19.0 through 9.19.19, 9.16.8-S1 through 9.16.45-S1, and 9.18.11-S1 through 9.18.21-S1.",
+      "published" : "2024-02-13T14:15:00Z",
+      "updated" : "2024-11-21T08:41:00Z",
+      "affects" : [
+        {
+          "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2cb373f9-bf65-43a2-ae79-baaac55700e1",
+      "id" : "CVE-2023-5679",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "severity" : "unknown",
+          "method" : "other"
+        }
+      ],
+      "description" : "A bad interaction between DNS64 and serve-stale may cause `named` to crash with an assertion failure during recursive resolution, when both of these features are enabled. This issue affects BIND 9 versions 9.16.12 through 9.16.45, 9.18.0 through 9.18.21, 9.19.0 through 9.19.19, 9.16.12-S1 through 9.16.45-S1, and 9.18.11-S1 through 9.18.21-S1.",
+      "published" : "2024-02-13T14:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e3aca9a2-c1c8-4905-82c5-bbdf51d666b0",
+      "id" : "CVE-2023-5680",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "severity" : "unknown",
+          "method" : "other"
+        }
+      ],
+      "description" : "If a resolver cache has a very large number of ECS records stored for the same name, the process of cleaning the cache database node for this name can significantly impair query performance. This issue affects BIND 9 versions 9.11.3-S1 through 9.11.37-S1, 9.16.8-S1 through 9.16.45-S1, and 9.18.11-S1 through 9.18.21-S1.",
+      "published" : "2024-02-13T14:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "34c18800-7b57-4792-af46-bda2e086edc8",
+      "id" : "CVE-2023-50387",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        770
+      ],
+      "description" : "Certain DNSSEC aspects of the DNS protocol (in RFC 4033, 4034, 4035, 6840, and related RFCs) allow remote attackers to cause a denial of service (CPU consumption) via one or more DNSSEC responses, aka the \"KeyTrap\" issue. One of the concerns is that, when there is a zone with many DNSKEY and RRSIG records, the protocol specification implies that an algorithm must evaluate all combinations of DNSKEY and RRSIG records.",
+      "published" : "2024-02-14T16:15:00Z",
+      "updated" : "2024-11-21T08:36:00Z",
+      "affects" : [
+        {
+          "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "899ef356-7783-4b2e-8910-a570f7cdf28f",
+      "id" : "CVE-2019-6470",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:N/C:N/I:N/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "There had existed in one of the ISC BIND libraries a bug in a function that was used by dhcpd when operating in DHCPv6 mode. There was also a bug in dhcpd relating to the use of this function per its documentation, but the bug in the library function prevented this from causing any harm. All releases of dhcpd from ISC contain copies of this, and other, BIND libraries in combinations that have been tested prior to release and are known to not present issues like this. Some third-party packagers of ISC software have modified the dhcpd source, BIND source, or version matchup in ways that create the crash potential. Based on reports available to ISC, the crash probability is large and no analysis has been done on how, or even if, the probability can be manipulated by an attacker. Affects: Builds of dhcpd versions prior to version 4.4.1 when using BIND versions 9.11.2 or later, or BIND versions with specific bug fixes backported to them. ISC does not have access to comprehensive version lists for all repackagings of dhcpd that are vulnerable. In particular, builds from other vendors may also be affected. Operators are advised to consult their vendor documentation.",
+      "published" : "2019-11-01T23:15:00Z",
+      "updated" : "2024-11-21T04:46:00Z",
+      "affects" : [
+        {
+          "ref" : "053697fc-8ea4-4628-b5b0-5c3641616f72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "bdbc5496-35b0-41c1-bfdc-5e9d309435c6",
+      "id" : "CVE-2024-0553",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "cwes" : [
+        203
+      ],
+      "description" : "A vulnerability was found in GnuTLS. The response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from the response times of ciphertexts with correct PKCS#1 v1.5 padding. This issue may allow a remote attacker to perform a timing side-channel attack in the RSA-PSK key exchange, potentially leading to the leakage of sensitive data. CVE-2024-0553 is designated as an incomplete resolution for CVE-2023-5981.",
+      "published" : "2024-01-16T12:15:00Z",
+      "updated" : "2024-11-21T08:46:00Z",
+      "affects" : [
+        {
+          "ref" : "d2b62c3e-d711-4bdd-8319-bda90e2033af"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b41a1a3c-7897-44dd-b63c-32c10d8a2e71",
+      "id" : "CVE-2024-0567",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        347
+      ],
+      "description" : "A vulnerability was found in GnuTLS, where a cockpit (which uses gnuTLS) rejects a certificate chain with distributed trust. This issue occurs when validating a certificate chain with cockpit-certificate-ensure. This flaw allows an unauthenticated, remote client or attacker to initiate a denial of service attack.",
+      "published" : "2024-01-16T14:15:00Z",
+      "updated" : "2024-11-21T08:46:00Z",
+      "affects" : [
+        {
+          "ref" : "d2b62c3e-d711-4bdd-8319-bda90e2033af"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f1c950c3-6198-4b1b-a13e-0a925ec3eda7",
+      "id" : "CVE-2024-6387",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.1,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        362
+      ],
+      "description" : "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time period.",
+      "published" : "2024-07-01T13:15:00Z",
+      "updated" : "2024-11-21T09:49:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9b565397-ab4a-45de-af05-7c8e4b8bf2ed",
+      "id" : "CVE-2023-48795",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.9,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        354
+      ],
+      "description" : "The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other products, allows remote attackers to bypass integrity checks such that some packets are omitted (from the extension negotiation message), and a client and server may consequently end up with a connection for which some security features have been downgraded or disabled, aka a Terrapin attack. This occurs because the SSH Binary Packet Protocol (BPP), implemented by these extensions, mishandles the handshake phase and mishandles use of sequence numbers. For example, there is an effective attack against SSH's use of ChaCha20-Poly1305 (and CBC with Encrypt-then-MAC). The bypass occurs in chacha20-poly1305@openssh.com and (if CBC is used) the -etm@openssh.com MAC algorithms. This also affects Maverick Synergy Java SSH API before 3.1.0-SNAPSHOT, Dropbear through 2022.83, Ssh before 5.1.1 in Erlang/OTP, PuTTY before 0.80, AsyncSSH before 2.14.2, golang.org/x/crypto before 0.17.0, libssh before 0.10.6, libssh2 through 1.11.0, Thorn Tech SFTP Gateway before 3.4.6, Tera Term before 5.1, Paramiko before 3.4.0, jsch before 0.2.15, SFTPGo before 2.5.6, Netgate pfSense Plus through 23.09.1, Netgate pfSense CE through 2.7.2, HPN-SSH through 18.2.0, ProFTPD before 1.3.8b (and before 1.3.9rc2), ORYX CycloneSSH before 2.3.4, NetSarang XShell 7 before Build 0144, CrushFTP before 10.6.0, ConnectBot SSH library before 2.2.22, Apache MINA sshd through 2.11.0, sshj through 0.37.0, TinySSH through 20230101, trilead-ssh2 6401, LANCOM LCOS and LANconfig, FileZilla before 3.66.4, Nova before 11.8, PKIX-SSH before 14.4, SecureCRT before 9.4.3, Transmit5 before 5.10.4, Win32-OpenSSH before 9.5.0.0p1-Beta, WinSCP before 6.2.2, Bitvise SSH Server before 9.32, Bitvise SSH Client before 9.33, KiTTY through 0.76.1.13, the net-ssh gem 7.2.0 for Ruby, the mscdex ssh2 module before 1.15.0 for Node.js, the thrussh library before 0.35.1 for Rust, and the Russh crate before 0.40.2 for Rust.",
+      "published" : "2023-12-18T16:15:00Z",
+      "updated" : "2024-12-02T14:54:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "52b7c117-798e-4c11-ad24-f13da236ea81",
+      "id" : "CVE-2023-51385",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        78
+      ],
+      "description" : "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations. For example, an untrusted Git repository can have a submodule with shell metacharacters in a user name or host name.",
+      "published" : "2023-12-18T19:15:00Z",
+      "updated" : "2024-11-21T08:37:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e10e50c8-51e4-4803-b895-4fde6b68dc88",
+      "id" : "CVE-2023-51767",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.0,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "OpenSSH through 9.6, when common types of DRAM are used, might allow row hammer attacks (for authentication bypass) because the integer value of authenticated in mm_answer_authpassword does not resist flips of a single bit. NOTE: this is applicable to a certain threat model of attacker-victim co-location in which the attacker has user privileges.",
+      "published" : "2023-12-24T07:15:00Z",
+      "updated" : "2024-11-21T08:38:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "4989f7be-dbca-4804-954f-0fd5879a0202",
+      "id" : "CVE-2008-3844",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.3,
+          "severity" : "high",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:C/I:C/A:C)"
+        }
+      ],
+      "cwes" : [
+        20
+      ],
+      "description" : "Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact. NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points. As of 20080827, no unofficial distributions of this software are known.",
+      "published" : "2008-08-27T20:41:00Z",
+      "updated" : "2024-11-21T00:50:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2a8ecf01-a466-4391-87c9-8caffe432d38",
+      "id" : "CVE-2007-2768",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:P/I:N/A:N)"
+        }
+      ],
+      "cwes" : [
+        200
+      ],
+      "description" : "OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, allows remote attackers to determine the existence of certain user accounts, which displays a different response if the user account exists and is configured to use one-time passwords (OTP), a similar issue to CVE-2007-2243.",
+      "published" : "2007-05-21T20:30:00Z",
+      "updated" : "2024-11-21T00:31:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "99f1b400-35cc-43ad-9b49-5f42c590fc84",
+      "id" : "CVE-2023-51384",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "description" : "In ssh-agent in OpenSSH before 9.6, certain destination constraints can be incompletely applied. When destination constraints are specified during addition of PKCS#11-hosted private keys, these constraints are only applied to the first key, even if a PKCS#11 token returns multiple keys.",
+      "published" : "2023-12-18T19:15:00Z",
+      "updated" : "2024-11-21T08:37:00Z",
+      "affects" : [
+        {
+          "ref" : "628fb248-1312-4653-9989-33360656b182"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "340b9a57-bcdb-4ac4-a317-83d342c11482",
+      "id" : "CVE-2024-0727",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack Impact summary: Applications loading files in the PKCS12 format from untrusted sources might terminate abruptly. A file in PKCS12 format can contain certificates and keys and may come from an untrusted source. The PKCS12 specification allows certain fields to be NULL, but OpenSSL does not correctly check for this case. This can lead to a NULL pointer dereference that results in OpenSSL crashing. If an application processes PKCS12 files from an untrusted source using the OpenSSL APIs then that application will be vulnerable to this issue. OpenSSL APIs that are vulnerable to this are: PKCS12_parse(), PKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes() and PKCS12_newpass(). We have also fixed a similar issue in SMIME_write_PKCS7(). However since this function is related to writing data we do not consider it security significant. The FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "published" : "2024-01-26T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "9e624a9e-e1e2-4933-9ef9-ffa1200286f1"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "20f576e4-996c-42ef-8a49-f4deddab73ef",
+      "id" : "CVE-2023-5678",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "cwes" : [
+        754
+      ],
+      "description" : "Issue summary: Generating excessively long X9.42 DH keys or checking excessively long X9.42 DH keys or parameters may be very slow. Impact summary: Applications that use the functions DH_generate_key() to generate an X9.42 DH key may experience long delays. Likewise, applications that use DH_check_pub_key(), DH_check_pub_key_ex() or EVP_PKEY_public_check() to check an X9.42 DH key or X9.42 DH parameters may experience long delays. Where the key or parameters that are being checked have been obtained from an untrusted source this may lead to a Denial of Service. While DH_check() performs all the necessary checks (as of CVE-2023-3817), DH_check_pub_key() doesn't make any of these checks, and is therefore vulnerable for excessively large P and Q parameters. Likewise, while DH_generate_key() performs a check for an excessively large P, it doesn't check for an excessively large Q. An application that calls DH_generate_key() or DH_check_pub_key() and supplies a key or parameters obtained from an untrusted source could be vulnerable to a Denial of Service attack. DH_generate_key() and DH_check_pub_key() are also called by a number of other OpenSSL functions. An application calling any of those other functions may similarly be affected. The other functions affected by this are DH_check_pub_key_ex(), EVP_PKEY_public_check(), and EVP_PKEY_generate(). Also vulnerable are the OpenSSL pkey command line application when using the \"-pubcheck\" option, as well as the OpenSSL genpkey command line application. The OpenSSL SSL/TLS implementation is not affected by this issue. The OpenSSL 3.0 and 3.1 FIPS providers are not affected by this issue.",
+      "published" : "2023-11-06T16:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "9e624a9e-e1e2-4933-9ef9-ffa1200286f1"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "906fcbca-3672-4200-a40f-12d47dda67ac",
+      "id" : "CVE-2023-6129",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Issue summary: The POLY1305 MAC (message authentication code) implementation contains a bug that might corrupt the internal state of applications running on PowerPC CPU based platforms if the CPU provides vector instructions. Impact summary: If an attacker can influence whether the POLY1305 MAC algorithm is used, the application state might be corrupted with various application dependent consequences. The POLY1305 MAC (message authentication code) implementation in OpenSSL for PowerPC CPUs restores the contents of vector registers in a different order than they are saved. Thus the contents of some of these vector registers are corrupted when returning to the caller. The vulnerable code is used only on newer PowerPC processors supporting the PowerISA 2.07 instructions. The consequences of this kind of internal application state corruption can be various - from no consequences, if the calling application does not depend on the contents of non-volatile XMM registers at all, to the worst consequences, where the attacker could get complete control of the application process. However unless the compiler uses the vector registers for storing pointers, the most likely consequence, if any, would be an incorrect result of some application dependent calculations or a crash leading to a denial of service. The POLY1305 MAC algorithm is most frequently used as part of the CHACHA20-POLY1305 AEAD (authenticated encryption with associated data) algorithm. The most common usage of this AEAD cipher is with TLS protocol versions 1.2 and 1.3. If this cipher is enabled on the server a malicious client can influence whether this AEAD cipher is used. This implies that TLS server applications using OpenSSL can be potentially impacted. However we are currently not aware of any concrete application that would be affected by this issue therefore we consider this a Low severity security issue.",
+      "published" : "2024-01-09T17:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "9e624a9e-e1e2-4933-9ef9-ffa1200286f1"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "080ed676-4b2f-4871-9c55-71cba0c41b53",
+      "id" : "CVE-2023-47100",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        755
+      ],
+      "description" : "In Perl before 5.38.2, S_parse_uniprop_string in regcomp.c can write to unallocated space because a property name associated with a \\p{...} regular expression construct is mishandled. The earliest affected version is 5.30.0.",
+      "published" : "2023-12-02T23:15:00Z",
+      "updated" : "2024-11-21T08:29:00Z",
+      "affects" : [
+        {
+          "ref" : "926dae7f-e5f8-49c1-843b-443f820e93e8"
+        }
+      ]
+    }
+  ]
+}

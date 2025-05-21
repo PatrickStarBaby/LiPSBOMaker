@@ -1,0 +1,197 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:99dfa8e7-80c9-4c9c-a853-3a53e39bb330",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:37Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm&package-id=2e8232b8057b79f1",
+      "type": "application",
+      "name": "libtasn1",
+      "version": "4.19.0",
+      "description": "\nLibtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages.\nThe goal of this implementation is to be highly portable, and only require an\nANSI C99 platform.This library provides Abstract Syntax Notation One (ASN.1,\nas specified by the X.680 ITU-T recommendation) parsing and structures management,\nand Distinguished Encoding Rules (DER, as per X.690) encoding and decoding functions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtasn1:4.19.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtasn1/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtasn1-4.19.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Feb 11 16:38:38 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=630a53a296354e26",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/sbin/ldconfig, libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.25)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm&package-id=6324ee7ea6e6fa66",
+      "type": "application",
+      "name": "libtasn1",
+      "version": "4.19.0",
+      "description": "\nLibtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages.\nThe goal of this implementation is to be highly portable, and only require an\nANSI C99 platform.This library provides Abstract Syntax Notation One (ASN.1,\nas specified by the X.680 ITU-T recommendation) parsing and structures management,\nand Distinguished Encoding Rules (DER, as per X.690) encoding and decoding functions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtasn1:4.19.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtasn1/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtasn1-4.19.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Feb 11 16:38:38 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtasn1.so.6()(64bit), libtasn1.so.6(LIBTASN1_0_3)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm&package-id=2e8232b8057b79f1",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=630a53a296354e26",
+        "pkg:rpm/openEuler/libtasn1@4.19.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libtasn1-4.19.0-2.oe2403.src.rpm&package-id=6324ee7ea6e6fa66"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:406b5722-4d62-4acc-9759-efb7bcbedebe",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:39Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libev@4.33-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libev-4.33-4.oe2403.src.rpm&package-id=e4c0711ad3e3b4f1",
+      "type": "application",
+      "name": "libev",
+      "version": "4.33",
+      "description": "\nLibev is modeled (very loosely) after libevent and the Event Perl\nmodule, but is faster, scales better and is more correct, and also more\nfeatureful. And also smaller.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD or GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libev:4.33:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libev@4.33-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libev-4.33-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/enki/libev",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libev-4.33-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:27:54 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=3d39a7d1f00212d9",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), libc.so.6(GLIBC_2.8)(64bit), libc.so.6(GLIBC_2.9)(64bit), libm.so.6()(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libev@4.33-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libev-4.33-4.oe2403.src.rpm&package-id=e4c0711ad3e3b4f1",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=3d39a7d1f00212d9"
+      ]
+    }
+  ]
+}

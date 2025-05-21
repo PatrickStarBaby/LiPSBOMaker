@@ -1,0 +1,1055 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:b113cee3-da7a-4bec-89ab-4e61607c360f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:11:31Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/librepo@1.15.2-1.oe2403?arch=x86_64&package-id=2c216fa9e6952b33",
+      "type": "application",
+      "name": "librepo",
+      "version": "1.15.2",
+      "description": "A library providing C and Python (libcURL like) API to downloading repository\nmetadata.",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:librepo:1.15.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/librepo@1.15.2-1.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/librepo",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "librepo-1.15.2.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "librepo=1.15.2-1.oe2403,librepo-devel=1.15.2-1.oe2403,python3-librepo=1.15.2-1.oe2403,librepo-debuginfo=1.15.2-1.oe2403,librepo-debugsource=1.15.2-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/check-devel@0.15.2-2.oe2403?arch=x86_64&upstream=check-0.15.2-2.oe2403.src.rpm&package-id=292a23d4be6c1409",
+      "type": "application",
+      "name": "check-devel",
+      "version": "0.15.2",
+      "description": "\nLibraries and headers for developing programs with check.Also include checkmk\nwhich binary translates concise versions of test suites into C programs.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:check:0.15.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/check-devel@0.15.2-2.oe2403?arch=x86_64&upstream=check-0.15.2-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://libcheck.github.io/check/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "check-0.15.2-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:46:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "check-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm&package-id=0597b2c18bd40467",
+      "type": "application",
+      "name": "cmake",
+      "version": "3.27.9",
+      "description": "\nCMake is used to control the software compilation process using simple\nplatform and compiler independent configuration files. CMake generates\nnative makefiles and workspaces that can be used in the compiler\nenvironment of your choice. CMake is quite sophisticated: it is possible\nto support complex environments requiring system configuration, preprocessor\ngeneration, code generation, and template instantiation.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and MIT and zlib"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cmake:3.27.9:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.cmake.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cmake-3.27.9-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:05:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "cmake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/doxygen@1.9.6-1.oe2403?arch=x86_64&upstream=doxygen-1.9.6-1.oe2403.src.rpm&package-id=0fc5002f3d31ef3c",
+      "type": "application",
+      "name": "doxygen",
+      "version": "1.9.6",
+      "description": "\nDoxygen is the de facto standard tool for generating documentation from\nannotated C++ sources, but it also supports other popular programming\nlanguages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba,\nMicrosoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some\nextent D.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:doxygen:1.9.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/doxygen@1.9.6-1.oe2403?arch=x86_64&upstream=doxygen-1.9.6-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.doxygen.nl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "doxygen-1.9.6-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:46:50 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "doxygen"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=49e065e02a58e016",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gpgme-devel@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=5ad8dc7d29fc5249",
+      "type": "application",
+      "name": "gpgme-devel",
+      "version": "1.21.0",
+      "description": "\nDevelopment headers and libraries for gpgme.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gpgme-devel@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gpgme-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm&package-id=a7c58e6eac83cb85",
+      "type": "application",
+      "name": "libattr-devel",
+      "version": "2.5.1",
+      "description": "\nThis package contains header files and documentation needed to\ndevelop programs which make use of extended attributes.\nFor Linux programs, the documented system call API is the\nrecommended interface, but an SGI IRIX compatibility interface\nis also provided.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:attr:2.5.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/attr",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "attr-2.5.1-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:36:43 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libattr-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=5d766e774ff39956",
+      "type": "application",
+      "name": "libcurl-devel",
+      "version": "8.4.0",
+      "description": "\nHeader files for libcurl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "curl"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:curl:8.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://curl.se/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "curl-8.4.0-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:20:40 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcurl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/glib2-devel@2.78.3-6.oe2403?arch=x86_64&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=69757236731ea52a",
+      "type": "application",
+      "name": "glib2-devel",
+      "version": "2.78.3",
+      "description": "\nDevelopment files for the GLib library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glib2:2.78.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/glib2-devel@2.78.3-6.oe2403?arch=x86_64&upstream=glib2-2.78.3-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gtk.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glib2-2.78.3-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Nov 12 13:06:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(glib-2.0)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=18a82b0b1e0cd26f",
+      "type": "application",
+      "name": "openssl-devel",
+      "version": "3.0.12",
+      "description": "\nDevelopment files for openssl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(libcrypto), pkgconfig(openssl)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libxml2-devel@2.11.5-4.oe2403?arch=x86_64&upstream=libxml2-2.11.5-4.oe2403.src.rpm&package-id=d9038356ab99bf8e",
+      "type": "application",
+      "name": "libxml2-devel",
+      "version": "2.11.5",
+      "description": "\nLibraries, include files, etc you can use to develop XML applications.\nThis library allows to manipulate XML files. It includes support\nto read, modify and write XML and HTML files. There is DTDs support\nthis includes parsing and validation even with complex DtDs, either\nat parse time or later once the document has been modified. The output\ncan be a simple SAX stream or and in-memory DOM like representations.\nIn this case one can use the built-in XPath and XPointer implementation\nto select sub nodes or ranges. A flexible Input/Output mechanism is\navailable, with existing HTTP and FTP modules and combined to an\nURI library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libxml2:2.11.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libxml2-devel@2.11.5-4.oe2403?arch=x86_64&upstream=libxml2-2.11.5-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://xmlsoft.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libxml2-2.11.5-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jul 30 04:31:26 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(libxml-2.0)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=64407ef16fdb6f60",
+      "type": "application",
+      "name": "python3-devel",
+      "version": "3.11.6",
+      "description": "\nThis package contains the header files and configuration needed to develop\npython3 modules.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-flask@2.2.5-1.oe2403?arch=noarch&upstream=python-flask-2.2.5-1.oe2403.src.rpm&package-id=5f383b886faa0bfb",
+      "type": "application",
+      "name": "python3-flask",
+      "version": "2.2.5",
+      "description": "\nPython-flask for python 3 version\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-flask:2.2.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-flask@2.2.5-1.oe2403?arch=noarch&upstream=python-flask-2.2.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://palletsprojects.com/p/flask/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-flask-2.2.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 11:47:12 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-flask"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=7fd0203649924aa1",
+      "type": "application",
+      "name": "python3-gpgme",
+      "version": "1.21.0",
+      "description": "\ngpgme bindings for Python3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-gpg"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-pyxattr@0.8.1-1.oe2403?arch=x86_64&upstream=pyxattr-0.8.1-1.oe2403.src.rpm&package-id=9a03c2d971d9da93",
+      "type": "application",
+      "name": "python3-pyxattr",
+      "version": "0.8.1",
+      "description": "\nThis is the pyxattr module, a Python extension module which gives access to\nthe extended attributes for filesystem objects available in some operating systems.\nfor python3\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pyxattr:0.8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-pyxattr@0.8.1-1.oe2403?arch=x86_64&upstream=pyxattr-0.8.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://pyxattr.k1024.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pyxattr-0.8.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:44:14 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-pyxattr"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-requests@2.31.0-1.oe2403?arch=noarch&upstream=python-requests-2.31.0-1.oe2403.src.rpm&package-id=0e2b11f2fbf91054",
+      "type": "application",
+      "name": "python3-requests",
+      "version": "2.31.0",
+      "description": "\nRequests is an ISC Licensed HTTP library, written in Python, for human\nbeings.\nMost existing Python modules for sending HTTP requests are extremely\nverbose and cumbersome. Python's builtin urllib2 module provides most of\nthe HTTP capabilities you should need, but the api is thoroughly broken.\nIt requires an enormous amount of work (even method overrides) to\nperform the simplest of tasks.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ASL 2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-requests:2.31.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-requests@2.31.0-1.oe2403?arch=noarch&upstream=python-requests-2.31.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://python-requests.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-requests-2.31.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:10:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-requests"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-sphinx@7.0.1-1.oe2403?arch=noarch&upstream=python-sphinx-7.0.1-1.oe2403.src.rpm&package-id=9a198f3fda7c755f",
+      "type": "application",
+      "name": "python3-sphinx",
+      "version": "7.0.1",
+      "description": "\nSphinx is a tool that makes it easy to create intelligent and\nbeautiful documentation for Python projects (or other documents\nconsisting of multiple reStructuredText sources), written by Georg\nBrandl. It was originally created to translate the new Python\ndocumentation, but has now been cleaned up in the hope that it will be\nuseful to many other projects.\n\nSphinx uses reStructuredText as its markup language, and many of its\nstrengths come from the power and straightforwardness of\nreStructuredText and its parsing and translating suite, the Docutils.\n\nAlthough it is still under constant development, the following\nfeatures are already present, work fine and can be seen \"in action\" in\nthe Python docs:\n\n    * Output formats: HTML (including Windows HTML Help) and LaTeX,\n      for printable PDF versions\n    * Extensive cross-references: semantic markup and automatic links\n      for functions, classes, glossary terms and similar pieces of\n      information\n    * Hierarchical structure: easy definition of a document tree, with\n      automatic links to siblings, parents and children\n    * Automatic indices: general index as well as a module index\n    * Code handling: automatic highlighting using the Pygments highlighter\n    * Various extensions are available, e.g. for automatic testing of\n      snippets and inclusion of appropriately formatted docstrings.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-sphinx:7.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-sphinx@7.0.1-1.oe2403?arch=noarch&upstream=python-sphinx-7.0.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://sphinx-doc.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-sphinx-7.0.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 04:26:48 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-sphinx"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/librepo@1.15.2-1.oe2403?arch=x86_64&package-id=2c216fa9e6952b33",
+      "dependsOn": [
+        "pkg:deb/check-devel@0.15.2-2.oe2403?arch=x86_64&upstream=check-0.15.2-2.oe2403.src.rpm&package-id=292a23d4be6c1409",
+        "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm&package-id=0597b2c18bd40467",
+        "pkg:deb/doxygen@1.9.6-1.oe2403?arch=x86_64&upstream=doxygen-1.9.6-1.oe2403.src.rpm&package-id=0fc5002f3d31ef3c",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=49e065e02a58e016",
+        "pkg:deb/gpgme-devel@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=5ad8dc7d29fc5249",
+        "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm&package-id=a7c58e6eac83cb85",
+        "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=5d766e774ff39956",
+        "pkg:deb/glib2-devel@2.78.3-6.oe2403?arch=x86_64&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=69757236731ea52a",
+        "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=18a82b0b1e0cd26f",
+        "pkg:deb/libxml2-devel@2.11.5-4.oe2403?arch=x86_64&upstream=libxml2-2.11.5-4.oe2403.src.rpm&package-id=d9038356ab99bf8e",
+        "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=64407ef16fdb6f60",
+        "pkg:deb/python3-flask@2.2.5-1.oe2403?arch=noarch&upstream=python-flask-2.2.5-1.oe2403.src.rpm&package-id=5f383b886faa0bfb",
+        "pkg:deb/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=7fd0203649924aa1",
+        "pkg:deb/python3-pyxattr@0.8.1-1.oe2403?arch=x86_64&upstream=pyxattr-0.8.1-1.oe2403.src.rpm&package-id=9a03c2d971d9da93",
+        "pkg:deb/python3-requests@2.31.0-1.oe2403?arch=noarch&upstream=python-requests-2.31.0-1.oe2403.src.rpm&package-id=0e2b11f2fbf91054",
+        "pkg:deb/python3-sphinx@7.0.1-1.oe2403?arch=noarch&upstream=python-sphinx-7.0.1-1.oe2403.src.rpm&package-id=9a198f3fda7c755f"
+      ]
+    }
+  ]
+}

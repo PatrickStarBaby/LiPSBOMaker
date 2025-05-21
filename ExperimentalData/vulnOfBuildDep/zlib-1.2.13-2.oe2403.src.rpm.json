@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:bc461198-cd75-4ea7-92c6-02b4ee9ebf6e",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:58:39Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "zlib-1.2.13-2.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.zlib.net"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "00f137e4-e9ce-4435-a1f8-c3cbf782bbea"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "00f137e4-e9ce-4435-a1f8-c3cbf782bbea",
+      "dependsOn" : [ ]
+    }
+  ]
+}

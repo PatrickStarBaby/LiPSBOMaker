@@ -1,0 +1,311 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:8d25bcf5-7fb8-4b2c-a9e3-ab162a6b8af5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:40Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libcap@2.69-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-4.oe2403.src.rpm&package-id=f2d5a2e15e05b6ce",
+      "type": "application",
+      "name": "libcap",
+      "version": "2.69",
+      "description": "\nThis is a library for getting and setting POSIX.1e (formerly POSIX 6)\ndraft 15 capabilities.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcap:2.69:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libcap@2.69-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://sites.google.com/site/fullycapable",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libcap-2.69-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Mar  4 09:58:13 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=ed17811c6c2e43e1",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=f709289c67dfb867",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/sbin/ldconfig, libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.32)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.8)(64bit), libc.so.6(GLIBC_2.9)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libcap@2.69-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-3.oe2403.src.rpm&package-id=f0ab6b7bff0b4641",
+      "type": "application",
+      "name": "libcap",
+      "version": "2.69",
+      "description": "\nThis is a library for getting and setting POSIX.1e (formerly POSIX 6)\ndraft 15 capabilities.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcap:2.69:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libcap@2.69-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://sites.google.com/site/fullycapable",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libcap-2.69-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:46:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcap.so.2()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/pam@1.5.3-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=pam-1.5.3-5.oe2403.src.rpm&package-id=297a0c299e86272e",
+      "type": "application",
+      "name": "pam",
+      "version": "1.5.3",
+      "description": "\nPAM (Pluggable Authentication Modules) is a system of libraries that\nhandle the authentication tasks of applications (services) on the system.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pam:1.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/pam@1.5.3-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=pam-1.5.3-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.linux-pam.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pam-1.5.3-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 03:09:00 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libpam.so.0()(64bit), libpam.so.0(LIBPAM_1.0)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libcap@2.69-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-4.oe2403.src.rpm&package-id=f2d5a2e15e05b6ce",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=ed17811c6c2e43e1",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=f709289c67dfb867",
+        "pkg:rpm/openEuler/libcap@2.69-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-3.oe2403.src.rpm&package-id=f0ab6b7bff0b4641",
+        "pkg:rpm/openEuler/pam@1.5.3-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=pam-1.5.3-5.oe2403.src.rpm&package-id=297a0c299e86272e"
+      ]
+    }
+  ]
+}

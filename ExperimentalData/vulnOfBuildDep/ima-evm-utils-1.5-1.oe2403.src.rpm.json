@@ -1,0 +1,617 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:14a10452-7362-46e8-8a48-529a309b3e10",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:42:47Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "ima-evm-utils-1.5-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://linux-ima.sourceforge.net/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "ff435452-8a95-4949-9ab6-41e3bdfd6aee"
+    }
+  },
+  "components" : [
+    {
+      "name" : "openssl",
+      "version" : "3.0.12",
+      "description" : "OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssl@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.openssl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "acc86a08-36af-45e6-a0fa-5387692df7cd"
+    },
+    {
+      "name" : "openssl-devel",
+      "version" : "3.0.12",
+      "description" : "Development files for openssl.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.openssl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "fcafe2c8-e6e1-49e7-a675-0f77655f440e"
+    },
+    {
+      "name" : "vim-common",
+      "version" : "9.0.2092",
+      "description" : "This common package contains files that will be needed when you run vim editor. This is also needed by vim-enhaned and vim-X11 packages.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Vim and MIT"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:vim:9.0.2092:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/vim-common@9.0.2092-16.oe2403?arch=x86_64&upstream=vim-9.0.2092-16.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.vim.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "ff435452-8a95-4949-9ab6-41e3bdfd6aee",
+      "dependsOn" : [
+        "acc86a08-36af-45e6-a0fa-5387692df7cd",
+        "fcafe2c8-e6e1-49e7-a675-0f77655f440e",
+        "c80c832f-3dcf-4aea-a418-28536a87624b"
+      ]
+    },
+    {
+      "ref" : "acc86a08-36af-45e6-a0fa-5387692df7cd",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "fcafe2c8-e6e1-49e7-a675-0f77655f440e",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "340b9a57-bcdb-4ac4-a317-83d342c11482",
+      "id" : "CVE-2024-0727",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack Impact summary: Applications loading files in the PKCS12 format from untrusted sources might terminate abruptly. A file in PKCS12 format can contain certificates and keys and may come from an untrusted source. The PKCS12 specification allows certain fields to be NULL, but OpenSSL does not correctly check for this case. This can lead to a NULL pointer dereference that results in OpenSSL crashing. If an application processes PKCS12 files from an untrusted source using the OpenSSL APIs then that application will be vulnerable to this issue. OpenSSL APIs that are vulnerable to this are: PKCS12_parse(), PKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes() and PKCS12_newpass(). We have also fixed a similar issue in SMIME_write_PKCS7(). However since this function is related to writing data we do not consider it security significant. The FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "published" : "2024-01-26T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "acc86a08-36af-45e6-a0fa-5387692df7cd"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "20f576e4-996c-42ef-8a49-f4deddab73ef",
+      "id" : "CVE-2023-5678",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "cwes" : [
+        754
+      ],
+      "description" : "Issue summary: Generating excessively long X9.42 DH keys or checking excessively long X9.42 DH keys or parameters may be very slow. Impact summary: Applications that use the functions DH_generate_key() to generate an X9.42 DH key may experience long delays. Likewise, applications that use DH_check_pub_key(), DH_check_pub_key_ex() or EVP_PKEY_public_check() to check an X9.42 DH key or X9.42 DH parameters may experience long delays. Where the key or parameters that are being checked have been obtained from an untrusted source this may lead to a Denial of Service. While DH_check() performs all the necessary checks (as of CVE-2023-3817), DH_check_pub_key() doesn't make any of these checks, and is therefore vulnerable for excessively large P and Q parameters. Likewise, while DH_generate_key() performs a check for an excessively large P, it doesn't check for an excessively large Q. An application that calls DH_generate_key() or DH_check_pub_key() and supplies a key or parameters obtained from an untrusted source could be vulnerable to a Denial of Service attack. DH_generate_key() and DH_check_pub_key() are also called by a number of other OpenSSL functions. An application calling any of those other functions may similarly be affected. The other functions affected by this are DH_check_pub_key_ex(), EVP_PKEY_public_check(), and EVP_PKEY_generate(). Also vulnerable are the OpenSSL pkey command line application when using the \"-pubcheck\" option, as well as the OpenSSL genpkey command line application. The OpenSSL SSL/TLS implementation is not affected by this issue. The OpenSSL 3.0 and 3.1 FIPS providers are not affected by this issue.",
+      "published" : "2023-11-06T16:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "acc86a08-36af-45e6-a0fa-5387692df7cd"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "906fcbca-3672-4200-a40f-12d47dda67ac",
+      "id" : "CVE-2023-6129",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Issue summary: The POLY1305 MAC (message authentication code) implementation contains a bug that might corrupt the internal state of applications running on PowerPC CPU based platforms if the CPU provides vector instructions. Impact summary: If an attacker can influence whether the POLY1305 MAC algorithm is used, the application state might be corrupted with various application dependent consequences. The POLY1305 MAC (message authentication code) implementation in OpenSSL for PowerPC CPUs restores the contents of vector registers in a different order than they are saved. Thus the contents of some of these vector registers are corrupted when returning to the caller. The vulnerable code is used only on newer PowerPC processors supporting the PowerISA 2.07 instructions. The consequences of this kind of internal application state corruption can be various - from no consequences, if the calling application does not depend on the contents of non-volatile XMM registers at all, to the worst consequences, where the attacker could get complete control of the application process. However unless the compiler uses the vector registers for storing pointers, the most likely consequence, if any, would be an incorrect result of some application dependent calculations or a crash leading to a denial of service. The POLY1305 MAC algorithm is most frequently used as part of the CHACHA20-POLY1305 AEAD (authenticated encryption with associated data) algorithm. The most common usage of this AEAD cipher is with TLS protocol versions 1.2 and 1.3. If this cipher is enabled on the server a malicious client can influence whether this AEAD cipher is used. This implies that TLS server applications using OpenSSL can be potentially impacted. However we are currently not aware of any concrete application that would be affected by this issue therefore we consider this a Low severity security issue.",
+      "published" : "2024-01-09T17:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "acc86a08-36af-45e6-a0fa-5387692df7cd"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "340b9a57-bcdb-4ac4-a317-83d342c11482",
+      "id" : "CVE-2024-0727",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack Impact summary: Applications loading files in the PKCS12 format from untrusted sources might terminate abruptly. A file in PKCS12 format can contain certificates and keys and may come from an untrusted source. The PKCS12 specification allows certain fields to be NULL, but OpenSSL does not correctly check for this case. This can lead to a NULL pointer dereference that results in OpenSSL crashing. If an application processes PKCS12 files from an untrusted source using the OpenSSL APIs then that application will be vulnerable to this issue. OpenSSL APIs that are vulnerable to this are: PKCS12_parse(), PKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes() and PKCS12_newpass(). We have also fixed a similar issue in SMIME_write_PKCS7(). However since this function is related to writing data we do not consider it security significant. The FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "published" : "2024-01-26T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "fcafe2c8-e6e1-49e7-a675-0f77655f440e"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "20f576e4-996c-42ef-8a49-f4deddab73ef",
+      "id" : "CVE-2023-5678",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "cwes" : [
+        754
+      ],
+      "description" : "Issue summary: Generating excessively long X9.42 DH keys or checking excessively long X9.42 DH keys or parameters may be very slow. Impact summary: Applications that use the functions DH_generate_key() to generate an X9.42 DH key may experience long delays. Likewise, applications that use DH_check_pub_key(), DH_check_pub_key_ex() or EVP_PKEY_public_check() to check an X9.42 DH key or X9.42 DH parameters may experience long delays. Where the key or parameters that are being checked have been obtained from an untrusted source this may lead to a Denial of Service. While DH_check() performs all the necessary checks (as of CVE-2023-3817), DH_check_pub_key() doesn't make any of these checks, and is therefore vulnerable for excessively large P and Q parameters. Likewise, while DH_generate_key() performs a check for an excessively large P, it doesn't check for an excessively large Q. An application that calls DH_generate_key() or DH_check_pub_key() and supplies a key or parameters obtained from an untrusted source could be vulnerable to a Denial of Service attack. DH_generate_key() and DH_check_pub_key() are also called by a number of other OpenSSL functions. An application calling any of those other functions may similarly be affected. The other functions affected by this are DH_check_pub_key_ex(), EVP_PKEY_public_check(), and EVP_PKEY_generate(). Also vulnerable are the OpenSSL pkey command line application when using the \"-pubcheck\" option, as well as the OpenSSL genpkey command line application. The OpenSSL SSL/TLS implementation is not affected by this issue. The OpenSSL 3.0 and 3.1 FIPS providers are not affected by this issue.",
+      "published" : "2023-11-06T16:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "fcafe2c8-e6e1-49e7-a675-0f77655f440e"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "906fcbca-3672-4200-a40f-12d47dda67ac",
+      "id" : "CVE-2023-6129",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Issue summary: The POLY1305 MAC (message authentication code) implementation contains a bug that might corrupt the internal state of applications running on PowerPC CPU based platforms if the CPU provides vector instructions. Impact summary: If an attacker can influence whether the POLY1305 MAC algorithm is used, the application state might be corrupted with various application dependent consequences. The POLY1305 MAC (message authentication code) implementation in OpenSSL for PowerPC CPUs restores the contents of vector registers in a different order than they are saved. Thus the contents of some of these vector registers are corrupted when returning to the caller. The vulnerable code is used only on newer PowerPC processors supporting the PowerISA 2.07 instructions. The consequences of this kind of internal application state corruption can be various - from no consequences, if the calling application does not depend on the contents of non-volatile XMM registers at all, to the worst consequences, where the attacker could get complete control of the application process. However unless the compiler uses the vector registers for storing pointers, the most likely consequence, if any, would be an incorrect result of some application dependent calculations or a crash leading to a denial of service. The POLY1305 MAC algorithm is most frequently used as part of the CHACHA20-POLY1305 AEAD (authenticated encryption with associated data) algorithm. The most common usage of this AEAD cipher is with TLS protocol versions 1.2 and 1.3. If this cipher is enabled on the server a malicious client can influence whether this AEAD cipher is used. This implies that TLS server applications using OpenSSL can be potentially impacted. However we are currently not aware of any concrete application that would be affected by this issue therefore we consider this a Low severity security issue.",
+      "published" : "2024-01-09T17:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "fcafe2c8-e6e1-49e7-a675-0f77655f440e"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "85b39554-d9e8-4d5a-b654-d5d845322b87",
+      "id" : "CVE-2024-22667",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Vim before 9.0.2142 has a stack-based buffer overflow because did_set_langmap in map.c calls sprintf to write to the error buffer that is passed down to the option callback functions.",
+      "published" : "2024-02-05T08:15:00Z",
+      "updated" : "2025-02-05T17:29:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a5244b4b-ba01-44f9-8e00-8a9ef31279f3",
+      "id" : "CVE-2024-41957",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "cwes" : [
+        415
+      ],
+      "description" : "Vim is an open source command line text editor. Vim < v9.1.0647 has double free in src/alloc.c:616. When closing a window, the corresponding tagstack data will be cleared and freed. However a bit later, the quickfix list belonging to that window will also be cleared and if that quickfix list points to the same tagstack data, Vim will try to free it again, resulting in a double-free/use-after-free access exception. Impact is low since the user must intentionally execute vim with several non-default flags, but it may cause a crash of Vim. The issue has been fixed as of Vim patch v9.1.0647",
+      "published" : "2024-08-01T22:15:00Z",
+      "updated" : "2024-11-29T12:15:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "8514b92b-3a38-4ddb-a979-cf2d76b93192",
+      "id" : "CVE-2024-41965",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.2,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "cwes" : [
+        415
+      ],
+      "description" : "Vim is an open source command line text editor. double-free in dialog_changed() in Vim < v9.1.0648. When abandoning a buffer, Vim may ask the user what to do with the modified buffer. If the user wants the changed buffer to be saved, Vim may create a new Untitled file, if the buffer did not have a name yet. However, when setting the buffer name to Unnamed, Vim will falsely free a pointer twice, leading to a double-free and possibly later to a heap-use-after-free, which can lead to a crash. The issue has been fixed as of Vim patch v9.1.0648.",
+      "published" : "2024-08-01T22:15:00Z",
+      "updated" : "2024-11-21T09:33:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e9840525-6b36-48e2-a61f-62df7024e76c",
+      "id" : "CVE-2023-48231",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. When closing a window, vim may try to access already freed window structure. Exploitation beyond crashing the application has not been shown to be viable. This issue has been addressed in commit `25aabc2b` which has been included in release version 9.0.2106. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2f28b91c-ccdf-40a1-9a8d-850bc08f3ed6",
+      "id" : "CVE-2023-48232",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. A floating point exception may occur when calculating the line offset for overlong lines and smooth scrolling is enabled and the cpo-settings include the 'n' flag. This may happen when a window border is present and when the wrapped line continues on the next physical line directly in the window border because the 'cpo' setting includes the 'n' flag. Only users with non-default settings are affected and the exception should only result in a crash. This issue has been addressed in commit `cb0b99f0` which has been included in release version 9.0.2107. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "ee694710-a0a1-4294-afcd-fb102025e10a",
+      "id" : "CVE-2023-48233",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. If the count after the :s command is larger than what fits into a (signed) long variable, abort with e_value_too_large. Impact is low, user interaction is required and a crash may not even happen in all situations. This issue has been addressed in commit `ac6378773` which has been included in release version 9.0.2108. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9b6111f0-d4fd-434e-a16e-82675025ec81",
+      "id" : "CVE-2023-48234",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. When getting the count for a normal mode z command, it may overflow for large counts given. Impact is low, user interaction is required and a crash may not even happen in all situations. This issue has been addressed in commit `58f9befca1` which has been included in release version 9.0.2109. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "0741fcb9-11e0-4993-adc9-64a98fc05518",
+      "id" : "CVE-2023-48706",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.7,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Vim is a UNIX editor that, prior to version 9.0.2121, has a heap-use-after-free vulnerability. When executing a `:s` command for the very first time and using a sub-replace-special atom inside the substitution part, it is possible that the recursive `:s` call causes free-ing of memory which may later then be accessed by the initial `:s` command. The user must intentionally execute the payload and the whole process is a bit tricky to do since it seems to work only reliably for the very first :s command. It may also cause a crash of Vim. Version 9.0.2121 contains a fix for this issue.",
+      "published" : "2023-11-22T22:15:00Z",
+      "updated" : "2024-11-21T08:32:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "015d44e1-f4b1-4410-83d6-70cae8fe3f50",
+      "id" : "CVE-2023-48235",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. When parsing relative ex addresses one may unintentionally cause an overflow. Ironically this happens in the existing overflow check, because the line number becomes negative and LONG_MAX - lnum will cause the overflow. Impact is low, user interaction is required and a crash may not even happen in all situations. This issue has been addressed in commit `060623e` which has been included in release version 9.0.2110. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "d657a13f-7b64-48c6-90c1-7db909c1a8c0",
+      "id" : "CVE-2023-48236",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. When using the z= command, the user may overflow the count with values larger than MAX_INT. Impact is low, user interaction is required and a crash may not even happen in all situations. This vulnerability has been addressed in commit `73b2d379` which has been included in release version 9.0.2111. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "99220aa6-0ca6-4244-9d95-3b1a0ad57b85",
+      "id" : "CVE-2023-48237",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "Vim is an open source command line text editor. In affected versions when shifting lines in operator pending mode and using a very large value, it may be possible to overflow the size of integer. Impact is low, user interaction is required and a crash may not even happen in all situations. This issue has been addressed in commit `6bf131888` which has been included in version 9.0.2112. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "published" : "2023-11-16T23:15:00Z",
+      "updated" : "2024-11-21T08:31:00Z",
+      "affects" : [
+        {
+          "ref" : "c80c832f-3dcf-4aea-a418-28536a87624b"
+        }
+      ]
+    }
+  ]
+}

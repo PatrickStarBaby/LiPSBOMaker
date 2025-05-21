@@ -1,0 +1,995 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:fdbf460c-b841-46a8-ad6c-44b76d1351a4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:28Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=9a3ed5f6292a7546",
+      "type": "application",
+      "name": "python3-libdnf",
+      "version": "0.70.2",
+      "description": "\nPython 3 bindings for the libdnf library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libdnf:0.70.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libdnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libdnf-0.70.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 05:41:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=6f724514cba7eee9",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.32)(64bit), libc.so.6(GLIBC_2.4)(64bit), libm.so.6()(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=d0bd863d46e4667e",
+      "type": "application",
+      "name": "libdnf",
+      "version": "0.70.2",
+      "description": "\nA Library providing simplified C and Python API to libsolv.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libdnf:0.70.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libdnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libdnf-0.70.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 05:41:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libdnf, libdnf.so.2()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=b23d853c710e5281",
+      "type": "application",
+      "name": "libgcc",
+      "version": "12.3.1",
+      "description": "\nThis package contains GCC shared support library which is needed\ne.g. for exception handling support.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=8b4d55e953070e6e",
+      "type": "application",
+      "name": "glib2",
+      "version": "2.78.3",
+      "description": "\nGLib is a bundle of three (formerly five) low-level system libraries\nwritten in C and developed mainly by GNOME. GLib's code was separated\nfrom GTK, so it can be used by software other than GNOME and has been\ndeveloped in parallel ever since.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glib2:2.78.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gtk.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glib2-2.78.3-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Nov 12 13:06:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgio-2.0.so.0()(64bit), libglib-2.0.so.0()(64bit), libgobject-2.0.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgpg-error@1.47-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgpg-error-1.47-1.oe2403.src.rpm&package-id=950abed598676ec7",
+      "type": "application",
+      "name": "libgpg-error",
+      "version": "1.47",
+      "description": "\nThe libgpg-error package contains a library that originally defines common error values for all GnuPG components.\nAmong these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt, Libksba, DirMngr, Pinentry, SCdaemon.\nBecause Libgpg-error is a common dependency all GnuPG components, more features will be added to this library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libgpg-error:1.47:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgpg-error@1.47-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgpg-error-1.47-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/related_software/libgpg-error/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libgpg-error-1.47-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:31:41 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgpg-error.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=b91db28a7e14316b",
+      "type": "application",
+      "name": "gpgme",
+      "version": "1.21.0",
+      "description": "\nGnuPG Made Easy (GPGME) is a library designed to make access to GnuPG\neasier for applications.  It provides a high-level crypto API for\nencryption, decryption, signing, signature verification and key\nmanagement.\nThis package provides C/C++/Qt/Python API support for GPGME.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgpgme.so.11()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/json-c@0.17-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=json-c-0.17-6.oe2403.src.rpm&package-id=f2d790fd39581754",
+      "type": "application",
+      "name": "json-c",
+      "version": "0.17",
+      "description": "\nJSON-C implements a reference counting object model that allows you\nto easily construct JSON objects in C, output them as JSON formatted\nstrings and parse JSON formatted strings back into the C representation\nof JSON objects.  It aims to conform to RFC 7159.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:json-c:0.17:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/json-c@0.17-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=json-c-0.17-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/json-c/json-c",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "json-c-0.17-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 10 03:19:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libjson-c.so.5()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libmodulemd@2.15.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm&package-id=eefb82434b03ddfc",
+      "type": "application",
+      "name": "libmodulemd",
+      "version": "2.15.0",
+      "description": "\nThe libmodulemd API provides a number of convenience tools for\ninteracting with repodata (that is, streams of YAML that contains\ninformation on multiple streams, default data and translations).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libmodulemd:2.15.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libmodulemd@2.15.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/fedora-modularity/libmodulemd",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libmodulemd-2.15.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:11:42 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libmodulemd.so.2()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm&package-id=af8599c6de1b4aa1",
+      "type": "application",
+      "name": "popt",
+      "version": "1.19",
+      "description": "\nThe popt library exists essentially for parsing command line options. Some\nspecific advantages of popt are no global variables (allowing multiple passes\nin parsing argv), parsing an arbitrary array of argv-style elements (allowing\nparsing of command-line-strings from any source), a standard method of option\naliasing, ability to exec external option filters, and automatic generation\nof help and usage messages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:popt:1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/popt/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "popt-1.19-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libpopt.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=d74c9ab17f42c613",
+      "type": "application",
+      "name": "python3",
+      "version": "3.11.6",
+      "description": "\nPython combines remarkable power with very clear syntax. It has modules,\nclasses, exceptions, very high level dynamic data types, and dynamic\ntyping. There are interfaces to many system calls and libraries, as well\nas to various windowing systems. New built-in modules are easily written\nin C or C++ (or other languages, depending on the chosen implementation).\nPython is also usable as an extension language for applications written\nin other languages that need easy-to-use scripting or automation interfaces.\n\nThis package Provides python version 3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libpython3.11.so.1.0()(64bit), python(abi)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/librepo@1.15.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=librepo-1.15.2-1.oe2403.src.rpm&package-id=85a2f293e67cf858",
+      "type": "application",
+      "name": "librepo",
+      "version": "1.15.2",
+      "description": "\nA library providing C and Python (libcURL like) API to downloading repository\nmetadata.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:librepo:1.15.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/librepo@1.15.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=librepo-1.15.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/librepo",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "librepo-1.15.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:46 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "librepo.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=690ba4cc05481514",
+      "type": "application",
+      "name": "rpm-libs",
+      "version": "4.18.2",
+      "description": "\nShared library of rpm 4.18.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rpm:4.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://rpm.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "22.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rpm-4.18.2-22.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec  4 09:45:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "librpm.so.9()(64bit), librpmio.so.9()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libsmartcols@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=38b9b2eabd8a383d",
+      "type": "application",
+      "name": "libsmartcols",
+      "version": "2.39.1",
+      "description": "\nThis package contains the library for column based text sort engine.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:util-linux:2.39.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libsmartcols@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "util-linux-2.39.1-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsmartcols.so.1()(64bit), libsmartcols.so.1(SMARTCOLS_2.25)(64bit), libsmartcols.so.1(SMARTCOLS_2.27)(64bit), libsmartcols.so.1(SMARTCOLS_2.28)(64bit), libsmartcols.so.1(SMARTCOLS_2.29)(64bit), libsmartcols.so.1(SMARTCOLS_2.30)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libsolv@0.7.24-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsolv-0.7.24-1.oe2403.src.rpm&package-id=a6ce034e95a1117d",
+      "type": "application",
+      "name": "libsolv",
+      "version": "0.7.24",
+      "description": "\nA free package dependency solver using a satisfiability algorithm. The\nlibrary is based on two major, but independent, blocks:\n\n- Using a dictionary approach to store and retrieve package\n  and dependency information.\n\n- Using satisfiability, a well known and researched topic, for\n  resolving package dependencies.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libsolv:0.7.24:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libsolv@0.7.24-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsolv-0.7.24-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/openSUSE/libsolv",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libsolv-0.7.24-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 05:48:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsolv.so.1()(64bit), libsolvext.so.1()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=feffeaaaadef7630",
+      "type": "application",
+      "name": "sqlite",
+      "version": "3.42.0",
+      "description": "\nSQLite is a C-language library that implements a small, fast, self-contained,\nhigh-reliability, full-featured, SQL database engine. SQLite is the most used\ndatabase engine in the world. SQLite is built into all mobile phones and most\ncomputers and comes bundled inside countless other applications that people\nuse every day.It also include lemon and sqlite3_analyzer and tcl tools.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.sqlite.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sqlite-3.42.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsqlite3.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=344be3725e812d7f",
+      "type": "application",
+      "name": "libstdc++",
+      "version": "12.3.1",
+      "description": "\nThe libstdc++ package contains a rewritten standard compliant GCC Standard\nC++ Library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libstdc++.so.6()(64bit), libstdc++.so.6(CXXABI_1.3)(64bit), libstdc++.so.6(GLIBCXX_3.4)(64bit), libstdc++.so.6(GLIBCXX_3.4.11)(64bit), libstdc++.so.6(GLIBCXX_3.4.21)(64bit), libstdc++.so.6(GLIBCXX_3.4.29)(64bit), libstdc++.so.6(GLIBCXX_3.4.30)(64bit), libstdc++.so.6(GLIBCXX_3.4.9)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=9a3ed5f6292a7546",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=6f724514cba7eee9",
+        "pkg:rpm/openEuler/libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=d0bd863d46e4667e",
+        "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=b23d853c710e5281",
+        "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=8b4d55e953070e6e",
+        "pkg:rpm/openEuler/libgpg-error@1.47-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgpg-error-1.47-1.oe2403.src.rpm&package-id=950abed598676ec7",
+        "pkg:rpm/openEuler/gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=b91db28a7e14316b",
+        "pkg:rpm/openEuler/json-c@0.17-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=json-c-0.17-6.oe2403.src.rpm&package-id=f2d790fd39581754",
+        "pkg:rpm/openEuler/libmodulemd@2.15.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm&package-id=eefb82434b03ddfc",
+        "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm&package-id=af8599c6de1b4aa1",
+        "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=d74c9ab17f42c613",
+        "pkg:rpm/openEuler/librepo@1.15.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=librepo-1.15.2-1.oe2403.src.rpm&package-id=85a2f293e67cf858",
+        "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=690ba4cc05481514",
+        "pkg:rpm/openEuler/libsmartcols@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=38b9b2eabd8a383d",
+        "pkg:rpm/openEuler/libsolv@0.7.24-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsolv-0.7.24-1.oe2403.src.rpm&package-id=a6ce034e95a1117d",
+        "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=feffeaaaadef7630",
+        "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=344be3725e812d7f"
+      ]
+    }
+  ]
+}

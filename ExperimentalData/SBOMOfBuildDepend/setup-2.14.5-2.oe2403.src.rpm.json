@@ -1,0 +1,323 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:6ae60f0d-3af5-4f6a-bf73-de53ca384591",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:26:37Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/setup@2.14.5-2.oe2403?arch=noarch&package-id=b82e4fd7aa224782",
+      "type": "application",
+      "name": "setup",
+      "version": "2.14.5",
+      "description": "The setup package contains a set of important system configuration and\nsetup files, such as passwd, group, and profile.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:setup:2.14.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/setup@2.14.5-2.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/setup/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "setup-2.14.5.tar.bz2"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "setup=2.14.5-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/bash@5.2.15-9.oe2403?arch=x86_64&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=d2591548d87f39e1",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/bash@5.2.15-9.oe2403?arch=x86_64&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "bash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=f0727ae21fa3343c",
+      "type": "application",
+      "name": "perl",
+      "version": "5.38.0",
+      "description": "\nPerl 5 is a highly capable, feature-rich programming language with over 30 years of development.\nPerl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid\nprototyping and large scale development projects.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.perl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "perl-5.38.0-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 17:06:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "perl-interpreter"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=398f46fa87343024",
+      "type": "application",
+      "name": "systemd",
+      "version": "255",
+      "description": "\nsystemd is a system and service manager that runs as PID 1 and starts\nthe rest of the system.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and LGPLv2+ and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/tcsh@6.24.10-1.oe2403?arch=x86_64&upstream=tcsh-6.24.10-1.oe2403.src.rpm&package-id=0e914e73a0ca9e9a",
+      "type": "application",
+      "name": "tcsh",
+      "version": "6.24.10",
+      "description": "\nTcsh is an enhanced but completely compatible version of the Berkeley\nC-Shell, with the addition of a command line editor, command and file\nname completion, listing, etc., and a bunch of small additions to the\nshell itself.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:tcsh:6.24.10:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/tcsh@6.24.10-1.oe2403?arch=x86_64&upstream=tcsh-6.24.10-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.tcsh.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "tcsh-6.24.10-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:44:12 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "tcsh"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/setup@2.14.5-2.oe2403?arch=noarch&package-id=b82e4fd7aa224782",
+      "dependsOn": [
+        "pkg:deb/bash@5.2.15-9.oe2403?arch=x86_64&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=d2591548d87f39e1",
+        "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=f0727ae21fa3343c",
+        "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=398f46fa87343024",
+        "pkg:deb/tcsh@6.24.10-1.oe2403?arch=x86_64&upstream=tcsh-6.24.10-1.oe2403.src.rpm&package-id=0e914e73a0ca9e9a"
+      ]
+    }
+  ]
+}

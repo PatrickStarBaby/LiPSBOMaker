@@ -1,0 +1,323 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:341e641f-722d-4901-a024-8e302d6d41f1",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:10:56Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/libpng@1.6.40-1.oe2403?arch=x86_64&package-id=08fa0fd1c2980852",
+      "type": "application",
+      "name": "libpng",
+      "version": "1.6.40",
+      "description": "The libpng package contains libraries used by other programs for reading and writing PNG format files.\nThe PNG format was designed as a replacement for GIF and, to a lesser extent, TIFF,\nwith many improvements and extensions and lack of patent problems.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Zlib"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libpng:1.6.40:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/libpng@1.6.40-1.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "http://www.libpng.org/pub/png/libpng.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "pngusr.dfa, libpng-1.6.40.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "libpng=2:1.6.40-1.oe2403,libpng-devel=2:1.6.40-1.oe2403,libpng-static=2:1.6.40-1.oe2403,libpng-tools=2:1.6.40-1.oe2403,libpng-help=2:1.6.40-1.oe2403,libpng-debuginfo=2:1.6.40-1.oe2403,libpng-debugsource=2:1.6.40-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=418a899081bb4d13",
+      "type": "application",
+      "name": "autoconf",
+      "version": "2.71",
+      "description": "\nAutoconf is an extensible package of M4 macros that produce shell scripts to automatically\nconfigure software source code packages. These scripts can adapt the packages to many kinds\nof UNIX-like systems without manual user intervention. Autoconf creates a configuration script\nfor a package from a template file that lists the operating system features that the package\ncan use, in the form of M4 macro calls.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf:2.71:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/autoconf/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-2.71-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=222dee3f06f8cf29",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=4ebfc6c31ade578e",
+      "type": "application",
+      "name": "libtool",
+      "version": "2.4.7",
+      "description": "\nGNU libtool is a generic library support script.\nLibtool hides the complexity of using shared libraries behind a consistent, portable interface.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtool:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtool/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtool-2.4.7-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtool"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=8df817ef466e4442",
+      "type": "application",
+      "name": "zlib-devel",
+      "version": "1.2.13",
+      "description": "\nThis package contains the static library, the header files, the tests user case and other\ndevelopment content.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "zlib-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/libpng@1.6.40-1.oe2403?arch=x86_64&package-id=08fa0fd1c2980852",
+      "dependsOn": [
+        "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=418a899081bb4d13",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=222dee3f06f8cf29",
+        "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=4ebfc6c31ade578e",
+        "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=8df817ef466e4442"
+      ]
+    }
+  ]
+}

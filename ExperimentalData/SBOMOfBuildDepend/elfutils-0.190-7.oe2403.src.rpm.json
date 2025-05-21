@@ -1,0 +1,933 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e1a15f8a-e1f8-4239-93a2-8489f0e788f8",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:59:38Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/elfutils@0.190-7.oe2403?arch=x86_64&package-id=53fa8393512041bf",
+      "type": "application",
+      "name": "elfutils",
+      "version": "0.190",
+      "description": "Elfutils is a collection of utilities, including stack (to show\nbacktraces), nm (for listing symbols from object files), size\n(for listing the section sizes of an object or archive file),\nstrip (for discarding symbols), elflint (to check for well-formed ELF files) and\nelfcompress (to compress or decompress ELF sections).\nAlso included are helper libraries which implement DWARF, ELF,\nand machine-specific ELF handling and process introspection.\nIt also provides a DSO which allows reading and\nwriting ELF files on a high level. Third party programs depend on\nthis package to read internals of ELF files.\nYama sysctl setting to enable default attach scope settings\nenabling programs to use ptrace attach, access to\n/proc/PID/{mem,personality,stack,syscall}, and the syscalls\nprocess_vm_readv and process_vm_writev which are used for\ninterprocess services, communication and introspection\n(like synchronisation, signaling, debugging, tracing and\nprofiling) of processes.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and (GPLv2+ or LGPLv3+)"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:elfutils:0.190:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/elfutils@0.190-7.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "http://elfutils.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "elfutils-0.190.tar.bz2"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "elfutils=0.190-7.oe2403,elfutils-extra=0.190-7.oe2403,elfutils-libs=0.190-7.oe2403,elfutils-devel=0.190-7.oe2403,elfutils-libelf=0.190-7.oe2403,elfutils-libelf-devel=0.190-7.oe2403,elfutils-default-yama-scope=0.190-7.oe2403,elfutils-help=0.190-7.oe2403,elfutils-debuginfod-client=0.190-7.oe2403,elfutils-debuginfod-client-devel=0.190-7.oe2403,elfutils-debuginfod=0.190-7.oe2403,elfutils-debuginfo=0.190-7.oe2403,elfutils-debugsource=0.190-7.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/bzip2-devel@1.0.8-7.oe2403?arch=x86_64&upstream=bzip2-1.0.8-7.oe2403.src.rpm&package-id=974ffa4d237e0832",
+      "type": "application",
+      "name": "bzip2-devel",
+      "version": "1.0.8",
+      "description": "\nheader files for bzip2\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bzip2:1.0.8:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/bzip2-devel@1.0.8-7.oe2403?arch=x86_64&upstream=bzip2-1.0.8-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.sourceware.org/bzip2/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bzip2-1.0.8-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:15 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "bzip2-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=fc26256a30fad607",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=02b11684bd9a3ecd",
+      "type": "application",
+      "name": "gcc-c++",
+      "version": "12.3.1",
+      "description": "\nThis package adds C++ support to the GNU Compiler Collection.\nIt includes support for most of the current C++ specification,\nincluding templates and exception handling.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc-c++"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gdb-headless@14.1-2.oe2403?arch=x86_64&upstream=gdb-14.1-2.oe2403.src.rpm&package-id=63a1ba829e51695d",
+      "type": "application",
+      "name": "gdb-headless",
+      "version": "14.1",
+      "description": "\nGDB, the GNU Project debugger, allows you to see what is going on inside\nanother program while it executes -- or what another program was doing\nat the moment it crashed.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ and GPLv2+ with exceptions and GPL+ and LGPLv2+ and LGPLv3+ and BSD and Public Domain and GFDL-1.3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gdb:14.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gdb-headless@14.1-2.oe2403?arch=x86_64&upstream=gdb-14.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://gnu.org/software/gdb/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gdb-14.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:35:25 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gdb-headless"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/m4@1.4.19-3.oe2403?arch=x86_64&upstream=m4-1.4.19-3.oe2403.src.rpm&package-id=02d5c74d65eaa240",
+      "type": "application",
+      "name": "m4",
+      "version": "1.4.19",
+      "description": "\nGNU M4 is an implementation of the traditional Unix macro processor.\nIt is mostly SVR4 compatible although it has some extensions (for\nexample, handling more than 9 positional parameters to macros). GNU M4\nalso has built-in functions for including files, running shell commands,\ndoing arithmetic, etc.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:m4:1.4.19:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/m4@1.4.19-3.oe2403?arch=x86_64&upstream=m4-1.4.19-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/m4/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "m4-1.4.19-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:11:07 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "m4"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libarchive-devel@3.7.1-5.oe2403?arch=x86_64&upstream=libarchive-3.7.1-5.oe2403.src.rpm&package-id=539bdf3c9bcb0ff1",
+      "type": "application",
+      "name": "libarchive-devel",
+      "version": "3.7.1",
+      "description": "\nlibarchive-devel contains the header files for developing\napplications that want to make use of libarchive.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libarchive:3.7.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libarchive-devel@3.7.1-5.oe2403?arch=x86_64&upstream=libarchive-3.7.1-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.libarchive.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libarchive-3.7.1-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Oct 15 12:55:28 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(libarchive)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=84d3c84e06dd8a7c",
+      "type": "application",
+      "name": "libcurl-devel",
+      "version": "8.4.0",
+      "description": "\nHeader files for libcurl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "curl"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:curl:8.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://curl.se/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "curl-8.4.0-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:20:40 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(libcurl)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libmicrohttpd-devel@0.9.77-1.oe2403?arch=x86_64&upstream=libmicrohttpd-0.9.77-1.oe2403.src.rpm&package-id=2c9c247f9c8bc1ca",
+      "type": "application",
+      "name": "libmicrohttpd-devel",
+      "version": "0.9.77",
+      "description": "\nDevelopment files for libmicrohttpd\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libmicrohttpd:0.9.77:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libmicrohttpd-devel@0.9.77-1.oe2403?arch=x86_64&upstream=libmicrohttpd-0.9.77-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libmicrohttpd/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libmicrohttpd-0.9.77-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 12:44:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(libmicrohttpd)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/sqlite-devel@3.42.0-1.oe2403?arch=x86_64&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=c50debaf3c4e9278",
+      "type": "application",
+      "name": "sqlite-devel",
+      "version": "3.42.0",
+      "description": "\nThis contains dynamic libraries and header files for the developing of sqlite.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/sqlite-devel@3.42.0-1.oe2403?arch=x86_64&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.sqlite.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sqlite-3.42.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig(sqlite3)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=0dcc2c5bdd1599de",
+      "type": "application",
+      "name": "systemd",
+      "version": "255",
+      "description": "\nsystemd is a system and service manager that runs as PID 1 and starts\nthe rest of the system.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and LGPLv2+ and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/xz-devel@5.4.7-1.oe2403?arch=x86_64&upstream=xz-5.4.7-1.oe2403.src.rpm&package-id=f0cda16586ed79fe",
+      "type": "application",
+      "name": "xz-devel",
+      "version": "5.4.7",
+      "description": "\nThis package mainly includes the following contents: static library,\nthe header file, example, tests use case, other development and use of content.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:xz:5.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/xz-devel@5.4.7-1.oe2403?arch=x86_64&upstream=xz-5.4.7-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://tukaani.org/xz",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "xz-5.4.7-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Aug 13 02:19:51 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "xz-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/xz-libs@5.4.7-1.oe2403?arch=x86_64&upstream=xz-5.4.7-1.oe2403.src.rpm&package-id=609e196f7c17f3cb",
+      "type": "application",
+      "name": "xz-libs",
+      "version": "5.4.7",
+      "description": "\nLibraries for decoding files compressed with LZMA or XZ utils.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:xz:5.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/xz-libs@5.4.7-1.oe2403?arch=x86_64&upstream=xz-5.4.7-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://tukaani.org/xz",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "xz-5.4.7-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Aug 13 02:19:51 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "xz-libs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=abbb6c9a167d3223",
+      "type": "application",
+      "name": "zlib-devel",
+      "version": "1.2.13",
+      "description": "\nThis package contains the static library, the header files, the tests user case and other\ndevelopment content.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "zlib-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/zstd-devel@1.5.5-1.oe2403?arch=x86_64&upstream=zstd-1.5.5-1.oe2403.src.rpm&package-id=0d1251494b25a195",
+      "type": "application",
+      "name": "zstd-devel",
+      "version": "1.5.5",
+      "description": "\nThis package contains the header files for zstd library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zstd:1.5.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/zstd-devel@1.5.5-1.oe2403?arch=x86_64&upstream=zstd-1.5.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/facebook/zstd",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zstd-1.5.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:45:04 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "zstd-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/elfutils@0.190-7.oe2403?arch=x86_64&package-id=53fa8393512041bf",
+      "dependsOn": [
+        "pkg:deb/bzip2-devel@1.0.8-7.oe2403?arch=x86_64&upstream=bzip2-1.0.8-7.oe2403.src.rpm&package-id=974ffa4d237e0832",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=fc26256a30fad607",
+        "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=02b11684bd9a3ecd",
+        "pkg:deb/gdb-headless@14.1-2.oe2403?arch=x86_64&upstream=gdb-14.1-2.oe2403.src.rpm&package-id=63a1ba829e51695d",
+        "pkg:deb/m4@1.4.19-3.oe2403?arch=x86_64&upstream=m4-1.4.19-3.oe2403.src.rpm&package-id=02d5c74d65eaa240",
+        "pkg:deb/libarchive-devel@3.7.1-5.oe2403?arch=x86_64&upstream=libarchive-3.7.1-5.oe2403.src.rpm&package-id=539bdf3c9bcb0ff1",
+        "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=84d3c84e06dd8a7c",
+        "pkg:deb/libmicrohttpd-devel@0.9.77-1.oe2403?arch=x86_64&upstream=libmicrohttpd-0.9.77-1.oe2403.src.rpm&package-id=2c9c247f9c8bc1ca",
+        "pkg:deb/sqlite-devel@3.42.0-1.oe2403?arch=x86_64&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=c50debaf3c4e9278",
+        "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=0dcc2c5bdd1599de",
+        "pkg:deb/xz-devel@5.4.7-1.oe2403?arch=x86_64&upstream=xz-5.4.7-1.oe2403.src.rpm&package-id=f0cda16586ed79fe",
+        "pkg:deb/xz-libs@5.4.7-1.oe2403?arch=x86_64&upstream=xz-5.4.7-1.oe2403.src.rpm&package-id=609e196f7c17f3cb",
+        "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=abbb6c9a167d3223",
+        "pkg:deb/zstd-devel@1.5.5-1.oe2403?arch=x86_64&upstream=zstd-1.5.5-1.oe2403.src.rpm&package-id=0d1251494b25a195"
+      ]
+    }
+  ]
+}

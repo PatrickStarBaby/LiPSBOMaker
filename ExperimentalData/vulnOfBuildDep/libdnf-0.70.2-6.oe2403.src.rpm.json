@@ -1,0 +1,324 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:509fa39c-e755-4f70-b135-f363b6abeba1",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:41:03Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libdnf-0.70.2-6.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/rpm-software-management/libdnf"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "00a04bee-58f7-46fa-b1fd-73948a499f4a"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "732e83a2-d007-44b8-ae62-fcf4ccef8163"
+    },
+    {
+      "name" : "gcc-c++",
+      "version" : "12.3.1",
+      "description" : "This package adds C++ support to the GNU Compiler Collection. It includes support for most of the current C++ specification, including templates and exception handling.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "8fe208e1-76f8-4eae-8936-c2f9edd3e89a"
+    },
+    {
+      "name" : "openssl-devel",
+      "version" : "3.0.12",
+      "description" : "Development files for openssl.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.openssl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "0f291753-69da-4a27-bb07-67168642fcb6"
+    },
+    {
+      "name" : "sqlite-devel",
+      "version" : "3.42.0",
+      "description" : "This contains dynamic libraries and header files for the developing of sqlite.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Public Domain"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/sqlite-devel@3.42.0-1.oe2403?arch=x86_64&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.sqlite.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "17803d46-21fa-4dbe-b57d-c9dc1ea38c66"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "00a04bee-58f7-46fa-b1fd-73948a499f4a",
+      "dependsOn" : [
+        "732e83a2-d007-44b8-ae62-fcf4ccef8163",
+        "8fe208e1-76f8-4eae-8936-c2f9edd3e89a",
+        "0f291753-69da-4a27-bb07-67168642fcb6",
+        "17803d46-21fa-4dbe-b57d-c9dc1ea38c66"
+      ]
+    },
+    {
+      "ref" : "732e83a2-d007-44b8-ae62-fcf4ccef8163",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "8fe208e1-76f8-4eae-8936-c2f9edd3e89a",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "0f291753-69da-4a27-bb07-67168642fcb6",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "17803d46-21fa-4dbe-b57d-c9dc1ea38c66",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "732e83a2-d007-44b8-ae62-fcf4ccef8163"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "8fe208e1-76f8-4eae-8936-c2f9edd3e89a"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "340b9a57-bcdb-4ac4-a317-83d342c11482",
+      "id" : "CVE-2024-0727",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack Impact summary: Applications loading files in the PKCS12 format from untrusted sources might terminate abruptly. A file in PKCS12 format can contain certificates and keys and may come from an untrusted source. The PKCS12 specification allows certain fields to be NULL, but OpenSSL does not correctly check for this case. This can lead to a NULL pointer dereference that results in OpenSSL crashing. If an application processes PKCS12 files from an untrusted source using the OpenSSL APIs then that application will be vulnerable to this issue. OpenSSL APIs that are vulnerable to this are: PKCS12_parse(), PKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes() and PKCS12_newpass(). We have also fixed a similar issue in SMIME_write_PKCS7(). However since this function is related to writing data we do not consider it security significant. The FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "published" : "2024-01-26T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "0f291753-69da-4a27-bb07-67168642fcb6"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "20f576e4-996c-42ef-8a49-f4deddab73ef",
+      "id" : "CVE-2023-5678",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "cwes" : [
+        754
+      ],
+      "description" : "Issue summary: Generating excessively long X9.42 DH keys or checking excessively long X9.42 DH keys or parameters may be very slow. Impact summary: Applications that use the functions DH_generate_key() to generate an X9.42 DH key may experience long delays. Likewise, applications that use DH_check_pub_key(), DH_check_pub_key_ex() or EVP_PKEY_public_check() to check an X9.42 DH key or X9.42 DH parameters may experience long delays. Where the key or parameters that are being checked have been obtained from an untrusted source this may lead to a Denial of Service. While DH_check() performs all the necessary checks (as of CVE-2023-3817), DH_check_pub_key() doesn't make any of these checks, and is therefore vulnerable for excessively large P and Q parameters. Likewise, while DH_generate_key() performs a check for an excessively large P, it doesn't check for an excessively large Q. An application that calls DH_generate_key() or DH_check_pub_key() and supplies a key or parameters obtained from an untrusted source could be vulnerable to a Denial of Service attack. DH_generate_key() and DH_check_pub_key() are also called by a number of other OpenSSL functions. An application calling any of those other functions may similarly be affected. The other functions affected by this are DH_check_pub_key_ex(), EVP_PKEY_public_check(), and EVP_PKEY_generate(). Also vulnerable are the OpenSSL pkey command line application when using the \"-pubcheck\" option, as well as the OpenSSL genpkey command line application. The OpenSSL SSL/TLS implementation is not affected by this issue. The OpenSSL 3.0 and 3.1 FIPS providers are not affected by this issue.",
+      "published" : "2023-11-06T16:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "0f291753-69da-4a27-bb07-67168642fcb6"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "906fcbca-3672-4200-a40f-12d47dda67ac",
+      "id" : "CVE-2023-6129",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Issue summary: The POLY1305 MAC (message authentication code) implementation contains a bug that might corrupt the internal state of applications running on PowerPC CPU based platforms if the CPU provides vector instructions. Impact summary: If an attacker can influence whether the POLY1305 MAC algorithm is used, the application state might be corrupted with various application dependent consequences. The POLY1305 MAC (message authentication code) implementation in OpenSSL for PowerPC CPUs restores the contents of vector registers in a different order than they are saved. Thus the contents of some of these vector registers are corrupted when returning to the caller. The vulnerable code is used only on newer PowerPC processors supporting the PowerISA 2.07 instructions. The consequences of this kind of internal application state corruption can be various - from no consequences, if the calling application does not depend on the contents of non-volatile XMM registers at all, to the worst consequences, where the attacker could get complete control of the application process. However unless the compiler uses the vector registers for storing pointers, the most likely consequence, if any, would be an incorrect result of some application dependent calculations or a crash leading to a denial of service. The POLY1305 MAC algorithm is most frequently used as part of the CHACHA20-POLY1305 AEAD (authenticated encryption with associated data) algorithm. The most common usage of this AEAD cipher is with TLS protocol versions 1.2 and 1.3. If this cipher is enabled on the server a malicious client can influence whether this AEAD cipher is used. This implies that TLS server applications using OpenSSL can be potentially impacted. However we are currently not aware of any concrete application that would be affected by this issue therefore we consider this a Low severity security issue.",
+      "published" : "2024-01-09T17:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "0f291753-69da-4a27-bb07-67168642fcb6"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a6581dcb-7f34-40a2-b2a8-c3c5d081118e",
+      "id" : "CVE-2023-7104",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.3,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "cwes" : [
+        119
+      ],
+      "description" : "A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.",
+      "published" : "2023-12-29T10:15:00Z",
+      "updated" : "2024-11-21T08:45:00Z",
+      "affects" : [
+        {
+          "ref" : "17803d46-21fa-4dbe-b57d-c9dc1ea38c66"
+        }
+      ]
+    }
+  ]
+}

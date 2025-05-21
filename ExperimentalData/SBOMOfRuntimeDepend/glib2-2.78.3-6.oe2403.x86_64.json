@@ -1,0 +1,539 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:f195f71d-4bf5-4abc-832b-9c53418b7d50",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:05Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=4cf8fc7cf7927aca",
+      "type": "application",
+      "name": "glib2",
+      "version": "2.78.3",
+      "description": "\nGLib is a bundle of three (formerly five) low-level system libraries\nwritten in C and developed mainly by GNOME. GLib's code was separated\nfrom GTK, so it can be used by software other than GNOME and has been\ndeveloped in parallel ever since.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glib2:2.78.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gtk.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glib2-2.78.3-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Nov 12 13:06:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=6959a4ad374dbd12",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=be628d3dcf119361",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.10)(64bit), libc.so.6(GLIBC_2.12)(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.16)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.27)(64bit), libc.so.6(GLIBC_2.28)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.32)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.5)(64bit), libc.so.6(GLIBC_2.6)(64bit), libc.so.6(GLIBC_2.7)(64bit), libc.so.6(GLIBC_2.8)(64bit), libc.so.6(GLIBC_2.9)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libffi@3.4.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libffi-3.4.4-3.oe2403.src.rpm&package-id=cda720f9181b33ba",
+      "type": "application",
+      "name": "libffi",
+      "version": "3.4.4",
+      "description": "\nCompilers for high level languages generate code that follows certain conventions. These\nconventions are necessary, in part, for separate compilation to work. One such convention\nis the \"calling convention\". The \"calling convention\" is a set of assumptions made by the\ncompiler about where function arguments will be found on entry to a function. A \"calling\nconvention\" also specifies where the return value for a function is found.\n\nSome programs may not know at the time of compilation what arguments are to be passed to a\nfunction. For instance, an interpreter may be told at run-time about the number and types\nof arguments used to call a given function. Libffi can be used in such programs to provide\na bridge from the interpreter program to compiled code.\n\nThe libffi library provides a portable, high level programming interface to various calling\nconventions. This allows a programmer to call any function specified by a call interface\ndescription at run-time.\n\nFFI stands for Foreign Function Interface. A foreign function interface is the popular name\nfor the interface that allows code written in one language to call code written in another\nlanguage. The libffi library really only provides the lowest, machine dependent layer of a\nfully featured foreign function interface. A layer must exist above libffi that handles type\nconversions for values passed between the two languages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libffi:3.4.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libffi@3.4.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libffi-3.4.4-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://sourceware.org/libffi",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libffi-3.4.4-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 05:07:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libffi.so.8()(64bit), libffi.so.8(LIBFFI_BASE_8.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=128b34fa8a7d5467",
+      "type": "application",
+      "name": "glib2",
+      "version": "2.78.3",
+      "description": "\nGLib is a bundle of three (formerly five) low-level system libraries\nwritten in C and developed mainly by GNOME. GLib's code was separated\nfrom GTK, so it can be used by software other than GNOME and has been\ndeveloped in parallel ever since.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glib2:2.78.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gtk.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glib2-2.78.3-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Nov 12 13:06:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgio-2.0.so.0()(64bit), libglib-2.0.so.0()(64bit), libgmodule-2.0.so.0()(64bit), libgobject-2.0.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libmount@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=66626129f862a500",
+      "type": "application",
+      "name": "libmount",
+      "version": "2.39.1",
+      "description": "\nThis package is the library for device mounting.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:util-linux:2.39.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libmount@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "util-linux-2.39.1-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libmount.so.1()(64bit), libmount.so.1(MOUNT_2.19)(64bit), libmount.so.1(MOUNT_2.20)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/pcre2@10.42-12.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=pcre2-10.42-12.oe2403.src.rpm&package-id=e80ac3c7da13c1cf",
+      "type": "application",
+      "name": "pcre2",
+      "version": "10.42",
+      "description": "\nPCRE2 is a re-working of the original PCRE1 library to provide an entirely new\nAPI. Since its initial release in 2015, there has been further development of\nthe code and it now differs from PCRE1 in more than just the API.\nPCRE2 is written in C, and it has its own API. There are three sets of\nfunctions, one for the 8-bit library, which processes strings of bytes, one for\nthe 16-bit library, which processes strings of 16-bit values, and one for the\n32-bit library, which processes strings of 32-bit values. Unlike PCRE1, there\nare no C++ wrappers.\n\nThe distribution does contain a set of C wrapper functions for the 8-bit\nlibrary that are based on the POSIX regular expression API (see the pcre2posix\nman page). These are built into a library called libpcre2-posix. Note that this\njust provides a POSIX calling interface to PCRE2; the regular expressions\nthemselves still follow Perl syntax and semantics. The POSIX API is restricted,\nand does not give full access to all of PCRE2's facilities.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pcre2:10.42:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/pcre2@10.42-12.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=pcre2-10.42-12.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.pcre.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "12.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pcre2-10.42-12.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:53:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libpcre2-8.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libselinux@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=91d108dc67ef40d0",
+      "type": "application",
+      "name": "libselinux",
+      "version": "3.5",
+      "description": "\nlibselinux provides an interface to get and set process and file\nsecurity contexts and to obtain security policy decisions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libselinux:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libselinux@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libselinux-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libselinux-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libselinux.so.1()(64bit), libselinux.so.1(LIBSELINUX_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=063671ba8e39968e",
+      "type": "application",
+      "name": "zlib",
+      "version": "1.2.13",
+      "description": "\nZlib is a free, general-purpose, not covered by any patents, lossless data-compression\nlibrary for use on virtually any computer hardware and operating system. The zlib data\nformat is itself portable across platforms.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libz.so.1()(64bit), libz.so.1(ZLIB_1.2.2)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=4cf8fc7cf7927aca",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=6959a4ad374dbd12",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=be628d3dcf119361",
+        "pkg:rpm/openEuler/libffi@3.4.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libffi-3.4.4-3.oe2403.src.rpm&package-id=cda720f9181b33ba",
+        "pkg:rpm/openEuler/glib2@2.78.3-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glib2-2.78.3-6.oe2403.src.rpm&package-id=128b34fa8a7d5467",
+        "pkg:rpm/openEuler/libmount@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=66626129f862a500",
+        "pkg:rpm/openEuler/pcre2@10.42-12.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=pcre2-10.42-12.oe2403.src.rpm&package-id=e80ac3c7da13c1cf",
+        "pkg:rpm/openEuler/libselinux@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=91d108dc67ef40d0",
+        "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=063671ba8e39968e"
+      ]
+    }
+  ]
+}

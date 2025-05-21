@@ -1,0 +1,368 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:2e90b68e-afbf-4fd2-a241-d73e15852c6c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:31Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libpsl@0.21.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libpsl-0.21.2-1.oe2403.src.rpm&package-id=5e65c8b9693c2956",
+      "type": "application",
+      "name": "libpsl",
+      "version": "0.21.2",
+      "description": "\nLibpsl is a C library to handle the Public Suffix List. A Public Suffix List is a\ncollection of Top Level Domains (TLDs) suffixes. Some of the features are listed as\nfollows:\n\n- has built-in PSL data for fast access;\n- allows to load PSL data from files;\n- checks if a given domain is a \"public suffix\";\n- provides immediate cookie domain verification;\n- finds the longest public part of a given domain;\n- finds the shortest private part of a given domain;\n- works with international domains (UTF-8 and IDNA2008 Punycode);\n- is thread-safe;\n- handles IDNA2008 UTS#46 (if libicu is available);\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libpsl:0.21.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libpsl@0.21.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libpsl-0.21.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rockdaboot/libpsl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libpsl-0.21.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:56:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=40a7c3c711681aca",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=0a46409f77052a9c",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/sbin/ldconfig, libc.so.6()(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.4)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libidn2@2.3.4-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libidn2-2.3.4-1.oe2403.src.rpm&package-id=82780774fd35876a",
+      "type": "application",
+      "name": "libidn2",
+      "version": "2.3.4",
+      "description": "\nLibidn2 is a free software implementation of IDNA2008, Punycode and TR46.\nIts purpose is to encode and decode internationalized domain names.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(GPLv2+ or LGPLv3+) and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libidn2:2.3.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libidn2@2.3.4-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libidn2-2.3.4-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/libidn/#libidn2",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libidn2-2.3.4-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libidn2.so.0()(64bit), libidn2.so.0(IDN2_0.0.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libunistring@1.1-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libunistring-1.1-2.oe2403.src.rpm&package-id=1f6f736b9a77428a",
+      "type": "application",
+      "name": "libunistring",
+      "version": "1.1",
+      "description": "\nLibunistring is a library that provides functions for manipulating Unicode strings\nand for manipulating C strings according to the Unicode standard.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLV2+ or LGPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libunistring:1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libunistring@1.1-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libunistring-1.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libunistring/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libunistring-1.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:36:09 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libunistring.so.5()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/publicsuffix-list@20240108-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=publicsuffix-list-20240108-1.oe2403.src.rpm&package-id=6027969169d56b05",
+      "type": "application",
+      "name": "publicsuffix-list",
+      "version": "20240108",
+      "description": "\nA \"public suffix\" is one under which Internet users can (or historically could)\ndirectly register names. The Public Suffix List is a list of all known public\nsuffixes.The Public Suffix List is an initiative of Mozilla, but is maintained\nas a community resource. It is available for use in any software, but was\noriginally created to meet the needs of browser manufacturers.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPLv2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:publicsuffix-list:20240108:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/publicsuffix-list@20240108-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=publicsuffix-list-20240108-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://publicsuffix.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "publicsuffix-list-20240108-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:45:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "publicsuffix-list"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libpsl@0.21.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libpsl-0.21.2-1.oe2403.src.rpm&package-id=5e65c8b9693c2956",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=40a7c3c711681aca",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=0a46409f77052a9c",
+        "pkg:rpm/openEuler/libidn2@2.3.4-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libidn2-2.3.4-1.oe2403.src.rpm&package-id=82780774fd35876a",
+        "pkg:rpm/openEuler/libunistring@1.1-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libunistring-1.1-2.oe2403.src.rpm&package-id=1f6f736b9a77428a",
+        "pkg:rpm/openEuler/publicsuffix-list@20240108-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=publicsuffix-list-20240108-1.oe2403.src.rpm&package-id=6027969169d56b05"
+      ]
+    }
+  ]
+}

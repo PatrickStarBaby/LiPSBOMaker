@@ -1,0 +1,368 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:8efe2eec-0fbc-4782-9446-b170b455b666",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:34Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/ncurses@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=3a0ea14d364c2f87",
+      "type": "application",
+      "name": "ncurses",
+      "version": "6.4",
+      "description": "\nThe ncurses (new curses) library is a free software emulation of\ncurses in System V Release 4.0 (SVr4), and more. It uses terminfo\nformat, supports pads and color and multiple highlights and forms\ncharacters and function-key mapping, and has all the other SVr4-curses\nenhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ncurses@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e4347de299065ec6",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), libm.so.6()(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=28f1dbb0b509b9f5",
+      "type": "application",
+      "name": "ncurses-libs",
+      "version": "6.4",
+      "description": "\nLibraries for ncurses.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libform.so.6()(64bit), libformw.so.6()(64bit), libmenu.so.6()(64bit), libmenuw.so.6()(64bit), libncurses.so.6()(64bit), libncursesw.so.6()(64bit), libpanel.so.6()(64bit), libpanelw.so.6()(64bit), libtic.so.6()(64bit), libtinfo.so.6()(64bit), ncurses-libs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=c1e5102993f6fc65",
+      "type": "application",
+      "name": "libgcc",
+      "version": "12.3.1",
+      "description": "\nThis package contains GCC shared support library which is needed\ne.g. for exception handling support.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=53125f2a652eb7c3",
+      "type": "application",
+      "name": "libstdc++",
+      "version": "12.3.1",
+      "description": "\nThe libstdc++ package contains a rewritten standard compliant GCC Standard\nC++ Library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libstdc++.so.6()(64bit), libstdc++.so.6(CXXABI_1.3)(64bit), libstdc++.so.6(CXXABI_1.3.9)(64bit), libstdc++.so.6(GLIBCXX_3.4)(64bit), libstdc++.so.6(GLIBCXX_3.4.11)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/ncurses-base@6.4-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=3f73a8da0af93622",
+      "type": "application",
+      "name": "ncurses-base",
+      "version": "6.4",
+      "description": "\nThis package contains descriptions of common terminals.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ncurses-base@6.4-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ncurses-base"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/ncurses@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=3a0ea14d364c2f87",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e4347de299065ec6",
+        "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=28f1dbb0b509b9f5",
+        "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=c1e5102993f6fc65",
+        "pkg:rpm/openEuler/libstdc%2B%2B@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=53125f2a652eb7c3",
+        "pkg:rpm/openEuler/ncurses-base@6.4-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=3f73a8da0af93622"
+      ]
+    }
+  ]
+}

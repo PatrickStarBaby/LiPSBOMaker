@@ -1,0 +1,425 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c10a1053-da78-4633-848a-150cdc02c1a8",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:06Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm&package-id=77628f7c581c98eb",
+      "type": "application",
+      "name": "e2fsprogs",
+      "version": "1.47.0",
+      "description": "\nThe e2fsprogs package consists of a lot of tools for users to create,\ncheck, modify, and correct any inconsistencies in second extended file\nsystem.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2 and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:e2fsprogs:1.47.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://e2fsprogs.sourceforge.net/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "e2fsprogs-1.47.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:57:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=fbdba1a962d6c1c2",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/bash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm&package-id=41099b8aace3d6f7",
+      "type": "application",
+      "name": "e2fsprogs",
+      "version": "1.47.0",
+      "description": "\nThe e2fsprogs package consists of a lot of tools for users to create,\ncheck, modify, and correct any inconsistencies in second extended file\nsystem.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2 and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:e2fsprogs:1.47.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://e2fsprogs.sourceforge.net/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "e2fsprogs-1.47.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:57:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(e2fsprogs), libcom_err.so.2()(64bit), libe2p.so.2()(64bit), libext2fs.so.2()(64bit), libss.so.2()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e678c1975b145361",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ld-linux-x86-64.so.2()(64bit), ld-linux-x86-64.so.2(GLIBC_2.3)(64bit), libc.so.6()(64bit), libc.so.6(GLIBC_2.10)(64bit), libc.so.6(GLIBC_2.11)(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.28)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.6)(64bit), libc.so.6(GLIBC_2.7)(64bit), libc.so.6(GLIBC_2.8)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libblkid@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=a8b096727b6a5c9c",
+      "type": "application",
+      "name": "libblkid",
+      "version": "2.39.1",
+      "description": "\nThis package is le library for block device id.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:util-linux:2.39.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libblkid@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "util-linux-2.39.1-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libblkid.so.1()(64bit), libblkid.so.1(BLKID_1.0)(64bit), libblkid.so.1(BLKID_2.15)(64bit), libblkid.so.1(BLKID_2.17)(64bit), libblkid.so.1(BLKID_2_36)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/fuse@2.9.9-11.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=fuse-2.9.9-11.oe2403.src.rpm&package-id=858ae744b82c31d2",
+      "type": "application",
+      "name": "fuse",
+      "version": "2.9.9",
+      "description": "\nFUSE (Filesystem in Userspace) is an interface for userspace programs to export\na filesystem to the Linux kernel. The FUSE project consists of two components:\nthe fuse kernel module (maintained in the regular kernel repositories) and the\nlibfuse userspace library (maintained in this repository). libfuse provides the\nreference implementation for communicating with the FUSE kernel module.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:fuse:2.9.9:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/fuse@2.9.9-11.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=fuse-2.9.9-11.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://fuse.sf.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "11.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "fuse-2.9.9-11.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:50:07 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libfuse.so.2()(64bit), libfuse.so.2(FUSE_2.5)(64bit), libfuse.so.2(FUSE_2.6)(64bit), libfuse.so.2(FUSE_2.8)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libuuid@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=14c9ae609067da36",
+      "type": "application",
+      "name": "libuuid",
+      "version": "2.39.1",
+      "description": "\nThis package is the universally unique ID library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:util-linux:2.39.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libuuid@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "util-linux-2.39.1-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libuuid.so.1()(64bit), libuuid.so.1(UUID_1.0)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm&package-id=77628f7c581c98eb",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=fbdba1a962d6c1c2",
+        "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm&package-id=41099b8aace3d6f7",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e678c1975b145361",
+        "pkg:rpm/openEuler/libblkid@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=a8b096727b6a5c9c",
+        "pkg:rpm/openEuler/fuse@2.9.9-11.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=fuse-2.9.9-11.oe2403.src.rpm&package-id=858ae744b82c31d2",
+        "pkg:rpm/openEuler/libuuid@2.39.1-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=14c9ae609067da36"
+      ]
+    }
+  ]
+}

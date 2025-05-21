@@ -1,0 +1,567 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:d088971e-8c1a-4e70-a9c5-30a1a3515f81",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:26:14Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/sed@4.9-4.oe2403?arch=x86_64&package-id=9ac2f1e273b1c1e7",
+      "type": "application",
+      "name": "sed",
+      "version": "4.9",
+      "description": "Sed is a non-interactive command-line text editor. A stream editor is used\nto per-form basic text transformations on an input stream (a file or input\nfrom a pipeline).",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sed:4.9:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/sed@4.9-4.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/sed/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "sed-4.9.tar.xz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "sed=4.9-4.oe2403,sed-help=4.9-4.oe2403,sed-debuginfo=4.9-4.oe2403,sed-debugsource=4.9-4.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=7678a34842c7b15b",
+      "type": "application",
+      "name": "autoconf",
+      "version": "2.71",
+      "description": "\nAutoconf is an extensible package of M4 macros that produce shell scripts to automatically\nconfigure software source code packages. These scripts can adapt the packages to many kinds\nof UNIX-like systems without manual user intervention. Autoconf creates a configuration script\nfor a package from a template file that lists the operating system features that the package\ncan use, in the form of M4 macro calls.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf:2.71:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/autoconf/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-2.71-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=cd986447bf6b7c69",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=e627a2bc4070f6a5",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/glibc-devel@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=18865baa3a1e86f1",
+      "type": "application",
+      "name": "glibc-devel",
+      "version": "2.38",
+      "description": "\nThe glibc-devel package contains the object files necessary for developing\nprograms which use the standard C libraries. Besides, it contains the\nheaders. Thus, it is necessory to install glibc-devel if you ned develop programs.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/glibc-devel@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "glibc-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gzip@1.12-4.oe2403?arch=x86_64&upstream=gzip-1.12-4.oe2403.src.rpm&package-id=44276ab2ba243e3f",
+      "type": "application",
+      "name": "gzip",
+      "version": "1.12",
+      "description": "\ngzip is a single-file/stream lossless data compression\nutility, where the resulting compressed file generally\nhas the suffix .gz.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gzip:1.12:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gzip@1.12-4.oe2403?arch=x86_64&upstream=gzip-1.12-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gzip",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gzip-1.12-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gzip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libacl-devel@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=c217548d444aad3f",
+      "type": "application",
+      "name": "libacl-devel",
+      "version": "2.3.1",
+      "description": "\nThis package contains header files for the POSIX ACL library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:acl:2.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libacl-devel@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/acl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "acl-2.3.1-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:46:10 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libacl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=fd1b706f5d21140c",
+      "type": "application",
+      "name": "libselinux-devel",
+      "version": "3.5",
+      "description": "\nlibselinux provides an interface to get and set process and file\nsecurity contexts and to obtain security policy decisions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libselinux:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libselinux-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libselinux-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/perl-Getopt-Long@2.57-1.oe2403?arch=noarch&upstream=perl-Getopt-Long-2.57-1.oe2403.src.rpm&package-id=d1a88f14f8ece8f5",
+      "type": "application",
+      "name": "perl-Getopt-Long",
+      "version": "2.57",
+      "description": "\nModule Getopt::Long implements an extended getopt function called\nGetOptions(). This function implements the POSIX standard for command\nline options, with GNU extensions, while still capable of handling\nthe traditional one-letter options.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic or GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:perl-Getopt-Long:2.57:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/perl-Getopt-Long@2.57-1.oe2403?arch=noarch&upstream=perl-Getopt-Long-2.57-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://metacpan.org/pod/Getopt::Long",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "perl-Getopt-Long-2.57-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:29:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "perl-Getopt-Long"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/sed@4.9-4.oe2403?arch=x86_64&package-id=9ac2f1e273b1c1e7",
+      "dependsOn": [
+        "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=7678a34842c7b15b",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=cd986447bf6b7c69",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=e627a2bc4070f6a5",
+        "pkg:deb/glibc-devel@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=18865baa3a1e86f1",
+        "pkg:deb/gzip@1.12-4.oe2403?arch=x86_64&upstream=gzip-1.12-4.oe2403.src.rpm&package-id=44276ab2ba243e3f",
+        "pkg:deb/libacl-devel@2.3.1-3.oe2403?arch=x86_64&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=c217548d444aad3f",
+        "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=fd1b706f5d21140c",
+        "pkg:deb/perl-Getopt-Long@2.57-1.oe2403?arch=noarch&upstream=perl-Getopt-Long-2.57-1.oe2403.src.rpm&package-id=d1a88f14f8ece8f5"
+      ]
+    }
+  ]
+}

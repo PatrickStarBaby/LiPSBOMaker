@@ -1,0 +1,140 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:fa8c0be2-4a13-4699-accf-d0e69b0e5523",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:25:52Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/publicsuffix-list@20240108-1.oe2403?arch=noarch&package-id=2fa1952a080e4b06",
+      "type": "application",
+      "name": "publicsuffix-list",
+      "version": "20240108",
+      "description": "A \"public suffix\" is one under which Internet users can (or historically could)\ndirectly register names. The Public Suffix List is a list of all known public\nsuffixes.The Public Suffix List is an initiative of Mozilla, but is maintained\nas a community resource. It is available for use in any software, but was\noriginally created to meet the needs of browser manufacturers.",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPLv2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:publicsuffix-list:20240108:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/publicsuffix-list@20240108-1.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://publicsuffix.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "test_psl.txt, index.txt, public_suffix_list.dat"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "publicsuffix-list=20240108-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/psl-make-dafsa@0.21.2-1.oe2403?arch=x86_64&upstream=libpsl-0.21.2-1.oe2403.src.rpm&package-id=f81a802469969add",
+      "type": "application",
+      "name": "psl-make-dafsa",
+      "version": "0.21.2",
+      "description": "\nThis script produces C/C++ code or an architecture-independent binary object\nwhich represents a Deterministic Acyclic Finite State Automaton (DAFSA)\nfrom a plain text Public Suffix List.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libpsl:0.21.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/psl-make-dafsa@0.21.2-1.oe2403?arch=x86_64&upstream=libpsl-0.21.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rockdaboot/libpsl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libpsl-0.21.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:56:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "psl-make-dafsa"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/publicsuffix-list@20240108-1.oe2403?arch=noarch&package-id=2fa1952a080e4b06",
+      "dependsOn": [
+        "pkg:deb/psl-make-dafsa@0.21.2-1.oe2403?arch=x86_64&upstream=libpsl-0.21.2-1.oe2403.src.rpm&package-id=f81a802469969add"
+      ]
+    }
+  ]
+}

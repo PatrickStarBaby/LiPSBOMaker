@@ -1,0 +1,311 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:095c1ebd-5ea1-4e9f-b41a-d00e0e07f788",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:32Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm&package-id=e47d6425ee0a4b68",
+      "type": "application",
+      "name": "cyrus-sasl-lib",
+      "version": "2.1.28",
+      "description": "\nThe cyrus-sasl-lib package contains shared libraries which are needed by\napplications which use the Cyrus SASL library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD with advertising"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cyrus-sasl:2.1.28:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.cyrusimap.org/sasl/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cyrus-sasl-2.1.28-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:13:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e4eb19e8115e1c3a",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libresolv.so.2()(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libxcrypt@4.4.36-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libxcrypt-4.4.36-2.oe2403.src.rpm&package-id=d3bdaa1f03534ca5",
+      "type": "application",
+      "name": "libxcrypt",
+      "version": "4.4.36",
+      "description": "\nlibxcrypt is a modern library for one-way hashing of passwords.\nIt supports a wide variety of both modern and historical hashing\nmethods: yescrypt, gost-yescrypt, scrypt, bcrypt, sha512crypt,\nsha256crypt, md5crypt, SunMD5, sha1crypt, NT, bsdicrypt, bigcrypt,\nand descrypt. It provides the traditional Unix crypt and crypt_r\ninterfaces, as well as a set of extended interfaces pioneered by\nOpenwall Linux, crypt_rn, crypt_ra, crypt_gensalt, crypt_gensalt_rn,\nand crypt_gensalt_ra.\nlibxcrypt is intended to be used by login(1), passwd(1), and other\nsimilar programs; that is, to hash a small number of passwords during\nan interactive authentication dialogue with a human. It is not suitable\nfor use in bulk password-cracking applications, or in any other situation\nwhere speed is more important than careful handling of sensitive data.\nHowever, it is intended to be fast and lightweight enough for use in\nservers that must field thousands of login attempts per minute.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and BSD and Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libxcrypt:4.4.36:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libxcrypt@4.4.36-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libxcrypt-4.4.36-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/besser82/libxcrypt",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libxcrypt-4.4.36-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:54:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcrypt.so.1()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gdbm@1.23-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gdbm-1.23-2.oe2403.src.rpm&package-id=0bfd218bc1ee2ab6",
+      "type": "application",
+      "name": "gdbm",
+      "version": "1.23",
+      "description": "\nGNU dbm (or GDBM, for short) is a library of database functions that\nuse extensible hashing and work similar to the standard UNIX dbm.\nThese routines are provided to a programmer needing to create and\nmanipulate a hashed database.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gdbm:1.23:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gdbm@1.23-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gdbm-1.23-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/gdbm/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gdbm-1.23-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:54:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgdbm.so.6()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm&package-id=bed3434927699905",
+      "type": "application",
+      "name": "cyrus-sasl-lib",
+      "version": "2.1.28",
+      "description": "\nThe cyrus-sasl-lib package contains shared libraries which are needed by\napplications which use the Cyrus SASL library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD with advertising"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cyrus-sasl:2.1.28:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.cyrusimap.org/sasl/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cyrus-sasl-2.1.28-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:13:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsasl2.so.3()(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm&package-id=e47d6425ee0a4b68",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e4eb19e8115e1c3a",
+        "pkg:rpm/openEuler/libxcrypt@4.4.36-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libxcrypt-4.4.36-2.oe2403.src.rpm&package-id=d3bdaa1f03534ca5",
+        "pkg:rpm/openEuler/gdbm@1.23-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gdbm-1.23-2.oe2403.src.rpm&package-id=0bfd218bc1ee2ab6",
+        "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm&package-id=bed3434927699905"
+      ]
+    }
+  ]
+}

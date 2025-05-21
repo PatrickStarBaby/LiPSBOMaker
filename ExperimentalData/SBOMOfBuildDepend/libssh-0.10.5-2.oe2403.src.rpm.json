@@ -1,0 +1,750 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:4e28ffec-1666-4f69-8e5a-fec3e0aa307f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:13:19Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/libssh@0.10.5-2.oe2403?arch=x86_64&package-id=8d60474b68fcc4aa",
+      "type": "application",
+      "name": "libssh",
+      "version": "0.10.5",
+      "description": "The ssh library was designed to be used by programmers needing a working SSH\nimplementation by the mean of a library. The complete control of the client is\nmade by the programmer. With libssh, you can remotely execute programs, transfer\nfiles, use a secure and transparent tunnel for your remote programs. With its\nSecure FTP implementation, you can play with remote files easily, without\nthird-party programs others than libcrypto (from openssl).",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libssh:0.10.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/libssh@0.10.5-2.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "http://www.libssh.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "libssh.keyring, libssh-0.10.5.tar.xz.asc, libssh-0.10.5.tar.xz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "libssh=0.10.5-2.oe2403,libssh-devel=0.10.5-2.oe2403,libssh-help=0.10.5-2.oe2403,libssh-debuginfo=0.10.5-2.oe2403,libssh-debugsource=0.10.5-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm&package-id=d07d8d74db65d11a",
+      "type": "application",
+      "name": "cmake",
+      "version": "3.27.9",
+      "description": "\nCMake is used to control the software compilation process using simple\nplatform and compiler independent configuration files. CMake generates\nnative makefiles and workspaces that can be used in the compiler\nenvironment of your choice. CMake is quite sophisticated: it is possible\nto support complex environments requiring system configuration, preprocessor\ngeneration, code generation, and template instantiation.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and MIT and zlib"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cmake:3.27.9:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.cmake.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cmake-3.27.9-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:05:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "cmake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=89fa173fe3c23158",
+      "type": "application",
+      "name": "gcc-c++",
+      "version": "12.3.1",
+      "description": "\nThis package adds C++ support to the GNU Compiler Collection.\nIt includes support for most of the current C++ specification,\nincluding templates and exception handling.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc-c++"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gnupg2@2.4.3-2.oe2403?arch=x86_64&upstream=gnupg2-2.4.3-2.oe2403.src.rpm&package-id=34fe8686facde6ae",
+      "type": "application",
+      "name": "gnupg2",
+      "version": "2.4.3",
+      "description": "\nGnuPG is a complete and free implementation of the OpenPGP standard\nas defined by RFC4880 (also known as PGP).  GnuPG enables encryption\nand signing of data and communication, and features a versatile key\nmanagement system as well as access modules for public key\ndirectories.\n\nGnuPG 2.0 adds support for smart cards and S/MIME encryption and\nsigning to the base GnuPG package.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gnupg2:2.4.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gnupg2@2.4.3-2.oe2403?arch=x86_64&upstream=gnupg2-2.4.3-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gnupg2-2.4.3-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:50:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gnupg2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/krb5-devel@1.21.2-14.oe2403?arch=x86_64&upstream=krb5-1.21.2-14.oe2403.src.rpm&package-id=ca58f2e7ef595d7d",
+      "type": "application",
+      "name": "krb5-devel",
+      "version": "1.21.2",
+      "description": "\nDevelopment files for compiling with krb5.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:krb5:1.21.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/krb5-devel@1.21.2-14.oe2403?arch=x86_64&upstream=krb5-1.21.2-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://web.mit.edu/kerberos/www/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "krb5-1.21.2-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Feb 11 16:18:11 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "krb5-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libcmocka-devel@1.1.7-1.oe2403?arch=x86_64&upstream=cmocka-1.1.7-1.oe2403.src.rpm&package-id=13017551fafa9d29",
+      "type": "application",
+      "name": "libcmocka-devel",
+      "version": "1.1.7",
+      "description": "\nDevelopment headers for the cmocka unit testing library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ASL 2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cmocka:1.1.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libcmocka-devel@1.1.7-1.oe2403?arch=x86_64&upstream=cmocka-1.1.7-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://cmocka.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cmocka-1.1.7-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:43:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcmocka-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/nmap@7.94-7.oe2403?arch=x86_64&upstream=nmap-7.94-7.oe2403.src.rpm&package-id=2303f4b3095fed56",
+      "type": "application",
+      "name": "nmap",
+      "version": "7.94",
+      "description": "\nNmap (\"Network Mapper\") is a free and open source (license) utility for network discovery and security \\\nauditing. It was designed to rapidly scan large networks, but works fine against single hosts.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:nmap:7.94:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/nmap@7.94-7.oe2403?arch=x86_64&upstream=nmap-7.94-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://nmap.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "nmap-7.94-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jan 21 14:27:09 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "nmap-ncat"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssh-clients@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm&package-id=f1cca620c2b3a370",
+      "type": "application",
+      "name": "openssh-clients",
+      "version": "9.3p2",
+      "description": "\nOpenSSH is a free version of SSH (Secure SHell), a program for logging\ninto and executing commands on a remote machine. This package includes\nthe clients necessary to make encrypted connections to SSH servers.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssh:9.3p2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssh-clients@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.openssh.com/portable.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssh-9.3p2-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jul  2 12:07:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openssh-clients"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssh-server@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm&package-id=b166d77bf6c7c617",
+      "type": "application",
+      "name": "openssh-server",
+      "version": "9.3p2",
+      "description": "\nOpenSSH is a free version of SSH (Secure SHell), a program for logging\ninto and executing commands on a remote machine. This package contains\nthe secure shell daemon (sshd). The sshd daemon allows SSH clients to\nsecurely connect to your SSH server.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssh:9.3p2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssh-server@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.openssh.com/portable.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssh-9.3p2-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jul  2 12:07:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openssh-server"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=013093e4a9fe47d8",
+      "type": "application",
+      "name": "openssl-devel",
+      "version": "3.0.12",
+      "description": "\nDevelopment files for openssl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openssl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=a74d23e474d12d4f",
+      "type": "application",
+      "name": "pkgconf",
+      "version": "1.9.5",
+      "description": "\npkgconf is a program which helps to configure compiler and linker flags for development frameworks.\nIt is similar to pkg-config from freedesktop.org, providing additional functionality while also\nmaintaining compatibility.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pkgconf:1.9.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://pkgconf.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pkgconf-1.9.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:17:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=371b2bb0fcd6b61d",
+      "type": "application",
+      "name": "zlib-devel",
+      "version": "1.2.13",
+      "description": "\nThis package contains the static library, the header files, the tests user case and other\ndevelopment content.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "zlib-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/libssh@0.10.5-2.oe2403?arch=x86_64&package-id=8d60474b68fcc4aa",
+      "dependsOn": [
+        "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm&package-id=d07d8d74db65d11a",
+        "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=89fa173fe3c23158",
+        "pkg:deb/gnupg2@2.4.3-2.oe2403?arch=x86_64&upstream=gnupg2-2.4.3-2.oe2403.src.rpm&package-id=34fe8686facde6ae",
+        "pkg:deb/krb5-devel@1.21.2-14.oe2403?arch=x86_64&upstream=krb5-1.21.2-14.oe2403.src.rpm&package-id=ca58f2e7ef595d7d",
+        "pkg:deb/libcmocka-devel@1.1.7-1.oe2403?arch=x86_64&upstream=cmocka-1.1.7-1.oe2403.src.rpm&package-id=13017551fafa9d29",
+        "pkg:deb/nmap@7.94-7.oe2403?arch=x86_64&upstream=nmap-7.94-7.oe2403.src.rpm&package-id=2303f4b3095fed56",
+        "pkg:deb/openssh-clients@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm&package-id=f1cca620c2b3a370",
+        "pkg:deb/openssh-server@9.3p2-4.oe2403?arch=x86_64&upstream=openssh-9.3p2-4.oe2403.src.rpm&package-id=b166d77bf6c7c617",
+        "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=013093e4a9fe47d8",
+        "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=a74d23e474d12d4f",
+        "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=371b2bb0fcd6b61d"
+      ]
+    }
+  ]
+}

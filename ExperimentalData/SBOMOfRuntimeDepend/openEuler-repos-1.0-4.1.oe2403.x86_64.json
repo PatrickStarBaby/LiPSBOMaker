@@ -1,0 +1,179 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:fa555113-b944-4a3b-a87d-c94b2828cbef",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:07Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/openEuler-repos@1.0-4.1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-4.1.oe2403.src.rpm&package-id=38bcf75779b3147e",
+      "type": "application",
+      "name": "openEuler-repos",
+      "version": "1.0",
+      "description": "\nopenEuler package repository files for yum and dnf along with gpg public keys\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Mulan PSL v2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openEuler-repos:1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openEuler-repos@1.0-4.1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-4.1.oe2403.src.rpm",
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openEuler-repos-1.0-4.1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Oct 22 03:15:14 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/openEuler-repos@1.0-3.8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-3.8.oe2403.src.rpm&package-id=c472c97b4c0db20d",
+      "type": "application",
+      "name": "openEuler-repos",
+      "version": "1.0",
+      "description": "\nopenEuler package repository files for yum and dnf along with gpg public keys\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Mulan PSL v2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openEuler-repos:1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openEuler-repos@1.0-3.8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-3.8.oe2403.src.rpm",
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openEuler-repos-1.0-3.8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jun 11 16:10:51 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(openEuler-repos)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/openEuler-gpg-keys@1.0-3.8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-3.8.oe2403.src.rpm&package-id=1f89f747ecfcdfe8",
+      "type": "application",
+      "name": "openEuler-gpg-keys",
+      "version": "1.0",
+      "description": "\nThis package provides the RPM signature keys.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Mulan PSL v2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openEuler-repos:1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openEuler-gpg-keys@1.0-3.8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-3.8.oe2403.src.rpm",
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openEuler-repos-1.0-3.8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jun 11 16:10:51 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openEuler-gpg-keys"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/openEuler-repos@1.0-4.1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-4.1.oe2403.src.rpm&package-id=38bcf75779b3147e",
+      "dependsOn": [
+        "pkg:rpm/openEuler/openEuler-repos@1.0-3.8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-3.8.oe2403.src.rpm&package-id=c472c97b4c0db20d",
+        "pkg:rpm/openEuler/openEuler-gpg-keys@1.0-3.8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-repos-1.0-3.8.oe2403.src.rpm&package-id=1f89f747ecfcdfe8"
+      ]
+    }
+  ]
+}

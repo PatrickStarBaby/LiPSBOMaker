@@ -1,0 +1,81 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:70778f16-3705-448d-82c4-4192db794a01",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:39Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/tzdata@2024a-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=tzdata-2024a-2.oe2403.src.rpm&package-id=9c73fa781cef8ff7",
+      "type": "application",
+      "name": "tzdata",
+      "version": "2024a",
+      "description": "\nThis package contains data files with rules for various timezones around\nthe world.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:tzdata:2024a:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/tzdata@2024a-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=tzdata-2024a-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.iana.org/time-zones",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "tzdata-2024a-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:32:04 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/tzdata@2024a-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=tzdata-2024a-2.oe2403.src.rpm&package-id=9c73fa781cef8ff7",
+      "dependsOn": []
+    }
+  ]
+}

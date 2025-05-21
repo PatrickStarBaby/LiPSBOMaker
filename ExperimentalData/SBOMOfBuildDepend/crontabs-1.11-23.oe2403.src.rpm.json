@@ -1,0 +1,77 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:d0772e25-3a25-4f86-9966-4bb94393a0f6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:55:27Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/crontabs@1.11-23.oe2403?arch=noarch&package-id=009fb4508f063cff",
+      "type": "application",
+      "name": "crontabs",
+      "version": "1.11",
+      "description": "A crontab file contains instructions to the cron daemon\nof the general form: 'run this command at  this  time  on\nthis  date'.   Each  user has their own crontab, and com-\nmands in any given crontab will be executed  as  the  user\nwho  owns  the  crontab.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Pubilc Domain and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:crontabs:1.11:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/crontabs@1.11-23.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://github.com/cronie-crond/crontabs",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "23.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "crontabs-1.11-20190603git.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "crontabs=1.11-23.oe2403,crontabs-help=1.11-23.oe2403"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/crontabs@1.11-23.oe2403?arch=noarch&package-id=009fb4508f063cff",
+      "dependsOn": []
+    }
+  ]
+}

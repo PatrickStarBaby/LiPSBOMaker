@@ -1,0 +1,368 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:34ed741f-4161-4105-b6aa-e02a099f1948",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:43Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/chkconfig@1.25-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=chkconfig-1.25-2.oe2403.src.rpm&package-id=f35892d1fad5ac58",
+      "type": "application",
+      "name": "chkconfig",
+      "version": "1.25",
+      "description": "\nChkconfig is a basic system utility.  It updates and queries runlevel\ninformation for system services.  Chkconfig manipulates the numerous\nsymbolic links in /etc/rc.d, to relieve system administrators of some\nof the drudgery of manually editing the symbolic links.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:chkconfig:1.25:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/chkconfig@1.25-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=chkconfig-1.25-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/fedora-sysv/chkconfig",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "chkconfig-1.25-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Aug 13 02:29:14 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=16d57d46bdd93ee9",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.27)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.8)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/newt@0.52.23-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=newt-0.52.23-3.oe2403.src.rpm&package-id=0e805735803807b3",
+      "type": "application",
+      "name": "newt",
+      "version": "0.52.23",
+      "description": "\nNewt is a programming library for color text-mode, widget-based user\ninterfaces.  Newt can be used to add stacked windows, entry widgets,\ncheckboxes, radio buttons, labels, plain text fields, scrollbars, etc.,\nto text mode user interfaces.\n\nThis package also contains a Dialog replacement called whiptail. Newt\nis based on the slang library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:newt:0.52.23:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/newt@0.52.23-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=newt-0.52.23-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/newt",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "newt-0.52.23-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:49:43 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libnewt.so.0.52()(64bit), libnewt.so.0.52(NEWT_0.52)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm&package-id=75723b279065a911",
+      "type": "application",
+      "name": "popt",
+      "version": "1.19",
+      "description": "\nThe popt library exists essentially for parsing command line options. Some\nspecific advantages of popt are no global variables (allowing multiple passes\nin parsing argv), parsing an arbitrary array of argv-style elements (allowing\nparsing of command-line-strings from any source), a standard method of option\naliasing, ability to exec external option filters, and automatic generation\nof help and usage messages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:popt:1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/popt/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "popt-1.19-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libpopt.so.0()(64bit), libpopt.so.0(LIBPOPT_0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libselinux@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=7b2e84c22b8b41a5",
+      "type": "application",
+      "name": "libselinux",
+      "version": "3.5",
+      "description": "\nlibselinux provides an interface to get and set process and file\nsecurity contexts and to obtain security policy decisions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libselinux:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libselinux@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libselinux-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libselinux-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libselinux.so.1()(64bit), libselinux.so.1(LIBSELINUX_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libsepol@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsepol-3.5-3.oe2403.src.rpm&package-id=c6e9f2d09d959161",
+      "type": "application",
+      "name": "libsepol",
+      "version": "3.5",
+      "description": "\nlibsepol provides an API for the manipulation of SELinux binary\npolicies. It is used by checkpolicy (the policy compiler) and similar\ntools, as well as by programs like load_policy that need to perform\nspecific transformations on binary policies such as customizing\npolicy boolean settings.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libsepol:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libsepol@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsepol-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki/Releases",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libsepol-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:33:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsepol.so.2()(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/chkconfig@1.25-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=chkconfig-1.25-2.oe2403.src.rpm&package-id=f35892d1fad5ac58",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=16d57d46bdd93ee9",
+        "pkg:rpm/openEuler/newt@0.52.23-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=newt-0.52.23-3.oe2403.src.rpm&package-id=0e805735803807b3",
+        "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm&package-id=75723b279065a911",
+        "pkg:rpm/openEuler/libselinux@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=7b2e84c22b8b41a5",
+        "pkg:rpm/openEuler/libsepol@3.5-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsepol-3.5-3.oe2403.src.rpm&package-id=c6e9f2d09d959161"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:12ba2d08-ff33-40d4-ad81-1fd0ec1f5628",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:09:26Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/libcap-ng@0.8.3-2.oe2403?arch=x86_64&package-id=1956bb3659417a55",
+      "type": "application",
+      "name": "libcap-ng",
+      "version": "0.8.3",
+      "description": "The libcap-ng library is intended to make programming with posix\ncapabilities much easier than the traditional libcap library.It\nincludes utilities that can analyse all currently running applications\nand print out any capabilities and whether or not it has an open\nended bounding set.",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcap-ng:0.8.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/libcap-ng@0.8.3-2.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "http://people.redhat.com/sgrubb/libcap-ng",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "libcap-ng-0.8.3.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "libcap-ng=0.8.3-2.oe2403,libcap-ng-devel=0.8.3-2.oe2403,libcap-ng-python3=0.8.3-2.oe2403,libcap-ng-help=0.8.3-2.oe2403,libcap-ng-debuginfo=0.8.3-2.oe2403,libcap-ng-debugsource=0.8.3-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=56b339f696bf7cbc",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/kernel-headers@6.6.0-77.0.0.70.oe2403?arch=x86_64&upstream=kernel-6.6.0-77.0.0.70.oe2403.src.rpm&package-id=2456a4482851865b",
+      "type": "application",
+      "name": "kernel-headers",
+      "version": "6.6.0",
+      "description": "\nKernel-headers includes the C header files that specify the interface\nbetween the Linux kernel and userspace libraries and programs.  The\nheader files define structures and constants that are needed for\nbuilding most standard programs and are also needed for rebuilding the\nglibc package.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:kernel:6.6.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/kernel-headers@6.6.0-77.0.0.70.oe2403?arch=x86_64&upstream=kernel-6.6.0-77.0.0.70.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.kernel.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "77.0.0.70.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "kernel-6.6.0-77.0.0.70.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb 12 07:36:29 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "kernel-headers"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm&package-id=1c05b09955e8e762",
+      "type": "application",
+      "name": "libattr-devel",
+      "version": "2.5.1",
+      "description": "\nThis package contains header files and documentation needed to\ndevelop programs which make use of extended attributes.\nFor Linux programs, the documented system call API is the\nrecommended interface, but an SGI IRIX compatibility interface\nis also provided.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:attr:2.5.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/attr",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "attr-2.5.1-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:36:43 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libattr-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=5995410dc18111d3",
+      "type": "application",
+      "name": "python3-devel",
+      "version": "3.11.6",
+      "description": "\nThis package contains the header files and configuration needed to develop\npython3 modules.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/swig@4.1.1-1.oe2403?arch=x86_64&upstream=swig-4.1.1-1.oe2403.src.rpm&package-id=123cfc5e46cc6f53",
+      "type": "application",
+      "name": "swig",
+      "version": "4.1.1",
+      "description": "\nSWIG is a compiler that attempts to make it easy to integrate C, C++,\nor Objective-C code with scripting languages including Perl, Tcl, and\nPython.In a nutshell, you give it a bunch of ANSI C/C++ declarations and\nit generates an interface between C and your favorite scripting language.\nHowever, this is only scratching the surface of what SWIG can do--some\nof its more advanced features include automatic documentation generation,\nmodule and library management, extensive customization options, and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:swig:4.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/swig@4.1.1-1.oe2403?arch=x86_64&upstream=swig-4.1.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://swig.sourceforge.net/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "swig-4.1.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:34:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "swig"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/libcap-ng@0.8.3-2.oe2403?arch=x86_64&package-id=1956bb3659417a55",
+      "dependsOn": [
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=56b339f696bf7cbc",
+        "pkg:deb/kernel-headers@6.6.0-77.0.0.70.oe2403?arch=x86_64&upstream=kernel-6.6.0-77.0.0.70.oe2403.src.rpm&package-id=2456a4482851865b",
+        "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm&package-id=1c05b09955e8e762",
+        "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=5995410dc18111d3",
+        "pkg:deb/swig@4.1.1-1.oe2403?arch=x86_64&upstream=swig-4.1.1-1.oe2403.src.rpm&package-id=123cfc5e46cc6f53"
+      ]
+    }
+  ]
+}

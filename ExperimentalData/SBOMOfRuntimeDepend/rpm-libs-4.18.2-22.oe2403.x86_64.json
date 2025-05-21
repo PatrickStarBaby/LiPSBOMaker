@@ -1,0 +1,1052 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c5cda982-c7e9-458d-a8d7-271d12b726f1",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:06Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=c064550f241119d5",
+      "type": "application",
+      "name": "rpm-libs",
+      "version": "4.18.2",
+      "description": "\nShared library of rpm 4.18.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rpm:4.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://rpm.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "22.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rpm-4.18.2-22.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec  4 09:45:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=aec66beb9c0ec6c2",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ld-linux-x86-64.so.2()(64bit), ld-linux-x86-64.so.2(GLIBC_2.3)(64bit), libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.16)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.32)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.6)(64bit), libc.so.6(GLIBC_2.7)(64bit), libm.so.6()(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libacl@2.3.1-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=a5c5d727e356b8f1",
+      "type": "application",
+      "name": "libacl",
+      "version": "2.3.1",
+      "description": "\nThis package contains the library for manipulating access control list.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:acl:2.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libacl@2.3.1-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=acl-2.3.1-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/acl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "acl-2.3.1-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:46:10 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libacl.so.1()(64bit), libacl.so.1(ACL_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/bzip2@1.0.8-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bzip2-1.0.8-7.oe2403.src.rpm&package-id=47d9848557ec8717",
+      "type": "application",
+      "name": "bzip2",
+      "version": "1.0.8",
+      "description": "\nbzip2 is a freely available, patent free, high-quality data compressor.\nIt typically compresses files to within 10% to 15% of the best available\ntechniques (the PPM family of statistical compressors), whilst being\naround twice as fast at compression and six times faster at decompression.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bzip2:1.0.8:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bzip2@1.0.8-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bzip2-1.0.8-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.sourceware.org/bzip2/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bzip2-1.0.8-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:15 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libbz2.so.1()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libcap@2.69-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-3.oe2403.src.rpm&package-id=b7e987789726b5e1",
+      "type": "application",
+      "name": "libcap",
+      "version": "2.69",
+      "description": "\nThis is a library for getting and setting POSIX.1e (formerly POSIX 6)\ndraft 15 capabilities.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcap:2.69:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libcap@2.69-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://sites.google.com/site/fullycapable",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libcap-2.69-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:46:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcap.so.2()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=29849424c09dc5a5",
+      "type": "application",
+      "name": "openssl-libs",
+      "version": "3.0.12",
+      "description": "\nThe openssl-libs package contains the libraries that are used\nby various applications which support cryptographic algorithms\nand protocols.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcrypto.so.3()(64bit), libcrypto.so.3(OPENSSL_3.0.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/elfutils-libs@0.190-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=elfutils-0.190-7.oe2403.src.rpm&package-id=94b82170aa70abe6",
+      "type": "application",
+      "name": "elfutils-libs",
+      "version": "0.190",
+      "description": "\nThe elfutils-libs package contains libraries which implement DWARF, ELF,\nand machine-specific ELF handling and process introspection.  These\nlibraries are used by the programs in the elfutils package.  The\nelfutils-devel package enables building other programs using these\nlibraries.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ or LGPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:elfutils:0.190:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/elfutils-libs@0.190-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=elfutils-0.190-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://elfutils.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "elfutils-0.190-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu Feb  6 09:02:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libdw.so.1()(64bit), libdw.so.1(ELFUTILS_0.159)(64bit), libdw.so.1(ELFUTILS_0.177)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/elfutils-libelf@0.190-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=elfutils-0.190-7.oe2403.src.rpm&package-id=4ed85a3a616ca53b",
+      "type": "application",
+      "name": "elfutils-libelf",
+      "version": "0.190",
+      "description": "\nThe elfutils-libelf package provides a DSO which allows reading and\nwriting ELF files on a high level.  Third party programs depend on\nthis package to read internals of ELF files.  The programs of the\nelfutils package use it also to generate new ELF files.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ or LGPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:elfutils:0.190:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/elfutils-libelf@0.190-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=elfutils-0.190-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://elfutils.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "elfutils-0.190-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu Feb  6 09:02:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libelf.so.1()(64bit), libelf.so.1(ELFUTILS_1.0)(64bit), libelf.so.1(ELFUTILS_1.5)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgomp@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=c43ac9fae03b6c82",
+      "type": "application",
+      "name": "libgomp",
+      "version": "12.3.1",
+      "description": "\nThis package contains GCC shared support library which is needed\nfor OpenMP v4.5 support.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgomp@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgomp.so.1()(64bit), libgomp.so.1(GOMP_1.0)(64bit), libgomp.so.1(GOMP_2.0)(64bit), libgomp.so.1(GOMP_4.0)(64bit), libgomp.so.1(OMP_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/ima-evm-utils-libs@1.5-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ima-evm-utils-1.5-1.oe2403.src.rpm&package-id=d2448bfb73be425b",
+      "type": "application",
+      "name": "ima-evm-utils-libs",
+      "version": "1.5",
+      "description": "\nThis package provides shared library for IMA/EVM.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ima-evm-utils:1.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ima-evm-utils-libs@1.5-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ima-evm-utils-1.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://linux-ima.sourceforge.net/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ima-evm-utils-1.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 14:57:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libimaevm.so.4()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/lua@5.4.6-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=lua-5.4.6-1.oe2403.src.rpm&package-id=6fb8baa150c7013b",
+      "type": "application",
+      "name": "lua",
+      "version": "5.4.6",
+      "description": "\nLua is a powerful, efficient, lightweight, embeddable scripting language.\nIt supports procedural programming, object-oriented programming,\nfunctional programming, data-driven programming, and data description.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:lua:5.4.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/lua@5.4.6-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=lua-5.4.6-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.lua.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "lua-5.4.6-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:55:28 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "liblua-5.4.so()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/xz-libs@5.4.7-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=xz-5.4.7-1.oe2403.src.rpm&package-id=66b39aff11625986",
+      "type": "application",
+      "name": "xz-libs",
+      "version": "5.4.7",
+      "description": "\nLibraries for decoding files compressed with LZMA or XZ utils.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:xz:5.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/xz-libs@5.4.7-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=xz-5.4.7-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://tukaani.org/xz",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "xz-5.4.7-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Aug 13 02:19:51 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "liblzma.so.5()(64bit), liblzma.so.5(XZ_5.0)(64bit), liblzma.so.5(XZ_5.2)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/file-libs@5.45-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=file-5.45-1.oe2403.src.rpm&package-id=e1cad60893e20f57",
+      "type": "application",
+      "name": "file-libs",
+      "version": "5.45",
+      "description": "\nThis package contains libraries for applications that use libmagic.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:file:5.45:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/file-libs@5.45-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=file-5.45-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.darwinsys.com/file/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "file-5.45-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:26 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libmagic.so.1()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm&package-id=832e2f3e817a1667",
+      "type": "application",
+      "name": "popt",
+      "version": "1.19",
+      "description": "\nThe popt library exists essentially for parsing command line options. Some\nspecific advantages of popt are no global variables (allowing multiple passes\nin parsing argv), parsing an arbitrary array of argv-style elements (allowing\nparsing of command-line-strings from any source), a standard method of option\naliasing, ability to exec external option filters, and automatic generation\nof help and usage messages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:popt:1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/popt/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "popt-1.19-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libpopt.so.0()(64bit), libpopt.so.0(LIBPOPT_0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=5757db1fa1a78a3b",
+      "type": "application",
+      "name": "rpm-libs",
+      "version": "4.18.2",
+      "description": "\nShared library of rpm 4.18.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rpm:4.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://rpm.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "22.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rpm-4.18.2-22.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec  4 09:45:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "librpm.so.9()(64bit), librpmio.so.9()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=837b342631379d6e",
+      "type": "application",
+      "name": "zlib",
+      "version": "1.2.13",
+      "description": "\nZlib is a free, general-purpose, not covered by any patents, lossless data-compression\nlibrary for use on virtually any computer hardware and operating system. The zlib data\nformat is itself portable across platforms.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libz.so.1()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zstd@1.5.5-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zstd-1.5.5-1.oe2403.src.rpm&package-id=7b74193fcce37d43",
+      "type": "application",
+      "name": "zstd",
+      "version": "1.5.5",
+      "description": "\nZstd is a fast lossless compression algorithm. It's backed by a very fast entropy stage,\nprovided by Huff0 and FSE library. It's a real-time compression scenario for zlib levels\nand has a better compression ratio.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zstd:1.5.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zstd@1.5.5-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zstd-1.5.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/facebook/zstd",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zstd-1.5.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:45:04 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libzstd.so.1()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/rpm@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=1fa0642d866dd6b2",
+      "type": "application",
+      "name": "rpm",
+      "version": "4.18.2",
+      "description": "\nThe RPM Package Manager (RPM) is a powerful package management system capability as below\n\n-building computer software from source into easily distributable packages\n-installing, updating and uninstalling packaged software\n-querying detailed information about the packaged software, whether installed or not\n-verifying integrity of packaged software and resulting software installation\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rpm:4.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/rpm@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://rpm.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "22.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rpm-4.18.2-22.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec  4 09:45:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "rpm"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=c064550f241119d5",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=aec66beb9c0ec6c2",
+        "pkg:rpm/openEuler/libacl@2.3.1-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=acl-2.3.1-3.oe2403.src.rpm&package-id=a5c5d727e356b8f1",
+        "pkg:rpm/openEuler/bzip2@1.0.8-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bzip2-1.0.8-7.oe2403.src.rpm&package-id=47d9848557ec8717",
+        "pkg:rpm/openEuler/libcap@2.69-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcap-2.69-3.oe2403.src.rpm&package-id=b7e987789726b5e1",
+        "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=29849424c09dc5a5",
+        "pkg:rpm/openEuler/elfutils-libs@0.190-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=elfutils-0.190-7.oe2403.src.rpm&package-id=94b82170aa70abe6",
+        "pkg:rpm/openEuler/elfutils-libelf@0.190-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=elfutils-0.190-7.oe2403.src.rpm&package-id=4ed85a3a616ca53b",
+        "pkg:rpm/openEuler/libgomp@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=c43ac9fae03b6c82",
+        "pkg:rpm/openEuler/ima-evm-utils-libs@1.5-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ima-evm-utils-1.5-1.oe2403.src.rpm&package-id=d2448bfb73be425b",
+        "pkg:rpm/openEuler/lua@5.4.6-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=lua-5.4.6-1.oe2403.src.rpm&package-id=6fb8baa150c7013b",
+        "pkg:rpm/openEuler/xz-libs@5.4.7-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=xz-5.4.7-1.oe2403.src.rpm&package-id=66b39aff11625986",
+        "pkg:rpm/openEuler/file-libs@5.45-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=file-5.45-1.oe2403.src.rpm&package-id=e1cad60893e20f57",
+        "pkg:rpm/openEuler/popt@1.19-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=popt-1.19-2.oe2403.src.rpm&package-id=832e2f3e817a1667",
+        "pkg:rpm/openEuler/rpm-libs@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=5757db1fa1a78a3b",
+        "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=837b342631379d6e",
+        "pkg:rpm/openEuler/zstd@1.5.5-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zstd-1.5.5-1.oe2403.src.rpm&package-id=7b74193fcce37d43",
+        "pkg:rpm/openEuler/rpm@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=1fa0642d866dd6b2"
+      ]
+    }
+  ]
+}

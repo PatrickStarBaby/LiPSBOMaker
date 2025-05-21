@@ -1,0 +1,311 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:11eed292-9b4d-4d76-a9fa-1ea5c44ef94a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:16Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm&package-id=3d738fec1583843e",
+      "type": "application",
+      "name": "crypto-policies",
+      "version": "20230614",
+      "description": "\nThis package provides update-crypto-policies, which is a tool that sets\nthe policy applicable for the various cryptographic back-ends, such as\nSSL/TLS libraries. The policy set by the tool will be the default policy\nused by these back-ends unless the application user configures them otherwise.\nhttps://fedoraproject.org/wiki/Changes/CryptoPolicy\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:crypto-policies:20230614:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/redhat-crypto/fedora-crypto-policies",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.git5f3458e.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:48:26 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm&package-id=c39623fcf5795131",
+      "type": "application",
+      "name": "crypto-policies",
+      "version": "20230614",
+      "description": "\nThis package provides update-crypto-policies, which is a tool that sets\nthe policy applicable for the various cryptographic back-ends, such as\nSSL/TLS libraries. The policy set by the tool will be the default policy\nused by these back-ends unless the application user configures them otherwise.\nhttps://fedoraproject.org/wiki/Changes/CryptoPolicy\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:crypto-policies:20230614:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/redhat-crypto/fedora-crypto-policies",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.git5f3458e.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:48:26 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(crypto-policies)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/coreutils@9.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=coreutils-9.4-3.oe2403.src.rpm&package-id=4ea045704b7acb91",
+      "type": "application",
+      "name": "coreutils",
+      "version": "9.4",
+      "description": "\nThese are the GNU core utilities.  This package is the combination of\nthe old GNU fileutils, sh-utils, and textutils packages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:coreutils:9.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/coreutils@9.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=coreutils-9.4-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/coreutils/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "coreutils-9.4-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:59:42 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "coreutils"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/grep@3.11-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=grep-3.11-1.oe2403.src.rpm&package-id=440de48240adc684",
+      "type": "application",
+      "name": "grep",
+      "version": "3.11",
+      "description": "\nGrep searches one or more input files for lines containing a match to\na specified pattern. By default, Grep outputs the matching lines.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:grep:3.11:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/grep@3.11-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=grep-3.11-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/grep/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "grep-3.11-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 05:08:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "grep"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm&package-id=020832b22547b615",
+      "type": "application",
+      "name": "sed",
+      "version": "4.9",
+      "description": "\nSed is a non-interactive command-line text editor. A stream editor is used\nto per-form basic text transformations on an input stream (a file or input\nfrom a pipeline).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sed:4.9:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/sed/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sed-4.9-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:27:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "sed"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm&package-id=3d738fec1583843e",
+      "dependsOn": [
+        "pkg:rpm/openEuler/crypto-policies@20230614-2.git5f3458e.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crypto-policies-20230614-2.git5f3458e.oe2403.src.rpm&package-id=c39623fcf5795131",
+        "pkg:rpm/openEuler/coreutils@9.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=coreutils-9.4-3.oe2403.src.rpm&package-id=4ea045704b7acb91",
+        "pkg:rpm/openEuler/grep@3.11-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=grep-3.11-1.oe2403.src.rpm&package-id=440de48240adc684",
+        "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm&package-id=020832b22547b615"
+      ]
+    }
+  ]
+}

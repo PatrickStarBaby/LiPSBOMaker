@@ -1,0 +1,81 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:7432585c-44ce-48d6-a26e-67920d57b2f8",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:44Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/python-setuptools@68.0.0-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=python-setuptools-68.0.0-2.oe2403.src.rpm&package-id=a7c64b6eba984d6a",
+      "type": "application",
+      "name": "python-setuptools",
+      "version": "68.0.0",
+      "description": "\nSetuptools is a collection of enhancements to the Python distutils that allow\nyou to more easily build and distribute Python packages, especially ones that\nhave dependencies on other packages.\n\nThis package contains a python wheel of setuptools to use with venv.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and (BSD or ASL 2.0)"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-setuptools:68.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python-setuptools@68.0.0-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=python-setuptools-68.0.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pypi.python.org/pypi/setuptools",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-setuptools-68.0.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 17 07:18:48 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/python-setuptools@68.0.0-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=python-setuptools-68.0.0-2.oe2403.src.rpm&package-id=a7c64b6eba984d6a",
+      "dependsOn": []
+    }
+  ]
+}

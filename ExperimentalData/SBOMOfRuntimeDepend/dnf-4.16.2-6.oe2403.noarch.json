@@ -1,0 +1,254 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:4e0e66d3-3e78-45d1-9ad3-c7c778fe4782",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:13Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/dnf@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=c643558b11c8cf33",
+      "type": "application",
+      "name": "dnf",
+      "version": "4.16.2",
+      "description": "\nDNF is a software package manager that installs, updates, and removespackages\non RPM-based Linux distributions. It automatically computes dependencies and\ndetermines the actions required to install packages.DNF also makes it easier\nto maintain groups of machines, eliminating the need to manually update each\none using rpm.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/dnf@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Sep  3 14:16:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=588b51cf30756abc",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm&package-id=e7ba9cb0f6310547",
+      "type": "application",
+      "name": "libreport-filesystem",
+      "version": "2.17.10",
+      "description": "\nFilesystem layout for libreport\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libreport:2.17.10:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://abrt.readthedocs.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libreport-2.17.10-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:04:31 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libreport-filesystem"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3-dnf@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=ad5d888b4d568fd4",
+      "type": "application",
+      "name": "python3-dnf",
+      "version": "4.16.2",
+      "description": "\nPython 3 interface to DNF.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-dnf@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:50:08 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-dnf"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/dnf@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=c643558b11c8cf33",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=588b51cf30756abc",
+        "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm&package-id=e7ba9cb0f6310547",
+        "pkg:rpm/openEuler/python3-dnf@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=ad5d888b4d568fd4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:172781de-878a-4774-9872-3f49bfd091d1",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:28:26Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "acl-2.3.1-3.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://savannah.nongnu.org/projects/acl"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "609d56ea-a87c-455e-a98e-37eff5d12aca"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "609d56ea-a87c-455e-a98e-37eff5d12aca",
+      "dependsOn" : [ ]
+    }
+  ]
+}

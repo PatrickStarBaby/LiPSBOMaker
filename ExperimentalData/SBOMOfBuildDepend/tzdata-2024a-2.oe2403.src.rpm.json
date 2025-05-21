@@ -1,0 +1,384 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:acd69180-dfb7-4598-bd74-729c0edfce92",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:29:05Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/tzdata@2024a-2.oe2403?arch=noarch&package-id=51d11807763e9807",
+      "type": "application",
+      "name": "tzdata",
+      "version": "2024a",
+      "description": "This package contains data files with rules for various timezones around\nthe world.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:tzdata:2024a:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/tzdata@2024a-2.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://www.iana.org/time-zones",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "javazic-1.8-37392f2f5d59.tar.xz, javazic.tar.gz, tzcode2024a.tar.gz, tzdata2024a.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "tzdata=2024a-2.oe2403,tzdata-java=2024a-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/gawk@5.2.2-1.oe2403?arch=x86_64&upstream=gawk-5.2.2-1.oe2403.src.rpm&package-id=893add4bc60d2c1f",
+      "type": "application",
+      "name": "gawk",
+      "version": "5.2.2",
+      "description": "\nThe gawk package is the GNU implementation of awk.\nThe awk utility interprets a special-purpose programming language that\nmakes it possible to handle simple data-reformatting jobs with just a\nfew lines of code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gawk:5.2.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gawk@5.2.2-1.oe2403?arch=x86_64&upstream=gawk-5.2.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gawk/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gawk-5.2.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:24:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gawk"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/glibc@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=5f2e6829539737cd",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/glibc@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "glibc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/glibc-common@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=a0bebba4e2124bd6",
+      "type": "application",
+      "name": "glibc-common",
+      "version": "2.38",
+      "description": "\nThe glibc-common package includes common binaries for the GNU libc\nlibraries and national language (locale) support. Besides, zh_CN and\nen_US are included.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/glibc-common@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "glibc-common"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/java-11-openjdk-devel@11.0.25.9-3.oe2403?arch=x86_64&upstream=java-11-openjdk-11.0.25.9-3.oe2403.src.rpm&package-id=741ef2d4c055761c",
+      "type": "application",
+      "name": "java-11-openjdk-devel",
+      "version": "11.0.25.9",
+      "description": "\nThe OpenJDK development tools 11.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA-MD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:java-11-openjdk:11.0.25.9:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/java-11-openjdk-devel@11.0.25.9-3.oe2403?arch=x86_64&upstream=java-11-openjdk-11.0.25.9-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://openjdk.java.net/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "java-11-openjdk-11.0.25.9-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Nov 19 07:22:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "java-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=8dd78b07020ba02d",
+      "type": "application",
+      "name": "perl",
+      "version": "5.38.0",
+      "description": "\nPerl 5 is a highly capable, feature-rich programming language with over 30 years of development.\nPerl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid\nprototyping and large scale development projects.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.perl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "perl-5.38.0-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 17:06:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "perl-interpreter"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/tzdata@2024a-2.oe2403?arch=noarch&package-id=51d11807763e9807",
+      "dependsOn": [
+        "pkg:deb/gawk@5.2.2-1.oe2403?arch=x86_64&upstream=gawk-5.2.2-1.oe2403.src.rpm&package-id=893add4bc60d2c1f",
+        "pkg:deb/glibc@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=5f2e6829539737cd",
+        "pkg:deb/glibc-common@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=a0bebba4e2124bd6",
+        "pkg:deb/java-11-openjdk-devel@11.0.25.9-3.oe2403?arch=x86_64&upstream=java-11-openjdk-11.0.25.9-3.oe2403.src.rpm&package-id=741ef2d4c055761c",
+        "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=8dd78b07020ba02d"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:2ccbd802-a7d6-466f-a057-507d304f9a81",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:25:26Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/procps-ng@4.0.4-6.oe2403?arch=x86_64&package-id=3a33b285361c4e02",
+      "type": "application",
+      "name": "procps-ng",
+      "version": "4.0.4",
+      "description": "The procps package contains a set of system utilities that provide\nsystem information. Procps includes ps, free, skill, pkill, pgrep,\nsnice, tload, top, uptime, vmstat, pidof, pmap, slabtop, w, watch\nand pwdx.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+ and GPLv2 and GPLv2+ and GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:procps-ng:4.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/procps-ng@4.0.4-6.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://sourceforge.net/projects/procps-ng/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "README.top, README.md, procps-ng-4.0.4.tar.xz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "procps-ng=4.0.4-6.oe2403,procps-ng-devel=4.0.4-6.oe2403,procps-ng-i18n=4.0.4-6.oe2403,procps-ng-help=4.0.4-6.oe2403,procps-ng-debuginfo=4.0.4-6.oe2403,procps-ng-debugsource=4.0.4-6.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=fe2d08c47a08a4bf",
+      "type": "application",
+      "name": "autoconf",
+      "version": "2.71",
+      "description": "\nAutoconf is an extensible package of M4 macros that produce shell scripts to automatically\nconfigure software source code packages. These scripts can adapt the packages to many kinds\nof UNIX-like systems without manual user intervention. Autoconf creates a configuration script\nfor a package from a template file that lists the operating system features that the package\ncan use, in the form of M4 macro calls.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf:2.71:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/autoconf/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-2.71-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=67253b0cf14f6936",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=99856bcbe74cfc01",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=0fde334e5c1d67ed",
+      "type": "application",
+      "name": "gettext-devel",
+      "version": "0.22",
+      "description": "\nThis package provides development files and tools which help edit/alter\npo files, if you need to compile gettext related application/library or\nedit/alter po files, you should install this package.\nwant to add gettext support for your project.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gettext:0.22:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gettext/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gettext-0.22-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:32:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gettext-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=1fa26df8085d7df5",
+      "type": "application",
+      "name": "libtool",
+      "version": "2.4.7",
+      "description": "\nGNU libtool is a generic library support script.\nLibtool hides the complexity of using shared libraries behind a consistent, portable interface.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtool:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtool/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtool-2.4.7-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtool"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/ncurses-devel@6.4-8.oe2403?arch=x86_64&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=1fbfb5a2e748b891",
+      "type": "application",
+      "name": "ncurses-devel",
+      "version": "6.4",
+      "description": "\nThe header files and libraries for developing applications that use\nthe ncurses terminal handling library.a, including static libraries\nof the ncurses library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/ncurses-devel@6.4-8.oe2403?arch=x86_64&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ncurses-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd-devel@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=01e0865c1f3c4bf3",
+      "type": "application",
+      "name": "systemd-devel",
+      "version": "255",
+      "description": "\nDevelopment headers and auxiliary files for developing applications linking\nto libudev or libsystemd.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd-devel@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/procps-ng@4.0.4-6.oe2403?arch=x86_64&package-id=3a33b285361c4e02",
+      "dependsOn": [
+        "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=fe2d08c47a08a4bf",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=67253b0cf14f6936",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=99856bcbe74cfc01",
+        "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=0fde334e5c1d67ed",
+        "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=1fa26df8085d7df5",
+        "pkg:deb/ncurses-devel@6.4-8.oe2403?arch=x86_64&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=1fbfb5a2e748b891",
+        "pkg:deb/systemd-devel@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=01e0865c1f3c4bf3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,628 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ad75d27c-b7b2-4ee1-8b83-6278da249316",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:10:23Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/libgpg-error@1.47-1.oe2403?arch=x86_64&package-id=253450615357233c",
+      "type": "application",
+      "name": "libgpg-error",
+      "version": "1.47",
+      "description": "The libgpg-error package contains a library that originally defines common error values for all GnuPG components.\nAmong these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt, Libksba, DirMngr, Pinentry, SCdaemon.\nBecause Libgpg-error is a common dependency all GnuPG components, more features will be added to this library.",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libgpg-error:1.47:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/libgpg-error@1.47-1.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/related_software/libgpg-error/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "libgpg-error-1.47.tar.gz.sig, libgpg-error-1.47.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "libgpg-error=1.47-1.oe2403,libgpg-error-devel=1.47-1.oe2403,libgpg-error-help=1.47-1.oe2403,libgpg-error-debuginfo=1.47-1.oe2403,libgpg-error-debugsource=1.47-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=c4ef01f735f38b9b",
+      "type": "application",
+      "name": "autoconf",
+      "version": "2.71",
+      "description": "\nAutoconf is an extensible package of M4 macros that produce shell scripts to automatically\nconfigure software source code packages. These scripts can adapt the packages to many kinds\nof UNIX-like systems without manual user intervention. Autoconf creates a configuration script\nfor a package from a template file that lists the operating system features that the package\ncan use, in the form of M4 macro calls.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf:2.71:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/autoconf/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-2.71-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=203947f301fd5ec9",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gawk@5.2.2-1.oe2403?arch=x86_64&upstream=gawk-5.2.2-1.oe2403.src.rpm&package-id=dd037d57fb77f975",
+      "type": "application",
+      "name": "gawk",
+      "version": "5.2.2",
+      "description": "\nThe gawk package is the GNU implementation of awk.\nThe awk utility interprets a special-purpose programming language that\nmakes it possible to handle simple data-reformatting jobs with just a\nfew lines of code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gawk:5.2.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gawk@5.2.2-1.oe2403?arch=x86_64&upstream=gawk-5.2.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gawk/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gawk-5.2.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:24:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gawk"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=06a8beabd13ca9c0",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=0a57fab24cbf5600",
+      "type": "application",
+      "name": "gettext",
+      "version": "0.22",
+      "description": "\nGNU gettext is an important step for the GNU Translation Project, as it\nis an asset on which we may build many other steps. This package offers\nto programmers, translators, and even users, a well integrated set of\ntools and documentation. Specifically, the GNU gettext utilities are a\nset of tools that provides a framework to help other GNU packages\nproduce multi-lingual messages. These tools include a set of conventions\nabout how programs should be written to support message catalogs, a\ndirectory and file naming organization for the message catalogs themselves,\na runtime library supporting the retrieval of translated messages, and\na few stand-alone programs to massage in various ways the sets of\ntranslatable strings, or already translated strings. A special GNU Emacs\nmode also helps interested parties in preparing these sets, or bringing\nthem up to date.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gettext:0.22:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gettext/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gettext-0.22-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:32:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gettext"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=43b920a7383636dc",
+      "type": "application",
+      "name": "gettext-devel",
+      "version": "0.22",
+      "description": "\nThis package provides development files and tools which help edit/alter\npo files, if you need to compile gettext related application/library or\nedit/alter po files, you should install this package.\nwant to add gettext support for your project.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gettext:0.22:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gettext/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gettext-0.22-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:32:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gettext-autopoint, gettext-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=6762efba298ca24a",
+      "type": "application",
+      "name": "libtool",
+      "version": "2.4.7",
+      "description": "\nGNU libtool is a generic library support script.\nLibtool hides the complexity of using shared libraries behind a consistent, portable interface.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtool:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtool/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtool-2.4.7-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtool"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=b225b79f617d1824",
+      "type": "application",
+      "name": "make",
+      "version": "4.4.1",
+      "description": "\nGNU Make is a tool which controls the generation of executables and other\nnon-source files of a program from the program's source files.\n\nMake gets its knowledge of how to build your program from a file called\nthe makefile, which lists each of the non-source files and how to compute\nit from other files. When you write a program, you should write a makefile\nfor it, so that it is possible to use Make to build and install the program.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:make:4.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/make/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "make-4.4.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb  5 15:26:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "make"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/texinfo@7.0.3-3.oe2403?arch=x86_64&upstream=texinfo-7.0.3-3.oe2403.src.rpm&package-id=f8254d75c952cf45",
+      "type": "application",
+      "name": "texinfo",
+      "version": "7.0.3",
+      "description": "\nTexinfo is a documentation system that uses a single source file to produce\nboth online information and printed output. Instead of writing different documents\nfor online presentation and another for printed work, you need have only one document.\n\nTexinfo can produce output in plain ASCII, HTML, its own hypertext format called Info,\nand (using TeX) DVI format. It includes the makeinfo program.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:texinfo:7.0.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/texinfo@7.0.3-3.oe2403?arch=x86_64&upstream=texinfo-7.0.3-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/texinfo/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "texinfo-7.0.3-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:50:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "texinfo"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/libgpg-error@1.47-1.oe2403?arch=x86_64&package-id=253450615357233c",
+      "dependsOn": [
+        "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=c4ef01f735f38b9b",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=203947f301fd5ec9",
+        "pkg:deb/gawk@5.2.2-1.oe2403?arch=x86_64&upstream=gawk-5.2.2-1.oe2403.src.rpm&package-id=dd037d57fb77f975",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=06a8beabd13ca9c0",
+        "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=0a57fab24cbf5600",
+        "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=43b920a7383636dc",
+        "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=6762efba298ca24a",
+        "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=b225b79f617d1824",
+        "pkg:deb/texinfo@7.0.3-3.oe2403?arch=x86_64&upstream=texinfo-7.0.3-3.oe2403.src.rpm&package-id=f8254d75c952cf45"
+      ]
+    }
+  ]
+}

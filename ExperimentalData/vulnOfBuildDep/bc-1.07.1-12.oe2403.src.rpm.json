@@ -1,0 +1,251 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:ba443f44-55b0-455c-aac9-f7c6b3ccafd6",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:34:17Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "bc-1.07.1-12.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.gnu.org/software/bc/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "5b3e96a1-f512-4a73-a1ce-1b5f595d222b"
+    }
+  },
+  "components" : [
+    {
+      "name" : "ed",
+      "version" : "1.19",
+      "description" : "GNU ed is a line-oriented text editor. It is used to create, display, modify and otherwise manipulate text files, both interactively and via shell scripts. A restricted version of ed, red, can only edit files in the current directory and cannot execute shell commands. Ed is the \"standard\" text editor in the sense that it is the original editor for Unix, and thus widely available. For most purposes, however, it is superseded by full-screen editors such as GNU Emacs or GNU Moe.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GFDL-1.3"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:ed:1.19:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/ed@1.19-2.oe2403?arch=x86_64&upstream=ed-1.19-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.gnu.org/software/ed/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "cbf428e4-8d1f-44c6-8d6d-804e60d8a588"
+    },
+    {
+      "name" : "flex",
+      "version" : "2.6.4",
+      "description" : "Flex is a tool for generating scanners: programs which recognize lexical patterns in text.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:flex:2.6.4:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/flex@2.6.4-5.oe2403?arch=x86_64&upstream=flex-2.6.4-5.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/westes/flex"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "3565b6d0-2b63-4058-b85f-bd6fcfebd49e"
+    },
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "5f95773b-febe-48ad-9f5e-a8cf24e53cb6"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "5b3e96a1-f512-4a73-a1ce-1b5f595d222b",
+      "dependsOn" : [
+        "cbf428e4-8d1f-44c6-8d6d-804e60d8a588",
+        "3565b6d0-2b63-4058-b85f-bd6fcfebd49e",
+        "5f95773b-febe-48ad-9f5e-a8cf24e53cb6"
+      ]
+    },
+    {
+      "ref" : "cbf428e4-8d1f-44c6-8d6d-804e60d8a588",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "3565b6d0-2b63-4058-b85f-bd6fcfebd49e",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "5f95773b-febe-48ad-9f5e-a8cf24e53cb6",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "8a8906f9-c2c2-4121-8678-14ffd84e74d5",
+      "id" : "CVE-2015-2987",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 2.6,
+          "severity" : "low",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:H/Au:N/C:P/I:N/A:N)"
+        }
+      ],
+      "cwes" : [
+        17
+      ],
+      "description" : "Type74 ED before 4.0 misuses 128-bit ECB encryption for small files, which makes it easier for attackers to obtain plaintext data via differential cryptanalysis of a file with an original length smaller than 128 bits.",
+      "published" : "2015-08-28T15:59:00Z",
+      "updated" : "2024-11-21T02:28:00Z",
+      "affects" : [
+        {
+          "ref" : "cbf428e4-8d1f-44c6-8d6d-804e60d8a588"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "5799ccc0-cc70-4dbe-8ae6-6259a1e5e741",
+      "id" : "CVE-2019-6293",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:N/I:N/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        674
+      ],
+      "description" : "An issue was discovered in the function mark_beginning_as_normal in nfa.c in flex 2.6.4. There is a stack exhaustion problem caused by the mark_beginning_as_normal function making recursive calls to itself in certain scenarios involving lots of '*' characters. Remote attackers could leverage this vulnerability to cause a denial-of-service.",
+      "published" : "2019-01-15T00:29:00Z",
+      "updated" : "2024-11-21T04:46:00Z",
+      "affects" : [
+        {
+          "ref" : "3565b6d0-2b63-4058-b85f-bd6fcfebd49e"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "7f3b6fb3-cb12-4878-8257-a6670c0e3e1e",
+      "id" : "CVE-2015-1773",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:N/I:P/A:N)"
+        }
+      ],
+      "cwes" : [
+        79
+      ],
+      "description" : "Cross-site scripting (XSS) vulnerability in asdoc/templates/index.html in Apache Flex before 4.14.1 allows remote attackers to inject arbitrary web script or HTML by providing a crafted URI to JavaScript code generated by the asdoc component.",
+      "published" : "2015-04-08T01:59:00Z",
+      "updated" : "2024-11-21T02:26:00Z",
+      "affects" : [
+        {
+          "ref" : "3565b6d0-2b63-4058-b85f-bd6fcfebd49e"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "5f95773b-febe-48ad-9f5e-a8cf24e53cb6"
+        }
+      ]
+    }
+  ]
+}

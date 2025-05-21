@@ -1,0 +1,197 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c4b0e37b-656c-4ed6-833a-e4de54401786",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:34Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/yum@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=dee2713543aff7c3",
+      "type": "application",
+      "name": "yum",
+      "version": "4.16.2",
+      "description": "\nUtility that allows users to manage packages on their systems.\\\nIt supports RPMs, modules and comps groups & environments.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/yum@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Sep  3 14:16:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/yum@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=d60e9208ea4b5d39",
+      "type": "application",
+      "name": "yum",
+      "version": "4.16.2",
+      "description": "\nUtility that allows users to manage packages on their systems.\\\nIt supports RPMs, modules and comps groups & environments.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/yum@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:50:08 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(yum)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/dnf@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=a122eb2cd9eca65d",
+      "type": "application",
+      "name": "dnf",
+      "version": "4.16.2",
+      "description": "\nDNF is a software package manager that installs, updates, and removespackages\non RPM-based Linux distributions. It automatically computes dependencies and\ndetermines the actions required to install packages.DNF also makes it easier\nto maintain groups of machines, eliminating the need to manually update each\none using rpm.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/dnf@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:50:08 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "dnf"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/yum@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=dee2713543aff7c3",
+      "dependsOn": [
+        "pkg:rpm/openEuler/yum@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=d60e9208ea4b5d39",
+        "pkg:rpm/openEuler/dnf@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=a122eb2cd9eca65d"
+      ]
+    }
+  ]
+}

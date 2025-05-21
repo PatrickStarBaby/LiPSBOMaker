@@ -1,0 +1,384 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3a8c51f5-3067-4ac5-ad79-c8fca1613aeb",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:13:52Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/ncurses@6.4-8.oe2403?arch=x86_64&package-id=53a1fa1e978412d2",
+      "type": "application",
+      "name": "ncurses",
+      "version": "6.4",
+      "description": "The ncurses (new curses) library is a free software emulation of\ncurses in System V Release 4.0 (SVr4), and more. It uses terminfo\nformat, supports pads and color and multiple highlights and forms\ncharacters and function-key mapping, and has all the other SVr4-curses\nenhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/ncurses@6.4-8.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "ncurses-6.4.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "ncurses=6.4-8.oe2403,ncurses-base=6.4-8.oe2403,ncurses-libs=6.4-8.oe2403,ncurses-devel=6.4-8.oe2403,ncurses-compat-libs=6.4-8.oe2403,ncurses-static=6.4-8.oe2403,ncurses-help=6.4-8.oe2403,ncurses-debuginfo=6.4-8.oe2403,ncurses-debugsource=6.4-8.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=8b40307f6aa26d59",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=73e0e7d3c47b09b5",
+      "type": "application",
+      "name": "gcc-c++",
+      "version": "12.3.1",
+      "description": "\nThis package adds C++ support to the GNU Compiler Collection.\nIt includes support for most of the current C++ specification,\nincluding templates and exception handling.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc-c++"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gpm-devel@1.20.7-27.oe2403?arch=x86_64&upstream=gpm-1.20.7-27.oe2403.src.rpm&package-id=6ce14a039626ab0f",
+      "type": "application",
+      "name": "gpm-devel",
+      "version": "1.20.7",
+      "description": "\nThe gpm-devel package includes header files and libraries necessary\nfor  the gpm library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2 and GPLv2+ with exceptions and GPLv3+ and Verbatim and Copyright only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpm:1.20.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gpm-devel@1.20.7-27.oe2403?arch=x86_64&upstream=gpm-1.20.7-27.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.nico.schottelius.org/software/gpm/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "27.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpm-1.20.7-27.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:01:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gpm-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=b063d16d148edd68",
+      "type": "application",
+      "name": "make",
+      "version": "4.4.1",
+      "description": "\nGNU Make is a tool which controls the generation of executables and other\nnon-source files of a program from the program's source files.\n\nMake gets its knowledge of how to build your program from a file called\nthe makefile, which lists each of the non-source files and how to compute\nit from other files. When you write a program, you should write a makefile\nfor it, so that it is possible to use Make to build and install the program.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:make:4.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/make/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "make-4.4.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb  5 15:26:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "make"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=f3dea572cf758fbd",
+      "type": "application",
+      "name": "pkgconf",
+      "version": "1.9.5",
+      "description": "\npkgconf is a program which helps to configure compiler and linker flags for development frameworks.\nIt is similar to pkg-config from freedesktop.org, providing additional functionality while also\nmaintaining compatibility.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pkgconf:1.9.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://pkgconf.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pkgconf-1.9.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:17:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/ncurses@6.4-8.oe2403?arch=x86_64&package-id=53a1fa1e978412d2",
+      "dependsOn": [
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=8b40307f6aa26d59",
+        "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=73e0e7d3c47b09b5",
+        "pkg:deb/gpm-devel@1.20.7-27.oe2403?arch=x86_64&upstream=gpm-1.20.7-27.oe2403.src.rpm&package-id=6ce14a039626ab0f",
+        "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=b063d16d148edd68",
+        "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=f3dea572cf758fbd"
+      ]
+    }
+  ]
+}

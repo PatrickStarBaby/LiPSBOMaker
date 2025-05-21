@@ -1,0 +1,140 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:38d1b08c-7d59-4746-a402-02d4be0a3bef",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:34Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/python-pip-wheel@23.3.1-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=python-pip-23.3.1-2.oe2403.src.rpm&package-id=3887da808e0d5e07",
+      "type": "application",
+      "name": "python-pip-wheel",
+      "version": "23.3.1",
+      "description": "\nA Python wheel of pip to use with venv\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-pip:23.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python-pip-wheel@23.3.1-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=python-pip-23.3.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.pip-installer.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-pip-23.3.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jul 16 02:01:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm&package-id=282b466046a9f2b7",
+      "type": "application",
+      "name": "ca-certificates",
+      "version": "2023.2.64",
+      "description": "\nThis package contains the set of CA certificates chosen by the\nMozilla Foundation for use with the Internet PKI.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ca-certificates:2023.2.64:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://fedoraproject.org/wiki/CA-Certificates",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ca-certificates-2023.2.64-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:18:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ca-certificates"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/python-pip-wheel@23.3.1-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=python-pip-23.3.1-2.oe2403.src.rpm&package-id=3887da808e0d5e07",
+      "dependsOn": [
+        "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm&package-id=282b466046a9f2b7"
+      ]
+    }
+  ]
+}

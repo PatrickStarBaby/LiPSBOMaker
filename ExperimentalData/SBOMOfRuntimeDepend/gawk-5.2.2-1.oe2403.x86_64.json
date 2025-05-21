@@ -1,0 +1,482 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:4c97cfea-3b57-4218-951e-5f5d4c7838d7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:20Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/gawk@5.2.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gawk-5.2.2-1.oe2403.src.rpm&package-id=435baa645d2ea9e4",
+      "type": "application",
+      "name": "gawk",
+      "version": "5.2.2",
+      "description": "\nThe gawk package is the GNU implementation of awk.\nThe awk utility interprets a special-purpose programming language that\nmakes it possible to handle simple data-reformatting jobs with just a\nfew lines of code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gawk:5.2.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gawk@5.2.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gawk-5.2.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gawk/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gawk-5.2.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:24:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=b5bff79b9d0c0deb",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/filesystem@3.16-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=filesystem-3.16-5.oe2403.src.rpm&package-id=ef29e54ce5ef83c2",
+      "type": "application",
+      "name": "filesystem",
+      "version": "3.16",
+      "description": "\nThe filesystem package is one of the basic packages that is installed\non a Linux system. Filesystem contains the basic directory layout\nfor a Linux operating system, including the correct permissions for\nthe directories.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:filesystem:3.16:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/filesystem@3.16-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=filesystem-3.16-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/filesystem",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "filesystem-3.16-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:41:19 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "filesystem"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=c1c07940f3805b0f",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.11)(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), libm.so.6()(64bit), libm.so.6(GLIBC_2.2.5)(64bit), libm.so.6(GLIBC_2.29)(64bit), libm.so.6(GLIBC_2.38)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gmp@6.3.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gmp-6.3.0-3.oe2403.src.rpm&package-id=8ebd293ed03233f6",
+      "type": "application",
+      "name": "gmp",
+      "version": "6.3.0",
+      "description": "\nGMP is a portable library written in C for arbitrary precision arithmetic\non integers, rational numbers, and floating-point numbers. It aims to provide\nthe fastest possible arithmetic for all applications that need higher\nprecision than is directly supported by the basic C types.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gmp:6.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gmp@6.3.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gmp-6.3.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gmplib.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gmp-6.3.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Aug  6 03:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgmp.so.10()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/mpfr@4.2.1-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=mpfr-4.2.1-1.oe2403.src.rpm&package-id=00277c89dfdae596",
+      "type": "application",
+      "name": "mpfr",
+      "version": "4.2.1",
+      "description": "\nMPFR is a C library for arbitrary-precision binary floating-point computation\nwith correct rounding, based on Multi-Precision Library. The computation is\nboth efficient and has a well-defined semantics: the functions are completely\nspecified on all the possible operands and the results do not depend on the\nplatform. This is done by copying the ideas from the ANSI/IEEE-754 standard\nfor fixed-precision floating-point arithmetic (correct rounding and exceptions,\nin particular)\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv3+ and GPLv3+ and GFDL-1.2-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:mpfr:4.2.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/mpfr@4.2.1-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=mpfr-4.2.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.mpfr.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "mpfr-4.2.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:16:26 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libmpfr.so.6()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/readline@8.2-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=readline-8.2-2.oe2403.src.rpm&package-id=80b4bba6390e23c9",
+      "type": "application",
+      "name": "readline",
+      "version": "8.2",
+      "description": "\nThe GNU Readline library provides a set of functions for use by\napplications that allow users to edit command lines as they are\ntyped in. Both Emacs and vi editing modes are available.The Readline\nlibrary includes additional functions to maintain a list of\npreviously-entered command lines, to recall and perhaps reedit those\nlines, and perform csh-like history expansion on previous commands.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:readline:8.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/readline@8.2-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=readline-8.2-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://tiswww.case.edu/php/chet/readline/rltop.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "readline-8.2-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:45:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libreadline.so.8()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libsigsegv@2.14-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsigsegv-2.14-1.oe2403.src.rpm&package-id=d07adb8c9a50b381",
+      "type": "application",
+      "name": "libsigsegv",
+      "version": "2.14",
+      "description": "\nLibsigsegv is a library for handling page faults in user mode. A page fault occurs\nwhen a program tries to access to a region of memory that is currently not available.\nCatching and handling a page fault is a useful technique for implementing:\n  *  pageable virtual memory,\n  *  memory-mapped access to persistent databases,\n  *  generational garbage collectors,\n  *  stack overflow handlers,\n  *  distributed shared memory,\n  *  ...\nThis library supports three sets of functions, all defined in <sigsegv.h>.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libsigsegv:2.14:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libsigsegv@2.14-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsigsegv-2.14-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/libsigsegv/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libsigsegv-2.14-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:47:15 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsigsegv.so.2()(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/gawk@5.2.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gawk-5.2.2-1.oe2403.src.rpm&package-id=435baa645d2ea9e4",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=b5bff79b9d0c0deb",
+        "pkg:rpm/openEuler/filesystem@3.16-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=filesystem-3.16-5.oe2403.src.rpm&package-id=ef29e54ce5ef83c2",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=c1c07940f3805b0f",
+        "pkg:rpm/openEuler/gmp@6.3.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gmp-6.3.0-3.oe2403.src.rpm&package-id=8ebd293ed03233f6",
+        "pkg:rpm/openEuler/mpfr@4.2.1-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=mpfr-4.2.1-1.oe2403.src.rpm&package-id=00277c89dfdae596",
+        "pkg:rpm/openEuler/readline@8.2-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=readline-8.2-2.oe2403.src.rpm&package-id=80b4bba6390e23c9",
+        "pkg:rpm/openEuler/libsigsegv@2.14-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libsigsegv-2.14-1.oe2403.src.rpm&package-id=d07adb8c9a50b381"
+      ]
+    }
+  ]
+}

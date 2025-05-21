@@ -1,0 +1,191 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c7d6d870-6849-4bd0-a113-26db3fcd8e71",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:44Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm&package-id=66757d7fb451e220",
+      "type": "application",
+      "name": "setup",
+      "version": "2.14.5",
+      "description": "\nThe setup package contains a set of important system configuration and\nsetup files, such as passwd, group, and profile.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:setup:2.14.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/setup/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "setup-2.14.5-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:00:56 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm&package-id=dca27616a353e265",
+      "type": "application",
+      "name": "setup",
+      "version": "2.14.5",
+      "description": "\nThe setup package contains a set of important system configuration and\nsetup files, such as passwd, group, and profile.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:setup:2.14.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/setup/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "setup-2.14.5-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:00:56 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(setup)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/openEuler-release@24.03LTS-55.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-release-24.03LTS-55.oe2403.src.rpm&package-id=6d2ae6b957bebb65",
+      "type": "application",
+      "name": "openEuler-release",
+      "version": "24.03LTS",
+      "description": "\nopenEuler release files\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Mulan PSL v2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openEuler-release:24.03LTS:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openEuler-release@24.03LTS-55.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-release-24.03LTS-55.oe2403.src.rpm",
+      "properties": [
+        {
+          "name": "release",
+          "value": "55.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openEuler-release-24.03LTS-55.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 07:54:14 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "system-release"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm&package-id=66757d7fb451e220",
+      "dependsOn": [
+        "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm&package-id=dca27616a353e265",
+        "pkg:rpm/openEuler/openEuler-release@24.03LTS-55.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openEuler-release-24.03LTS-55.oe2403.src.rpm&package-id=6d2ae6b957bebb65"
+      ]
+    }
+  ]
+}

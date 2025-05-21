@@ -1,0 +1,81 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:cb33ab62-7464-4885-a785-b76095e9248e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:42Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/ncurses-base@6.4-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=3b853c587dd484e8",
+      "type": "application",
+      "name": "ncurses-base",
+      "version": "6.4",
+      "description": "\nThis package contains descriptions of common terminals.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ncurses-base@6.4-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/ncurses-base@6.4-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=3b853c587dd484e8",
+      "dependsOn": []
+    }
+  ]
+}

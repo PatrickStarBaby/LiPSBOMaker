@@ -1,0 +1,567 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1ba1fa89-6c68-41e5-bcaa-963e49920ef2",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:54:59Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/chkconfig@1.25-2.oe2403?arch=x86_64&package-id=eece450e00de4dc8",
+      "type": "application",
+      "name": "chkconfig",
+      "version": "1.25",
+      "description": "Chkconfig is a basic system utility.  It updates and queries runlevel\ninformation for system services.  Chkconfig manipulates the numerous\nsymbolic links in /etc/rc.d, to relieve system administrators of some\nof the drudgery of manually editing the symbolic links.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:chkconfig:1.25:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/chkconfig@1.25-2.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://github.com/fedora-sysv/chkconfig",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "chkconfig-1.25.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "chkconfig=1.25-2.oe2403,chkconfig-help=1.25-2.oe2403,chkconfig-debuginfo=1.25-2.oe2403,chkconfig-debugsource=1.25-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/beakerlib@1.29.3-2.oe2403?arch=noarch&upstream=beakerlib-1.29.3-2.oe2403.src.rpm&package-id=e50007db44d53a74",
+      "type": "application",
+      "name": "beakerlib",
+      "version": "1.29.3",
+      "description": "\nThe BeakerLib project means to provide a library of various helpers, which\ncould be used when writing operating system level integration tests.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:beakerlib:1.29.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/beakerlib@1.29.3-2.oe2403?arch=noarch&upstream=beakerlib-1.29.3-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/beakerlib/beakerlib",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "beakerlib-1.29.3-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:11:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "beakerlib"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=98d53ed97dad88bd",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=54f7c96a4ca5f5d6",
+      "type": "application",
+      "name": "gettext",
+      "version": "0.22",
+      "description": "\nGNU gettext is an important step for the GNU Translation Project, as it\nis an asset on which we may build many other steps. This package offers\nto programmers, translators, and even users, a well integrated set of\ntools and documentation. Specifically, the GNU gettext utilities are a\nset of tools that provides a framework to help other GNU packages\nproduce multi-lingual messages. These tools include a set of conventions\nabout how programs should be written to support message catalogs, a\ndirectory and file naming organization for the message catalogs themselves,\na runtime library supporting the retrieval of translated messages, and\na few stand-alone programs to massage in various ways the sets of\ntranslatable strings, or already translated strings. A special GNU Emacs\nmode also helps interested parties in preparing these sets, or bringing\nthem up to date.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gettext:0.22:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gettext/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gettext-0.22-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:32:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gettext"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=15be2187b819b27b",
+      "type": "application",
+      "name": "libselinux-devel",
+      "version": "3.5",
+      "description": "\nlibselinux provides an interface to get and set process and file\nsecurity contexts and to obtain security policy decisions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libselinux:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libselinux-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libselinux-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=fb57819ec909e59a",
+      "type": "application",
+      "name": "make",
+      "version": "4.4.1",
+      "description": "\nGNU Make is a tool which controls the generation of executables and other\nnon-source files of a program from the program's source files.\n\nMake gets its knowledge of how to build your program from a file called\nthe makefile, which lists each of the non-source files and how to compute\nit from other files. When you write a program, you should write a makefile\nfor it, so that it is possible to use Make to build and install the program.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:make:4.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/make/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "make-4.4.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb  5 15:26:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "make"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/newt-devel@0.52.23-3.oe2403?arch=x86_64&upstream=newt-0.52.23-3.oe2403.src.rpm&package-id=849b91fc5e07face",
+      "type": "application",
+      "name": "newt-devel",
+      "version": "0.52.23",
+      "description": "\nThe devel for newt. Install newt-devel can help you develop\napplications.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:newt:0.52.23:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/newt-devel@0.52.23-3.oe2403?arch=x86_64&upstream=newt-0.52.23-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/newt",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "newt-0.52.23-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:49:43 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "newt-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm&package-id=98fcc6081f06b787",
+      "type": "application",
+      "name": "popt-devel",
+      "version": "1.19",
+      "description": "\nThe popt-devel package contains libraries and header files for\ndeveloping applications that use popt.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:popt:1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/popt/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "popt-1.19-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "popt-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd-devel@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=7b33ed20a2c975c6",
+      "type": "application",
+      "name": "systemd-devel",
+      "version": "255",
+      "description": "\nDevelopment headers and auxiliary files for developing applications linking\nto libudev or libsystemd.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd-devel@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/chkconfig@1.25-2.oe2403?arch=x86_64&package-id=eece450e00de4dc8",
+      "dependsOn": [
+        "pkg:deb/beakerlib@1.29.3-2.oe2403?arch=noarch&upstream=beakerlib-1.29.3-2.oe2403.src.rpm&package-id=e50007db44d53a74",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=98d53ed97dad88bd",
+        "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=54f7c96a4ca5f5d6",
+        "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=15be2187b819b27b",
+        "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=fb57819ec909e59a",
+        "pkg:deb/newt-devel@0.52.23-3.oe2403?arch=x86_64&upstream=newt-0.52.23-3.oe2403.src.rpm&package-id=849b91fc5e07face",
+        "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm&package-id=98fcc6081f06b787",
+        "pkg:deb/systemd-devel@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=7b33ed20a2c975c6"
+      ]
+    }
+  ]
+}

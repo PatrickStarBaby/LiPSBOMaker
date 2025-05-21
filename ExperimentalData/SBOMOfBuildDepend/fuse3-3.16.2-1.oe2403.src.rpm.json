@@ -1,0 +1,689 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:97b3a558-3eb7-43a1-8dbd-bf7eecf9b476",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:00:38Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/fuse3@3.16.2-1.oe2403?arch=aarch64&package-id=bd8259ded07ad76b",
+      "type": "application",
+      "name": "fuse3",
+      "version": "3.16.2",
+      "description": "FUSE (Filesystem in Userspace) is an interface for userspace programs to export\na filesystem to the Linux kernel. The FUSE project consists of two components:\nthe fuse kernel module (maintained in the regular kernel repositories) and the\nlibfuse userspace library (maintained in this repository). libfuse provides the\nreference implementation for communicating with the FUSE kernel module.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:fuse3:3.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/fuse3@3.16.2-1.oe2403?arch=aarch64",
+      "externalReferences": [
+        {
+          "url": "http://fuse.sf.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "aarch64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "fuse.conf, fuse-3.16.2.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "fuse3=3.16.2-1.oe2403,fuse-common=3.16.2-1.oe2403,fuse3-devel=3.16.2-1.oe2403,fuse3-help=3.16.2-1.oe2403,fuse3-debuginfo=3.16.2-1.oe2403,fuse3-debugsource=3.16.2-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=99b368bb9d4639f7",
+      "type": "application",
+      "name": "autoconf",
+      "version": "2.71",
+      "description": "\nAutoconf is an extensible package of M4 macros that produce shell scripts to automatically\nconfigure software source code packages. These scripts can adapt the packages to many kinds\nof UNIX-like systems without manual user intervention. Autoconf creates a configuration script\nfor a package from a template file that lists the operating system features that the package\ncan use, in the form of M4 macro calls.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf:2.71:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/autoconf/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-2.71-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=6f0bbf6b9a2764c5",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/fdupes@2.2.1-1.oe2403?arch=x86_64&upstream=fdupes-2.2.1-1.oe2403.src.rpm&package-id=e8095978f8bca12d",
+      "type": "application",
+      "name": "fdupes",
+      "version": "2.2.1",
+      "description": "\nFDUPES is a program for identifying duplicate files residing within specified\ndirectories.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:fdupes:2.2.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/fdupes@2.2.1-1.oe2403?arch=x86_64&upstream=fdupes-2.2.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/adrianlopezroche/fdupes",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "fdupes-2.2.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:34:56 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "fdupes"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=12bddc3df3c1e1e8",
+      "type": "application",
+      "name": "gettext-devel",
+      "version": "0.22",
+      "description": "\nThis package provides development files and tools which help edit/alter\npo files, if you need to compile gettext related application/library or\nedit/alter po files, you should install this package.\nwant to add gettext support for your project.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gettext:0.22:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gettext/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gettext-0.22-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:32:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gettext-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=121f90e4e720463f",
+      "type": "application",
+      "name": "libselinux-devel",
+      "version": "3.5",
+      "description": "\nlibselinux provides an interface to get and set process and file\nsecurity contexts and to obtain security policy decisions.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libselinux:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libselinux-3.5-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:49:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libselinux-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=98cd027ba66d0bbd",
+      "type": "application",
+      "name": "libtool",
+      "version": "2.4.7",
+      "description": "\nGNU libtool is a generic library support script.\nLibtool hides the complexity of using shared libraries behind a consistent, portable interface.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtool:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtool/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtool-2.4.7-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtool"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/meson@1.3.1-1.oe2403?arch=noarch&upstream=meson-1.3.1-1.oe2403.src.rpm&package-id=f19aee4fa28b60ca",
+      "type": "application",
+      "name": "meson",
+      "version": "1.3.1",
+      "description": "\nMeson is an open source build system meant to be both extremely fast, and, even more importantly,\nas user friendly as possible.\n\nThe main design point of Meson is that every moment a developer spends writing or debugging build\ndefinitions is a second wasted. So is every second spent waiting for the build system to actually\nstart compiling code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ASL 2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:meson:1.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/meson@1.3.1-1.oe2403?arch=noarch&upstream=meson-1.3.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://mesonbuild.com/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "meson-1.3.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:45:42 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "meson"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/ninja-build@1.11.1-1.oe2403?arch=x86_64&upstream=ninja-build-1.11.1-1.oe2403.src.rpm&package-id=c1148380e3c66921",
+      "type": "application",
+      "name": "ninja-build",
+      "version": "1.11.1",
+      "description": "\nNinja is a small build system with a focus on speed. It differs from other build systems\nin two major respects: it is designed to have its input files generated by a higher-level\nbuild system, and it is designed to run builds as fast as possible.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ASL 2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ninja-build:1.11.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/ninja-build@1.11.1-1.oe2403?arch=x86_64&upstream=ninja-build-1.11.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://ninja-build.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ninja-build-1.11.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:44:33 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ninja-build"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=8bdb8adf5589d3e0",
+      "type": "application",
+      "name": "pkgconf",
+      "version": "1.9.5",
+      "description": "\npkgconf is a program which helps to configure compiler and linker flags for development frameworks.\nIt is similar to pkg-config from freedesktop.org, providing additional functionality while also\nmaintaining compatibility.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pkgconf:1.9.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://pkgconf.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pkgconf-1.9.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:17:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd-udev@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=7ce7a442245f564f",
+      "type": "application",
+      "name": "systemd-udev",
+      "version": "255",
+      "description": "\nThis package contains systemd-udev and the rules and hardware database\nneeded to manage device nodes. This package is necessary on physical\nmachines and in virtual machines, but not in containers.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd-udev@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd-udev"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/fuse3@3.16.2-1.oe2403?arch=aarch64&package-id=bd8259ded07ad76b",
+      "dependsOn": [
+        "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=99b368bb9d4639f7",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=6f0bbf6b9a2764c5",
+        "pkg:deb/fdupes@2.2.1-1.oe2403?arch=x86_64&upstream=fdupes-2.2.1-1.oe2403.src.rpm&package-id=e8095978f8bca12d",
+        "pkg:deb/gettext-devel@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=12bddc3df3c1e1e8",
+        "pkg:deb/libselinux-devel@3.5-3.oe2403?arch=x86_64&upstream=libselinux-3.5-3.oe2403.src.rpm&package-id=121f90e4e720463f",
+        "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=98cd027ba66d0bbd",
+        "pkg:deb/meson@1.3.1-1.oe2403?arch=noarch&upstream=meson-1.3.1-1.oe2403.src.rpm&package-id=f19aee4fa28b60ca",
+        "pkg:deb/ninja-build@1.11.1-1.oe2403?arch=x86_64&upstream=ninja-build-1.11.1-1.oe2403.src.rpm&package-id=c1148380e3c66921",
+        "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=8bdb8adf5589d3e0",
+        "pkg:deb/systemd-udev@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=7ce7a442245f564f"
+      ]
+    }
+  ]
+}

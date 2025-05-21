@@ -1,0 +1,262 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:7f39b735-708e-4291-800b-71de1b56269d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:25:56Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/python-setuptools@68.0.0-2.oe2403?arch=noarch&package-id=1039bd95c755b4f5",
+      "type": "application",
+      "name": "python-setuptools",
+      "version": "68.0.0",
+      "description": "Setuptools is a collection of enhancements to the Python distutils that allow\nyou to more easily build and distribute Python packages, especially ones that\nhave dependencies on other packages.\n\nThis package contains a python wheel of setuptools to use with venv.",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and (BSD or ASL 2.0)"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-setuptools:68.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/python-setuptools@68.0.0-2.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://pypi.python.org/pypi/setuptools",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "setuptools-68.0.0.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "python-setuptools=68.0.0-2.oe2403,python3-setuptools=68.0.0-2.oe2403,python-setuptools-help=68.0.0-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=704580eeb362df03",
+      "type": "application",
+      "name": "python3-devel",
+      "version": "3.11.6",
+      "description": "\nThis package contains the header files and configuration needed to develop\npython3 modules.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-pip@23.3.1-2.oe2403?arch=noarch&upstream=python-pip-23.3.1-2.oe2403.src.rpm&package-id=2d3901bc3e9691c3",
+      "type": "application",
+      "name": "python3-pip",
+      "version": "23.3.1",
+      "description": "\npip is the package installer for Python. You can use pip to install packages from the Python Package Index and other indexes.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-pip:23.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-pip@23.3.1-2.oe2403?arch=noarch&upstream=python-pip-23.3.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.pip-installer.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-pip-23.3.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jul 16 02:01:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-wheel@0.40.0-1.oe2403?arch=noarch&upstream=python-wheel-0.40.0-1.oe2403.src.rpm&package-id=eab5d68e9c8c4cc5",
+      "type": "application",
+      "name": "python3-wheel",
+      "version": "0.40.0",
+      "description": "\nA built-package format for Python.\nA wheel is a ZIP-format archive with a specially formatted filename and the\n.whl extension. It is designed to contain all the files for a PEP 376\ncompatible install in a way that is very close to the on-disk format.\nPython 3 version.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-wheel:0.40.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-wheel@0.40.0-1.oe2403?arch=noarch&upstream=python-wheel-0.40.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/pypa/wheel",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-wheel-0.40.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:41:00 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-wheel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/python-setuptools@68.0.0-2.oe2403?arch=noarch&package-id=1039bd95c755b4f5",
+      "dependsOn": [
+        "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=704580eeb362df03",
+        "pkg:deb/python3-pip@23.3.1-2.oe2403?arch=noarch&upstream=python-pip-23.3.1-2.oe2403.src.rpm&package-id=2d3901bc3e9691c3",
+        "pkg:deb/python3-wheel@0.40.0-1.oe2403?arch=noarch&upstream=python-wheel-0.40.0-1.oe2403.src.rpm&package-id=eab5d68e9c8c4cc5"
+      ]
+    }
+  ]
+}

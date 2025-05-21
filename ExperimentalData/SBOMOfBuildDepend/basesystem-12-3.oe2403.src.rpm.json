@@ -1,0 +1,73 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:f2ac498a-0309-4df6-9787-89745f73e0a9",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:53:29Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/basesystem@12-3.oe2403?arch=noarch&package-id=7c5fd5d477ea833e",
+      "type": "application",
+      "name": "basesystem",
+      "version": "12",
+      "description": "Basesystem defines the components of a basic system",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:basesystem:12:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/basesystem@12-3.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://src.fedoraproject.org/rpms/basesystem",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "basesystem=12-3.oe2403"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/basesystem@12-3.oe2403?arch=noarch&package-id=7c5fd5d477ea833e",
+      "dependsOn": []
+    }
+  ]
+}

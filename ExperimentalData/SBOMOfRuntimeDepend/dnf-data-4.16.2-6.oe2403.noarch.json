@@ -1,0 +1,197 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1a3ea105-8290-4de2-a4fb-d97803b7af15",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:43Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/dnf-data@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=10e9c65783ca2402",
+      "type": "application",
+      "name": "dnf-data",
+      "version": "4.16.2",
+      "description": "\nCommon data and configuration files for DNF\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/dnf-data@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Sep  3 14:16:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/dnf-data@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=41fd87e7e60585c2",
+      "type": "application",
+      "name": "dnf-data",
+      "version": "4.16.2",
+      "description": "\nCommon data and configuration files for DNF\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/dnf-data@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:50:08 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(dnf-data)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm&package-id=2b37576a2d0067bb",
+      "type": "application",
+      "name": "libreport-filesystem",
+      "version": "2.17.10",
+      "description": "\nFilesystem layout for libreport\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libreport:2.17.10:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://abrt.readthedocs.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libreport-2.17.10-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:04:31 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libreport-filesystem"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/dnf-data@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=10e9c65783ca2402",
+      "dependsOn": [
+        "pkg:rpm/openEuler/dnf-data@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=41fd87e7e60585c2",
+        "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm&package-id=2b37576a2d0067bb"
+      ]
+    }
+  ]
+}

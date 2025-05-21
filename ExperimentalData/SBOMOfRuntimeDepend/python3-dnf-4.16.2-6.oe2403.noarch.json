@@ -1,0 +1,539 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c5c1c928-717e-4ed4-aca1-3027f03b515e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:25Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/python3-dnf@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=ac7932bd54305156",
+      "type": "application",
+      "name": "python3-dnf",
+      "version": "4.16.2",
+      "description": "\nPython 3 interface to DNF.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-dnf@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Sep  3 14:16:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=569827ad64ab4087",
+      "type": "application",
+      "name": "python3",
+      "version": "3.11.6",
+      "description": "\nPython combines remarkable power with very clear syntax. It has modules,\nclasses, exceptions, very high level dynamic data types, and dynamic\ntyping. There are interfaces to many system calls and libraries, as well\nas to various windowing systems. New built-in modules are easily written\nin C or C++ (or other languages, depending on the chosen implementation).\nPython is also usable as an extension language for applications written\nin other languages that need easy-to-use scripting or automation interfaces.\n\nThis package Provides python version 3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/usr/bin/python3, python(abi)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/dnf-data@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=8adfb7523755d178",
+      "type": "application",
+      "name": "dnf-data",
+      "version": "4.16.2",
+      "description": "\nCommon data and configuration files for DNF\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/dnf-data@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "dnf-4.16.2-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:50:08 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "dnf-data"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libmodulemd@2.15.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm&package-id=db70452724c24c25",
+      "type": "application",
+      "name": "libmodulemd",
+      "version": "2.15.0",
+      "description": "\nThe libmodulemd API provides a number of convenience tools for\ninteracting with repodata (that is, streams of YAML that contains\ninformation on multiple streams, default data and translations).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libmodulemd:2.15.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libmodulemd@2.15.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/fedora-modularity/libmodulemd",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libmodulemd-2.15.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:11:42 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libmodulemd"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=a3fdfd3122196fe5",
+      "type": "application",
+      "name": "python3-gpgme",
+      "version": "1.21.0",
+      "description": "\ngpgme bindings for Python3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-gpg"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3-hawkey@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=aa293b554c7e6dce",
+      "type": "application",
+      "name": "python3-hawkey",
+      "version": "0.70.2",
+      "description": "\nPython 3 bindings for the hawkey library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libdnf:0.70.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-hawkey@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libdnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libdnf-0.70.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 05:41:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-hawkey"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3-libcomps@0.1.19-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcomps-0.1.19-1.oe2403.src.rpm&package-id=903998fb7b4e49f4",
+      "type": "application",
+      "name": "python3-libcomps",
+      "version": "0.1.19",
+      "description": "\nPython3 bindings for libcomps library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcomps:0.1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-libcomps@0.1.19-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcomps-0.1.19-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libcomps",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libcomps-0.1.19-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 05:16:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-libcomps"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=584d29e34a06b813",
+      "type": "application",
+      "name": "python3-libdnf",
+      "version": "0.70.2",
+      "description": "\nPython 3 bindings for the libdnf library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libdnf:0.70.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libdnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libdnf-0.70.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 05:41:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-libdnf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3-rpm@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=9e7a0112e88d8c17",
+      "type": "application",
+      "name": "python3-rpm",
+      "version": "4.18.2",
+      "description": "\nThis package contains a module that allow applications\nwritten with Python3 to use the interface\nsupplied by RPM.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rpm:4.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-rpm@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://rpm.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "22.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rpm-4.18.2-22.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec  4 09:45:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-rpm"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/python3-dnf@4.16.2-6.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-6.oe2403.src.rpm&package-id=ac7932bd54305156",
+      "dependsOn": [
+        "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=569827ad64ab4087",
+        "pkg:rpm/openEuler/dnf-data@4.16.2-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=dnf-4.16.2-3.oe2403.src.rpm&package-id=8adfb7523755d178",
+        "pkg:rpm/openEuler/libmodulemd@2.15.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm&package-id=db70452724c24c25",
+        "pkg:rpm/openEuler/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=a3fdfd3122196fe5",
+        "pkg:rpm/openEuler/python3-hawkey@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=aa293b554c7e6dce",
+        "pkg:rpm/openEuler/python3-libcomps@0.1.19-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libcomps-0.1.19-1.oe2403.src.rpm&package-id=903998fb7b4e49f4",
+        "pkg:rpm/openEuler/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=584d29e34a06b813",
+        "pkg:rpm/openEuler/python3-rpm@4.18.2-22.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=9e7a0112e88d8c17"
+      ]
+    }
+  ]
+}

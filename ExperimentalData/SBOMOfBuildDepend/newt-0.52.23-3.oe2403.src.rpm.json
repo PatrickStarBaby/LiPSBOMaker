@@ -1,0 +1,506 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:47c0cf63-97b1-45d5-90f9-786846ecacd0",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:14:06Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/newt@0.52.23-3.oe2403?arch=x86_64&package-id=b673f88de8ce6d94",
+      "type": "application",
+      "name": "newt",
+      "version": "0.52.23",
+      "description": "Newt is a programming library for color text-mode, widget-based user\ninterfaces.  Newt can be used to add stacked windows, entry widgets,\ncheckboxes, radio buttons, labels, plain text fields, scrollbars, etc.,\nto text mode user interfaces.\n\nThis package also contains a Dialog replacement called whiptail. Newt\nis based on the slang library.",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:newt:0.52.23:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/newt@0.52.23-3.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/newt",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "newt-0.52.23.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "newt=0.52.23-3.oe2403,newt-devel=0.52.23-3.oe2403,python3-newt=0.52.23-3.oe2403,newt-help=0.52.23-3.oe2403,newt-debuginfo=0.52.23-3.oe2403,newt-debugsource=0.52.23-3.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/docbook-utils@0.6.14-47.oe2403?arch=noarch&upstream=docbook-utils-0.6.14-47.oe2403.src.rpm&package-id=b8af3ab8c2523db7",
+      "type": "application",
+      "name": "docbook-utils",
+      "version": "0.6.14",
+      "description": "\nThe DocBook-utils package is a collection of utility scripts used to convert and\nanalyze SGML documents in general, and DocBook files in particular. The scripts\nare used to convert from DocBook or other SGML formats into “classical” file formats\nlike HTML, man, info, RTF and many more. There's also a utility to compare two SGML\nfiles and only display the differences in markup. This is useful for comparing\ndocuments prepared for different languages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:docbook-utils:0.6.14:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/docbook-utils@0.6.14-47.oe2403?arch=noarch&upstream=docbook-utils-0.6.14-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.linuxfromscratch.org/blfs/view/svn/pst/docbook-utils.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "docbook-utils-0.6.14-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:52:03 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "docbook-utils"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=b2646c0305afc259",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/lynx@2.8.9-7.oe2403?arch=x86_64&upstream=lynx-2.8.9-7.oe2403.src.rpm&package-id=ba38b7a0ff5717d1",
+      "type": "application",
+      "name": "lynx",
+      "version": "2.8.9",
+      "description": "\nLynx is a fully-featured World Wide Web (WWW) client for users running\ncursor-addressable, character-cell display devices such as vt100 terminals,\nvt100 emulators running on Windows 95/NT or Macintoshes, or any other\ncharacter-cell display.  It will display Hypertext Markup Language (HTML)\ndocuments containing links to files on the local system, as well as files on\nremote systems running http, gopher, ftp, wais, nntp, finger, or cso/ph/qi\nservers, and services accessible via logins to telnet, tn3270 or rlogin\naccounts.  Current versions of Lynx run on Unix, VMS, Windows95\nthrough Windows 8, 386DOS and OS/2 EMX.\n\nLynx can be used to access information on the WWW, or to establish\ninformation systems intended primarily for local access.  Lynx has been\nused to build several Campus Wide Information Systems (CWIS).  Lynx can\nalso be used to build systems isolated within a single LAN.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:lynx:2.8.9:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/lynx@2.8.9-7.oe2403?arch=x86_64&upstream=lynx-2.8.9-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://lynx.browser.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "lynx-2.8.9-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:59:14 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "lynx"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=9d317c97be6d5314",
+      "type": "application",
+      "name": "make",
+      "version": "4.4.1",
+      "description": "\nGNU Make is a tool which controls the generation of executables and other\nnon-source files of a program from the program's source files.\n\nMake gets its knowledge of how to build your program from a file called\nthe makefile, which lists each of the non-source files and how to compute\nit from other files. When you write a program, you should write a makefile\nfor it, so that it is possible to use Make to build and install the program.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:make:4.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/make/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "make-4.4.1-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb  5 15:26:21 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "make"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm&package-id=8f4e3f8d4da6f939",
+      "type": "application",
+      "name": "popt-devel",
+      "version": "1.19",
+      "description": "\nThe popt-devel package contains libraries and header files for\ndeveloping applications that use popt.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:popt:1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/popt/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "popt-1.19-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:38:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "popt-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=12bf0514cc5f0ea6",
+      "type": "application",
+      "name": "python3-devel",
+      "version": "3.11.6",
+      "description": "\nThis package contains the header files and configuration needed to develop\npython3 modules.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/slang-devel@2.3.3-2.oe2403?arch=x86_64&upstream=slang-2.3.3-2.oe2403.src.rpm&package-id=50d51954593e4a29",
+      "type": "application",
+      "name": "slang-devel",
+      "version": "2.3.3",
+      "description": "\nFiles for slang development\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:slang:2.3.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/slang-devel@2.3.3-2.oe2403?arch=x86_64&upstream=slang-2.3.3-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.jedsoft.org/slang/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "slang-2.3.3-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:34:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "slang-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/newt@0.52.23-3.oe2403?arch=x86_64&package-id=b673f88de8ce6d94",
+      "dependsOn": [
+        "pkg:deb/docbook-utils@0.6.14-47.oe2403?arch=noarch&upstream=docbook-utils-0.6.14-47.oe2403.src.rpm&package-id=b8af3ab8c2523db7",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=b2646c0305afc259",
+        "pkg:deb/lynx@2.8.9-7.oe2403?arch=x86_64&upstream=lynx-2.8.9-7.oe2403.src.rpm&package-id=ba38b7a0ff5717d1",
+        "pkg:deb/make@4.4.1-2.oe2403?arch=x86_64&upstream=make-4.4.1-2.oe2403.src.rpm&package-id=9d317c97be6d5314",
+        "pkg:deb/popt-devel@1.19-2.oe2403?arch=x86_64&upstream=popt-1.19-2.oe2403.src.rpm&package-id=8f4e3f8d4da6f939",
+        "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=12bf0514cc5f0ea6",
+        "pkg:deb/slang-devel@2.3.3-2.oe2403?arch=x86_64&upstream=slang-2.3.3-2.oe2403.src.rpm&package-id=50d51954593e4a29"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:63f7c79a-1ba0-4c59-ba4e-0e3ed9284ae2",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:14Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libssh@0.10.5-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libssh-0.10.5-2.oe2403.src.rpm&package-id=1d2ac8fd8361c810",
+      "type": "application",
+      "name": "libssh",
+      "version": "0.10.5",
+      "description": "\nThe ssh library was designed to be used by programmers needing a working SSH\nimplementation by the mean of a library. The complete control of the client is\nmade by the programmer. With libssh, you can remotely execute programs, transfer\nfiles, use a secure and transparent tunnel for your remote programs. With its\nSecure FTP implementation, you can play with remote files easily, without\nthird-party programs others than libcrypto (from openssl).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libssh:0.10.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libssh@0.10.5-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libssh-0.10.5-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.libssh.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libssh-0.10.5-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:47:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=d4fcec559313d245",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ld-linux-x86-64.so.2()(64bit), ld-linux-x86-64.so.2(GLIBC_2.3)(64bit), libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.25)(64bit), libc.so.6(GLIBC_2.27)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm&package-id=f883b9353367ed49",
+      "type": "application",
+      "name": "e2fsprogs",
+      "version": "1.47.0",
+      "description": "\nThe e2fsprogs package consists of a lot of tools for users to create,\ncheck, modify, and correct any inconsistencies in second extended file\nsystem.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2 and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:e2fsprogs:1.47.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://e2fsprogs.sourceforge.net/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "e2fsprogs-1.47.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:57:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcom_err.so.2()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=2e5cfd1b94f72c8e",
+      "type": "application",
+      "name": "openssl-libs",
+      "version": "3.0.12",
+      "description": "\nThe openssl-libs package contains the libraries that are used\nby various applications which support cryptographic algorithms\nand protocols.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcrypto.so.3()(64bit), libcrypto.so.3(OPENSSL_3.0.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/krb5-libs@1.21.2-14.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=krb5-1.21.2-14.oe2403.src.rpm&package-id=9a49c7981e7df795",
+      "type": "application",
+      "name": "krb5-libs",
+      "version": "1.21.2",
+      "description": "\nThis package contains the shared libraries needed by Kerberos 5.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:krb5:1.21.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/krb5-libs@1.21.2-14.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=krb5-1.21.2-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://web.mit.edu/kerberos/www/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "krb5-1.21.2-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Feb 11 16:18:11 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgssapi_krb5.so.2()(64bit), libgssapi_krb5.so.2(gssapi_krb5_2_MIT)(64bit), libk5crypto.so.3()(64bit), libkrb5.so.3()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=4992fd9630fa1606",
+      "type": "application",
+      "name": "zlib",
+      "version": "1.2.13",
+      "description": "\nZlib is a free, general-purpose, not covered by any patents, lossless data-compression\nlibrary for use on virtually any computer hardware and operating system. The zlib data\nformat is itself portable across platforms.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libz.so.1()(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libssh@0.10.5-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libssh-0.10.5-2.oe2403.src.rpm&package-id=1d2ac8fd8361c810",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=d4fcec559313d245",
+        "pkg:rpm/openEuler/e2fsprogs@1.47.0-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=e2fsprogs-1.47.0-3.oe2403.src.rpm&package-id=f883b9353367ed49",
+        "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=2e5cfd1b94f72c8e",
+        "pkg:rpm/openEuler/krb5-libs@1.21.2-14.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=krb5-1.21.2-14.oe2403.src.rpm&package-id=9a49c7981e7df795",
+        "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=4992fd9630fa1606"
+      ]
+    }
+  ]
+}

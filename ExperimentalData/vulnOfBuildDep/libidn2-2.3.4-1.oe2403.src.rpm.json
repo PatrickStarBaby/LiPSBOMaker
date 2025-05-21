@@ -1,0 +1,94 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:f6e829b4-4d40-4b83-be09-88bec2f8cf87",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:51:05Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libidn2-2.3.4-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.gnu.org/software/libidn/#libidn2"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "eb0f4c3d-f477-475c-b51f-73a5980b7b9c"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "c608f8e2-190c-4079-9463-47935a3e9291"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "eb0f4c3d-f477-475c-b51f-73a5980b7b9c",
+      "dependsOn" : [
+        "c608f8e2-190c-4079-9463-47935a3e9291"
+      ]
+    },
+    {
+      "ref" : "c608f8e2-190c-4079-9463-47935a3e9291",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "c608f8e2-190c-4079-9463-47935a3e9291"
+        }
+      ]
+    }
+  ]
+}

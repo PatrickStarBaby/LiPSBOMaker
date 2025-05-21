@@ -1,0 +1,140 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:9f29d184-bbc8-420a-bb87-9fe917e80954",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:00:08Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/filesystem@3.16-6.oe2403?arch=x86_64&package-id=c5bcc11157f33bbb",
+      "type": "application",
+      "name": "filesystem",
+      "version": "3.16",
+      "description": "The filesystem package is one of the basic packages that is installed\non a Linux system. Filesystem contains the basic directory layout\nfor a Linux operating system, including the correct permissions for\nthe directories.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:filesystem:3.16:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/filesystem@3.16-6.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/filesystem",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "iso_3166.sed, iso_639.sed, lang-exceptions"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "filesystem=3.16-6.oe2403,filesystem-content=3.16-6.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/iso-codes@4.15.0-1.oe2403?arch=noarch&upstream=iso-codes-4.15.0-1.oe2403.src.rpm&package-id=564ab3443134b87b",
+      "type": "application",
+      "name": "iso-codes",
+      "version": "4.15.0",
+      "description": "\nThis project provides lists of various ISO standards (e.g. country,\nlanguage, language scripts, and currency names) in one place, rather\nthan repeated in many programs throughout the system.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:iso-codes:4.15.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/iso-codes@4.15.0-1.oe2403?arch=noarch&upstream=iso-codes-4.15.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://salsa.debian.org/iso-codes-team/iso-codes",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "iso-codes-4.15.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:32:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "iso-codes"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/filesystem@3.16-6.oe2403?arch=x86_64&package-id=c5bcc11157f33bbb",
+      "dependsOn": [
+        "pkg:deb/iso-codes@4.15.0-1.oe2403?arch=noarch&upstream=iso-codes-4.15.0-1.oe2403.src.rpm&package-id=564ab3443134b87b"
+      ]
+    }
+  ]
+}

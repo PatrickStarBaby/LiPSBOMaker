@@ -1,0 +1,811 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1f927ac8-f7b2-468f-8c04-e5ae749757eb",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:58:33Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/dnf@4.16.2-6.oe2403?arch=noarch&package-id=530e03299bd18149",
+      "type": "application",
+      "name": "dnf",
+      "version": "4.16.2",
+      "description": "DNF is a software package manager that installs, updates, and removespackages\non RPM-based Linux distributions. It automatically computes dependencies and\ndetermines the actions required to install packages.DNF also makes it easier\nto maintain groups of machines, eliminating the need to manually update each\none using rpm.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later AND GPL-1.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:dnf:4.16.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/dnf@4.16.2-6.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/dnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "dnf-4.16.2.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "dnf=4.16.2-6.oe2403,yum=4.16.2-6.oe2403,python3-dnf=4.16.2-6.oe2403,dnf-data=4.16.2-6.oe2403,dnf-automatic=4.16.2-6.oe2403,dnf-help=4.16.2-6.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/bash-completion@2.12.0-1.oe2403?arch=noarch&upstream=bash-completion-2.12.0-1.oe2403.src.rpm&package-id=af6ea1ada83c81b3",
+      "type": "application",
+      "name": "bash-completion",
+      "version": "2.12.0",
+      "description": "\nbash-completion is a collection of shell funcionts that can be\nused to complete the command of bash.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash-completion:2.12.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/bash-completion@2.12.0-1.oe2403?arch=noarch&upstream=bash-completion-2.12.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/scop/bash-completion",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-completion-2.12.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:44:54 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "bash-completion"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm&package-id=92b331f9dcd24983",
+      "type": "application",
+      "name": "cmake",
+      "version": "3.27.9",
+      "description": "\nCMake is used to control the software compilation process using simple\nplatform and compiler independent configuration files. CMake generates\nnative makefiles and workspaces that can be used in the compiler\nenvironment of your choice. CMake is quite sophisticated: it is possible\nto support complex environments requiring system configuration, preprocessor\ngeneration, code generation, and template instantiation.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and MIT and zlib"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cmake:3.27.9:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.cmake.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cmake-3.27.9-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:05:23 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "cmake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=d55c0bbff17eafb9",
+      "type": "application",
+      "name": "gettext",
+      "version": "0.22",
+      "description": "\nGNU gettext is an important step for the GNU Translation Project, as it\nis an asset on which we may build many other steps. This package offers\nto programmers, translators, and even users, a well integrated set of\ntools and documentation. Specifically, the GNU gettext utilities are a\nset of tools that provides a framework to help other GNU packages\nproduce multi-lingual messages. These tools include a set of conventions\nabout how programs should be written to support message catalogs, a\ndirectory and file naming organization for the message catalogs themselves,\na runtime library supporting the retrieval of translated messages, and\na few stand-alone programs to massage in various ways the sets of\ntranslatable strings, or already translated strings. A special GNU Emacs\nmode also helps interested parties in preparing these sets, or bringing\nthem up to date.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gettext:0.22:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/gettext/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gettext-0.22-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:32:59 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gettext"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libmodulemd@2.15.0-1.oe2403?arch=x86_64&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm&package-id=c81ad1db53d37cc7",
+      "type": "application",
+      "name": "libmodulemd",
+      "version": "2.15.0",
+      "description": "\nThe libmodulemd API provides a number of convenience tools for\ninteracting with repodata (that is, streams of YAML that contains\ninformation on multiple streams, default data and translations).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libmodulemd:2.15.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libmodulemd@2.15.0-1.oe2403?arch=x86_64&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/fedora-modularity/libmodulemd",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libmodulemd-2.15.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:11:42 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libmodulemd"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=ea023fedac8c1682",
+      "type": "application",
+      "name": "python3-devel",
+      "version": "3.11.6",
+      "description": "\nThis package contains the header files and configuration needed to develop\npython3 modules.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=b3eaabca56758094",
+      "type": "application",
+      "name": "python3-gpgme",
+      "version": "1.21.0",
+      "description": "\ngpgme bindings for Python3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-gpg"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-hawkey@0.70.2-6.oe2403?arch=x86_64&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=3da4bffffa004c17",
+      "type": "application",
+      "name": "python3-hawkey",
+      "version": "0.70.2",
+      "description": "\nPython 3 bindings for the hawkey library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libdnf:0.70.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-hawkey@0.70.2-6.oe2403?arch=x86_64&upstream=libdnf-0.70.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libdnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libdnf-0.70.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 05:41:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-hawkey"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-libcomps@0.1.19-1.oe2403?arch=x86_64&upstream=libcomps-0.1.19-1.oe2403.src.rpm&package-id=6e00ac347a027f2f",
+      "type": "application",
+      "name": "python3-libcomps",
+      "version": "0.1.19",
+      "description": "\nPython3 bindings for libcomps library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcomps:0.1.19:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-libcomps@0.1.19-1.oe2403?arch=x86_64&upstream=libcomps-0.1.19-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libcomps",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libcomps-0.1.19-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 05:16:44 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-libcomps"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=ead0aa0ed649b711",
+      "type": "application",
+      "name": "python3-libdnf",
+      "version": "0.70.2",
+      "description": "\nPython 3 bindings for the libdnf library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libdnf:0.70.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&upstream=libdnf-0.70.2-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rpm-software-management/libdnf",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libdnf-0.70.2-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 05:41:05 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-libdnf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-rpm@4.18.2-22.oe2403?arch=x86_64&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=2f316f2dbf7aaf97",
+      "type": "application",
+      "name": "python3-rpm",
+      "version": "4.18.2",
+      "description": "\nThis package contains a module that allow applications\nwritten with Python3 to use the interface\nsupplied by RPM.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rpm:4.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-rpm@4.18.2-22.oe2403?arch=x86_64&upstream=rpm-4.18.2-22.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://rpm.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "22.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "rpm-4.18.2-22.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec  4 09:45:37 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3-sphinx@7.0.1-1.oe2403?arch=noarch&upstream=python-sphinx-7.0.1-1.oe2403.src.rpm&package-id=abb6301b45558fad",
+      "type": "application",
+      "name": "python3-sphinx",
+      "version": "7.0.1",
+      "description": "\nSphinx is a tool that makes it easy to create intelligent and\nbeautiful documentation for Python projects (or other documents\nconsisting of multiple reStructuredText sources), written by Georg\nBrandl. It was originally created to translate the new Python\ndocumentation, but has now been cleaned up in the hope that it will be\nuseful to many other projects.\n\nSphinx uses reStructuredText as its markup language, and many of its\nstrengths come from the power and straightforwardness of\nreStructuredText and its parsing and translating suite, the Docutils.\n\nAlthough it is still under constant development, the following\nfeatures are already present, work fine and can be seen \"in action\" in\nthe Python docs:\n\n    * Output formats: HTML (including Windows HTML Help) and LaTeX,\n      for printable PDF versions\n    * Extensive cross-references: semantic markup and automatic links\n      for functions, classes, glossary terms and similar pieces of\n      information\n    * Hierarchical structure: easy definition of a document tree, with\n      automatic links to siblings, parents and children\n    * Automatic indices: general index as well as a module index\n    * Code handling: automatic highlighting using the Pygments highlighter\n    * Various extensions are available, e.g. for automatic testing of\n      snippets and inclusion of appropriately formatted docstrings.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python-sphinx:7.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3-sphinx@7.0.1-1.oe2403?arch=noarch&upstream=python-sphinx-7.0.1-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://sphinx-doc.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python-sphinx-7.0.1-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 04:26:48 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3-sphinx"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=243bbd64efdad026",
+      "type": "application",
+      "name": "systemd",
+      "version": "255",
+      "description": "\nsystemd is a system and service manager that runs as PID 1 and starts\nthe rest of the system.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and LGPLv2+ and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/dnf@4.16.2-6.oe2403?arch=noarch&package-id=530e03299bd18149",
+      "dependsOn": [
+        "pkg:deb/bash-completion@2.12.0-1.oe2403?arch=noarch&upstream=bash-completion-2.12.0-1.oe2403.src.rpm&package-id=af6ea1ada83c81b3",
+        "pkg:deb/cmake@3.27.9-3.oe2403?arch=x86_64&upstream=cmake-3.27.9-3.oe2403.src.rpm&package-id=92b331f9dcd24983",
+        "pkg:deb/gettext@0.22-2.oe2403?arch=x86_64&upstream=gettext-0.22-2.oe2403.src.rpm&package-id=d55c0bbff17eafb9",
+        "pkg:deb/libmodulemd@2.15.0-1.oe2403?arch=x86_64&upstream=libmodulemd-2.15.0-1.oe2403.src.rpm&package-id=c81ad1db53d37cc7",
+        "pkg:deb/python3-devel@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=ea023fedac8c1682",
+        "pkg:deb/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=b3eaabca56758094",
+        "pkg:deb/python3-hawkey@0.70.2-6.oe2403?arch=x86_64&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=3da4bffffa004c17",
+        "pkg:deb/python3-libcomps@0.1.19-1.oe2403?arch=x86_64&upstream=libcomps-0.1.19-1.oe2403.src.rpm&package-id=6e00ac347a027f2f",
+        "pkg:deb/python3-libdnf@0.70.2-6.oe2403?arch=x86_64&upstream=libdnf-0.70.2-6.oe2403.src.rpm&package-id=ead0aa0ed649b711",
+        "pkg:deb/python3-rpm@4.18.2-22.oe2403?arch=x86_64&upstream=rpm-4.18.2-22.oe2403.src.rpm&package-id=2f316f2dbf7aaf97",
+        "pkg:deb/python3-sphinx@7.0.1-1.oe2403?arch=noarch&upstream=python-sphinx-7.0.1-1.oe2403.src.rpm&package-id=abb6301b45558fad",
+        "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=243bbd64efdad026"
+      ]
+    }
+  ]
+}

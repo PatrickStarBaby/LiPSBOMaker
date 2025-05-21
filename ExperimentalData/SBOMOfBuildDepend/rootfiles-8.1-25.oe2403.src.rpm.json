@@ -1,0 +1,77 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:5062e211-cd04-4e33-8746-26d75fb3741e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:26:05Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/rootfiles@8.1-25.oe2403?arch=noarch&package-id=a91a03328e2ed73f",
+      "type": "application",
+      "name": "rootfiles",
+      "version": "8.1",
+      "description": "The rootfiles package contains basic required files that are placed\nin the root user's account. These files are basically the same as\nthose in /etc/skel, which are placed in regular users' home directories.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:rootfiles:8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/rootfiles@8.1-25.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://src.fedoraproject.org/rpms/rootfiles/tree/master",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "25.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "dot-cshrc, dot-tcshrc, dot-bash_logout, dot-bash_profile, dot-bashrc"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "rootfiles=8.1-25.oe2403"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/rootfiles@8.1-25.oe2403?arch=noarch&package-id=a91a03328e2ed73f",
+      "dependsOn": []
+    }
+  ]
+}

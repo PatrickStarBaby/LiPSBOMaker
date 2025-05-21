@@ -1,0 +1,653 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e95ece75-d02e-41ca-93a4-7c0d400e1b4a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:04Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/gnupg2@2.4.3-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnupg2-2.4.3-2.oe2403.src.rpm&package-id=dd3a4aef4527b495",
+      "type": "application",
+      "name": "gnupg2",
+      "version": "2.4.3",
+      "description": "\nGnuPG is a complete and free implementation of the OpenPGP standard\nas defined by RFC4880 (also known as PGP).  GnuPG enables encryption\nand signing of data and communication, and features a versatile key\nmanagement system as well as access modules for public key\ndirectories.\n\nGnuPG 2.0 adds support for smart cards and S/MIME encryption and\nsigning to the base GnuPG package.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gnupg2:2.4.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gnupg2@2.4.3-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnupg2-2.4.3-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gnupg2-2.4.3-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:50:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=7e3b1fbb29deccf1",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gnupg2@2.4.3-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnupg2-2.4.3-2.oe2403.src.rpm&package-id=7e2a3c8e8bcf8434",
+      "type": "application",
+      "name": "gnupg2",
+      "version": "2.4.3",
+      "description": "\nGnuPG is a complete and free implementation of the OpenPGP standard\nas defined by RFC4880 (also known as PGP).  GnuPG enables encryption\nand signing of data and communication, and features a versatile key\nmanagement system as well as access modules for public key\ndirectories.\n\nGnuPG 2.0 adds support for smart cards and S/MIME encryption and\nsigning to the base GnuPG package.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gnupg2:2.4.3:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gnupg2@2.4.3-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnupg2-2.4.3-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gnupg2-2.4.3-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:50:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(gnupg2)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libassuan@2.5.6-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libassuan-2.5.6-2.oe2403.src.rpm&package-id=5a4e658c113dbb5d",
+      "type": "application",
+      "name": "libassuan",
+      "version": "2.5.6",
+      "description": "\nA small library implementing the so-called Assuan protocal,which is used for IPC between most newer GnuPG cmponents,and provides\\\n\\ both server and client sides functions.\\\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libassuan:2.5.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libassuan@2.5.6-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libassuan-2.5.6-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libassuan-2.5.6-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:47:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libassuan.so.0()(64bit), libassuan.so.0(LIBASSUAN_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=188dcbb4e53d309d",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.25)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.32)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgcrypt@1.10.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgcrypt-1.10.2-1.oe2403.src.rpm&package-id=7e0cbaecce7bc3be",
+      "type": "application",
+      "name": "libgcrypt",
+      "version": "1.10.2",
+      "description": "\nLibgcrypt is a general purpose cryptographic library originally based on code from GnuPG.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libgcrypt:1.10.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgcrypt@1.10.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgcrypt-1.10.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libgcrypt-1.10.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:38:20 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgcrypt, libgcrypt.so.20()(64bit), libgcrypt.so.20(GCRYPT_1.6)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/gnutls@3.8.2-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-4.oe2403.src.rpm&package-id=66f5efa2373d14e8",
+      "type": "application",
+      "name": "gnutls",
+      "version": "3.8.2",
+      "description": "\nGnuTLS is a secure communications library implementing the SSL, TLS and DTLS\nprotocols and technologies around them. It provides a simple C language\napplication programming interface (API) to access the secure communications\nprotocols as well as APIs to parse and write X.509, PKCS #12, and other\nrequired structures.\nThe project strives to provide a secure communications back-end, simple to use\nand integrated with the rest of the base Linux libraries. A back-end designed\nto work and be secure out of the box, keeping the complexity of TLS and PKI out\nof application code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2.1+ and GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gnutls:3.8.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gnutls@3.8.2-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnutls.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gnutls-3.8.2-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:28 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgnutls.so.30()(64bit), libgnutls.so.30(GNUTLS_3_4)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libgpg-error@1.47-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgpg-error-1.47-1.oe2403.src.rpm&package-id=26ddf05335f88e84",
+      "type": "application",
+      "name": "libgpg-error",
+      "version": "1.47",
+      "description": "\nThe libgpg-error package contains a library that originally defines common error values for all GnuPG components.\nAmong these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt, Libksba, DirMngr, Pinentry, SCdaemon.\nBecause Libgpg-error is a common dependency all GnuPG components, more features will be added to this library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libgpg-error:1.47:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgpg-error@1.47-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgpg-error-1.47-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/related_software/libgpg-error/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libgpg-error-1.47-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:31:41 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgpg-error, libgpg-error.so.0()(64bit), libgpg-error.so.0(GPG_ERROR_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/libksba@1.6.4-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libksba-1.6.4-2.oe2403.src.rpm&package-id=1ddc32242a11195a",
+      "type": "application",
+      "name": "libksba",
+      "version": "1.6.4",
+      "description": "\nLibksba is a library to make the tasks of working with X.509 certificates,\nCMS data and related objects more easy. It provides a highlevel interface to\nthe implemented protocols and presents the data in a consistent way.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(LGPL-3.0+ or GPL-2.0+) and GPL-3.0+ and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libksba:1.6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libksba@1.6.4-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libksba-1.6.4-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/software/libksba/index.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libksba-1.6.4-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Jul 30 11:34:28 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libksba.so.8()(64bit), libksba.so.8(KSBA_0.9)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/npth@1.6-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=npth-1.6-7.oe2403.src.rpm&package-id=85c8fedd3be4780e",
+      "type": "application",
+      "name": "npth",
+      "version": "1.6",
+      "description": "\nThe NPth package contains a very portable POSIX/ANSI-C based\nlibrary for Unix platforms which provides non-preemptive\npriority-based scheduling for multiple threads of execution\n(multithreading) inside event-driven applications. All threads\nrun in the same address space of the server application, but\neach thread has its own individual program-counter, run-time\nstack, signal mask and errno variable.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:npth:1.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/npth@1.6-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=npth-1.6-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://git.gnupg.org/cgi-bin/gitweb.cgi?p=npth.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "npth-1.6-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:18:27 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libnpth.so.0()(64bit), libnpth.so.0(NPTH_1.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=e3109e5a4d12da92",
+      "type": "application",
+      "name": "zlib",
+      "version": "1.2.13",
+      "description": "\nZlib is a free, general-purpose, not covered by any patents, lossless data-compression\nlibrary for use on virtually any computer hardware and operating system. The zlib data\nformat is itself portable across platforms.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libz.so.1()(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/gnupg2@2.4.3-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnupg2-2.4.3-2.oe2403.src.rpm&package-id=dd3a4aef4527b495",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=7e3b1fbb29deccf1",
+        "pkg:rpm/openEuler/gnupg2@2.4.3-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnupg2-2.4.3-2.oe2403.src.rpm&package-id=7e2a3c8e8bcf8434",
+        "pkg:rpm/openEuler/libassuan@2.5.6-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libassuan-2.5.6-2.oe2403.src.rpm&package-id=5a4e658c113dbb5d",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=188dcbb4e53d309d",
+        "pkg:rpm/openEuler/libgcrypt@1.10.2-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgcrypt-1.10.2-1.oe2403.src.rpm&package-id=7e0cbaecce7bc3be",
+        "pkg:rpm/openEuler/gnutls@3.8.2-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gnutls-3.8.2-4.oe2403.src.rpm&package-id=66f5efa2373d14e8",
+        "pkg:rpm/openEuler/libgpg-error@1.47-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libgpg-error-1.47-1.oe2403.src.rpm&package-id=26ddf05335f88e84",
+        "pkg:rpm/openEuler/libksba@1.6.4-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=libksba-1.6.4-2.oe2403.src.rpm&package-id=1ddc32242a11195a",
+        "pkg:rpm/openEuler/npth@1.6-7.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=npth-1.6-7.oe2403.src.rpm&package-id=85c8fedd3be4780e",
+        "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=e3109e5a4d12da92"
+      ]
+    }
+  ]
+}

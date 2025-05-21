@@ -1,0 +1,134 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:8d7c74ca-cfcc-44fe-924a-ee0fb148a826",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:23:42Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler-release@24.03LTS-55.oe2403?arch=x86_64&package-id=6b8fe2ff9774ea3a",
+      "type": "application",
+      "name": "openEuler-release",
+      "version": "24.03LTS",
+      "description": "openEuler release files",
+      "licenses": [
+        {
+          "license": {
+            "name": "Mulan PSL v2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openEuler-release:24.03LTS:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler-release@24.03LTS-55.oe2403?arch=x86_64",
+      "properties": [
+        {
+          "name": "release",
+          "value": "55.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "99-default-disable.preset, 90-default.preset, 85-display-manager.preset, generic-release-1.0.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "openEuler-release=24.03LTS-55.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/python3@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=1d8e184b4c84a865",
+      "type": "application",
+      "name": "python3",
+      "version": "3.11.6",
+      "description": "\nPython combines remarkable power with very clear syntax. It has modules,\nclasses, exceptions, very high level dynamic data types, and dynamic\ntyping. There are interfaces to many system calls and libraries, as well\nas to various windowing systems. New built-in modules are easily written\nin C or C++ (or other languages, depending on the chosen implementation).\nPython is also usable as an extension language for applications written\nin other languages that need easy-to-use scripting or automation interfaces.\n\nThis package Provides python version 3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler-release@24.03LTS-55.oe2403?arch=x86_64&package-id=6b8fe2ff9774ea3a",
+      "dependsOn": [
+        "pkg:deb/python3@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=1d8e184b4c84a865"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:17176225-30ec-4f52-b975-e2e45a0eba1c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:04Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=c81c69849fd68fa1",
+      "type": "application",
+      "name": "libgcc",
+      "version": "12.3.1",
+      "description": "\nThis package contains GCC shared support library which is needed\ne.g. for exception handling support.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libgcc@12.3.1-38.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=c81c69849fd68fa1",
+      "dependsOn": []
+    }
+  ]
+}

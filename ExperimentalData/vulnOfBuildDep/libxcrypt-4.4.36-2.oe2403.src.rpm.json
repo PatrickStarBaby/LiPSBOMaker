@@ -1,0 +1,97 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:a67b95f9-5215-48bd-8856-a11077bcd8bb",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:47:51Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libxcrypt-4.4.36-2.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/besser82/libxcrypt"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "a0f75deb-9ccd-4e1e-b796-4747b6c38fb9"
+    }
+  },
+  "components" : [
+    {
+      "name" : "perl",
+      "version" : "5.38.0",
+      "description" : "Perl 5 is a highly capable, feature-rich programming language with over 30 years of development. Perl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid prototyping and large scale development projects.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.perl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "73f16f46-3bcd-417d-b838-ff037de5cb17"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "a0f75deb-9ccd-4e1e-b796-4747b6c38fb9",
+      "dependsOn" : [
+        "73f16f46-3bcd-417d-b838-ff037de5cb17"
+      ]
+    },
+    {
+      "ref" : "73f16f46-3bcd-417d-b838-ff037de5cb17",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "080ed676-4b2f-4871-9c55-71cba0c41b53",
+      "id" : "CVE-2023-47100",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        755
+      ],
+      "description" : "In Perl before 5.38.2, S_parse_uniprop_string in regcomp.c can write to unallocated space because a property name associated with a \\p{...} regular expression construct is mishandled. The earliest affected version is 5.30.0.",
+      "published" : "2023-12-02T23:15:00Z",
+      "updated" : "2024-11-21T08:29:00Z",
+      "affects" : [
+        {
+          "ref" : "73f16f46-3bcd-417d-b838-ff037de5cb17"
+        }
+      ]
+    }
+  ]
+}

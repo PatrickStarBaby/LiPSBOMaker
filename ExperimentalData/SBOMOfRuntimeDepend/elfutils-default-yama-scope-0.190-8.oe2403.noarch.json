@@ -1,0 +1,197 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:70c6fde6-5cce-4989-a770-546e6d77126f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:43Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/elfutils-default-yama-scope@0.190-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=elfutils-0.190-8.oe2403.src.rpm&package-id=4838aa4053da2e58",
+      "type": "application",
+      "name": "elfutils-default-yama-scope",
+      "version": "0.190",
+      "description": "\nYama sysctl setting to enable default attach scope settings\nenabling programs to use ptrace attach, access to\n/proc/PID/{mem,personality,stack,syscall}, and the syscalls\nprocess_vm_readv and process_vm_writev which are used for\ninterprocess services, communication and introspection\n(like synchronisation, signaling, debugging, tracing and\nprofiling) of processes.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ or LGPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:elfutils:0.190:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/elfutils-default-yama-scope@0.190-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=elfutils-0.190-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://elfutils.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "elfutils-0.190-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb 19 09:05:27 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=165ee4078e1dff48",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/elfutils-default-yama-scope@0.190-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=elfutils-0.190-3.oe2403.src.rpm&package-id=2917b03829d5c3c4",
+      "type": "application",
+      "name": "elfutils-default-yama-scope",
+      "version": "0.190",
+      "description": "\nYama sysctl setting to enable default attach scope settings\nenabling programs to use ptrace attach, access to\n/proc/PID/{mem,personality,stack,syscall}, and the syscalls\nprocess_vm_readv and process_vm_writev which are used for\ninterprocess services, communication and introspection\n(like synchronisation, signaling, debugging, tracing and\nprofiling) of processes.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ or LGPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:elfutils:0.190:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/elfutils-default-yama-scope@0.190-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=elfutils-0.190-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://elfutils.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "elfutils-0.190-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:28:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(elfutils-default-yama-scope)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/elfutils-default-yama-scope@0.190-8.oe2403?arch=noarch&distro=openEuler-24.03&upstream=elfutils-0.190-8.oe2403.src.rpm&package-id=4838aa4053da2e58",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=165ee4078e1dff48",
+        "pkg:rpm/openEuler/elfutils-default-yama-scope@0.190-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=elfutils-0.190-3.oe2403.src.rpm&package-id=2917b03829d5c3c4"
+      ]
+    }
+  ]
+}

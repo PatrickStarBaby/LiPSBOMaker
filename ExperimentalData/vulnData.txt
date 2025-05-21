@@ -1,0 +1,68 @@
+openEuler-24.03-LTS-sp1 docker image中二进制软件包个数：135（比openEuler-24.03-LTS少一个pkgconf）
+对应的源码包个数：112
+
+============================ 构建依赖 ============================
+构建依赖（二进制包）的个数（去重）：302
+构建依赖对应的源码包个数（去重）：253
+
+CVE总数-筛选前: 527
+CVE总数-筛选后: 366
+CVE总数-筛选前（去重）: 106
+CVE总数-筛选后（去重）: 55
+
+构建依赖含有CVE的源码包数量，hasCPE_pkg_count: 92
+通过patch名筛选前含有CVE的构建依赖总数（去重），de_hasCPE_depend_count_before_filter: 43
+通过patch名筛选后含有CVE的构建依赖总数（去重），de_hasCPE_depend_count_after_filter: 32
+
+存在已知漏洞的构建依赖：32个
+sqlite-devel zlib-devel coreutils openssh-server fuse-devel openssl strace glibc-devel unbound-libs glibc-all-langpacks libpq-devel sharutils tar ed flex gcc-c++ openssh-clients ghostscript lz4-devel git lynx glibc-common gcc openssl-devel bind libxml2-devel git-core lz4 glibc kernel-headers libarchive-devel unbound-devel
+
+对应的上游源码包： 25个
+sqlite zlib coreutils openssh fuse openssl strace glibc unbound libpq sharutils tar ed flex gcc ghostscript lz4 git lynx openssl bind libxml2 kernel libarchive unbound
+
+openEuler-24.03-LTS-sp1分支CVE尚未修复的构建依赖：11个
+正在受到这些存在未修复已知漏洞的构建依赖的影响的源码包：39个（对应48个二进制包）
+（首先用自动化程序剔除掉已经用patch修复的CVE，然后人工审查：NVD仓库的影响范围、commit history是否有相关CVE修复提交）
+
+coreutils：CVE-2016-2781
+fuse：CVE-2019-14900  CVE-2019-14860
+openssl：CVE-2024-0727  CVE-2023-5678  CVE-2023-6129
+libarchive：CVE-2024-37407
+kernel：CVE-2010-0309（cpe:2.3:a:linux:kernel:*:*:*:*:*:*:*:*）
+glibc：CVE-2023-4911、CVE-2010-4756（cpe:2.3:a:gnu:glibc:2.38:*:*:*:*:*:*:*）
+openssh-clients：CVE-2023-51767（cpe:2.3:a:openbsd:openssh:9.3:p2:*:*:*:*:*:*）、
+			   CVE-2008-3844（cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*）、
+			   CVE-2007-2768（cpe:2.3:a:openbsd:openssh:9.3:p2:*:*:*:*:*:*）
+ghostscript：CVE-2024-46954、CVE-2023-43115
+lynx：CVE-2016-9179
+sharutils：CVE-2018-1000097
+flex：CVE-2019-6293
+
+
+============================ 运行依赖 ============================
+运行依赖总数 ：588
+运行依赖总数（去重）：130
+运行依赖对应的源码包总数（去重）：110
+
+CVE去重总数：64
+
+存在已知漏洞的运行依赖：20个 
+coreutils curl fuse glibc glibc-common gnutls libarchive libcurl libgcc libgomp libssh libstdc++ libxml2 logrotate lz4 openssl-libs sqlite tar vim-minimal zlib
+对应的上游源码包： 16个
+coreutils  curl   fuse  glibc  gnutls  libarchive gcc  libssh  libxml2  logrotate lz4  openssl  sqlite tar   vim  zlib
+
+openEuler-24.03-LTS-sp1分支CVE尚未修复的运行依赖：5个
+coreutils：CVE-2016-2781
+fuse：CVE-2019-14900  CVE-2019-14860
+glibc：CVE-2023-4911、CVE-2010-4756（cpe:2.3:a:gnu:glibc:2.38:*:*:*:*:*:*:*）
+libarchive：CVE-2024-37407
+openssl：CVE-2024-0727  CVE-2023-5678  CVE-2023-6129
+
+
+============================ syft存在的缺陷 ============================
+1、对于Linux体系的软件，其CPE是子包的名字而不是源码包的名字："cpe:2.3:a:glibc-common:glibc-common:2.38-29.oe2403:*:*:*:*:*:*:*"
+这样匹配不到上游开源项目
+
+2、对于镜像粒度SBOM，包含了很多不必要的组件，
+
+

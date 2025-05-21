@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:e21b3889-0a54-40dd-bd39-a6de5657a989",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:49:13Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libsigsegv-2.14-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.gnu.org/software/libsigsegv/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "0466dfb3-ac46-45cd-8e30-2495449bea70"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "0466dfb3-ac46-45cd-8e30-2495449bea70",
+      "dependsOn" : [ ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:bd57cebc-f2e4-4cab-a6c6-01c4f158d88d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:32Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/basesystem@12-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=basesystem-12-3.oe2403.src.rpm&package-id=d1370470ce55b163",
+      "type": "application",
+      "name": "basesystem",
+      "version": "12",
+      "description": "\nBasesystem defines the components of a basic system\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:basesystem:12:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/basesystem@12-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=basesystem-12-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://src.fedoraproject.org/rpms/basesystem",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "basesystem-12-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:42:45 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/filesystem@3.16-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=filesystem-3.16-5.oe2403.src.rpm&package-id=17e70ad0e39e4cac",
+      "type": "application",
+      "name": "filesystem",
+      "version": "3.16",
+      "description": "\nThe filesystem package is one of the basic packages that is installed\non a Linux system. Filesystem contains the basic directory layout\nfor a Linux operating system, including the correct permissions for\nthe directories.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:filesystem:3.16:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/filesystem@3.16-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=filesystem-3.16-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/filesystem",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "filesystem-3.16-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 03:41:19 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "filesystem"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm&package-id=81d98f335854e0bb",
+      "type": "application",
+      "name": "setup",
+      "version": "2.14.5",
+      "description": "\nThe setup package contains a set of important system configuration and\nsetup files, such as passwd, group, and profile.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:setup:2.14.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://pagure.io/setup/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "setup-2.14.5-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:00:56 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "setup"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/basesystem@12-3.oe2403?arch=noarch&distro=openEuler-24.03&upstream=basesystem-12-3.oe2403.src.rpm&package-id=d1370470ce55b163",
+      "dependsOn": [
+        "pkg:rpm/openEuler/filesystem@3.16-5.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=filesystem-3.16-5.oe2403.src.rpm&package-id=17e70ad0e39e4cac",
+        "pkg:rpm/openEuler/setup@2.14.5-2.oe2403?arch=noarch&distro=openEuler-24.03&upstream=setup-2.14.5-2.oe2403.src.rpm&package-id=81d98f335854e0bb"
+      ]
+    }
+  ]
+}

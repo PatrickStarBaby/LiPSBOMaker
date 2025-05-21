@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:d4a2bcc9-bce3-4879-b563-0b0305fcdd45",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:37:53Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "crontabs-1.11-23.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/cronie-crond/crontabs"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "7cd566fd-224c-4899-9888-aee360cf6791"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "7cd566fd-224c-4899-9888-aee360cf6791",
+      "dependsOn" : [ ]
+    }
+  ]
+}

@@ -1,0 +1,787 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:3fabcdd6-cf22-4c15-a284-cbbce6656da5",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:44:51Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "gawk-5.2.2-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.gnu.org/software/gawk/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "d2a154ed-ee16-4527-8e68-a4c150ac20b0"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "f43b02ad-485a-40b9-a0f7-7eeee5708c98"
+    },
+    {
+      "name" : "ghostscript",
+      "version" : "9.56.1",
+      "description" : "Ghostscript is an interpreter for PostScript™ and Portable Document Format (PDF) files. Ghostscript consists of a PostScript interpreter layer, and a graphics library.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "AGPLv3+"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:ghostscript:9.56.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/ghostscript@9.56.1-13.oe2403?arch=x86_64&upstream=ghostscript-9.56.1-13.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://ghostscript.com/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+    },
+    {
+      "name" : "glibc-all-langpacks",
+      "version" : "2.38",
+      "description" : "The glibc-all-langpacks provides all the glibc-langpacks. Every entry includes the basic information required to support the corresponding language in your applications.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/glibc-all-langpacks@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.gnu.org/software/glibc/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "d2a154ed-ee16-4527-8e68-a4c150ac20b0",
+      "dependsOn" : [
+        "f43b02ad-485a-40b9-a0f7-7eeee5708c98",
+        "a753fde1-00c7-4fc2-892f-7c750e1dcd81",
+        "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+      ]
+    },
+    {
+      "ref" : "f43b02ad-485a-40b9-a0f7-7eeee5708c98",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "f43b02ad-485a-40b9-a0f7-7eeee5708c98"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b79a4d7d-8316-4563-af21-748583c3f01a",
+      "id" : "CVE-2024-29506",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Artifex Ghostscript before 10.03.0 has a stack-based buffer overflow in the pdfi_apply_filter() function via a long PDF filter name.",
+      "published" : "2024-07-03T18:15:00Z",
+      "updated" : "2024-11-21T09:08:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "4c58e63e-e351-4fdd-8811-e6aa847e46c9",
+      "id" : "CVE-2024-29508",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 3.3,
+          "severity" : "low",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "description" : "Artifex Ghostscript before 10.03.0 has a heap-based pointer disclosure (observable in a constructed BaseFont name) in the function pdf_base_font_alloc.",
+      "published" : "2024-07-03T18:15:00Z",
+      "updated" : "2024-11-21T09:08:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "0c5044dc-a410-4ba1-b72e-8b831ddaf91d",
+      "id" : "CVE-2024-29509",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Artifex Ghostscript before 10.03.0 has a heap-based overflow when PDFPassword (e.g., for runpdf) has a \\000 byte in the middle.",
+      "published" : "2024-07-03T18:15:00Z",
+      "updated" : "2024-11-21T09:08:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "7f033a6e-e494-49d7-8d1d-4173d67e2e55",
+      "id" : "CVE-2023-28879",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "In Artifex Ghostscript through 10.01.0, there is a buffer overflow leading to potential corruption of data internal to the PostScript interpreter, in base/sbcp.c. This affects BCPEncode, BCPDecode, TBCPEncode, and TBCPDecode. If the write buffer is filled to one byte less than full, and one then tries to write an escaped character, two bytes are written.",
+      "published" : "2023-03-31T17:15:00Z",
+      "updated" : "2025-02-14T20:15:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "35af617e-de65-4500-94da-fc351f7548c9",
+      "id" : "CVE-2023-36664",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "Artifex Ghostscript through 10.01.2 mishandles permission validation for pipe devices (with the %pipe% prefix or the | pipe character prefix).",
+      "published" : "2023-06-25T22:15:00Z",
+      "updated" : "2024-12-05T15:15:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "daedc0c5-ad50-413c-86bb-8d7b499a4d2b",
+      "id" : "CVE-2023-43115",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "In Artifex Ghostscript through 10.01.2, gdevijs.c in GhostPDL can lead to remote code execution via crafted PostScript documents because they can switch to the IJS device, or change the IjsServer parameter, after SAFER has been activated. NOTE: it is a documented risk that the IJS server can be specified on a gs command line (the IJS device inherently must execute a command to start the IJS server).",
+      "published" : "2023-09-18T08:15:00Z",
+      "updated" : "2024-11-21T08:23:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "e11c1d41-ef78-4d72-a26d-b8e8222bdde3",
+      "id" : "CVE-2023-46751",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        416
+      ],
+      "description" : "An issue was discovered in the function gdev_prn_open_printer_seekable() in Artifex Ghostscript through 10.02.0 allows remote attackers to crash the application via a dangling pointer.",
+      "published" : "2023-12-06T20:15:00Z",
+      "updated" : "2024-11-21T08:29:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a22a861a-958f-4b77-a911-312a96d8c948",
+      "id" : "CVE-2024-46951",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        824
+      ],
+      "description" : "An issue was discovered in psi/zcolor.c in Artifex Ghostscript before 10.04.0. An unchecked Implementation pointer in Pattern color space could lead to arbitrary code execution.",
+      "published" : "2024-11-10T21:15:00Z",
+      "updated" : "2024-11-14T02:13:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a8fef848-13cb-4a2d-8296-a380883782ff",
+      "id" : "CVE-2024-46952",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        120
+      ],
+      "description" : "An issue was discovered in pdf/pdf_xref.c in Artifex Ghostscript before 10.04.0. There is a buffer overflow during handling of a PDF XRef stream (related to W array values).",
+      "published" : "2024-11-10T22:15:00Z",
+      "updated" : "2024-11-14T02:01:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "38304c72-dff5-4204-a948-6279e6bb054f",
+      "id" : "CVE-2024-46953",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        190
+      ],
+      "description" : "An issue was discovered in base/gsdevice.c in Artifex Ghostscript before 10.04.0. An integer overflow when parsing the filename format string (for the output filename) results in path truncation, and possible path traversal and code execution.",
+      "published" : "2024-11-10T22:15:00Z",
+      "updated" : "2024-11-14T02:01:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "47f7ad38-1ce7-408e-8fe0-aa5d2e82d09a",
+      "id" : "CVE-2024-46954",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        22
+      ],
+      "description" : "An issue was discovered in decode_utf8 in base/gp_utf8.c in Artifex Ghostscript before 10.04.0. Overlong UTF-8 encoding leads to possible ../ directory traversal.",
+      "published" : "2024-11-10T22:15:00Z",
+      "updated" : "2024-11-14T01:58:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "974fa9fb-a881-4fa3-9b40-bfb36f5a6e49",
+      "id" : "CVE-2024-46955",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "An issue was discovered in psi/zcolor.c in Artifex Ghostscript before 10.04.0. There is an out-of-bounds read when reading color in Indexed color space.",
+      "published" : "2024-11-10T22:15:00Z",
+      "updated" : "2024-11-14T01:53:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "5fa42c55-c8c7-4027-880c-3febea6d7320",
+      "id" : "CVE-2024-46956",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "An issue was discovered in psi/zfile.c in Artifex Ghostscript before 10.04.0. Out-of-bounds data access in filenameforall can lead to arbitrary code execution.",
+      "published" : "2024-11-10T22:15:00Z",
+      "updated" : "2024-11-14T20:39:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2678afc9-ec07-468f-92aa-993797a130d6",
+      "id" : "CVE-2023-38559",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        120
+      ],
+      "description" : "A buffer overflow flaw was found in base/gdevdevn.c:1973 in devn_pcx_write_rle() in ghostscript. This issue may allow a local attacker to cause a denial of service via outputting a crafted PDF file for a DEVN device with gs.",
+      "published" : "2023-08-01T17:15:00Z",
+      "updated" : "2024-11-21T08:13:00Z",
+      "affects" : [
+        {
+          "ref" : "a753fde1-00c7-4fc2-892f-7c750e1dcd81"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "726d43c5-e721-4e0c-9672-a3f4fb0f48ce",
+      "id" : "CVE-2023-4911",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A buffer overflow was discovered in the GNU C Library's dynamic loader ld.so while processing the GLIBC_TUNABLES environment variable. This issue could allow a local attacker to use maliciously crafted GLIBC_TUNABLES environment variables when launching binaries with SUID permission to execute code with elevated privileges.",
+      "published" : "2023-10-03T18:15:00Z",
+      "updated" : "2025-01-27T21:45:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "47c349fe-7670-4d39-9e13-1702a7850159",
+      "id" : "CVE-2023-5156",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        401
+      ],
+      "description" : "A flaw was found in the GNU C Library. A recent fix for CVE-2023-4806 introduced the potential for a memory leak, which may result in an application crash.",
+      "published" : "2023-09-25T16:15:00Z",
+      "updated" : "2024-11-21T08:41:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "aeea09d9-71f0-47a1-a9d7-8b0eea286cb0",
+      "id" : "CVE-2023-6246",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A heap-based buffer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when the openlog function was not called, or called with the ident argument set to NULL, and the program name (the basename of argv[0]) is bigger than 1024 bytes, resulting in an application crash or local privilege escalation. This issue affects glibc 2.36 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "52fbe382-258b-445c-a427-46a31b5f93ed",
+      "id" : "CVE-2010-4756",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:S/C:N/I:N/A:P)"
+        }
+      ],
+      "cwes" : [
+        399
+      ],
+      "description" : "The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+      "published" : "2011-03-02T20:00:00Z",
+      "updated" : "2024-11-21T01:21:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "413e5be0-213f-42b2-9455-7cd555c519b7",
+      "id" : "CVE-2023-4527",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "A flaw was found in glibc. When the getaddrinfo function is called with the AF_UNSPEC address family and the system is configured with no-aaaa mode via /etc/resolv.conf, a DNS response via TCP larger than 2048 bytes can potentially disclose stack contents through the function returned address data, and may cause a crash.",
+      "published" : "2023-09-18T17:15:00Z",
+      "updated" : "2024-11-21T08:35:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "0e9fec9d-164c-4637-833a-d63a9859c15c",
+      "id" : "CVE-2023-6779",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "An off-by-one heap-based buffer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when these functions are called with a message bigger than INT_MAX bytes, leading to an incorrect calculation of the buffer size to store the message, resulting in an application crash. This issue affects glibc 2.37 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f3de6b40-9e47-4ea1-a94a-92fb6ffa56bc",
+      "id" : "CVE-2023-6780",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "An integer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when these functions are called with a very long message, leading to an incorrect calculation of the buffer size to store the message, resulting in undefined behavior. This issue affects glibc 2.37 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2025-02-07T17:15:00Z",
+      "affects" : [
+        {
+          "ref" : "53da54da-6e28-4c06-a96f-ca98fe93adcb"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:66615dbb-68a0-4424-babe-b5136f9d01e6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:11Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=ccc56052a78e1365",
+      "type": "application",
+      "name": "sqlite",
+      "version": "3.42.0",
+      "description": "\nSQLite is a C-language library that implements a small, fast, self-contained,\nhigh-reliability, full-featured, SQL database engine. SQLite is the most used\ndatabase engine in the world. SQLite is built into all mobile phones and most\ncomputers and comes bundled inside countless other applications that people\nuse every day.It also include lemon and sqlite3_analyzer and tcl tools.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.sqlite.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sqlite-3.42.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e54253ca642a8ba1",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.28)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), libm.so.6()(64bit), libm.so.6(GLIBC_2.2.5)(64bit), libm.so.6(GLIBC_2.29)(64bit), libm.so.6(GLIBC_2.38)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=8e140607e5d5a8c9",
+      "type": "application",
+      "name": "ncurses-libs",
+      "version": "6.4",
+      "description": "\nLibraries for ncurses.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libncurses.so.6()(64bit), libtinfo.so.6()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/readline@8.2-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=readline-8.2-2.oe2403.src.rpm&package-id=165710a8e8d24062",
+      "type": "application",
+      "name": "readline",
+      "version": "8.2",
+      "description": "\nThe GNU Readline library provides a set of functions for use by\napplications that allow users to edit command lines as they are\ntyped in. Both Emacs and vi editing modes are available.The Readline\nlibrary includes additional functions to maintain a list of\npreviously-entered command lines, to recall and perhaps reedit those\nlines, and perform csh-like history expansion on previous commands.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:readline:8.2:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/readline@8.2-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=readline-8.2-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://tiswww.case.edu/php/chet/readline/rltop.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "readline-8.2-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:45:58 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libreadline.so.8()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=54ae84ecfb7877e0",
+      "type": "application",
+      "name": "sqlite",
+      "version": "3.42.0",
+      "description": "\nSQLite is a C-language library that implements a small, fast, self-contained,\nhigh-reliability, full-featured, SQL database engine. SQLite is the most used\ndatabase engine in the world. SQLite is built into all mobile phones and most\ncomputers and comes bundled inside countless other applications that people\nuse every day.It also include lemon and sqlite3_analyzer and tcl tools.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.sqlite.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sqlite-3.42.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsqlite3.so.0()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/tcl@8.6.14-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=tcl-8.6.14-1.oe2403.src.rpm&package-id=a53274bb751d8b0b",
+      "type": "application",
+      "name": "tcl",
+      "version": "8.6.14",
+      "description": "\nTcl(Tool Command Language) provides a powerful platform for creating integration applications\nthat tie together diverse applications, protocols, devices, and frameworks. When paired with\nthe Tk toolkit, Tcl provides the fastest and most powerful way to create GUI applications that\nrun on linux, Unix, and Mac OS X. Tcl can also be used for a variety of web-related tasks and\nfor creating powerful command languages for applications.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:tcl:8.6.14:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/tcl@8.6.14-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=tcl-8.6.14-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://sourceforge.net/projects/tcl/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "tcl-8.6.14-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtcl8.6.so()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=b579f52bfa1bd028",
+      "type": "application",
+      "name": "zlib",
+      "version": "1.2.13",
+      "description": "\nZlib is a free, general-purpose, not covered by any patents, lossless data-compression\nlibrary for use on virtually any computer hardware and operating system. The zlib data\nformat is itself portable across platforms.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libz.so.1()(64bit), libz.so.1(ZLIB_1.2.0)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=ccc56052a78e1365",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=e54253ca642a8ba1",
+        "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=8e140607e5d5a8c9",
+        "pkg:rpm/openEuler/readline@8.2-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=readline-8.2-2.oe2403.src.rpm&package-id=165710a8e8d24062",
+        "pkg:rpm/openEuler/sqlite@3.42.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sqlite-3.42.0-1.oe2403.src.rpm&package-id=54ae84ecfb7877e0",
+        "pkg:rpm/openEuler/tcl@8.6.14-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=tcl-8.6.14-1.oe2403.src.rpm&package-id=a53274bb751d8b0b",
+        "pkg:rpm/openEuler/zlib@1.2.13-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=b579f52bfa1bd028"
+      ]
+    }
+  ]
+}

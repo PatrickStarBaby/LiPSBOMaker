@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:d36f7cad-488b-4fa0-b3c1-aae540e05729",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:56:21Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "lua-5.4.6-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.lua.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "7577e4a0-83d6-44f0-9853-176905d37708"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "7577e4a0-83d6-44f0-9853-176905d37708",
+      "dependsOn" : [ ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:40cbbff9-303e-4333-b68c-76cb18c13c88",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:45:32Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "filesystem-3.16-6.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://pagure.io/filesystem"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "1efc2614-a632-472e-9b16-84ed7a0200d1"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "1efc2614-a632-472e-9b16-84ed7a0200d1",
+      "dependsOn" : [ ]
+    }
+  ]
+}

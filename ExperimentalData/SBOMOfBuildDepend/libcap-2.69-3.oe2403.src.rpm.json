@@ -1,0 +1,323 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:24905e9c-d438-40f1-b69f-dbf68d770ab3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:09:24Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/libcap@2.69-3.oe2403?arch=x86_64&package-id=df0d335f048538d0",
+      "type": "application",
+      "name": "libcap",
+      "version": "2.69",
+      "description": "This is a library for getting and setting POSIX.1e (formerly POSIX 6)\ndraft 15 capabilities.",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libcap:2.69:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/libcap@2.69-3.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://sites.google.com/site/fullycapable",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "libcap-2.69.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "libcap=2.69-3.oe2403,libcap-devel=2.69-3.oe2403,libcap-help=2.69-3.oe2403,libcap-debuginfo=2.69-3.oe2403,libcap-debugsource=2.69-3.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=a4a777baeeae0f7f",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm&package-id=11049dadc132352a",
+      "type": "application",
+      "name": "libattr-devel",
+      "version": "2.5.1",
+      "description": "\nThis package contains header files and documentation needed to\ndevelop programs which make use of extended attributes.\nFor Linux programs, the documented system call API is the\nrecommended interface, but an SGI IRIX compatibility interface\nis also provided.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:attr:2.5.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://savannah.nongnu.org/projects/attr",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "attr-2.5.1-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jul 31 04:36:43 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libattr-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pam-devel@1.5.3-5.oe2403?arch=x86_64&upstream=pam-1.5.3-5.oe2403.src.rpm&package-id=5bfc7d3e8f59fcf9",
+      "type": "application",
+      "name": "pam-devel",
+      "version": "1.5.3",
+      "description": "\nDevelopment files for Linux-PAM.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pam:1.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pam-devel@1.5.3-5.oe2403?arch=x86_64&upstream=pam-1.5.3-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.linux-pam.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pam-1.5.3-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 03:09:00 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pam-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=5f8f1b68ecb359c1",
+      "type": "application",
+      "name": "perl",
+      "version": "5.38.0",
+      "description": "\nPerl 5 is a highly capable, feature-rich programming language with over 30 years of development.\nPerl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid\nprototyping and large scale development projects.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.perl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "perl-5.38.0-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 17:06:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "perl-interpreter"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/libcap@2.69-3.oe2403?arch=x86_64&package-id=df0d335f048538d0",
+      "dependsOn": [
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=a4a777baeeae0f7f",
+        "pkg:deb/libattr-devel@2.5.1-5.oe2403?arch=x86_64&upstream=attr-2.5.1-5.oe2403.src.rpm&package-id=11049dadc132352a",
+        "pkg:deb/pam-devel@1.5.3-5.oe2403?arch=x86_64&upstream=pam-1.5.3-5.oe2403.src.rpm&package-id=5bfc7d3e8f59fcf9",
+        "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=5f8f1b68ecb359c1"
+      ]
+    }
+  ]
+}

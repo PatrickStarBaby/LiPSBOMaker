@@ -1,0 +1,254 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:75339734-6708-4855-bfc0-c001f3f4968d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:24Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=9f56b360b34b67dc",
+      "type": "application",
+      "name": "python3-gpgme",
+      "version": "1.21.0",
+      "description": "\ngpgme bindings for Python3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=1aa11a10dd7c17a4",
+      "type": "application",
+      "name": "gpgme",
+      "version": "1.21.0",
+      "description": "\nGnuPG Made Easy (GPGME) is a library designed to make access to GnuPG\neasier for applications.  It provides a high-level crypto API for\nencryption, decryption, signing, signature verification and key\nmanagement.\nThis package provides C/C++/Qt/Python API support for GPGME.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gpgme:1.21.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gnupg.org/related_software/gpgme/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gpgme-1.21.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:42:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gpgme, libgpgme.so.11()(64bit), libgpgme.so.11(GPGME_1.0)(64bit), libgpgme.so.11(GPGME_1.1)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=1c66037e931ab7f9",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.4)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=55205967303295af",
+      "type": "application",
+      "name": "python3",
+      "version": "3.11.6",
+      "description": "\nPython combines remarkable power with very clear syntax. It has modules,\nclasses, exceptions, very high level dynamic data types, and dynamic\ntyping. There are interfaces to many system calls and libraries, as well\nas to various windowing systems. New built-in modules are easily written\nin C or C++ (or other languages, depending on the chosen implementation).\nPython is also usable as an extension language for applications written\nin other languages that need easy-to-use scripting or automation interfaces.\n\nThis package Provides python version 3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python(abi)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/python3-gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=9f56b360b34b67dc",
+      "dependsOn": [
+        "pkg:rpm/openEuler/gpgme@1.21.0-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=gpgme-1.21.0-1.oe2403.src.rpm&package-id=1aa11a10dd7c17a4",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=1c66037e931ab7f9",
+        "pkg:rpm/openEuler/python3@3.11.6-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=55205967303295af"
+      ]
+    }
+  ]
+}

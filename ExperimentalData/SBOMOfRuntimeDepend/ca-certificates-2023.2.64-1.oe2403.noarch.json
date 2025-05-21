@@ -1,0 +1,482 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e6c0c6b2-950c-455e-be43-a38819449bae",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:11Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm&package-id=38c6831c977c7e5e",
+      "type": "application",
+      "name": "ca-certificates",
+      "version": "2023.2.64",
+      "description": "\nThis package contains the set of CA certificates chosen by the\nMozilla Foundation for use with the Internet PKI.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ca-certificates:2023.2.64:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://fedoraproject.org/wiki/CA-Certificates",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ca-certificates-2023.2.64-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:18:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=5b26948726d34881",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh, bash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm&package-id=9c22873316a8c740",
+      "type": "application",
+      "name": "ca-certificates",
+      "version": "2023.2.64",
+      "description": "\nThis package contains the set of CA certificates chosen by the\nMozilla Foundation for use with the Internet PKI.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ca-certificates:2023.2.64:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://fedoraproject.org/wiki/CA-Certificates",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ca-certificates-2023.2.64-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:18:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(ca-certificates)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/coreutils@9.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=coreutils-9.4-3.oe2403.src.rpm&package-id=a5de952cb4271a8f",
+      "type": "application",
+      "name": "coreutils",
+      "version": "9.4",
+      "description": "\nThese are the GNU core utilities.  This package is the combination of\nthe old GNU fileutils, sh-utils, and textutils packages.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:coreutils:9.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/coreutils@9.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=coreutils-9.4-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/coreutils/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "coreutils-9.4-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:59:42 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "coreutils"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/grep@3.11-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=grep-3.11-1.oe2403.src.rpm&package-id=01de9b481f766989",
+      "type": "application",
+      "name": "grep",
+      "version": "3.11",
+      "description": "\nGrep searches one or more input files for lines containing a match to\na specified pattern. By default, Grep outputs the matching lines.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:grep:3.11:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/grep@3.11-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=grep-3.11-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/grep/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "grep-3.11-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 05:08:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "grep"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/p11-kit@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=775530d52b406c35",
+      "type": "application",
+      "name": "p11-kit",
+      "version": "0.25.0",
+      "description": "\nProvides a way to load and enumerate PKCS#11 modules.\nProvides a standard configuration setup for installing\nPKCS#11 modules in such a way that they're discoverable.\nAlso solves problems with coordinating the use of PKCS#11\nby different components or libraries living in the same process.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:p11-kit:0.25.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/p11-kit@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://p11-glue.freedesktop.org/p11-kit.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "p11-kit-0.25.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:01:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "p11-kit"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/p11-kit-trust@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=35c13bf259e33b11",
+      "type": "application",
+      "name": "p11-kit-trust",
+      "version": "0.25.0",
+      "description": "\nThis package contains PKCS#11 trust policy module.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:p11-kit:0.25.0:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/p11-kit-trust@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://p11-glue.freedesktop.org/p11-kit.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "p11-kit-0.25.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:01:22 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "p11-kit-trust"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm&package-id=b44a5e0614410dd8",
+      "type": "application",
+      "name": "sed",
+      "version": "4.9",
+      "description": "\nSed is a non-interactive command-line text editor. A stream editor is used\nto per-form basic text transformations on an input stream (a file or input\nfrom a pipeline).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sed:4.9:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/sed/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sed-4.9-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:27:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "sed"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm&package-id=38c6831c977c7e5e",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=5b26948726d34881",
+        "pkg:rpm/openEuler/ca-certificates@2023.2.64-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=ca-certificates-2023.2.64-1.oe2403.src.rpm&package-id=9c22873316a8c740",
+        "pkg:rpm/openEuler/coreutils@9.4-3.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=coreutils-9.4-3.oe2403.src.rpm&package-id=a5de952cb4271a8f",
+        "pkg:rpm/openEuler/grep@3.11-1.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=grep-3.11-1.oe2403.src.rpm&package-id=01de9b481f766989",
+        "pkg:rpm/openEuler/p11-kit@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=775530d52b406c35",
+        "pkg:rpm/openEuler/p11-kit-trust@0.25.0-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=p11-kit-0.25.0-2.oe2403.src.rpm&package-id=35c13bf259e33b11",
+        "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm&package-id=b44a5e0614410dd8"
+      ]
+    }
+  ]
+}

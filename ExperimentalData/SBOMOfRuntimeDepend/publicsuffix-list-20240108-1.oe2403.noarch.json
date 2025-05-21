@@ -1,0 +1,140 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:bcbf58f1-4a96-4121-ba03-51cdffe7f6ed",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:43Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/publicsuffix-list@20240108-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=publicsuffix-list-20240108-1.oe2403.src.rpm&package-id=ea538ccea1841938",
+      "type": "application",
+      "name": "publicsuffix-list",
+      "version": "20240108",
+      "description": "\nA \"public suffix\" is one under which Internet users can (or historically could)\ndirectly register names. The Public Suffix List is a list of all known public\nsuffixes.The Public Suffix List is an initiative of Mozilla, but is maintained\nas a community resource. It is available for use in any software, but was\noriginally created to meet the needs of browser manufacturers.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPLv2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:publicsuffix-list:20240108:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/publicsuffix-list@20240108-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=publicsuffix-list-20240108-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://publicsuffix.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "publicsuffix-list-20240108-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:45:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=1c863b1161ac9ac6",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/sh"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/publicsuffix-list@20240108-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=publicsuffix-list-20240108-1.oe2403.src.rpm&package-id=ea538ccea1841938",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=1c863b1161ac9ac6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:12972b9f-3880-4749-b7f2-66d06cb26087",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:46:00Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "elfutils-0.190-7.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://elfutils.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "e4dc68ca-1b68-4574-ad63-b39b061aa300"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "58e75709-b75e-4eca-8197-839092ce69a3"
+    },
+    {
+      "name" : "gcc-c++",
+      "version" : "12.3.1",
+      "description" : "This package adds C++ support to the GNU Compiler Collection. It includes support for most of the current C++ specification, including templates and exception handling.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "25dbd46f-7c5c-4779-ba5a-a5676d634d86"
+    },
+    {
+      "name" : "libarchive-devel",
+      "version" : "3.7.1",
+      "description" : "libarchive-devel contains the header files for developing applications that want to make use of libarchive.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:libarchive:3.7.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/libarchive-devel@3.7.1-5.oe2403?arch=x86_64&upstream=libarchive-3.7.1-5.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.libarchive.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75"
+    },
+    {
+      "name" : "libcurl-devel",
+      "version" : "8.4.0",
+      "description" : "Header files for libcurl.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "curl"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:curl:8.4.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://curl.se/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "32dcd1b6-9503-4848-8881-28e5bb1d2216"
+    },
+    {
+      "name" : "sqlite-devel",
+      "version" : "3.42.0",
+      "description" : "This contains dynamic libraries and header files for the developing of sqlite.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Public Domain"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/sqlite-devel@3.42.0-1.oe2403?arch=x86_64&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.sqlite.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "a574723e-70ce-4c4c-8a42-12591138990f"
+    },
+    {
+      "name" : "zlib-devel",
+      "version" : "1.2.13",
+      "description" : "This package contains the static library, the header files, the tests user case and other development content.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "zlib and Boost"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.zlib.net"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "2868e948-e622-46f0-9a1a-7d1547a7842c"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "e4dc68ca-1b68-4574-ad63-b39b061aa300",
+      "dependsOn" : [
+        "58e75709-b75e-4eca-8197-839092ce69a3",
+        "25dbd46f-7c5c-4779-ba5a-a5676d634d86",
+        "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75",
+        "32dcd1b6-9503-4848-8881-28e5bb1d2216",
+        "a574723e-70ce-4c4c-8a42-12591138990f",
+        "2868e948-e622-46f0-9a1a-7d1547a7842c"
+      ]
+    },
+    {
+      "ref" : "58e75709-b75e-4eca-8197-839092ce69a3",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "25dbd46f-7c5c-4779-ba5a-a5676d634d86",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "32dcd1b6-9503-4848-8881-28e5bb1d2216",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "a574723e-70ce-4c4c-8a42-12591138990f",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "2868e948-e622-46f0-9a1a-7d1547a7842c",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "58e75709-b75e-4eca-8197-839092ce69a3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "25dbd46f-7c5c-4779-ba5a-a5676d634d86"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a6c149c8-149b-4b34-ad06-bfcd518a8fdb",
+      "id" : "CVE-2024-26256",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "severity" : "unknown",
+          "method" : "other"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Libarchive Remote Code Execution Vulnerability",
+      "published" : "2024-04-09T17:15:00Z",
+      "updated" : "2025-01-08T16:03:00Z",
+      "affects" : [
+        {
+          "ref" : "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f16d51c3-14cf-443d-9f3f-1b067d34aa2c",
+      "id" : "CVE-2024-37407",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.1,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "Libarchive before 3.7.4 allows name out-of-bounds access when a ZIP archive has an empty-name file and mac-ext is enabled. This occurs in slurp_central_directory in archive_read_support_format_zip.c.",
+      "published" : "2024-06-08T13:15:00Z",
+      "updated" : "2024-11-21T09:23:00Z",
+      "affects" : [
+        {
+          "ref" : "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "376b5d04-8133-43c6-9174-70ad3b178cd7",
+      "id" : "CVE-2024-48957",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "execute_filter_audio in archive_read_support_format_rar.c in libarchive before 3.7.5 allows out-of-bounds access via a crafted archive file because src can move beyond dst.",
+      "published" : "2024-10-10T02:15:00Z",
+      "updated" : "2024-12-02T14:58:00Z",
+      "affects" : [
+        {
+          "ref" : "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "53290bec-bd03-499c-b526-5d7391c754a6",
+      "id" : "CVE-2024-48958",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "execute_filter_delta in archive_read_support_format_rar.c in libarchive before 3.7.5 allows out-of-bounds access via a crafted archive file because src can move beyond dst.",
+      "published" : "2024-10-10T02:15:00Z",
+      "updated" : "2024-12-02T14:58:00Z",
+      "affects" : [
+        {
+          "ref" : "2d7e66ae-687b-4cf1-a2c0-5d17f1631f75"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "217e172f-f499-4ea9-9890-b8f201d69231",
+      "id" : "CVE-2024-9681",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L"
+        }
+      ],
+      "cwes" : [
+        697
+      ],
+      "description" : "When curl is asked to use HSTS, the expiry time for a subdomain might overwrite a parent domain's cache entry, making it end sooner or later than otherwise intended. This affects curl using applications that enable HSTS and use URLs with the insecure `HTTP://` scheme and perform transfers with hosts like `x.example.com` as well as `example.com` where the first host is a subdomain of the second host. (The HSTS cache either needs to have been populated manually or there needs to have been previous HTTPS accesses done as the cache needs to have entries for the domains involved to trigger this problem.) When `x.example.com` responds with `Strict-Transport-Security:` headers, this bug can make the subdomain's expiry timeout *bleed over* and get set for the parent domain `example.com` in curl's HSTS cache. The result of a triggered bug is that HTTP accesses to `example.com` get converted to HTTPS for a different period of time than what was asked for by the origin server. If `example.com` for example stops supporting HTTPS at its expiry time, curl might then fail to access `http://example.com` until the (wrongly set) timeout expires. This bug can also expire the parent's entry *earlier*, thus making curl inadvertently switch back to insecure HTTP earlier than otherwise intended.",
+      "published" : "2024-11-06T08:15:00Z",
+      "updated" : "2024-12-13T14:15:00Z",
+      "affects" : [
+        {
+          "ref" : "32dcd1b6-9503-4848-8881-28e5bb1d2216"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "de7ebfb6-623e-4f41-b9c0-e405212e8e8f",
+      "id" : "CVE-2023-46218",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "This flaw allows a malicious HTTP server to set \"super cookies\" in curl that are then passed back to more origins than what is otherwise allowed or possible. This allows a site to set cookies that then would get sent to different and unrelated sites and domains. It could do this by exploiting a mixed case flaw in curl's function that verifies a given cookie domain against the Public Suffix List (PSL). For example a cookie could be set with `domain=co.UK` when the URL used a lower case hostname `curl.co.uk`, even though `co.uk` is listed as a PSL domain.",
+      "published" : "2023-12-07T01:15:00Z",
+      "updated" : "2025-02-13T18:15:00Z",
+      "affects" : [
+        {
+          "ref" : "32dcd1b6-9503-4848-8881-28e5bb1d2216"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9df547cd-18f0-4559-8b79-aaa80e266a97",
+      "id" : "CVE-2023-46219",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        311
+      ],
+      "description" : "When saving HSTS data to an excessively long file name, curl could end up removing all contents, making subsequent requests using that file unaware of the HSTS status they should otherwise use.",
+      "published" : "2023-12-12T02:15:00Z",
+      "updated" : "2025-02-13T18:15:00Z",
+      "affects" : [
+        {
+          "ref" : "32dcd1b6-9503-4848-8881-28e5bb1d2216"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a6581dcb-7f34-40a2-b2a8-c3c5d081118e",
+      "id" : "CVE-2023-7104",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.3,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "cwes" : [
+        119
+      ],
+      "description" : "A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.",
+      "published" : "2023-12-29T10:15:00Z",
+      "updated" : "2024-11-21T08:45:00Z",
+      "affects" : [
+        {
+          "ref" : "a574723e-70ce-4c4c-8a42-12591138990f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "50713749-e17a-4ac4-b4d8-71c3a4b8b188",
+      "id" : "CVE-2023-45853",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        190
+      ],
+      "description" : "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+      "published" : "2023-10-14T02:15:00Z",
+      "updated" : "2024-12-20T17:41:00Z",
+      "affects" : [
+        {
+          "ref" : "2868e948-e622-46f0-9a1a-7d1547a7842c"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a1cda7a3-f5a6-4bae-b8a5-805623776404",
+      "id" : "CVE-2023-6992",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Cloudflare version of zlib library was found to be vulnerable to memory corruption issues affecting the deflation algorithm implementation (deflate.c). The issues resulted from improper input validation and heap-based buffer overflow. A local attacker could exploit the problem during compression using a crafted malicious file potentially leading to denial of service of the software. Patches: The issue has been patched in commit 8352d10 https://github.com/cloudflare/zlib/commit/8352d108c05db1bdc5ac3bdf834dad641694c13c . The upstream repository is not affected.",
+      "published" : "2024-01-04T12:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "2868e948-e622-46f0-9a1a-7d1547a7842c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:9e3b635c-e4b6-471e-b1eb-308a4b6e26a3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:29Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/procps-ng@4.0.4-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=procps-ng-4.0.4-6.oe2403.src.rpm&package-id=9300ce5a76d71d3b",
+      "type": "application",
+      "name": "procps-ng",
+      "version": "4.0.4",
+      "description": "\nThe procps package contains a set of system utilities that provide\nsystem information. Procps includes ps, free, skill, pkill, pgrep,\nsnice, tload, top, uptime, vmstat, pidof, pmap, slabtop, w, watch\nand pwdx.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+ and GPLv2 and GPLv2+ and GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:procps-ng:4.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/procps-ng@4.0.4-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=procps-ng-4.0.4-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://sourceforge.net/projects/procps-ng/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "procps-ng-4.0.4-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jun 26 10:42:55 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=f521815121b3ad60",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "ld-linux-x86-64.so.2()(64bit), ld-linux-x86-64.so.2(GLIBC_2.3)(64bit), libc.so.6()(64bit), libc.so.6(GLIBC_2.11)(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.15)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.27)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.32)(64bit), libc.so.6(GLIBC_2.33)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.38)(64bit), libc.so.6(GLIBC_2.4)(64bit), libc.so.6(GLIBC_2.7)(64bit), libc.so.6(GLIBC_2.8)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=ee2ee22031814e6e",
+      "type": "application",
+      "name": "ncurses-libs",
+      "version": "6.4",
+      "description": "\nLibraries for ncurses.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ncurses:6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://invisible-island.net/ncurses/ncurses.html",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "ncurses-6.4-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:35:29 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libncursesw.so.6()(64bit), libtinfo.so.6()(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/procps-ng@4.0.4-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=procps-ng-4.0.4-6.oe2403.src.rpm&package-id=123f2c18407354dd",
+      "type": "application",
+      "name": "procps-ng",
+      "version": "4.0.4",
+      "description": "\nThe procps package contains a set of system utilities that provide\nsystem information. Procps includes ps, free, skill, pkill, pgrep,\nsnice, tload, top, uptime, vmstat, pidof, pmap, slabtop, w, watch\nand pwdx.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+ and GPLv2 and GPLv2+ and GPLv3+ and LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:procps-ng:4.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/procps-ng@4.0.4-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=procps-ng-4.0.4-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://sourceforge.net/projects/procps-ng/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "procps-ng-4.0.4-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jun 26 10:42:55 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libproc2.so.0()(64bit), libproc2.so.0(LIBPROC_2)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/systemd-libs@255-35.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=systemd-255-35.oe2403.src.rpm&package-id=6f2d80b3919042ce",
+      "type": "application",
+      "name": "systemd-libs",
+      "version": "255",
+      "description": "\nLibraries for systemd and udev.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/systemd-libs@255-35.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsystemd.so.0()(64bit), libsystemd.so.0(LIBSYSTEMD_209)(64bit), libsystemd.so.0(LIBSYSTEMD_254)(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/procps-ng@4.0.4-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=procps-ng-4.0.4-6.oe2403.src.rpm&package-id=9300ce5a76d71d3b",
+      "dependsOn": [
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=f521815121b3ad60",
+        "pkg:rpm/openEuler/ncurses-libs@6.4-8.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=ncurses-6.4-8.oe2403.src.rpm&package-id=ee2ee22031814e6e",
+        "pkg:rpm/openEuler/procps-ng@4.0.4-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=procps-ng-4.0.4-6.oe2403.src.rpm&package-id=123f2c18407354dd",
+        "pkg:rpm/openEuler/systemd-libs@255-35.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=systemd-255-35.oe2403.src.rpm&package-id=6f2d80b3919042ce"
+      ]
+    }
+  ]
+}

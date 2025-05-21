@@ -1,0 +1,1055 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:dadabc7d-9e25-4ea8-bd5b-77735a5d8a13",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:28:08Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/tpm2-tss@4.0.1-3.oe2403?arch=x86_64&package-id=d7efc2d79f5a4702",
+      "type": "application",
+      "name": "tpm2-tss",
+      "version": "4.0.1",
+      "description": "tpm2-tss is a software stack supporting Trusted Platform Module(TPM) 2.0 system\nAPIs which provides TPM2.0 specified APIs for applications to access TPM module through kernel TPM drivers.",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:tpm2-tss:4.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/tpm2-tss@4.0.1-3.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://github.com/tpm2-software/tpm2-tss",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "tpm2-tss-4.0.1.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "tpm2-tss=4.0.1-3.oe2403,tpm2-tss-devel=4.0.1-3.oe2403,tpm2-tss-help=4.0.1-3.oe2403,tpm2-tss-debuginfo=4.0.1-3.oe2403,tpm2-tss-debugsource=4.0.1-3.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf-archive@2023.02.20-1.oe2403?arch=noarch&upstream=autoconf-archive-2023.02.20-1.oe2403.src.rpm&package-id=f847d4b490d2445b",
+      "type": "application",
+      "name": "autoconf-archive",
+      "version": "2023.02.20",
+      "description": "\nAutoconf Macro Archive aims to provide a central repository of useful\nand tested Autoconf macros for software developers around the world.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3.0 and GPL-2.0+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf-archive:2023.02.20:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf-archive@2023.02.20-1.oe2403?arch=noarch&upstream=autoconf-archive-2023.02.20-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/autoconf-archive/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-archive-2023.02.20-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:48:34 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf-archive"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/curl@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=0562588f07a66ab8",
+      "type": "application",
+      "name": "curl",
+      "version": "8.4.0",
+      "description": "\ncURL is a computer software project providing a library (libcurl) and\ncommand-line tool (curl) for transferring data using various protocols.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "curl"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:curl:8.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/curl@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://curl.se/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "curl-8.4.0-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:20:40 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "curl"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/doxygen@1.9.6-1.oe2403?arch=x86_64&upstream=doxygen-1.9.6-1.oe2403.src.rpm&package-id=10b4b83cdbb50df3",
+      "type": "application",
+      "name": "doxygen",
+      "version": "1.9.6",
+      "description": "\nDoxygen is the de facto standard tool for generating documentation from\nannotated C++ sources, but it also supports other popular programming\nlanguages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba,\nMicrosoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some\nextent D.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:doxygen:1.9.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/doxygen@1.9.6-1.oe2403?arch=x86_64&upstream=doxygen-1.9.6-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.doxygen.nl",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "doxygen-1.9.6-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 03:46:50 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "doxygen"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=43d3883a6c39fe27",
+      "type": "application",
+      "name": "gcc-c++",
+      "version": "12.3.1",
+      "description": "\nThis package adds C++ support to the GNU Compiler Collection.\nIt includes support for most of the current C++ specification,\nincluding templates and exception handling.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc-c++"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/iproute@6.6.0-3.oe2403?arch=x86_64&upstream=iproute-6.6.0-3.oe2403.src.rpm&package-id=634494cbc4b36a61",
+      "type": "application",
+      "name": "iproute",
+      "version": "6.6.0",
+      "description": "\nIproute2 is a collection of user-space utilities to set up networking\nunder Linux from the command-line. It can inspect and configure,\namong other things: interface paramters, IP addresses, routing,\ntunnels, bridges, packet transformations (IPsec, etc.), and Quality\nof Service.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:iproute:6.6.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/iproute@6.6.0-3.oe2403?arch=x86_64&upstream=iproute-6.6.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://kernel.org/pub/linux/utils/net/iproute2/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "iproute-6.6.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:53:24 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "iproute"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/json-c-devel@0.17-6.oe2403?arch=x86_64&upstream=json-c-0.17-6.oe2403.src.rpm&package-id=3d79e21c71ce6b33",
+      "type": "application",
+      "name": "json-c-devel",
+      "version": "0.17",
+      "description": "\nThis package contains libraries and header files for\ndeveloping applications that use json-c.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:json-c:0.17:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/json-c-devel@0.17-6.oe2403?arch=x86_64&upstream=json-c-0.17-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/json-c/json-c",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "json-c-0.17-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 10 03:19:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "json-c-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libcmocka-devel@1.1.7-1.oe2403?arch=x86_64&upstream=cmocka-1.1.7-1.oe2403.src.rpm&package-id=89bf6648da317628",
+      "type": "application",
+      "name": "libcmocka-devel",
+      "version": "1.1.7",
+      "description": "\nDevelopment headers for the cmocka unit testing library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ASL 2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cmocka:1.1.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libcmocka-devel@1.1.7-1.oe2403?arch=x86_64&upstream=cmocka-1.1.7-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://cmocka.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cmocka-1.1.7-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:43:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcmocka-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=53549e394525e38c",
+      "type": "application",
+      "name": "libcurl-devel",
+      "version": "8.4.0",
+      "description": "\nHeader files for libcurl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "curl"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:curl:8.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://curl.se/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "curl-8.4.0-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:20:40 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcurl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libgcrypt-devel@1.10.2-1.oe2403?arch=x86_64&upstream=libgcrypt-1.10.2-1.oe2403.src.rpm&package-id=ce92b40f93e30b26",
+      "type": "application",
+      "name": "libgcrypt-devel",
+      "version": "1.10.2",
+      "description": "\nLibgcrypt is a general purpose crypto library based on the code used\nin GNU Privacy Guard.  This package contains files needed to develop\napplications using libgcrypt.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libgcrypt:1.10.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libgcrypt-devel@1.10.2-1.oe2403?arch=x86_64&upstream=libgcrypt-1.10.2-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnupg.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libgcrypt-1.10.2-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:38:20 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libgcrypt-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=ca48472b3ac872ec",
+      "type": "application",
+      "name": "libtool",
+      "version": "2.4.7",
+      "description": "\nGNU libtool is a generic library support script.\nLibtool hides the complexity of using shared libraries behind a consistent, portable interface.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtool:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtool/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtool-2.4.7-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtool"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=7612646f767b2bab",
+      "type": "application",
+      "name": "openssl-devel",
+      "version": "3.0.12",
+      "description": "\nDevelopment files for openssl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openssl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=019abd53c6505f01",
+      "type": "application",
+      "name": "pkgconf",
+      "version": "1.9.5",
+      "description": "\npkgconf is a program which helps to configure compiler and linker flags for development frameworks.\nIt is similar to pkg-config from freedesktop.org, providing additional functionality while also\nmaintaining compatibility.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pkgconf:1.9.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://pkgconf.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pkgconf-1.9.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:17:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/swtpm@0.8.0-3.oe2403?arch=x86_64&upstream=swtpm-0.8.0-3.oe2403.src.rpm&package-id=c586fefd8618a121",
+      "type": "application",
+      "name": "swtpm",
+      "version": "0.8.0",
+      "description": "\nTPM emulator built on libtpms providing TPM functionality for QEMU VMs\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:swtpm:0.8.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/swtpm@0.8.0-3.oe2403?arch=x86_64&upstream=swtpm-0.8.0-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/stefanberger/swtpm",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "swtpm-0.8.0-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 14:43:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "swtpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=578e3838bbb79048",
+      "type": "application",
+      "name": "systemd",
+      "version": "255",
+      "description": "\nsystemd is a system and service manager that runs as PID 1 and starts\nthe rest of the system.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT and LGPLv2+ and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:systemd:255:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://systemd.io/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "35.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "systemd-255-35.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec 24 14:31:35 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "systemd"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/uthash-devel@2.3.0-1.oe2403?arch=x86_64&upstream=uthash-2.3.0-1.oe2403.src.rpm&package-id=e7c7c4cc55608fbd",
+      "type": "application",
+      "name": "uthash-devel",
+      "version": "2.3.0",
+      "description": "\nHeader and library files for uthash\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:uthash:2.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/uthash-devel@2.3.0-1.oe2403?arch=x86_64&upstream=uthash-2.3.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/troydhanson/uthash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "uthash-2.3.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:11:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "uthash-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/util-linux-devel@2.39.1-7.oe2403?arch=x86_64&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=6830c8c4d8f2fe03",
+      "type": "application",
+      "name": "util-linux-devel",
+      "version": "2.39.1",
+      "description": "\nThis package contains some library and other necessary files for the\ndevelopment of util-linux.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:util-linux:2.39.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/util-linux-devel@2.39.1-7.oe2403?arch=x86_64&upstream=util-linux-2.39.1-7.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "7.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "util-linux-2.39.1-7.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:21 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "util-linux-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/tpm2-tss@4.0.1-3.oe2403?arch=x86_64&package-id=d7efc2d79f5a4702",
+      "dependsOn": [
+        "pkg:deb/autoconf-archive@2023.02.20-1.oe2403?arch=noarch&upstream=autoconf-archive-2023.02.20-1.oe2403.src.rpm&package-id=f847d4b490d2445b",
+        "pkg:deb/curl@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=0562588f07a66ab8",
+        "pkg:deb/doxygen@1.9.6-1.oe2403?arch=x86_64&upstream=doxygen-1.9.6-1.oe2403.src.rpm&package-id=10b4b83cdbb50df3",
+        "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=43d3883a6c39fe27",
+        "pkg:deb/iproute@6.6.0-3.oe2403?arch=x86_64&upstream=iproute-6.6.0-3.oe2403.src.rpm&package-id=634494cbc4b36a61",
+        "pkg:deb/json-c-devel@0.17-6.oe2403?arch=x86_64&upstream=json-c-0.17-6.oe2403.src.rpm&package-id=3d79e21c71ce6b33",
+        "pkg:deb/libcmocka-devel@1.1.7-1.oe2403?arch=x86_64&upstream=cmocka-1.1.7-1.oe2403.src.rpm&package-id=89bf6648da317628",
+        "pkg:deb/libcurl-devel@8.4.0-14.oe2403?arch=x86_64&upstream=curl-8.4.0-14.oe2403.src.rpm&package-id=53549e394525e38c",
+        "pkg:deb/libgcrypt-devel@1.10.2-1.oe2403?arch=x86_64&upstream=libgcrypt-1.10.2-1.oe2403.src.rpm&package-id=ce92b40f93e30b26",
+        "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=ca48472b3ac872ec",
+        "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=7612646f767b2bab",
+        "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=019abd53c6505f01",
+        "pkg:deb/swtpm@0.8.0-3.oe2403?arch=x86_64&upstream=swtpm-0.8.0-3.oe2403.src.rpm&package-id=c586fefd8618a121",
+        "pkg:deb/systemd@255-35.oe2403?arch=x86_64&upstream=systemd-255-35.oe2403.src.rpm&package-id=578e3838bbb79048",
+        "pkg:deb/uthash-devel@2.3.0-1.oe2403?arch=x86_64&upstream=uthash-2.3.0-1.oe2403.src.rpm&package-id=e7c7c4cc55608fbd",
+        "pkg:deb/util-linux-devel@2.39.1-7.oe2403?arch=x86_64&upstream=util-linux-2.39.1-7.oe2403.src.rpm&package-id=6830c8c4d8f2fe03"
+      ]
+    }
+  ]
+}

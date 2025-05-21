@@ -1,0 +1,1115 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:48b70434-be7e-4871-8bdc-e816184d1318",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:53:19Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "python3-3.11.6-8.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.python.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "c4a619b4-0ba7-4b32-bb30-fa1d19b201ca"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "99a8bd0f-015d-4425-91d8-1e16a685e878"
+    },
+    {
+      "name" : "gcc-c++",
+      "version" : "12.3.1",
+      "description" : "This package adds C++ support to the GNU Compiler Collection. It includes support for most of the current C++ specification, including templates and exception handling.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "fa963f23-54a7-4186-b3ab-5d7f67fb19d5"
+    },
+    {
+      "name" : "glibc-all-langpacks",
+      "version" : "2.38",
+      "description" : "The glibc-all-langpacks provides all the glibc-langpacks. Every entry includes the basic information required to support the corresponding language in your applications.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/glibc-all-langpacks@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.gnu.org/software/glibc/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+    },
+    {
+      "name" : "glibc-devel",
+      "version" : "2.38",
+      "description" : "The glibc-devel package contains the object files necessary for developing programs which use the standard C libraries. Besides, it contains the headers. Thus, it is necessory to install glibc-devel if you ned develop programs.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/glibc-devel@2.38-47.oe2403?arch=x86_64&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.gnu.org/software/glibc/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+    },
+    {
+      "name" : "openssl-devel",
+      "version" : "3.0.12",
+      "description" : "Development files for openssl.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.openssl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "b2f49009-292b-4fbb-ba98-f81763c66910"
+    },
+    {
+      "name" : "sqlite-devel",
+      "version" : "3.42.0",
+      "description" : "This contains dynamic libraries and header files for the developing of sqlite.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "Public Domain"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:sqlite:3.42.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/sqlite-devel@3.42.0-1.oe2403?arch=x86_64&upstream=sqlite-3.42.0-1.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.sqlite.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "a4811305-4b7f-4dba-902d-fb019f34efef"
+    },
+    {
+      "name" : "tar",
+      "version" : "1.35",
+      "description" : "GNU Tar provides the ability to create tar archives, as well as various other kinds of manipulation. For example, you can use Tar on previously created archives to extract files, to store additional files, or to update or list files which were already stored.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:tar:1.35:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/tar@1.35-2.oe2403?arch=x86_64&upstream=tar-1.35-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.gnu.org/software/tar/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "04ebb869-f466-4492-8e6d-09c0450cca72"
+    },
+    {
+      "name" : "zlib-devel",
+      "version" : "1.2.13",
+      "description" : "This package contains the static library, the header files, the tests user case and other development content.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "zlib and Boost"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.zlib.net"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "02ae4e20-b734-4879-bca1-82c65c53abf0"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "c4a619b4-0ba7-4b32-bb30-fa1d19b201ca",
+      "dependsOn" : [
+        "99a8bd0f-015d-4425-91d8-1e16a685e878",
+        "fa963f23-54a7-4186-b3ab-5d7f67fb19d5",
+        "f581086d-8d12-45eb-afad-60d2d61c5e2f",
+        "d568fc1f-5d4e-47f9-8075-284de850e946",
+        "b2f49009-292b-4fbb-ba98-f81763c66910",
+        "a4811305-4b7f-4dba-902d-fb019f34efef",
+        "04ebb869-f466-4492-8e6d-09c0450cca72",
+        "02ae4e20-b734-4879-bca1-82c65c53abf0"
+      ]
+    },
+    {
+      "ref" : "99a8bd0f-015d-4425-91d8-1e16a685e878",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "fa963f23-54a7-4186-b3ab-5d7f67fb19d5",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "b2f49009-292b-4fbb-ba98-f81763c66910",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "a4811305-4b7f-4dba-902d-fb019f34efef",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "04ebb869-f466-4492-8e6d-09c0450cca72",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "02ae4e20-b734-4879-bca1-82c65c53abf0",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "99a8bd0f-015d-4425-91d8-1e16a685e878"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "fa963f23-54a7-4186-b3ab-5d7f67fb19d5"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "0e9fec9d-164c-4637-833a-d63a9859c15c",
+      "id" : "CVE-2023-6779",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "An off-by-one heap-based buffer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when these functions are called with a message bigger than INT_MAX bytes, leading to an incorrect calculation of the buffer size to store the message, resulting in an application crash. This issue affects glibc 2.37 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f3de6b40-9e47-4ea1-a94a-92fb6ffa56bc",
+      "id" : "CVE-2023-6780",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "An integer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when these functions are called with a very long message, leading to an incorrect calculation of the buffer size to store the message, resulting in undefined behavior. This issue affects glibc 2.37 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2025-02-07T17:15:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "52fbe382-258b-445c-a427-46a31b5f93ed",
+      "id" : "CVE-2010-4756",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:S/C:N/I:N/A:P)"
+        }
+      ],
+      "cwes" : [
+        399
+      ],
+      "description" : "The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+      "published" : "2011-03-02T20:00:00Z",
+      "updated" : "2024-11-21T01:21:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "413e5be0-213f-42b2-9455-7cd555c519b7",
+      "id" : "CVE-2023-4527",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "A flaw was found in glibc. When the getaddrinfo function is called with the AF_UNSPEC address family and the system is configured with no-aaaa mode via /etc/resolv.conf, a DNS response via TCP larger than 2048 bytes can potentially disclose stack contents through the function returned address data, and may cause a crash.",
+      "published" : "2023-09-18T17:15:00Z",
+      "updated" : "2024-11-21T08:35:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "726d43c5-e721-4e0c-9672-a3f4fb0f48ce",
+      "id" : "CVE-2023-4911",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A buffer overflow was discovered in the GNU C Library's dynamic loader ld.so while processing the GLIBC_TUNABLES environment variable. This issue could allow a local attacker to use maliciously crafted GLIBC_TUNABLES environment variables when launching binaries with SUID permission to execute code with elevated privileges.",
+      "published" : "2023-10-03T18:15:00Z",
+      "updated" : "2025-01-27T21:45:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "47c349fe-7670-4d39-9e13-1702a7850159",
+      "id" : "CVE-2023-5156",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        401
+      ],
+      "description" : "A flaw was found in the GNU C Library. A recent fix for CVE-2023-4806 introduced the potential for a memory leak, which may result in an application crash.",
+      "published" : "2023-09-25T16:15:00Z",
+      "updated" : "2024-11-21T08:41:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "aeea09d9-71f0-47a1-a9d7-8b0eea286cb0",
+      "id" : "CVE-2023-6246",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A heap-based buffer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when the openlog function was not called, or called with the ident argument set to NULL, and the program name (the basename of argv[0]) is bigger than 1024 bytes, resulting in an application crash or local privilege escalation. This issue affects glibc 2.36 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "f581086d-8d12-45eb-afad-60d2d61c5e2f"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "413e5be0-213f-42b2-9455-7cd555c519b7",
+      "id" : "CVE-2023-4527",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        125
+      ],
+      "description" : "A flaw was found in glibc. When the getaddrinfo function is called with the AF_UNSPEC address family and the system is configured with no-aaaa mode via /etc/resolv.conf, a DNS response via TCP larger than 2048 bytes can potentially disclose stack contents through the function returned address data, and may cause a crash.",
+      "published" : "2023-09-18T17:15:00Z",
+      "updated" : "2024-11-21T08:35:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "726d43c5-e721-4e0c-9672-a3f4fb0f48ce",
+      "id" : "CVE-2023-4911",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A buffer overflow was discovered in the GNU C Library's dynamic loader ld.so while processing the GLIBC_TUNABLES environment variable. This issue could allow a local attacker to use maliciously crafted GLIBC_TUNABLES environment variables when launching binaries with SUID permission to execute code with elevated privileges.",
+      "published" : "2023-10-03T18:15:00Z",
+      "updated" : "2025-01-27T21:45:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "47c349fe-7670-4d39-9e13-1702a7850159",
+      "id" : "CVE-2023-5156",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        401
+      ],
+      "description" : "A flaw was found in the GNU C Library. A recent fix for CVE-2023-4806 introduced the potential for a memory leak, which may result in an application crash.",
+      "published" : "2023-09-25T16:15:00Z",
+      "updated" : "2024-11-21T08:41:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "aeea09d9-71f0-47a1-a9d7-8b0eea286cb0",
+      "id" : "CVE-2023-6246",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A heap-based buffer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when the openlog function was not called, or called with the ident argument set to NULL, and the program name (the basename of argv[0]) is bigger than 1024 bytes, resulting in an application crash or local privilege escalation. This issue affects glibc 2.36 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "0e9fec9d-164c-4637-833a-d63a9859c15c",
+      "id" : "CVE-2023-6779",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "An off-by-one heap-based buffer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when these functions are called with a message bigger than INT_MAX bytes, leading to an incorrect calculation of the buffer size to store the message, resulting in an application crash. This issue affects glibc 2.37 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "f3de6b40-9e47-4ea1-a94a-92fb6ffa56bc",
+      "id" : "CVE-2023-6780",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description" : "An integer overflow was found in the __vsyslog_internal function of the glibc library. This function is called by the syslog and vsyslog functions. This issue occurs when these functions are called with a very long message, leading to an incorrect calculation of the buffer size to store the message, resulting in undefined behavior. This issue affects glibc 2.37 and newer.",
+      "published" : "2024-01-31T14:15:00Z",
+      "updated" : "2025-02-07T17:15:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "52fbe382-258b-445c-a427-46a31b5f93ed",
+      "id" : "CVE-2010-4756",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:S/C:N/I:N/A:P)"
+        }
+      ],
+      "cwes" : [
+        399
+      ],
+      "description" : "The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+      "published" : "2011-03-02T20:00:00Z",
+      "updated" : "2024-11-21T01:21:00Z",
+      "affects" : [
+        {
+          "ref" : "d568fc1f-5d4e-47f9-8075-284de850e946"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "340b9a57-bcdb-4ac4-a317-83d342c11482",
+      "id" : "CVE-2024-0727",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description" : "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack Impact summary: Applications loading files in the PKCS12 format from untrusted sources might terminate abruptly. A file in PKCS12 format can contain certificates and keys and may come from an untrusted source. The PKCS12 specification allows certain fields to be NULL, but OpenSSL does not correctly check for this case. This can lead to a NULL pointer dereference that results in OpenSSL crashing. If an application processes PKCS12 files from an untrusted source using the OpenSSL APIs then that application will be vulnerable to this issue. OpenSSL APIs that are vulnerable to this are: PKCS12_parse(), PKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes() and PKCS12_newpass(). We have also fixed a similar issue in SMIME_write_PKCS7(). However since this function is related to writing data we do not consider it security significant. The FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "published" : "2024-01-26T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "b2f49009-292b-4fbb-ba98-f81763c66910"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "20f576e4-996c-42ef-8a49-f4deddab73ef",
+      "id" : "CVE-2023-5678",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "cwes" : [
+        754
+      ],
+      "description" : "Issue summary: Generating excessively long X9.42 DH keys or checking excessively long X9.42 DH keys or parameters may be very slow. Impact summary: Applications that use the functions DH_generate_key() to generate an X9.42 DH key may experience long delays. Likewise, applications that use DH_check_pub_key(), DH_check_pub_key_ex() or EVP_PKEY_public_check() to check an X9.42 DH key or X9.42 DH parameters may experience long delays. Where the key or parameters that are being checked have been obtained from an untrusted source this may lead to a Denial of Service. While DH_check() performs all the necessary checks (as of CVE-2023-3817), DH_check_pub_key() doesn't make any of these checks, and is therefore vulnerable for excessively large P and Q parameters. Likewise, while DH_generate_key() performs a check for an excessively large P, it doesn't check for an excessively large Q. An application that calls DH_generate_key() or DH_check_pub_key() and supplies a key or parameters obtained from an untrusted source could be vulnerable to a Denial of Service attack. DH_generate_key() and DH_check_pub_key() are also called by a number of other OpenSSL functions. An application calling any of those other functions may similarly be affected. The other functions affected by this are DH_check_pub_key_ex(), EVP_PKEY_public_check(), and EVP_PKEY_generate(). Also vulnerable are the OpenSSL pkey command line application when using the \"-pubcheck\" option, as well as the OpenSSL genpkey command line application. The OpenSSL SSL/TLS implementation is not affected by this issue. The OpenSSL 3.0 and 3.1 FIPS providers are not affected by this issue.",
+      "published" : "2023-11-06T16:15:00Z",
+      "updated" : "2024-11-21T08:42:00Z",
+      "affects" : [
+        {
+          "ref" : "b2f49009-292b-4fbb-ba98-f81763c66910"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "906fcbca-3672-4200-a40f-12d47dda67ac",
+      "id" : "CVE-2023-6129",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Issue summary: The POLY1305 MAC (message authentication code) implementation contains a bug that might corrupt the internal state of applications running on PowerPC CPU based platforms if the CPU provides vector instructions. Impact summary: If an attacker can influence whether the POLY1305 MAC algorithm is used, the application state might be corrupted with various application dependent consequences. The POLY1305 MAC (message authentication code) implementation in OpenSSL for PowerPC CPUs restores the contents of vector registers in a different order than they are saved. Thus the contents of some of these vector registers are corrupted when returning to the caller. The vulnerable code is used only on newer PowerPC processors supporting the PowerISA 2.07 instructions. The consequences of this kind of internal application state corruption can be various - from no consequences, if the calling application does not depend on the contents of non-volatile XMM registers at all, to the worst consequences, where the attacker could get complete control of the application process. However unless the compiler uses the vector registers for storing pointers, the most likely consequence, if any, would be an incorrect result of some application dependent calculations or a crash leading to a denial of service. The POLY1305 MAC algorithm is most frequently used as part of the CHACHA20-POLY1305 AEAD (authenticated encryption with associated data) algorithm. The most common usage of this AEAD cipher is with TLS protocol versions 1.2 and 1.3. If this cipher is enabled on the server a malicious client can influence whether this AEAD cipher is used. This implies that TLS server applications using OpenSSL can be potentially impacted. However we are currently not aware of any concrete application that would be affected by this issue therefore we consider this a Low severity security issue.",
+      "published" : "2024-01-09T17:15:00Z",
+      "updated" : "2024-11-21T08:43:00Z",
+      "affects" : [
+        {
+          "ref" : "b2f49009-292b-4fbb-ba98-f81763c66910"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a6581dcb-7f34-40a2-b2a8-c3c5d081118e",
+      "id" : "CVE-2023-7104",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.3,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "cwes" : [
+        119
+      ],
+      "description" : "A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.",
+      "published" : "2023-12-29T10:15:00Z",
+      "updated" : "2024-11-21T08:45:00Z",
+      "affects" : [
+        {
+          "ref" : "a4811305-4b7f-4dba-902d-fb019f34efef"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "d653b764-a334-448b-b977-8ed822c5e63c",
+      "id" : "CVE-2021-32803",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.8,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:N/I:P/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.1,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        59
+      ],
+      "description" : "The npm package \"tar\" (aka node-tar) before versions 6.1.2, 5.0.7, 4.4.15, and 3.2.3 has an arbitrary File Creation/Overwrite vulnerability via insufficient symlink protection. `node-tar` aims to guarantee that any file whose location would be modified by a symbolic link is not extracted. This is, in part, achieved by ensuring that extracted directories are not symlinks. Additionally, in order to prevent unnecessary `stat` calls to determine whether a given path is a directory, paths are cached when directories are created. This logic was insufficient when extracting tar files that contained both a directory and a symlink with the same name as the directory. This order of operations resulted in the directory being created and added to the `node-tar` directory cache. When a directory is present in the directory cache, subsequent calls to mkdir for that directory are skipped. However, this is also where `node-tar` checks for symlinks occur. By first creating a directory, and then replacing that directory with a symlink, it was thus possible to bypass `node-tar` symlink checks on directories, essentially allowing an untrusted tar file to symlink into an arbitrary location and subsequently extracting arbitrary files into that location, thus allowing arbitrary file creation and overwrite. This issue was addressed in releases 3.2.3, 4.4.15, 5.0.7 and 6.1.2.",
+      "published" : "2021-08-03T19:15:00Z",
+      "updated" : "2024-11-21T06:07:00Z",
+      "affects" : [
+        {
+          "ref" : "04ebb869-f466-4492-8e6d-09c0450cca72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "3cd1da22-5122-419a-818c-ba52b7f340d1",
+      "id" : "CVE-2021-32804",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.8,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:N/I:P/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.1,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "description" : "The npm package \"tar\" (aka node-tar) before versions 6.1.1, 5.0.6, 4.4.14, and 3.3.2 has a arbitrary File Creation/Overwrite vulnerability due to insufficient absolute path sanitization. node-tar aims to prevent extraction of absolute file paths by turning absolute paths into relative paths when the `preservePaths` flag is not set to `true`. This is achieved by stripping the absolute path root from any absolute file paths contained in a tar file. For example `/home/user/.bashrc` would turn into `home/user/.bashrc`. This logic was insufficient when file paths contained repeated path roots such as `////home/user/.bashrc`. `node-tar` would only strip a single path root from such paths. When given an absolute file path with repeating path roots, the resulting path (e.g. `///home/user/.bashrc`) would still resolve to an absolute path, thus allowing arbitrary file creation and overwrite. This issue was addressed in releases 3.2.2, 4.4.14, 5.0.6 and 6.1.1. Users may work around this vulnerability without upgrading by creating a custom `onentry` method which sanitizes the `entry.path` or a `filter` method which removes entries with absolute paths. See referenced GitHub Advisory for details. Be aware of CVE-2021-32803 which fixes a similar bug in later versions of tar.",
+      "published" : "2021-08-03T19:15:00Z",
+      "updated" : "2024-11-21T06:07:00Z",
+      "affects" : [
+        {
+          "ref" : "04ebb869-f466-4492-8e6d-09c0450cca72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "4c6df43f-d731-4fc4-9de7-c00eda4ba05a",
+      "id" : "CVE-2021-37701",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.4,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:L/AC:M/Au:N/C:P/I:P/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.6,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "The npm package \"tar\" (aka node-tar) before versions 4.4.16, 5.0.8, and 6.1.7 has an arbitrary file creation/overwrite and arbitrary code execution vulnerability. node-tar aims to guarantee that any file whose location would be modified by a symbolic link is not extracted. This is, in part, achieved by ensuring that extracted directories are not symlinks. Additionally, in order to prevent unnecessary stat calls to determine whether a given path is a directory, paths are cached when directories are created. This logic was insufficient when extracting tar files that contained both a directory and a symlink with the same name as the directory, where the symlink and directory names in the archive entry used backslashes as a path separator on posix systems. The cache checking logic used both `\\` and `/` characters as path separators, however `\\` is a valid filename character on posix systems. By first creating a directory, and then replacing that directory with a symlink, it was thus possible to bypass node-tar symlink checks on directories, essentially allowing an untrusted tar file to symlink into an arbitrary location and subsequently extracting arbitrary files into that location, thus allowing arbitrary file creation and overwrite. Additionally, a similar confusion could arise on case-insensitive filesystems. If a tar archive contained a directory at `FOO`, followed by a symbolic link named `foo`, then on case-insensitive file systems, the creation of the symbolic link would remove the directory from the filesystem, but _not_ from the internal directory cache, as it would not be treated as a cache hit. A subsequent file entry within the `FOO` directory would then be placed in the target of the symbolic link, thinking that the directory had already been created. These issues were addressed in releases 4.4.16, 5.0.8 and 6.1.7. The v3 branch of node-tar has been deprecated and did not receive patches for these issues. If you are still using a v3 release we recommend you update to a more recent version of node-tar. If this is not possible, a workaround is available in the referenced GHSA-9r2w-394v-53qc.",
+      "published" : "2021-08-31T17:15:00Z",
+      "updated" : "2024-11-21T06:15:00Z",
+      "affects" : [
+        {
+          "ref" : "04ebb869-f466-4492-8e6d-09c0450cca72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "ce15bfb8-c9f5-4a09-abc3-a88105deb460",
+      "id" : "CVE-2021-37712",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.4,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:L/AC:M/Au:N/C:P/I:P/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.6,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "The npm package \"tar\" (aka node-tar) before versions 4.4.18, 5.0.10, and 6.1.9 has an arbitrary file creation/overwrite and arbitrary code execution vulnerability. node-tar aims to guarantee that any file whose location would be modified by a symbolic link is not extracted. This is, in part, achieved by ensuring that extracted directories are not symlinks. Additionally, in order to prevent unnecessary stat calls to determine whether a given path is a directory, paths are cached when directories are created. This logic was insufficient when extracting tar files that contained both a directory and a symlink with names containing unicode values that normalized to the same value. Additionally, on Windows systems, long path portions would resolve to the same file system entities as their 8.3 \"short path\" counterparts. A specially crafted tar archive could thus include a directory with one form of the path, followed by a symbolic link with a different string that resolves to the same file system entity, followed by a file using the first form. By first creating a directory, and then replacing that directory with a symlink that had a different apparent name that resolved to the same entry in the filesystem, it was thus possible to bypass node-tar symlink checks on directories, essentially allowing an untrusted tar file to symlink into an arbitrary location and subsequently extracting arbitrary files into that location, thus allowing arbitrary file creation and overwrite. These issues were addressed in releases 4.4.18, 5.0.10 and 6.1.9. The v3 branch of node-tar has been deprecated and did not receive patches for these issues. If you are still using a v3 release we recommend you update to a more recent version of node-tar. If this is not possible, a workaround is available in the referenced GHSA-qq89-hq3f-393p.",
+      "published" : "2021-08-31T17:15:00Z",
+      "updated" : "2024-11-21T06:15:00Z",
+      "affects" : [
+        {
+          "ref" : "04ebb869-f466-4492-8e6d-09c0450cca72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "ac61dc0b-c2f2-44ad-bac7-f2c41df4c9f8",
+      "id" : "CVE-2021-37713",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.4,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:L/AC:M/Au:N/C:P/I:P/A:P)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.6,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "description" : "The npm package \"tar\" (aka node-tar) before versions 4.4.18, 5.0.10, and 6.1.9 has an arbitrary file creation/overwrite and arbitrary code execution vulnerability. node-tar aims to guarantee that any file whose location would be outside of the extraction target directory is not extracted. This is, in part, accomplished by sanitizing absolute paths of entries within the archive, skipping archive entries that contain `..` path portions, and resolving the sanitized paths against the extraction target directory. This logic was insufficient on Windows systems when extracting tar files that contained a path that was not an absolute path, but specified a drive letter different from the extraction target, such as `C:some\\path`. If the drive letter does not match the extraction target, for example `D:\\extraction\\dir`, then the result of `path.resolve(extractionDirectory, entryPath)` would resolve against the current working directory on the `C:` drive, rather than the extraction target directory. Additionally, a `..` portion of the path could occur immediately after the drive letter, such as `C:../foo`, and was not properly sanitized by the logic that checked for `..` within the normalized and split portions of the path. This only affects users of `node-tar` on Windows systems. These issues were addressed in releases 4.4.18, 5.0.10 and 6.1.9. The v3 branch of node-tar has been deprecated and did not receive patches for these issues. If you are still using a v3 release we recommend you update to a more recent version of node-tar. There is no reasonable way to work around this issue without performing the same path normalization procedures that node-tar now does. Users are encouraged to upgrade to the latest patched versions of node-tar, rather than attempt to sanitize paths themselves.",
+      "published" : "2021-08-31T17:15:00Z",
+      "updated" : "2024-11-21T06:15:00Z",
+      "affects" : [
+        {
+          "ref" : "04ebb869-f466-4492-8e6d-09c0450cca72"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "50713749-e17a-4ac4-b4d8-71c3a4b8b188",
+      "id" : "CVE-2023-45853",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        190
+      ],
+      "description" : "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+      "published" : "2023-10-14T02:15:00Z",
+      "updated" : "2024-12-20T17:41:00Z",
+      "affects" : [
+        {
+          "ref" : "02ae4e20-b734-4879-bca1-82c65c53abf0"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a1cda7a3-f5a6-4bae-b8a5-805623776404",
+      "id" : "CVE-2023-6992",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Cloudflare version of zlib library was found to be vulnerable to memory corruption issues affecting the deflation algorithm implementation (deflate.c). The issues resulted from improper input validation and heap-based buffer overflow. A local attacker could exploit the problem during compression using a crafted malicious file potentially leading to denial of service of the software. Patches: The issue has been patched in commit 8352d10 https://github.com/cloudflare/zlib/commit/8352d108c05db1bdc5ac3bdf834dad641694c13c . The upstream repository is not affected.",
+      "published" : "2024-01-04T12:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "02ae4e20-b734-4879-bca1-82c65c53abf0"
+        }
+      ]
+    }
+  ]
+}

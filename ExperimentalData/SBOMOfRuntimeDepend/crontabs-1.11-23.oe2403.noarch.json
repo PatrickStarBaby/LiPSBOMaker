@@ -1,0 +1,254 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:78466090-9131-4bbe-a1be-28b9d548dcaa",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:09Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/crontabs@1.11-23.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crontabs-1.11-23.oe2403.src.rpm&package-id=072f02d73be45ab8",
+      "type": "application",
+      "name": "crontabs",
+      "version": "1.11",
+      "description": "\nA crontab file contains instructions to the cron daemon\nof the general form: 'run this command at  this  time  on\nthis  date'.   Each  user has their own crontab, and com-\nmands in any given crontab will be executed  as  the  user\nwho  owns  the  crontab.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Pubilc Domain and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:crontabs:1.11:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/crontabs@1.11-23.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crontabs-1.11-23.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/cronie-crond/crontabs",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "23.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "crontabs-1.11-23.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:54:13 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=c6304b025f113291",
+      "type": "application",
+      "name": "bash",
+      "version": "5.2.15",
+      "description": "\nBash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible\nshell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is\nintended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers\nfunctional improvements over sh for both programming and interactive use. In addition, most\nsh scripts can be run by Bash without modification.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:bash:5.2.15:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/bash",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "9.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "bash-5.2.15-9.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:20:16 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "/bin/bash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/crontabs@1.11-23.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crontabs-1.11-23.oe2403.src.rpm&package-id=deb0a7e9d14a2525",
+      "type": "application",
+      "name": "crontabs",
+      "version": "1.11",
+      "description": "\nA crontab file contains instructions to the cron daemon\nof the general form: 'run this command at  this  time  on\nthis  date'.   Each  user has their own crontab, and com-\nmands in any given crontab will be executed  as  the  user\nwho  owns  the  crontab.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Pubilc Domain and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:crontabs:1.11:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/crontabs@1.11-23.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crontabs-1.11-23.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/cronie-crond/crontabs",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "23.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "crontabs-1.11-23.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Fri May 10 02:54:13 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(crontabs)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm&package-id=0573ef15598b4644",
+      "type": "application",
+      "name": "sed",
+      "version": "4.9",
+      "description": "\nSed is a non-interactive command-line text editor. A stream editor is used\nto per-form basic text transformations on an input stream (a file or input\nfrom a pipeline).\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:sed:4.9:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/sed/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "sed-4.9-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:27:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "sed"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/crontabs@1.11-23.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crontabs-1.11-23.oe2403.src.rpm&package-id=072f02d73be45ab8",
+      "dependsOn": [
+        "pkg:rpm/openEuler/bash@5.2.15-9.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=bash-5.2.15-9.oe2403.src.rpm&package-id=c6304b025f113291",
+        "pkg:rpm/openEuler/crontabs@1.11-23.oe2403?arch=noarch&distro=openEuler-24.03&upstream=crontabs-1.11-23.oe2403.src.rpm&package-id=deb0a7e9d14a2525",
+        "pkg:rpm/openEuler/sed@4.9-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=sed-4.9-4.oe2403.src.rpm&package-id=0573ef15598b4644"
+      ]
+    }
+  ]
+}

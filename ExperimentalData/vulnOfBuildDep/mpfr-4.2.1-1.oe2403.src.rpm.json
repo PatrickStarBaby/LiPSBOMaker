@@ -1,0 +1,519 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:d5f8d17f-7234-48d3-ac37-2b98a438a133",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:56:04Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "mpfr-4.2.1-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.mpfr.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "90cce127-06d7-4a94-bb9b-639ac5c2c21f"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "d466f0f5-5d9c-4d64-8e42-f5e59c3251f3"
+    },
+    {
+      "name" : "git",
+      "version" : "2.43.0",
+      "description" : "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv2+ or LGPLv2.1"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:git:2.43.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/git@2.43.0-6.oe2403?arch=x86_64&upstream=git-2.43.0-6.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://git-scm.com/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "90cce127-06d7-4a94-bb9b-639ac5c2c21f",
+      "dependsOn" : [
+        "d466f0f5-5d9c-4d64-8e42-f5e59c3251f3",
+        "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+      ]
+    },
+    {
+      "ref" : "d466f0f5-5d9c-4d64-8e42-f5e59c3251f3",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "d466f0f5-5d9c-4d64-8e42-f5e59c3251f3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9a05dacd-d414-4991-bc53-47079e5b49bf",
+      "id" : "CVE-2020-2136",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 3.5,
+          "severity" : "low",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:S/C:N/I:P/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.4,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        79
+      ],
+      "description" : "Jenkins Git Plugin 4.2.0 and earlier does not escape the error message for the repository URL for Microsoft TFS field form validation, resulting in a stored cross-site scripting vulnerability.",
+      "published" : "2020-03-09T16:15:00Z",
+      "updated" : "2024-11-21T05:24:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b46f7c56-3441-4876-9580-0861cc729f0f",
+      "id" : "CVE-2022-30947",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:N/C:P/I:N/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "description" : "Jenkins Git Plugin 4.11.1 and earlier allows attackers able to configure pipelines to check out some SCM repositories stored on the Jenkins controller's file system using local paths as SCM URLs, obtaining limited information about other projects' SCM contents.",
+      "published" : "2022-05-17T15:15:00Z",
+      "updated" : "2024-11-21T07:03:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "2a556c21-dbcd-4364-b074-ab92fef838bb",
+      "id" : "CVE-2021-21684",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:N/I:P/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.1,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        116
+      ],
+      "description" : "Jenkins Git Plugin 4.8.2 and earlier does not escape the Git SHA-1 checksum parameters provided to commit notifications when displaying them in a build cause, resulting in a stored cross-site scripting (XSS) vulnerability.",
+      "published" : "2021-10-06T23:15:00Z",
+      "updated" : "2024-11-21T05:48:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "14ee917d-077e-4f53-89a0-c8bc446d5ad2",
+      "id" : "CVE-2019-1003010",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:M/Au:N/C:N/I:P/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        352
+      ],
+      "description" : "A cross-site request forgery vulnerability exists in Jenkins Git Plugin 3.9.1 and earlier in src/main/java/hudson/plugins/git/GitTagAction.java that allows attackers to create a Git tag in a workspace and attach corresponding metadata to a build record.",
+      "published" : "2019-02-06T16:29:00Z",
+      "updated" : "2024-11-21T04:17:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "dbf73e17-5569-42fc-82fb-d7ac1989bcfb",
+      "id" : "CVE-2024-32002",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.0,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        59
+      ],
+      "description" : "Git is a revision control system. Prior to versions 2.45.1, 2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4, repositories with submodules can be crafted in a way that exploits a bug in Git whereby it can be fooled into writing files not into the submodule's worktree but into a `.git/` directory. This allows writing a hook that will be executed while the clone operation is still running, giving the user no opportunity to inspect the code that is being executed. The problem has been patched in versions 2.45.1, 2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4. If symbolic link support is disabled in Git (e.g. via `git config --global core.symlinks false`), the described attack won't work. As always, it is best to avoid cloning repositories from untrusted sources.",
+      "published" : "2024-05-14T19:15:00Z",
+      "updated" : "2024-11-21T09:14:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "89fa8316-7e9f-46b6-9ced-1d3997a8c455",
+      "id" : "CVE-2022-36882",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 8.8,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        352
+      ],
+      "description" : "A cross-site request forgery (CSRF) vulnerability in Jenkins Git Plugin 4.11.3 and earlier allows attackers to trigger builds of jobs configured to use an attacker-specified Git repository and to cause them to check out an attacker-specified commit.",
+      "published" : "2022-07-27T15:15:00Z",
+      "updated" : "2024-11-21T07:13:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "134f9af8-5cbe-42d5-a047-3f3d76d35595",
+      "id" : "CVE-2022-36883",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        862
+      ],
+      "description" : "A missing permission check in Jenkins Git Plugin 4.11.3 and earlier allows unauthenticated attackers to trigger builds of jobs configured to use an attacker-specified Git repository and to cause them to check out an attacker-specified commit.",
+      "published" : "2022-07-27T15:15:00Z",
+      "updated" : "2024-11-21T07:13:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "ccc77f3c-1275-4aee-b132-755a2678a2c2",
+      "id" : "CVE-2022-36884",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "cwes" : [
+        306
+      ],
+      "description" : "The webhook endpoint in Jenkins Git Plugin 4.11.3 and earlier provide unauthenticated attackers information about the existence of jobs configured to use an attacker-specified Git repository.",
+      "published" : "2022-07-27T15:15:00Z",
+      "updated" : "2024-11-21T07:13:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "340f9540-ae15-4d9d-b3a2-bf303a605792",
+      "id" : "CVE-2022-38663",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "cwes" : [
+        522
+      ],
+      "description" : "Jenkins Git Plugin 4.11.4 and earlier does not properly mask (i.e., replace with asterisks) credentials in the build log provided by the Git Username and Password (`gitUsernamePassword`) credentials binding.",
+      "published" : "2022-08-23T17:15:00Z",
+      "updated" : "2024-11-21T07:16:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "29a0b40f-ea8c-49d3-93bf-14107e1dddf4",
+      "id" : "CVE-2018-1000110",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:N/C:P/I:N/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "cwes" : [
+        863
+      ],
+      "description" : "An improper authorization vulnerability exists in Jenkins Git Plugin version 3.7.0 and earlier in GitStatus.java that allows an attacker with network access to obtain a list of nodes and users.",
+      "published" : "2018-03-13T13:29:00Z",
+      "updated" : "2024-11-21T03:39:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "c3941fdd-8975-41d7-8f23-990f6b7ab837",
+      "id" : "CVE-2018-1000182",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "(AV:N/AC:L/Au:S/C:P/I:P/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.4,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        918
+      ],
+      "description" : "A server-side request forgery vulnerability exists in Jenkins Git Plugin 3.9.0 and older in AssemblaWeb.java, GitBlitRepositoryBrowser.java, Gitiles.java, TFS2013GitRepositoryBrowser.java, ViewGitWeb.java that allows attackers with Overall/Read access to cause Jenkins to send a GET request to a specified URL.",
+      "published" : "2018-06-05T20:29:00Z",
+      "updated" : "2024-11-21T03:39:00Z",
+      "affects" : [
+        {
+          "ref" : "c6854cd7-6d1e-4fcb-9736-66bbc02acad3"
+        }
+      ]
+    }
+  ]
+}

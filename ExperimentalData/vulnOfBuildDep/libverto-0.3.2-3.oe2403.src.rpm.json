@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:6bce3ae8-b8e4-4914-95c4-316cbfa89d28",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:48:02Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libverto-0.3.2-3.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/latchset/libverto"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "2a4f8976-7c31-4efe-b628-e405dffc6797"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "2a4f8976-7c31-4efe-b628-e405dffc6797",
+      "dependsOn" : [ ]
+    }
+  ]
+}

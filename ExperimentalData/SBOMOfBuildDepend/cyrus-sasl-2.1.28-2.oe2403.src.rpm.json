@@ -1,0 +1,872 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:6ee7b7e2-0c26-4cdf-b7db-8a9c398f08ee",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:58:27Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/cyrus-sasl@2.1.28-2.oe2403?arch=aarch64&package-id=cceac1e14432cb18",
+      "type": "application",
+      "name": "cyrus-sasl",
+      "version": "2.1.28",
+      "description": "The cyrus-sasl package contains the Cyrus implementation of SASL.\nSASL is the Simple Authentication and Security Layer, a method for\nadding authentication support to connection-based protocols.",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD with advertising"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cyrus-sasl:2.1.28:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/cyrus-sasl@2.1.28-2.oe2403?arch=aarch64",
+      "externalReferences": [
+        {
+          "url": "https://www.cyrusimap.org/sasl/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "aarch64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "saslauthd.sysconfig, saslauthd.service, cyrus-sasl-2.1.28.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "cyrus-sasl=2.1.28-2.oe2403,cyrus-sasl-devel=2.1.28-2.oe2403,cyrus-sasl-lib=2.1.28-2.oe2403,cyrus-sasl-sql=2.1.28-2.oe2403,cyrus-sasl-help=2.1.28-2.oe2403,cyrus-sasl-debuginfo=2.1.28-2.oe2403,cyrus-sasl-debugsource=2.1.28-2.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=f7a7443b01460372",
+      "type": "application",
+      "name": "autoconf",
+      "version": "2.71",
+      "description": "\nAutoconf is an extensible package of M4 macros that produce shell scripts to automatically\nconfigure software source code packages. These scripts can adapt the packages to many kinds\nof UNIX-like systems without manual user intervention. Autoconf creates a configuration script\nfor a package from a template file that lists the operating system features that the package\ncan use, in the form of M4 macro calls.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:autoconf:2.71:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.gnu.org/software/autoconf/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "autoconf-2.71-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:40 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "autoconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=46dac66b09b11b91",
+      "type": "application",
+      "name": "automake",
+      "version": "1.16.5",
+      "description": "\niAutomake is a tool for automatically generating Makefile.in files compliant\nwith the GNU Coding Standards. Automake requires the use of Autoconf.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:automake:1.16.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/automake/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "automake-1.16.5-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:29:17 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "automake"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gdbm-devel@1.23-2.oe2403?arch=x86_64&upstream=gdbm-1.23-2.oe2403.src.rpm&package-id=40b0e99573d0d2ae",
+      "type": "application",
+      "name": "gdbm-devel",
+      "version": "1.23",
+      "description": "\nGdbm-devel contains the header files and libraries for development.\nYou should install this package if you want to develop applications\nbase on gdbm database.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gdbm:1.23:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gdbm-devel@1.23-2.oe2403?arch=x86_64&upstream=gdbm-1.23-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/gdbm/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gdbm-1.23-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 04:54:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gdbm-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/groff@1.23.0-2.oe2403?arch=x86_64&upstream=groff-1.23.0-2.oe2403.src.rpm&package-id=86623c1bfbd64f85",
+      "type": "application",
+      "name": "groff",
+      "version": "1.23.0",
+      "description": "\nGroff (GNU troff) is a typesetting system that reads plain text mixed\nwith formatting commands and produces formatted output. Output may be\nPostScript or PDF, html, or ASCII/UTF8 for display at the terminal.\nFormatting commands may be either low-level typesetting requests\n(“primitives”) or macros from a supplied set. Users may also write\ntheir own macros. All three may be combined.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GFDL and BSD and MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:groff:1.23.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/groff@1.23.0-2.oe2403?arch=x86_64&upstream=groff-1.23.0-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/groff/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "groff-1.23.0-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 08:56:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "groff"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/krb5-devel@1.21.2-14.oe2403?arch=x86_64&upstream=krb5-1.21.2-14.oe2403.src.rpm&package-id=426f326dfca40352",
+      "type": "application",
+      "name": "krb5-devel",
+      "version": "1.21.2",
+      "description": "\nDevelopment files for compiling with krb5.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:krb5:1.21.2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/krb5-devel@1.21.2-14.oe2403?arch=x86_64&upstream=krb5-1.21.2-14.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://web.mit.edu/kerberos/www/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "14.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "krb5-1.21.2-14.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Feb 11 16:18:11 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "krb5-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=243492b4c96ce159",
+      "type": "application",
+      "name": "libtool",
+      "version": "2.4.7",
+      "description": "\nGNU libtool is a generic library support script.\nLibtool hides the complexity of using shared libraries behind a consistent, portable interface.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libtool:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/libtool/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libtool-2.4.7-3.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:10:01 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libtool"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/mariadb-connector-c-devel@3.3.8-1.oe2403?arch=x86_64&upstream=mariadb-connector-c-3.3.8-1.oe2403.src.rpm&package-id=ec7e58e7388e208d",
+      "type": "application",
+      "name": "mariadb-connector-c-devel",
+      "version": "3.3.8",
+      "description": "\nThis package includes library and header files for development.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:mariadb-connector-c:3.3.8:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/mariadb-connector-c-devel@3.3.8-1.oe2403?arch=x86_64&upstream=mariadb-connector-c-3.3.8-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/MariaDB/mariadb-connector-c",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "mariadb-connector-c-3.3.8-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:00:36 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "mariadb-connector-c-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openldap-devel@2.6.5-4.oe2403?arch=x86_64&upstream=openldap-2.6.5-4.oe2403.src.rpm&package-id=86f12c0989964cdd",
+      "type": "application",
+      "name": "openldap-devel",
+      "version": "2.6.5",
+      "description": "\nThe openldap-devel package includes the development libraries and\nheader files needed for compiling applications that use LDAP\n(Lightweight Directory Access Protocol) internals. LDAP is a set of\nprotocols for enabling directory services over the Internet. Install\nthis package only if you plan to develop or will need to compile\ncustomized LDAP clients.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OLDAP-2.8"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openldap:2.6.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openldap-devel@2.6.5-4.oe2403?arch=x86_64&upstream=openldap-2.6.5-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openldap.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openldap-2.6.5-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openldap-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=ba18b0f07c74bf51",
+      "type": "application",
+      "name": "openssl-devel",
+      "version": "3.0.12",
+      "description": "\nDevelopment files for openssl.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openssl-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pam-devel@1.5.3-5.oe2403?arch=x86_64&upstream=pam-1.5.3-5.oe2403.src.rpm&package-id=f87d4d4557591df2",
+      "type": "application",
+      "name": "pam-devel",
+      "version": "1.5.3",
+      "description": "\nDevelopment files for Linux-PAM.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD and GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pam:1.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pam-devel@1.5.3-5.oe2403?arch=x86_64&upstream=pam-1.5.3-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.linux-pam.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pam-1.5.3-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 03:09:00 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pam-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=bae4548d57ca7962",
+      "type": "application",
+      "name": "pkgconf",
+      "version": "1.9.5",
+      "description": "\npkgconf is a program which helps to configure compiler and linker flags for development frameworks.\nIt is similar to pkg-config from freedesktop.org, providing additional functionality while also\nmaintaining compatibility.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:pkgconf:1.9.5:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://pkgconf.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "pkgconf-1.9.5-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:17:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "pkgconfig"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libpq-devel@15.9-1.oe2403?arch=x86_64&upstream=libpq-15.9-1.oe2403.src.rpm&package-id=a4caca3efc9e9a64",
+      "type": "application",
+      "name": "libpq-devel",
+      "version": "15.9",
+      "description": "\nThe development package of libpq\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "PostgreSQL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libpq:15.9:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libpq-devel@15.9-1.oe2403?arch=x86_64&upstream=libpq-15.9-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.postgresql.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libpq-15.9-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 20 05:02:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "postgresql-devel"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=b7f7f66aa6fe5768",
+      "type": "application",
+      "name": "zlib-devel",
+      "version": "1.2.13",
+      "description": "\nThis package contains the static library, the header files, the tests user case and other\ndevelopment content.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "zlib and Boost"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.zlib.net",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "zlib-1.2.13-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:02:38 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "zlib-devel"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/cyrus-sasl@2.1.28-2.oe2403?arch=aarch64&package-id=cceac1e14432cb18",
+      "dependsOn": [
+        "pkg:deb/autoconf@2.71-5.oe2403?arch=noarch&upstream=autoconf-2.71-5.oe2403.src.rpm&package-id=f7a7443b01460372",
+        "pkg:deb/automake@1.16.5-8.oe2403?arch=noarch&upstream=automake-1.16.5-8.oe2403.src.rpm&package-id=46dac66b09b11b91",
+        "pkg:deb/gdbm-devel@1.23-2.oe2403?arch=x86_64&upstream=gdbm-1.23-2.oe2403.src.rpm&package-id=40b0e99573d0d2ae",
+        "pkg:deb/groff@1.23.0-2.oe2403?arch=x86_64&upstream=groff-1.23.0-2.oe2403.src.rpm&package-id=86623c1bfbd64f85",
+        "pkg:deb/krb5-devel@1.21.2-14.oe2403?arch=x86_64&upstream=krb5-1.21.2-14.oe2403.src.rpm&package-id=426f326dfca40352",
+        "pkg:deb/libtool@2.4.7-3.oe2403?arch=x86_64&upstream=libtool-2.4.7-3.oe2403.src.rpm&package-id=243492b4c96ce159",
+        "pkg:deb/mariadb-connector-c-devel@3.3.8-1.oe2403?arch=x86_64&upstream=mariadb-connector-c-3.3.8-1.oe2403.src.rpm&package-id=ec7e58e7388e208d",
+        "pkg:deb/openldap-devel@2.6.5-4.oe2403?arch=x86_64&upstream=openldap-2.6.5-4.oe2403.src.rpm&package-id=86f12c0989964cdd",
+        "pkg:deb/openssl-devel@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=ba18b0f07c74bf51",
+        "pkg:deb/pam-devel@1.5.3-5.oe2403?arch=x86_64&upstream=pam-1.5.3-5.oe2403.src.rpm&package-id=f87d4d4557591df2",
+        "pkg:deb/pkgconf@1.9.5-1.oe2403?arch=x86_64&upstream=pkgconf-1.9.5-1.oe2403.src.rpm&package-id=bae4548d57ca7962",
+        "pkg:deb/libpq-devel@15.9-1.oe2403?arch=x86_64&upstream=libpq-15.9-1.oe2403.src.rpm&package-id=a4caca3efc9e9a64",
+        "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm&package-id=b7f7f66aa6fe5768"
+      ]
+    }
+  ]
+}

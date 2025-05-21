@@ -1,0 +1,34 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:c7ddd791-6ba7-4c70-b374-1aaedaafd3d3",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:46:18Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "dnf-4.16.2-6.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/rpm-software-management/dnf"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "6f514324-7f61-4708-a8f9-d88b02ea95bc"
+    }
+  },
+  "dependencies" : [
+    {
+      "ref" : "6f514324-7f61-4708-a8f9-d88b02ea95bc",
+      "dependsOn" : [ ]
+    }
+  ]
+}

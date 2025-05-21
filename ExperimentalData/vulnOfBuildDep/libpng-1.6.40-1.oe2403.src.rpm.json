@@ -1,0 +1,128 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:c11eb08e-9821-4738-90b5-fa02274b7260",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:50:29Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libpng-1.6.40-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.libpng.org/pub/png/libpng.html"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "5290866d-8506-4d37-a36d-a0e16919e7b4"
+    }
+  },
+  "components" : [
+    {
+      "name" : "zlib-devel",
+      "version" : "1.2.13",
+      "description" : "This package contains the static library, the header files, the tests user case and other development content.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "zlib and Boost"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.zlib.net"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "fe8fdb96-ca0a-436e-8090-b908cfe5e259"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "5290866d-8506-4d37-a36d-a0e16919e7b4",
+      "dependsOn" : [
+        "fe8fdb96-ca0a-436e-8090-b908cfe5e259"
+      ]
+    },
+    {
+      "ref" : "fe8fdb96-ca0a-436e-8090-b908cfe5e259",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "a1cda7a3-f5a6-4bae-b8a5-805623776404",
+      "id" : "CVE-2023-6992",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Cloudflare version of zlib library was found to be vulnerable to memory corruption issues affecting the deflation algorithm implementation (deflate.c). The issues resulted from improper input validation and heap-based buffer overflow. A local attacker could exploit the problem during compression using a crafted malicious file potentially leading to denial of service of the software. Patches: The issue has been patched in commit 8352d10 https://github.com/cloudflare/zlib/commit/8352d108c05db1bdc5ac3bdf834dad641694c13c . The upstream repository is not affected.",
+      "published" : "2024-01-04T12:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "fe8fdb96-ca0a-436e-8090-b908cfe5e259"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "50713749-e17a-4ac4-b4d8-71c3a4b8b188",
+      "id" : "CVE-2023-45853",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        190
+      ],
+      "description" : "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+      "published" : "2023-10-14T02:15:00Z",
+      "updated" : "2024-12-20T17:41:00Z",
+      "affects" : [
+        {
+          "ref" : "fe8fdb96-ca0a-436e-8090-b908cfe5e259"
+        }
+      ]
+    }
+  ]
+}

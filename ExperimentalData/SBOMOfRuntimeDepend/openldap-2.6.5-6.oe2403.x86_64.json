@@ -1,0 +1,311 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:fe9e6c8b-af60-4367-bc6c-8646aee16f73",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:34Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/openldap@2.6.5-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openldap-2.6.5-6.oe2403.src.rpm&package-id=b998e574d8bc41de",
+      "type": "application",
+      "name": "openldap",
+      "version": "2.6.5",
+      "description": "\nOpenLDAP is an open source suite of LDAP (Lightweight Directory Access\nProtocol) applications and development tools. LDAP is a set of\nprotocols for accessing directory services (usually phone book style\ninformation, but other information is possible) over the Internet,\nsimilar to the way DNS (Domain Name System) information is propagated\nover the Internet. The openldap package contains configuration files,\nlibraries, and documentation for OpenLDAP.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OLDAP-2.8"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openldap:2.6.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openldap@2.6.5-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openldap-2.6.5-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openldap.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openldap-2.6.5-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Feb 19 09:29:57 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/openEuler/openldap@2.6.5-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openldap-2.6.5-4.oe2403.src.rpm&package-id=0b9818e53ea0a766",
+      "type": "application",
+      "name": "openldap",
+      "version": "2.6.5",
+      "description": "\nOpenLDAP is an open source suite of LDAP (Lightweight Directory Access\nProtocol) applications and development tools. LDAP is a set of\nprotocols for accessing directory services (usually phone book style\ninformation, but other information is possible) over the Internet,\nsimilar to the way DNS (Domain Name System) information is propagated\nover the Internet. The openldap package contains configuration files,\nlibraries, and documentation for OpenLDAP.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OLDAP-2.8"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openldap:2.6.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openldap@2.6.5-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openldap-2.6.5-4.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openldap.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "4.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openldap-2.6.5-4.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 12:47:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "config(openldap), liblber.so.2()(64bit), liblber.so.2(OPENLDAP_2.200)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=ffffce17ee24300e",
+      "type": "application",
+      "name": "glibc",
+      "version": "2.38",
+      "description": "\nThe GNU C Library project provides the core libraries for the GNU system and\nGNU/Linux systems, as well as many other systems that use Linux as the kernel.\nThese libraries provide critical APIs including ISO C11, POSIX.1-2008, BSD,\nOS-specific APIs and more. These APIs include such foundational facilities as\nopen, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt,\n login, exit and more.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:glibc:2.38:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://www.gnu.org/software/glibc/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "47.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "glibc-2.38-47.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Dec 11 07:41:52 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libc.so.6()(64bit), libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.17)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.22)(64bit), libc.so.6(GLIBC_2.3)(64bit), libc.so.6(GLIBC_2.3.2)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.4)(64bit), rtld(GNU_HASH)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=dec56c1289b62e67",
+      "type": "application",
+      "name": "openssl-libs",
+      "version": "3.0.12",
+      "description": "\nThe openssl-libs package contains the libraries that are used\nby various applications which support cryptographic algorithms\nand protocols.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libcrypto.so.3()(64bit), libcrypto.so.3(OPENSSL_3.0.0)(64bit), libssl.so.3()(64bit), libssl.so.3(OPENSSL_3.0.0)(64bit)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm&package-id=e2a793b0d4e2c4bf",
+      "type": "application",
+      "name": "cyrus-sasl-lib",
+      "version": "2.1.28",
+      "description": "\nThe cyrus-sasl-lib package contains shared libraries which are needed by\napplications which use the Cyrus SASL library.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD with advertising"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:cyrus-sasl:2.1.28:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.cyrusimap.org/sasl/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "2.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "cyrus-sasl-2.1.28-2.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Thu May 23 13:13:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "depend"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libsasl2.so.3()(64bit)"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/openldap@2.6.5-6.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openldap-2.6.5-6.oe2403.src.rpm&package-id=b998e574d8bc41de",
+      "dependsOn": [
+        "pkg:rpm/openEuler/openldap@2.6.5-4.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openldap-2.6.5-4.oe2403.src.rpm&package-id=0b9818e53ea0a766",
+        "pkg:rpm/openEuler/glibc@2.38-47.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=glibc-2.38-47.oe2403.src.rpm&package-id=ffffce17ee24300e",
+        "pkg:rpm/openEuler/openssl-libs@3.0.12-15.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=dec56c1289b62e67",
+        "pkg:rpm/openEuler/cyrus-sasl-lib@2.1.28-2.oe2403?arch=x86_64&distro=openEuler-24.03&upstream=cyrus-sasl-2.1.28-2.oe2403.src.rpm&package-id=e2a793b0d4e2c4bf"
+      ]
+    }
+  ]
+}

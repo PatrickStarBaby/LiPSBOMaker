@@ -1,0 +1,193 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:a869f5b6-df3c-45c9-a2d3-fbb7aee3f342",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:54:13Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "pcre2-10.42-12.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.pcre.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "31fba5c7-fd7e-4227-8304-fdce2637e2d7"
+    }
+  },
+  "components" : [
+    {
+      "name" : "coreutils",
+      "version" : "9.4",
+      "description" : "These are the GNU core utilities. This package is the combination of the old GNU fileutils, sh-utils, and textutils packages.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:coreutils:9.4:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/coreutils@9.4-3.oe2403?arch=x86_64&upstream=coreutils-9.4-3.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.gnu.org/software/coreutils/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "72b97a09-84bc-4c1b-b867-af365845a510"
+    },
+    {
+      "name" : "gcc",
+      "version" : "12.3.1",
+      "description" : "The gcc package contains the GNU Compiler Collection version 12. You'll need this package in order to compile C code.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "0f6d500c-34a2-4900-ab72-cc95b4085adc"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "31fba5c7-fd7e-4227-8304-fdce2637e2d7",
+      "dependsOn" : [
+        "72b97a09-84bc-4c1b-b867-af365845a510",
+        "0f6d500c-34a2-4900-ab72-cc95b4085adc"
+      ]
+    },
+    {
+      "ref" : "72b97a09-84bc-4c1b-b867-af365845a510",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "0f6d500c-34a2-4900-ab72-cc95b4085adc",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "3c273fba-36c0-454f-8ac8-52b0164bb35d",
+      "id" : "CVE-2024-0684",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "A flaw was found in the GNU coreutils \"split\" program. A heap overflow with user-controlled data of multiple hundred bytes in length could occur in the line_bytes_split() function, potentially leading to an application crash and denial of service.",
+      "published" : "2024-02-06T09:15:00Z",
+      "updated" : "2024-11-21T08:47:00Z",
+      "affects" : [
+        {
+          "ref" : "72b97a09-84bc-4c1b-b867-af365845a510"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "6c63770e-e368-48fa-836a-953ed479f366",
+      "id" : "CVE-2016-2781",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 2.1,
+          "severity" : "low",
+          "method" : "CVSSv2",
+          "vector" : "(AV:L/AC:L/Au:N/C:N/I:P/A:N)"
+        },
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        20
+      ],
+      "description" : "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+      "published" : "2017-02-07T15:59:00Z",
+      "updated" : "2024-11-21T02:48:00Z",
+      "affects" : [
+        {
+          "ref" : "72b97a09-84bc-4c1b-b867-af365845a510"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "0f6d500c-34a2-4900-ab72-cc95b4085adc"
+        }
+      ]
+    }
+  ]
+}

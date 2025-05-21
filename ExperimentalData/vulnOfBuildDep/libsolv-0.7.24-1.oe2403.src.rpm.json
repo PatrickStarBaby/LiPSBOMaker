@@ -1,0 +1,330 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:0ac01f14-61f2-4899-8f37-3613209f8ba5",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-02-23T12:49:03Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.10.1"
+      }
+    ],
+    "component" : {
+      "name" : "libsolv-0.7.24-1.oe2403.src.rpm",
+      "version" : "SNAPSHOT",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/openSUSE/libsolv"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "58c4a419-a4da-433f-9a23-b48b4422dd44"
+    }
+  },
+  "components" : [
+    {
+      "name" : "gcc-c++",
+      "version" : "12.3.1",
+      "description" : "This package adds C++ support to the GNU Compiler Collection. It includes support for most of the current C++ specification, including templates and exception handling.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/gcc-c%2B%2B@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://gcc.gnu.org"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "0bf35e76-884c-4540-8e01-1f8fded9783c"
+    },
+    {
+      "name" : "libxml2-devel",
+      "version" : "2.11.5",
+      "description" : "Libraries, include files, etc you can use to develop XML applications. This library allows to manipulate XML files. It includes support to read, modify and write XML and HTML files. There is DTDs support this includes parsing and validation even with complex DtDs, either at parse time or later once the document has been modified. The output can be a simple SAX stream or and in-memory DOM like representations. In this case one can use the built-in XPath and XPointer implementation to select sub nodes or ranges. A flexible Input/Output mechanism is available, with existing HTTP and FTP modules and combined to an URI library.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "MIT"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:libxml2:2.11.5:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/libxml2-devel@2.11.5-4.oe2403?arch=x86_64&upstream=libxml2-2.11.5-4.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://xmlsoft.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "18a87307-b09e-4bda-bf2c-c921f750d6c6"
+    },
+    {
+      "name" : "perl-devel",
+      "version" : "5.38.0",
+      "description" : "This package contains the development files and test files for perl.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "(GPL+ or Artistic) and UCD"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/perl-devel@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://www.perl.org/"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "d5974b40-3731-458c-ae51-eb56a1754b3e"
+    },
+    {
+      "name" : "zlib-devel",
+      "version" : "1.2.13",
+      "description" : "This package contains the static library, the header files, the tests user case and other development content.",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "zlib and Boost"
+          }
+        }
+      ],
+      "cpe" : "cpe:2.3:a:*:zlib:1.2.13:*:*:*:*:*:*:*",
+      "purl" : "pkg:deb/zlib-devel@1.2.13-2.oe2403?arch=x86_64&upstream=zlib-1.2.13-2.oe2403.src.rpm",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.zlib.net"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "acb58fdf-fbbf-4271-b325-766527ea84d1"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "58c4a419-a4da-433f-9a23-b48b4422dd44",
+      "dependsOn" : [
+        "0bf35e76-884c-4540-8e01-1f8fded9783c",
+        "18a87307-b09e-4bda-bf2c-c921f750d6c6",
+        "d5974b40-3731-458c-ae51-eb56a1754b3e",
+        "acb58fdf-fbbf-4271-b325-766527ea84d1"
+      ]
+    },
+    {
+      "ref" : "0bf35e76-884c-4540-8e01-1f8fded9783c",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "18a87307-b09e-4bda-bf2c-c921f750d6c6",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "d5974b40-3731-458c-ae51-eb56a1754b3e",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "acb58fdf-fbbf-4271-b325-766527ea84d1",
+      "dependsOn" : [ ]
+    }
+  ],
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "b9e737f0-3967-443c-a30d-353e4436f895",
+      "id" : "CVE-2023-4039",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 4.8,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "description" : "**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains that target AArch64 allows an attacker to exploit an existing buffer overflow in dynamically-sized local variables in your application without this being detected. This stack-protector failure only applies to C99-style dynamically-sized local variables or those created using alloca(). The stack-protector operates as intended for statically-sized local variables. The default behavior when the stack-protector detects an overflow is to terminate your application, resulting in controlled loss of availability. An attacker who can exploit a buffer overflow without triggering the stack-protector might be able to change program flow control to cause an uncontrolled loss of availability or to go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+      "published" : "2023-09-13T09:15:00Z",
+      "updated" : "2025-02-13T17:17:00Z",
+      "affects" : [
+        {
+          "ref" : "0bf35e76-884c-4540-8e01-1f8fded9783c"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a735b870-fe77-4808-a204-aafe1ef87874",
+      "id" : "CVE-2024-25062",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        416
+      ],
+      "description" : "An issue was discovered in libxml2 before 2.11.7 and 2.12.x before 2.12.5. When using the XML Reader interface with DTD validation and XInclude expansion enabled, processing crafted XML documents can lead to an xmlValidatePopElement use-after-free.",
+      "published" : "2024-02-04T16:15:00Z",
+      "updated" : "2024-11-21T09:00:00Z",
+      "affects" : [
+        {
+          "ref" : "18a87307-b09e-4bda-bf2c-c921f750d6c6"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "8e6393fe-c25f-4b9f-aa25-cc4b92fa8110",
+      "id" : "CVE-2023-45322",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        416
+      ],
+      "description" : "libxml2 through 2.11.5 has a use-after-free that can only occur after a certain memory allocation fails. This occurs in xmlUnlinkNode in tree.c. NOTE: the vendor's position is \"I don't think these issues are critical enough to warrant a CVE ID ... because an attacker typically can't control when memory allocations fail.\"",
+      "published" : "2023-10-06T22:15:00Z",
+      "updated" : "2024-11-21T08:26:00Z",
+      "affects" : [
+        {
+          "ref" : "18a87307-b09e-4bda-bf2c-c921f750d6c6"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "080ed676-4b2f-4871-9c55-71cba0c41b53",
+      "id" : "CVE-2023-47100",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        755
+      ],
+      "description" : "In Perl before 5.38.2, S_parse_uniprop_string in regcomp.c can write to unallocated space because a property name associated with a \\p{...} regular expression construct is mishandled. The earliest affected version is 5.30.0.",
+      "published" : "2023-12-02T23:15:00Z",
+      "updated" : "2024-11-21T08:29:00Z",
+      "affects" : [
+        {
+          "ref" : "d5974b40-3731-458c-ae51-eb56a1754b3e"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "50713749-e17a-4ac4-b4d8-71c3a4b8b188",
+      "id" : "CVE-2023-45853",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        190
+      ],
+      "description" : "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+      "published" : "2023-10-14T02:15:00Z",
+      "updated" : "2024-12-20T17:41:00Z",
+      "affects" : [
+        {
+          "ref" : "acb58fdf-fbbf-4271-b325-766527ea84d1"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "a1cda7a3-f5a6-4bae-b8a5-805623776404",
+      "id" : "CVE-2023-6992",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv3",
+          "vector" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "Cloudflare version of zlib library was found to be vulnerable to memory corruption issues affecting the deflation algorithm implementation (deflate.c). The issues resulted from improper input validation and heap-based buffer overflow. A local attacker could exploit the problem during compression using a crafted malicious file potentially leading to denial of service of the software. Patches: The issue has been patched in commit 8352d10 https://github.com/cloudflare/zlib/commit/8352d108c05db1bdc5ac3bdf834dad641694c13c . The upstream repository is not affected.",
+      "published" : "2024-01-04T12:15:00Z",
+      "updated" : "2024-11-21T08:44:00Z",
+      "affects" : [
+        {
+          "ref" : "acb58fdf-fbbf-4271-b325-766527ea84d1"
+        }
+      ]
+    }
+  ]
+}

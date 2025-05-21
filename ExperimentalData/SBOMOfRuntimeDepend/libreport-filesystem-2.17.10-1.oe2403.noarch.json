@@ -1,0 +1,81 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:85317629-2103-4693-b913-be298b9c56a3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-03-11T03:20:32Z",
+    "lifecycles": [
+      {
+        "name": "installed",
+        "phase": "operations",
+        "description": "This is the stage for using the binary after it has been installed locally."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm&package-id=72d7895162c5a0d9",
+      "type": "application",
+      "name": "libreport-filesystem",
+      "version": "2.17.10",
+      "description": "\nFilesystem layout for libreport\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libreport:2.17.10:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://abrt.readthedocs.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libreport-2.17.10-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue May 28 08:04:31 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/openEuler/libreport-filesystem@2.17.10-1.oe2403?arch=noarch&distro=openEuler-24.03&upstream=libreport-2.17.10-1.oe2403.src.rpm&package-id=72d7895162c5a0d9",
+      "dependsOn": []
+    }
+  ]
+}

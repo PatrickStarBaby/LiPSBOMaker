@@ -1,0 +1,384 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ef233dd7-ea8e-4236-a9d6-b2ba49655f03",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T08:54:28Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/ca-certificates@2023.2.64-1.oe2403?arch=noarch&package-id=3390c7736ab90cde",
+      "type": "application",
+      "name": "ca-certificates",
+      "version": "2023.2.64",
+      "description": "This package contains the set of CA certificates chosen by the\nMozilla Foundation for use with the Internet PKI.",
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:ca-certificates:2023.2.64:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/ca-certificates@2023.2.64-1.oe2403?arch=noarch",
+      "externalReferences": [
+        {
+          "url": "https://fedoraproject.org/wiki/CA-Certificates",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "README.src, README.edk2, README.pem, README.openssl, README.java, README.extr, README.etc, README.usr, update-ca-trust.8.txt, ca-legacy.8.txt, ca-legacy, ca-legacy.conf, certdata2pem.py, trust-fixes, update-ca-trust, nssckbi.h, certdata.txt"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "ca-certificates=2023.2.64-1.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/asciidoc@10.2.0-1.oe2403?arch=noarch&upstream=asciidoc-10.2.0-1.oe2403.src.rpm&package-id=b99f4e6cb1f0499a",
+      "type": "application",
+      "name": "asciidoc",
+      "version": "10.2.0",
+      "description": "\nPython 3 port of Asciidoc Python, this is a development work in progress,\nbut passes all tests, real world testing is very much welcomed.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:asciidoc:10.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/asciidoc@10.2.0-1.oe2403?arch=noarch&upstream=asciidoc-10.2.0-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "http://asciidoc.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "noarch"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "asciidoc-10.2.0-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 13:00:39 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "asciidoc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/libxslt@1.1.39-1.oe2403?arch=x86_64&upstream=libxslt-1.1.39-1.oe2403.src.rpm&package-id=13652222839f7930",
+      "type": "application",
+      "name": "libxslt",
+      "version": "1.1.39",
+      "description": "\nLibxslt is the XSLT C library developed for the GNOME project\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libxslt:1.1.39:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/libxslt@1.1.39-1.oe2403?arch=x86_64&upstream=libxslt-1.1.39-1.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.gnome.org/GNOME/libxslt",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "1.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "libxslt-1.1.39-1.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 11:46:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "libxslt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/openssl@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=33b64d38a41fbe92",
+      "type": "application",
+      "name": "openssl",
+      "version": "3.0.12",
+      "description": "\nOpenSSL is a robust, commercial-grade, and full-featured toolkit for the\nTransport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "OpenSSL and SSLeay"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:openssl:3.0.12:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/openssl@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.openssl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "15.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "openssl-3.0.12-15.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Tue Dec  3 01:59:30 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "openssl"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=2e4686c86261dbd9",
+      "type": "application",
+      "name": "perl",
+      "version": "5.38.0",
+      "description": "\nPerl 5 is a highly capable, feature-rich programming language with over 30 years of development.\nPerl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid\nprototyping and large scale development projects.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:perl:5.38.0:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.perl.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "6.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "perl-5.38.0-6.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Sun May 19 17:06:47 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "perl-interpreter"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/python3@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=4ad76d8a7dbec1dd",
+      "type": "application",
+      "name": "python3",
+      "version": "3.11.6",
+      "description": "\nPython combines remarkable power with very clear syntax. It has modules,\nclasses, exceptions, very high level dynamic data types, and dynamic\ntyping. There are interfaces to many system calls and libraries, as well\nas to various windowing systems. New built-in modules are easily written\nin C or C++ (or other languages, depending on the chosen implementation).\nPython is also usable as an extension language for applications written\nin other languages that need easy-to-use scripting or automation interfaces.\n\nThis package Provides python version 3.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:python3:3.11.6:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/python3@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://www.python.org/",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "8.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "python3-3.11.6-8.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Nov 27 10:01:32 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "python3"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/ca-certificates@2023.2.64-1.oe2403?arch=noarch&package-id=3390c7736ab90cde",
+      "dependsOn": [
+        "pkg:deb/asciidoc@10.2.0-1.oe2403?arch=noarch&upstream=asciidoc-10.2.0-1.oe2403.src.rpm&package-id=b99f4e6cb1f0499a",
+        "pkg:deb/libxslt@1.1.39-1.oe2403?arch=x86_64&upstream=libxslt-1.1.39-1.oe2403.src.rpm&package-id=13652222839f7930",
+        "pkg:deb/openssl@3.0.12-15.oe2403?arch=x86_64&upstream=openssl-3.0.12-15.oe2403.src.rpm&package-id=33b64d38a41fbe92",
+        "pkg:deb/perl@5.38.0-6.oe2403?arch=x86_64&upstream=perl-5.38.0-6.oe2403.src.rpm&package-id=2e4686c86261dbd9",
+        "pkg:deb/python3@3.11.6-8.oe2403?arch=x86_64&upstream=python3-3.11.6-8.oe2403.src.rpm&package-id=4ad76d8a7dbec1dd"
+      ]
+    }
+  ]
+}

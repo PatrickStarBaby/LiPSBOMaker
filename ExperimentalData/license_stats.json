@@ -1,0 +1,5845 @@
+[
+  {
+    "pkg-name": "acl",
+    "version": "2.3.1",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "attr",
+    "version": "2.5.1",
+    "license": "GPLv2+ AND LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "audit",
+    "version": "3.1.2",
+    "license": "GPLv2+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "golang",
+        "version": "1.21.4",
+        "license": "BSD and Public Domain"
+      },
+      {
+        "name": "kernel-headers",
+        "version": "6.6.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "krb5-devel",
+        "version": "1.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libcap-ng-devel",
+        "version": "0.8.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "openldap-devel",
+        "version": "2.6.5",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "swig",
+        "version": "4.1.1",
+        "license": "GPLv3+ and BSD"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "basesystem",
+    "version": "12",
+    "license": "Public Domain"
+  },
+  {
+    "pkg-name": "bash",
+    "version": "5.2.15",
+    "license": "GPLv3",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "glibc-all-langpacks",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "bc",
+    "version": "1.07.1",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "ed",
+        "version": "1.19",
+        "license": "GPLv3+ and GFDL-1.3"
+      },
+      {
+        "name": "flex",
+        "version": "2.6.4",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "brotli",
+    "version": "1.1.0",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "bzip2",
+    "version": "1.0.8",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "ca-certificates",
+    "version": "2023.2.64",
+    "license": "Public Domain",
+    "build-dep-list": [
+      {
+        "name": "asciidoc",
+        "version": "10.2.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "openssl",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "python3",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "chkconfig",
+    "version": "1.25",
+    "license": "GPL-2.0-only",
+    "build-dep-list": [
+      {
+        "name": "beakerlib",
+        "version": "1.29.3",
+        "license": "GPLv2"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "newt-devel",
+        "version": "0.52.23",
+        "license": "LGPL-2.0-only"
+      },
+      {
+        "name": "popt-devel",
+        "version": "1.19",
+        "license": "MIT"
+      },
+      {
+        "name": "systemd-devel",
+        "version": "255",
+        "license": "LGPLv2+ and MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "coreutils",
+    "version": "9.4",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "attr",
+        "version": "2.5.1",
+        "license": "GPLv2+ AND LGPLv2+"
+      },
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "gmp-devel",
+        "version": "6.3.0",
+        "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+      },
+      {
+        "name": "hostname",
+        "version": "3.23",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libcap-devel",
+        "version": "2.69",
+        "license": "GPLv2"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libselinux",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "strace",
+        "version": "6.6",
+        "license": "LGPL-2.1+ and GPL-2.0+"
+      },
+      {
+        "name": "tcl",
+        "version": "8.6.14",
+        "license": "BSD"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "cracklib",
+    "version": "2.9.11",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "words",
+        "version": "3.0",
+        "license": "Public Domain"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "crontabs",
+    "version": "1.11",
+    "license": "Pubilc Domain and GPLv2+"
+  },
+  {
+    "pkg-name": "crypto-policies",
+    "version": "20230614",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "asciidoc",
+        "version": "10.2.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "bind",
+        "version": "9.18.21",
+        "license": "MPLv2.0"
+      },
+      {
+        "name": "gnutls-utils",
+        "version": "3.8.2",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "java-21-openjdk-devel",
+        "version": "21.0.2.12",
+        "license": "ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "openssh-clients",
+        "version": "9.3p2",
+        "license": "BSD"
+      },
+      {
+        "name": "openssl",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "perl-File-Temp",
+        "version": "0.2311",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-File-Which",
+        "version": "1.27",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-File-pushd",
+        "version": "1.016",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "perl-generators",
+        "version": "1.10",
+        "license": "GPL+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "curl",
+    "version": "8.4.0",
+    "license": "curl",
+    "build-dep-list": [
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "brotli-devel",
+        "version": "1.1.0",
+        "license": "MIT"
+      },
+      {
+        "name": "coreutils",
+        "version": "9.4",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gnutls-utils",
+        "version": "3.8.2",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "groff",
+        "version": "1.23.0",
+        "license": "GPLv3+ and GFDL and BSD and MIT"
+      },
+      {
+        "name": "krb5-devel",
+        "version": "1.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libidn2-devel",
+        "version": "2.3.4",
+        "license": "(GPLv2+ or LGPLv3+) and GPLv3+"
+      },
+      {
+        "name": "libnghttp2-devel",
+        "version": "1.58.0",
+        "license": "MIT"
+      },
+      {
+        "name": "libpsl-devel",
+        "version": "0.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libssh-devel",
+        "version": "0.10.5",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "nghttp2",
+        "version": "1.58.0",
+        "license": "MIT"
+      },
+      {
+        "name": "openldap-devel",
+        "version": "2.6.5",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "openssh-clients",
+        "version": "9.3p2",
+        "license": "BSD"
+      },
+      {
+        "name": "openssh-server",
+        "version": "9.3p2",
+        "license": "BSD"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "perl-PathTools",
+        "version": "3.89",
+        "license": "(GPL+ or Artistic) and BSD"
+      },
+      {
+        "name": "perl-Digest-MD5",
+        "version": "2.58",
+        "license": "(GPL+ or Artistic) and BSD"
+      },
+      {
+        "name": "perl-Digest-SHA",
+        "version": "6.04",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-Exporter",
+        "version": "5.77",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "perl-Getopt-Long",
+        "version": "2.57",
+        "license": "Artistic or GPLv2+"
+      },
+      {
+        "name": "perl-IO-Compress",
+        "version": "2.206",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-MIME-Base64",
+        "version": "3.16",
+        "license": "(GPL+ or Artistic) and MIT"
+      },
+      {
+        "name": "perl-Pod-Usage",
+        "version": "2.03",
+        "license": "GPL+ or Artistic-1.0"
+      },
+      {
+        "name": "perl-Time-HiRes",
+        "version": "1.9775",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-Time-Local",
+        "version": "1.350",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-libs",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and HSRL and MIT and UCD"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "sed",
+        "version": "4.9",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "stunnel",
+        "version": "5.69",
+        "license": "GPLv2"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "cyrus-sasl",
+    "version": "2.1.28",
+    "license": "BSD with advertising",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gdbm-devel",
+        "version": "1.23",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "groff",
+        "version": "1.23.0",
+        "license": "GPLv3+ and GFDL and BSD and MIT"
+      },
+      {
+        "name": "krb5-devel",
+        "version": "1.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "mariadb-connector-c-devel",
+        "version": "3.3.8",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "openldap-devel",
+        "version": "2.6.5",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "pam-devel",
+        "version": "1.5.3",
+        "license": "BSD and GPLv2+"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "libpq-devel",
+        "version": "15.9",
+        "license": "PostgreSQL"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "dnf",
+    "version": "4.16.2",
+    "license": "GPL-2.0-or-later AND GPL-1.0-only",
+    "build-dep-list": [
+      {
+        "name": "bash-completion",
+        "version": "2.12.0",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libmodulemd",
+        "version": "2.15.0",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-gpgme",
+        "version": "1.21.0",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "python3-hawkey",
+        "version": "0.70.2",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "python3-libcomps",
+        "version": "0.1.19",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "python3-libdnf",
+        "version": "0.70.2",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "python3-rpm",
+        "version": "4.18.2",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "python3-sphinx",
+        "version": "7.0.1",
+        "license": "BSD and MIT"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "e2fsprogs",
+    "version": "1.47.0",
+    "license": "GPLv2+ and LGPLv2 and MIT",
+    "build-dep-list": [
+      {
+        "name": "audit",
+        "version": "3.1.2",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "fuse-devel",
+        "version": "2.9.9",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "util-linux-devel",
+        "version": "2.39.1",
+        "license": "LGPLv2+ and BSD"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "elfutils",
+    "version": "0.190",
+    "license": "GPLv3+ and (GPLv2+ or LGPLv3+)",
+    "build-dep-list": [
+      {
+        "name": "bzip2-devel",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gdb-headless",
+        "version": "14.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ and GPLv2+ with exceptions and GPL+ and LGPLv2+ and LGPLv3+ and BSD and Public Domain and GFDL-1.3"
+      },
+      {
+        "name": "m4",
+        "version": "1.4.19",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "libarchive-devel",
+        "version": "3.7.1",
+        "license": "BSD"
+      },
+      {
+        "name": "libcurl-devel",
+        "version": "8.4.0",
+        "license": "curl"
+      },
+      {
+        "name": "libmicrohttpd-devel",
+        "version": "0.9.77",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "sqlite-devel",
+        "version": "3.42.0",
+        "license": "Public Domain"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "xz-libs",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      },
+      {
+        "name": "zstd-devel",
+        "version": "1.5.5",
+        "license": "BSD and GPLv2"
+      }
+    ]
+  },
+  {
+    "pkg-name": "expat",
+    "version": "2.5.0",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "sed",
+        "version": "4.9",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "xmlto",
+        "version": "0.0.28",
+        "license": "GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "file",
+    "version": "5.45",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "filesystem",
+    "version": "3.16",
+    "license": "Public Domain",
+    "build-dep-list": [
+      {
+        "name": "iso-codes",
+        "version": "4.15.0",
+        "license": "LGPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "fuse",
+    "version": "2.9.9",
+    "license": "GPL+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "fdupes",
+        "version": "2.2.1",
+        "license": "MIT"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "meson",
+        "version": "1.3.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "ninja-build",
+        "version": "1.11.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "systemd-udev",
+        "version": "255",
+        "license": "LGPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "fuse3",
+    "version": "3.16.2",
+    "license": "GPL+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "fdupes",
+        "version": "2.2.1",
+        "license": "MIT"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "meson",
+        "version": "1.3.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "ninja-build",
+        "version": "1.11.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "systemd-udev",
+        "version": "255",
+        "license": "LGPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gawk",
+    "version": "5.2.2",
+    "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD",
+    "build-dep-list": [
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "ghostscript",
+        "version": "9.56.1",
+        "license": "AGPLv3+"
+      },
+      {
+        "name": "glibc-all-langpacks",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "grep",
+        "version": "3.11",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "libsigsegv-devel",
+        "version": "2.14",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "mpfr-devel",
+        "version": "4.2.1",
+        "license": "LGPLv3+ and GPLv3+ and GFDL-1.2-only"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texinfo-tex",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texlive-cm-super",
+        "version": "svn15878.0",
+        "license": "GPL+"
+      },
+      {
+        "name": "texlive-ec",
+        "version": "svn25033.1.0",
+        "license": "ec"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gcc",
+    "version": "12.3.1",
+    "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD",
+    "build-dep-list": [
+      {
+        "name": "binutils",
+        "version": "2.41",
+        "license": "GPL-3.0-or-later AND (GPL-3.0-or-later WITH Bison-exception-2.2) AND (LGPL-2.0-or-later WITH GCC-exception-2.0) AND BSD-3-Clause AND GFDL-1.3-or-later AND GPL-2.0-or-later AND LGPL-2.1-or-later AND LGPL-2.0-or-later"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "flex",
+        "version": "2.6.4",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gdb",
+        "version": "14.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ and GPLv2+ with exceptions and GPL+ and LGPLv2+ and LGPLv3+ and BSD and Public Domain and GFDL-1.3"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "glibc-devel",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "gmp-devel",
+        "version": "6.3.0",
+        "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+      },
+      {
+        "name": "libmpc-devel",
+        "version": "1.3.1",
+        "license": "LGPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "mpfr-devel",
+        "version": "4.2.1",
+        "license": "LGPLv3+ and GPLv3+ and GFDL-1.2-only"
+      },
+      {
+        "name": "python3-sphinx",
+        "version": "7.0.1",
+        "license": "BSD and MIT"
+      },
+      {
+        "name": "sharutils",
+        "version": "4.15.2",
+        "license": "GPLv3+ and (GPLv3+ and BSD) and (LGPLv3+ or BSD) and LGPLv2+ and Public Domain and GFDL"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gdb",
+    "version": "14.1",
+    "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ and GPLv2+ with exceptions and GPL+ and LGPLv2+ and LGPLv3+ and BSD and Public Domain and GFDL-1.3",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "expat-devel",
+        "version": "2.5.0",
+        "license": "MIT"
+      },
+      {
+        "name": "flex",
+        "version": "2.6.4",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "gmp-devel",
+        "version": "6.3.0",
+        "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+      },
+      {
+        "name": "guile-devel",
+        "version": "2.2.7",
+        "license": "LGPLv3+"
+      },
+      {
+        "name": "libbabeltrace-devel",
+        "version": "1.5.11",
+        "license": "MIT AND GPL-3.0-or-later WITH Bison-exception-2.2 AND LGPL-2.1-only AND BSD-4-Clause-UC"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "mpfr-devel",
+        "version": "4.2.1",
+        "license": "LGPLv3+ and GPLv3+ and GFDL-1.2-only"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "perl-podlators",
+        "version": "5.01",
+        "license": "(GPL+ or Artistic) and FSFAP"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "rpm-devel",
+        "version": "4.18.2",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "rpm-libs",
+        "version": "4.18.2",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texinfo-tex",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gdbm",
+    "version": "1.23",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "flex",
+        "version": "2.6.4",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "glib2",
+    "version": "2.78.3",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "desktop-file-utils",
+        "version": "0.27",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "glibc-devel",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "meson",
+        "version": "1.3.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "elfutils-libelf-devel",
+        "version": "0.190",
+        "license": "GPLv2+ or LGPLv3+"
+      },
+      {
+        "name": "libffi-devel",
+        "version": "3.4.4",
+        "license": "MIT"
+      },
+      {
+        "name": "pcre2-devel",
+        "version": "10.42",
+        "license": "BSD"
+      },
+      {
+        "name": "util-linux-devel",
+        "version": "2.39.1",
+        "license": "LGPLv2+ and BSD"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "shared-mime-info",
+        "version": "2.4",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "systemtap-sdt-devel",
+        "version": "5.0",
+        "license": "GPLv2+ and Public Domain"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gmp",
+    "version": "6.3.0",
+    "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "m4",
+        "version": "1.4.19",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gnupg2",
+    "version": "2.4.3",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gnutls-devel",
+        "version": "3.8.2",
+        "license": "LGPLv2.1+ and GPLv3+"
+      },
+      {
+        "name": "libassuan-devel",
+        "version": "2.5.6",
+        "license": "GPL-3.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-or-later"
+      },
+      {
+        "name": "libgcrypt-devel",
+        "version": "1.10.2",
+        "license": "LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "libgpg-error-devel",
+        "version": "1.47",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libksba-devel",
+        "version": "1.6.4",
+        "license": "(LGPL-3.0+ or GPL-2.0+) and GPL-3.0+ and MIT"
+      },
+      {
+        "name": "npth-devel",
+        "version": "1.6",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gnutls",
+    "version": "3.8.2",
+    "license": "LGPLv2.1+ and GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "autogen-devel",
+        "version": "5.18.16",
+        "license": "LGPLv3+"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "2023.2.64",
+        "license": "Public Domain"
+      },
+      {
+        "name": "fipscheck",
+        "version": "1.5.0",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "gnupg2",
+        "version": "2.4.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gperf",
+        "version": "3.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "libidn2-devel",
+        "version": "2.3.4",
+        "license": "(GPLv2+ or LGPLv3+) and GPLv3+"
+      },
+      {
+        "name": "libtasn1-devel",
+        "version": "4.19.0",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "libunistring-devel",
+        "version": "1.1",
+        "license": "GPLV2+ or LGPLv3+"
+      },
+      {
+        "name": "net-tools",
+        "version": "2.10",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "nettle-devel",
+        "version": "3.8.1",
+        "license": "LGPLv3+ or GPLv2+"
+      },
+      {
+        "name": "p11-kit-devel",
+        "version": "0.25.0",
+        "license": "BSD"
+      },
+      {
+        "name": "p11-kit-trust",
+        "version": "0.25.0",
+        "license": "BSD"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "softhsm",
+        "version": "2.6.1",
+        "license": "BSD"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "trousers-devel",
+        "version": "0.3.15",
+        "license": "BSD"
+      },
+      {
+        "name": "unbound-devel",
+        "version": "1.17.1",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "unbound-libs",
+        "version": "1.17.1",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gpgme",
+    "version": "1.21.0",
+    "license": "GPLv2+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gnupg2",
+        "version": "2.4.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "libassuan-devel",
+        "version": "2.5.6",
+        "license": "GPL-3.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-or-later"
+      },
+      {
+        "name": "libgpg-error-devel",
+        "version": "1.47",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "qt5-qtbase-devel",
+        "version": "5.15.10",
+        "license": "LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0"
+      },
+      {
+        "name": "swig",
+        "version": "4.1.1",
+        "license": "GPLv3+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "grep",
+    "version": "3.11",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libsigsegv-devel",
+        "version": "2.14",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "pcre2-devel",
+        "version": "10.42",
+        "license": "BSD"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "gzip",
+    "version": "1.12",
+    "license": "GPLv3",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "less",
+        "version": "633",
+        "license": "GPLv3+ or BSD"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "ima-evm-utils",
+    "version": "1.5",
+    "license": "GPLv2",
+    "build-dep-list": [
+      {
+        "name": "asciidoc",
+        "version": "10.2.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "keyutils-libs-devel",
+        "version": "1.6.3",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "openssl",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "tpm2-tss-devel",
+        "version": "4.0.1",
+        "license": "BSD"
+      },
+      {
+        "name": "vim-common",
+        "version": "9.0.2092",
+        "license": "Vim and MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "json-c",
+    "version": "0.17",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "doxygen",
+        "version": "1.9.6",
+        "license": "GPL+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "util-linux",
+        "version": "2.39.1",
+        "license": "GPLv2 and GPLv2+ and LGPLv2+ and BSD with advertising and Public Domain"
+      },
+      {
+        "name": "ninja-build",
+        "version": "1.11.1",
+        "license": "ASL 2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "keyutils",
+    "version": "1.6.3",
+    "license": "GPLv2+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "kernel-headers",
+        "version": "6.6.0",
+        "license": "GPLv2"
+      }
+    ]
+  },
+  {
+    "pkg-name": "krb5",
+    "version": "1.21.2",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "byacc",
+        "version": "2.0.20230219",
+        "license": "public domain"
+      },
+      {
+        "name": "dejagnu",
+        "version": "1.6.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "hostname",
+        "version": "3.23",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "iproute",
+        "version": "6.6.0",
+        "license": "GPLv2+ and Public Domain"
+      },
+      {
+        "name": "keyutils",
+        "version": "1.6.3",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "keyutils-libs-devel",
+        "version": "1.6.3",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "e2fsprogs-devel",
+        "version": "1.47.0",
+        "license": "GPLv2 and LGPLv2 and MIT"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libverto-devel",
+        "version": "0.3.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libverto",
+        "version": "0.3.2",
+        "license": "MIT"
+      },
+      {
+        "name": "lmdb-devel",
+        "version": "0.9.31",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "net-tools",
+        "version": "2.10",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "nss_wrapper",
+        "version": "1.1.15",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "openldap-devel",
+        "version": "2.6.5",
+        "license": "OLDAP-2.8"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "pam-devel",
+        "version": "1.5.3",
+        "license": "BSD and GPLv2+"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "python3",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "rpcbind",
+        "version": "1.2.6",
+        "license": "BSD"
+      },
+      {
+        "name": "socket_wrapper",
+        "version": "1.4.0",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "tcl-devel",
+        "version": "8.6.14",
+        "license": "BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libarchive",
+    "version": "3.7.1",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "bzip2-devel",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "e2fsprogs-devel",
+        "version": "1.47.0",
+        "license": "GPLv2 and LGPLv2 and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "libxml2-devel",
+        "version": "2.11.5",
+        "license": "MIT"
+      },
+      {
+        "name": "zstd-devel",
+        "version": "1.5.5",
+        "license": "BSD and GPLv2"
+      },
+      {
+        "name": "lz4-devel",
+        "version": "1.9.4",
+        "license": "GPLv2+ and BSD"
+      },
+      {
+        "name": "lzo-devel",
+        "version": "2.10",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "sharutils",
+        "version": "4.15.2",
+        "license": "GPLv3+ and (GPLv3+ and BSD) and (LGPLv3+ or BSD) and LGPLv2+ and Public Domain and GFDL"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libassuan",
+    "version": "2.5.6",
+    "license": "GPL-3.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-or-later",
+    "build-dep-list": [
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libgpg-error-devel",
+        "version": "1.47",
+        "license": "LGPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libcap",
+    "version": "2.69",
+    "license": "GPLv2",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "pam-devel",
+        "version": "1.5.3",
+        "license": "BSD and GPLv2+"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libcap-ng",
+    "version": "0.8.3",
+    "license": "LGPLv2+ and GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "kernel-headers",
+        "version": "6.6.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "swig",
+        "version": "4.1.1",
+        "license": "GPLv3+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libcomps",
+    "version": "0.1.19",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "check-devel",
+        "version": "0.15.2",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "doxygen",
+        "version": "1.9.6",
+        "license": "GPL+"
+      },
+      {
+        "name": "expat-devel",
+        "version": "2.5.0",
+        "license": "MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libxml2-devel",
+        "version": "2.11.5",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-sphinx",
+        "version": "7.0.1",
+        "license": "BSD and MIT"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libdnf",
+    "version": "0.70.2",
+    "license": "LGPL-2.1-or-later",
+    "build-dep-list": [
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "gpgme-devel",
+        "version": "1.21.0",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "libsolv-devel",
+        "version": "0.7.24",
+        "license": "BSD"
+      },
+      {
+        "name": "check-devel",
+        "version": "0.15.2",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "cppunit-devel",
+        "version": "1.15.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "json-c-devel",
+        "version": "0.17",
+        "license": "MIT"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "librepo-devel",
+        "version": "1.15.2",
+        "license": "LGPL-2.0-or-later"
+      },
+      {
+        "name": "libmodulemd-devel",
+        "version": "2.15.0",
+        "license": "MIT"
+      },
+      {
+        "name": "util-linux-devel",
+        "version": "2.39.1",
+        "license": "LGPLv2+ and BSD"
+      },
+      {
+        "name": "sqlite-devel",
+        "version": "3.42.0",
+        "license": "Public Domain"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-sphinx",
+        "version": "7.0.1",
+        "license": "BSD and MIT"
+      },
+      {
+        "name": "rpm-devel",
+        "version": "4.18.2",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "swig",
+        "version": "4.1.1",
+        "license": "GPLv3+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libev",
+    "version": "4.33",
+    "license": "BSD or GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "coreutils",
+        "version": "9.4",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "findutils",
+        "version": "4.9.0",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "tar",
+        "version": "1.35",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libevent",
+    "version": "2.1.12",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "doxygen",
+        "version": "1.9.6",
+        "license": "GPL+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libffi",
+    "version": "3.4.4",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "dejagnu",
+        "version": "1.6.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libgcrypt",
+    "version": "1.10.2",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libgpg-error-devel",
+        "version": "1.47",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libgpg-error",
+    "version": "1.47",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libidn2",
+    "version": "2.3.4",
+    "license": "(GPLv2+ or LGPLv3+) and GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "libunistring-devel",
+        "version": "1.1",
+        "license": "GPLV2+ or LGPLv3+"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libksba",
+    "version": "1.6.4",
+    "license": "(LGPL-3.0+ or GPL-2.0+) and GPL-3.0+ and MIT",
+    "build-dep-list": [
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libgcrypt-devel",
+        "version": "1.10.2",
+        "license": "LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "libgpg-error-devel",
+        "version": "1.47",
+        "license": "LGPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libmodulemd",
+    "version": "2.15.0",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "file-devel",
+        "version": "5.45",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "glib2-help",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "gobject-introspection-devel",
+        "version": "1.76.1",
+        "license": "GPLv2+ and LGPLv2+ and MIT"
+      },
+      {
+        "name": "help2man",
+        "version": "1.49.3",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "meson",
+        "version": "1.3.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "libyaml-devel",
+        "version": "0.2.5",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-gobject-base",
+        "version": "3.46.0",
+        "license": "LGPLv2+ and MIT"
+      },
+      {
+        "name": "rpm-devel",
+        "version": "4.18.2",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "valgrind",
+        "version": "3.22.0",
+        "license": "GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libnsl2",
+    "version": "2.0.1",
+    "license": "BSD and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libtirpc-devel",
+        "version": "1.3.4",
+        "license": "SISSL and BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libpng",
+    "version": "1.6.40",
+    "license": "Zlib",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libpsl",
+    "version": "0.21.2",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "libicu-devel",
+        "version": "74.1",
+        "license": "MIT and UCD and Public Domain"
+      },
+      {
+        "name": "libidn2-devel",
+        "version": "2.3.4",
+        "license": "(GPLv2+ or LGPLv3+) and GPLv3+"
+      },
+      {
+        "name": "libunistring-devel",
+        "version": "1.1",
+        "license": "GPLV2+ or LGPLv3+"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "publicsuffix-list",
+        "version": "20240108",
+        "license": "MPLv2.0"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libpwquality",
+    "version": "1.4.5",
+    "license": "BSD or GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "cracklib-devel",
+        "version": "2.9.11",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "pam-devel",
+        "version": "1.5.3",
+        "license": "BSD and GPLv2+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "librepo",
+    "version": "1.15.2",
+    "license": "LGPL-2.0-or-later",
+    "build-dep-list": [
+      {
+        "name": "check-devel",
+        "version": "0.15.2",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "doxygen",
+        "version": "1.9.6",
+        "license": "GPL+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gpgme-devel",
+        "version": "1.21.0",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "libattr-devel",
+        "version": "2.5.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libcurl-devel",
+        "version": "8.4.0",
+        "license": "curl"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "libxml2-devel",
+        "version": "2.11.5",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-flask",
+        "version": "2.2.5",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "python3-gpgme",
+        "version": "1.21.0",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "python3-pyxattr",
+        "version": "0.8.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "python3-requests",
+        "version": "2.31.0",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "python3-sphinx",
+        "version": "7.0.1",
+        "license": "BSD and MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libreport",
+    "version": "2.17.10",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "asciidoc",
+        "version": "10.2.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "augeas",
+        "version": "1.14.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "augeas-devel",
+        "version": "1.14.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libcurl-devel",
+        "version": "8.4.0",
+        "license": "curl"
+      },
+      {
+        "name": "dbus-devel",
+        "version": "1.14.8",
+        "license": "AFLv3.0 or GPLv2+"
+      },
+      {
+        "name": "desktop-file-utils",
+        "version": "0.27",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "doxygen",
+        "version": "1.9.6",
+        "license": "GPL+"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "git-core",
+        "version": "2.43.0",
+        "license": "GPLv2+ or LGPLv2.1"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "glibc-all-langpacks",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "gtk3-devel",
+        "version": "3.24.41",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "intltool",
+        "version": "0.51.0",
+        "license": "GPLv2"
+      },
+      {
+        "name": "json-c-devel",
+        "version": "0.17",
+        "license": "MIT"
+      },
+      {
+        "name": "libarchive-devel",
+        "version": "3.7.1",
+        "license": "BSD"
+      },
+      {
+        "name": "libproxy-devel",
+        "version": "0.5.3",
+        "license": "LGPL-2.1-or-later"
+      },
+      {
+        "name": "libtar-devel",
+        "version": "1.2.20",
+        "license": "BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "libxml2-devel",
+        "version": "2.11.5",
+        "license": "MIT"
+      },
+      {
+        "name": "lz4",
+        "version": "1.9.4",
+        "license": "GPLv2+ and BSD"
+      },
+      {
+        "name": "nettle-devel",
+        "version": "3.8.1",
+        "license": "LGPLv3+ or GPLv2+"
+      },
+      {
+        "name": "newt-devel",
+        "version": "0.52.23",
+        "license": "LGPL-2.0-only"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "satyr-devel",
+        "version": "0.42",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "systemd-devel",
+        "version": "255",
+        "license": "LGPLv2+ and MIT"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "xmlrpc-c-devel",
+        "version": "1.59.02",
+        "license": "BSD and MIT"
+      },
+      {
+        "name": "xmlto",
+        "version": "0.0.28",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "xz",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libselinux",
+    "version": "3.5",
+    "license": "Public Domain",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libsepol-devel",
+        "version": "3.5",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "pcre2-devel",
+        "version": "10.42",
+        "license": "BSD"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-pip",
+        "version": "23.3.1",
+        "license": "MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)"
+      },
+      {
+        "name": "python3-setuptools",
+        "version": "68.0.0",
+        "license": "MIT and (BSD or ASL 2.0)"
+      },
+      {
+        "name": "python3-wheel",
+        "version": "0.40.0",
+        "license": "MIT"
+      },
+      {
+        "name": "ruby-devel",
+        "version": "3.2.2",
+        "license": "(Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD"
+      },
+      {
+        "name": "swig",
+        "version": "4.1.1",
+        "license": "GPLv3+ and BSD"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libsepol",
+    "version": "3.5",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "flex",
+        "version": "2.6.4",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libsigsegv",
+    "version": "2.14",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libsolv",
+    "version": "0.7.24",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "bzip2-devel",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libxml2-devel",
+        "version": "2.11.5",
+        "license": "MIT"
+      },
+      {
+        "name": "zstd-devel",
+        "version": "1.5.5",
+        "license": "BSD and GPLv2"
+      },
+      {
+        "name": "ninja-build",
+        "version": "1.11.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "perl-devel",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and UCD"
+      },
+      {
+        "name": "perl-generators",
+        "version": "1.10",
+        "license": "GPL+"
+      },
+      {
+        "name": "rpm-devel",
+        "version": "4.18.2",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "ruby-devel",
+        "version": "3.2.2",
+        "license": "(Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD"
+      },
+      {
+        "name": "swig",
+        "version": "4.1.1",
+        "license": "GPLv3+ and BSD"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libssh",
+    "version": "0.10.5",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "cmake",
+        "version": "3.27.9",
+        "license": "BSD and MIT and zlib"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gnupg2",
+        "version": "2.4.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "krb5-devel",
+        "version": "1.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libcmocka-devel",
+        "version": "1.1.7",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "nmap",
+        "version": "7.94",
+        "license": "GPL-2.0-or-later"
+      },
+      {
+        "name": "openssh-clients",
+        "version": "9.3p2",
+        "license": "BSD"
+      },
+      {
+        "name": "openssh-server",
+        "version": "9.3p2",
+        "license": "BSD"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libtasn1",
+    "version": "4.19.0",
+    "license": "GPLv3+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gnupg2",
+        "version": "2.4.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "help2man",
+        "version": "1.49.3",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "valgrind-devel",
+        "version": "3.22.0",
+        "license": "GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libtirpc",
+    "version": "1.3.4",
+    "license": "SISSL and BSD",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "krb5-devel",
+        "version": "1.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libunistring",
+    "version": "1.1",
+    "license": "GPLV2+ or LGPLv3+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libverto",
+    "version": "0.3.2",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libev-devel",
+        "version": "4.33",
+        "license": "BSD or GPLv2+"
+      },
+      {
+        "name": "libevent-devel",
+        "version": "2.1.12",
+        "license": "BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libxcrypt",
+    "version": "4.4.36",
+    "license": "LGPLv2+ and BSD and Public Domain",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "fipscheck",
+        "version": "1.5.0",
+        "license": "BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libxml2",
+    "version": "2.11.5",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "libyaml",
+    "version": "0.2.5",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "logrotate",
+    "version": "3.21.0",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "acl",
+        "version": "2.3.1",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "popt-devel",
+        "version": "1.19",
+        "license": "MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "lua",
+    "version": "5.4.6",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "lz4",
+    "version": "1.9.4",
+    "license": "GPLv2+ and BSD",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "mpfr",
+    "version": "4.2.1",
+    "license": "LGPLv3+ and GPLv3+ and GFDL-1.2-only",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "git",
+        "version": "2.43.0",
+        "license": "GPLv2+ or LGPLv2.1"
+      },
+      {
+        "name": "gmp-devel",
+        "version": "6.3.0",
+        "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "ncurses",
+    "version": "6.4",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gpm-devel",
+        "version": "1.20.7",
+        "license": "GPLv2 and GPLv2+ with exceptions and GPLv3+ and Verbatim and Copyright only"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      }
+    ]
+  },
+  {
+    "pkg-name": "nettle",
+    "version": "3.8.1",
+    "license": "LGPLv3+ or GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "fipscheck",
+        "version": "1.5.0",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "gmp-devel",
+        "version": "6.3.0",
+        "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "m4",
+        "version": "1.4.19",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "newt",
+    "version": "0.52.23",
+    "license": "LGPL-2.0-only",
+    "build-dep-list": [
+      {
+        "name": "docbook-utils",
+        "version": "0.6.14",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "lynx",
+        "version": "2.8.9",
+        "license": "GPLv2"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "popt-devel",
+        "version": "1.19",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "slang-devel",
+        "version": "2.3.3",
+        "license": "GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "nghttp2",
+    "version": "1.58.0",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "CUnit-devel",
+        "version": "2.1.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "c-ares-devel",
+        "version": "1.19.1",
+        "license": "MIT"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libev-devel",
+        "version": "4.33",
+        "license": "BSD or GPLv2+"
+      },
+      {
+        "name": "libxml2-devel",
+        "version": "2.11.5",
+        "license": "MIT"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "systemd-devel",
+        "version": "255",
+        "license": "LGPLv2+ and MIT"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "npth",
+    "version": "1.6",
+    "license": "LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "openEuler-release",
+    "version": "24.03LTS",
+    "license": "Mulan PSL v2",
+    "build-dep-list": [
+      {
+        "name": "python3",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      }
+    ]
+  },
+  {
+    "pkg-name": "openEuler-repos",
+    "version": "1.0",
+    "license": "Mulan PSL v2"
+  },
+  {
+    "pkg-name": "openldap",
+    "version": "2.6.5",
+    "license": "OLDAP-2.8",
+    "build-dep-list": [
+      {
+        "name": "cracklib-devel",
+        "version": "2.9.11",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "cyrus-sasl-devel",
+        "version": "2.1.28",
+        "license": "BSD with advertising"
+      },
+      {
+        "name": "glibc-devel",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "groff",
+        "version": "1.23.0",
+        "license": "GPLv3+ and GFDL and BSD and MIT"
+      },
+      {
+        "name": "krb5-devel",
+        "version": "1.21.2",
+        "license": "MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "libtool-devel",
+        "version": "2.4.7",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "perl-devel",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and UCD"
+      },
+      {
+        "name": "perl-generators",
+        "version": "1.10",
+        "license": "GPL+"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "unixODBC-devel",
+        "version": "2.3.9",
+        "license": "GPLv2+ and LGPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "openssl",
+    "version": "3.0.12",
+    "license": "OpenSSL and SSLeay",
+    "build-dep-list": [
+      {
+        "name": "coreutils",
+        "version": "9.4",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "lksctp-tools-devel",
+        "version": "1.0.19",
+        "license": "GPLv2 and GPLv2+ and LGPLv2 and MIT"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "util-linux",
+        "version": "2.39.1",
+        "license": "GPLv2 and GPLv2+ and LGPLv2+ and BSD with advertising and Public Domain"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "p11-kit",
+    "version": "0.25.0",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "bash-completion",
+        "version": "2.12.0",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gtk-doc",
+        "version": "1.33.2",
+        "license": "Verbatim and GPLv2+"
+      },
+      {
+        "name": "libffi-devel",
+        "version": "3.4.4",
+        "license": "MIT"
+      },
+      {
+        "name": "libtasn1-devel",
+        "version": "4.19.0",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "glib2-devel",
+        "version": "2.78.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "systemd-devel",
+        "version": "255",
+        "license": "LGPLv2+ and MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "pam",
+    "version": "1.5.3",
+    "license": "BSD and GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "audit-devel",
+        "version": "3.1.2",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "bison",
+        "version": "3.8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "cracklib-devel",
+        "version": "2.9.11",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "flex",
+        "version": "2.6.4",
+        "license": "BSD"
+      },
+      {
+        "name": "gdbm-devel",
+        "version": "1.23",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libnsl2-devel",
+        "version": "2.0.1",
+        "license": "BSD and LGPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libtirpc-devel",
+        "version": "1.3.4",
+        "license": "SISSL and BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "sed",
+        "version": "4.9",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "pcre2",
+    "version": "10.42",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "coreutils",
+        "version": "9.4",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "pkgconf",
+    "version": "1.9.5",
+    "license": "ISC",
+    "build-dep-list": [
+      {
+        "name": "atf-tests",
+        "version": "0.21",
+        "license": "BSD"
+      },
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "kyua",
+        "version": "0.13",
+        "license": "BSD"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "popt",
+    "version": "1.19",
+    "license": "MIT",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "git",
+        "version": "2.43.0",
+        "license": "GPLv2+ or LGPLv2.1"
+      }
+    ]
+  },
+  {
+    "pkg-name": "procps-ng",
+    "version": "4.0.4",
+    "license": "GPL+ and GPLv2 and GPLv2+ and GPLv3+ and LGPLv2+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "systemd-devel",
+        "version": "255",
+        "license": "LGPLv2+ and MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "publicsuffix-list",
+    "version": "20240108",
+    "license": "MPLv2.0",
+    "build-dep-list": [
+      {
+        "name": "psl-make-dafsa",
+        "version": "0.21.2",
+        "license": "MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "python-pip",
+    "version": "23.3.1",
+    "license": "MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)",
+    "build-dep-list": [
+      {
+        "name": "bash-completion",
+        "version": "2.12.0",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "2023.2.64",
+        "license": "Public Domain"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-setuptools",
+        "version": "68.0.0",
+        "license": "MIT and (BSD or ASL 2.0)"
+      },
+      {
+        "name": "python3-wheel",
+        "version": "0.40.0",
+        "license": "MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "python-setuptools",
+    "version": "68.0.0",
+    "license": "MIT and (BSD or ASL 2.0)",
+    "build-dep-list": [
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-pip",
+        "version": "23.3.1",
+        "license": "MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)"
+      },
+      {
+        "name": "python3-wheel",
+        "version": "0.40.0",
+        "license": "MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "python3",
+    "version": "3.11.6",
+    "license": "Python-2.0",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "bluez-devel",
+        "version": "5.71",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "bzip2",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "bzip2-devel",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "desktop-file-utils",
+        "version": "0.27",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "expat-devel",
+        "version": "2.5.0",
+        "license": "MIT"
+      },
+      {
+        "name": "findutils",
+        "version": "4.9.0",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gdbm-devel",
+        "version": "1.23",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "glibc-all-langpacks",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "glibc-devel",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "gmp-devel",
+        "version": "6.3.0",
+        "license": "(LGPL-3.0-or-later OR GPL-2.0-or-later OR (LGPL-3.0-or-later AND GPL-2.0-or-later)) AND GFDL-1.3-invariants-or-later"
+      },
+      {
+        "name": "mesa-libGL-devel",
+        "version": "24.0.3",
+        "license": "MIT"
+      },
+      {
+        "name": "libX11-devel",
+        "version": "1.8.7",
+        "license": "MIT"
+      },
+      {
+        "name": "libappstream-glib",
+        "version": "0.8.2",
+        "license": "LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "libffi-devel",
+        "version": "3.4.4",
+        "license": "MIT"
+      },
+      {
+        "name": "libnsl2-devel",
+        "version": "2.0.1",
+        "license": "BSD and LGPLv2+"
+      },
+      {
+        "name": "libtirpc-devel",
+        "version": "1.3.4",
+        "license": "SISSL and BSD"
+      },
+      {
+        "name": "util-linux-devel",
+        "version": "2.39.1",
+        "license": "LGPLv2+ and BSD"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "net-tools",
+        "version": "2.10",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "python-pip-wheel",
+        "version": "23.3.1",
+        "license": "MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)"
+      },
+      {
+        "name": "openEuler-rpm-config",
+        "version": "30",
+        "license": "GPL+"
+      },
+      {
+        "name": "python-setuptools",
+        "version": "68.0.0",
+        "license": "MIT and (BSD or ASL 2.0)"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "sqlite-devel",
+        "version": "3.42.0",
+        "license": "Public Domain"
+      },
+      {
+        "name": "systemtap-sdt-devel",
+        "version": "5.0",
+        "license": "GPLv2+ and Public Domain"
+      },
+      {
+        "name": "tar",
+        "version": "1.35",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "tcl-devel",
+        "version": "8.6.14",
+        "license": "BSD"
+      },
+      {
+        "name": "tix-devel",
+        "version": "8.4.3",
+        "license": "TCL"
+      },
+      {
+        "name": "tk-devel",
+        "version": "8.6.14",
+        "license": "TCL"
+      },
+      {
+        "name": "valgrind-devel",
+        "version": "3.22.0",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "readline",
+    "version": "8.2",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      }
+    ]
+  },
+  {
+    "pkg-name": "rootfiles",
+    "version": "8.1",
+    "license": "Public Domain"
+  },
+  {
+    "pkg-name": "rpm",
+    "version": "4.18.2",
+    "license": "GPL-2.0-or-later",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "bzip2-devel",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "dbus-devel",
+        "version": "1.14.8",
+        "license": "AFLv3.0 or GPLv2+"
+      },
+      {
+        "name": "debugedit",
+        "version": "5.0",
+        "license": "GPL-2.0-or-later and LGPL-2.1-only and GPL-3.0-only"
+      },
+      {
+        "name": "dwz",
+        "version": "0.15",
+        "license": "GPLv2+ and GPLv3+"
+      },
+      {
+        "name": "elfutils-devel",
+        "version": "0.190",
+        "license": "GPLv2+ or LGPLv3+"
+      },
+      {
+        "name": "elfutils-libelf-devel",
+        "version": "0.190",
+        "license": "GPLv2+ or LGPLv3+"
+      },
+      {
+        "name": "fakechroot",
+        "version": "2.20.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "file-devel",
+        "version": "5.45",
+        "license": "BSD"
+      },
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "gnupg2",
+        "version": "2.4.3",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "ima-evm-utils",
+        "version": "1.5",
+        "license": "GPLv2"
+      },
+      {
+        "name": "ima-evm-utils-devel",
+        "version": "1.5",
+        "license": "GPLv2"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libarchive-devel",
+        "version": "3.7.1",
+        "license": "BSD"
+      },
+      {
+        "name": "libcap-devel",
+        "version": "2.69",
+        "license": "GPLv2"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "lua-devel",
+        "version": "5.4.6",
+        "license": "MIT"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "popt-devel",
+        "version": "1.19",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "openEuler-rpm-config",
+        "version": "30",
+        "license": "GPL+"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      },
+      {
+        "name": "zstd-devel",
+        "version": "1.5.5",
+        "license": "BSD and GPLv2"
+      }
+    ]
+  },
+  {
+    "pkg-name": "sed",
+    "version": "4.9",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "glibc-devel",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "gzip",
+        "version": "1.12",
+        "license": "GPLv3"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "perl-Getopt-Long",
+        "version": "2.57",
+        "license": "Artistic or GPLv2+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "setup",
+    "version": "2.14.5",
+    "license": "Public Domain",
+    "build-dep-list": [
+      {
+        "name": "bash",
+        "version": "5.2.15",
+        "license": "GPLv3"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "tcsh",
+        "version": "6.24.10",
+        "license": "BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "slang",
+    "version": "2.3.3",
+    "license": "GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "libpng-devel",
+        "version": "1.6.40",
+        "license": "Zlib"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "sqlite",
+    "version": "3.42.0",
+    "license": "Public Domain",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "glibc-devel",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "tcl",
+        "version": "8.6.14",
+        "license": "BSD"
+      },
+      {
+        "name": "tcl-devel",
+        "version": "8.6.14",
+        "license": "BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "systemd",
+    "version": "255",
+    "license": "MIT and LGPLv2+ and GPLv2+",
+    "build-dep-list": [
+      {
+        "name": "audit-devel",
+        "version": "3.1.2",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "bzip2-devel",
+        "version": "1.0.8",
+        "license": "BSD"
+      },
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "cryptsetup-devel",
+        "version": "2.6.1",
+        "license": "GPLv2+ and CC0-1.0 and LGPLv2+"
+      },
+      {
+        "name": "dbus",
+        "version": "1.14.8",
+        "license": "AFLv3.0 or GPLv2+"
+      },
+      {
+        "name": "dbus-devel",
+        "version": "1.14.8",
+        "license": "AFLv3.0 or GPLv2+"
+      },
+      {
+        "name": "docbook-style-xsl",
+        "version": "1.79.2",
+        "license": "MIT"
+      },
+      {
+        "name": "firewalld",
+        "version": "1.2.6",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "git",
+        "version": "2.43.0",
+        "license": "GPLv2+ or LGPLv2.1"
+      },
+      {
+        "name": "gnutls-devel",
+        "version": "3.8.2",
+        "license": "LGPLv2.1+ and GPLv3+"
+      },
+      {
+        "name": "gobject-introspection-devel",
+        "version": "1.76.1",
+        "license": "GPLv2+ and LGPLv2+ and MIT"
+      },
+      {
+        "name": "gperf",
+        "version": "3.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "hostname",
+        "version": "3.23",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "iptables-devel",
+        "version": "1.8.9",
+        "license": "GPLv2 and Artistic Licence 2.0 and ISC"
+      },
+      {
+        "name": "kmod-devel",
+        "version": "30",
+        "license": "GPLv2+ and LGPLv2+"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "util-linux-devel",
+        "version": "2.39.1",
+        "license": "LGPLv2+ and BSD"
+      },
+      {
+        "name": "libcap-devel",
+        "version": "2.69",
+        "license": "GPLv2"
+      },
+      {
+        "name": "libgcrypt-devel",
+        "version": "1.10.2",
+        "license": "LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "libgpg-error-devel",
+        "version": "1.47",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libidn2-devel",
+        "version": "2.3.4",
+        "license": "(GPLv2+ or LGPLv3+) and GPLv3+"
+      },
+      {
+        "name": "libpwquality-devel",
+        "version": "1.4.5",
+        "license": "BSD or GPLv2+"
+      },
+      {
+        "name": "libseccomp-devel",
+        "version": "2.5.4",
+        "license": "LGPLv2"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libxkbcommon-devel",
+        "version": "1.6.0",
+        "license": "MIT"
+      },
+      {
+        "name": "libxslt",
+        "version": "1.1.39",
+        "license": "MIT"
+      },
+      {
+        "name": "lz4",
+        "version": "1.9.4",
+        "license": "GPLv2+ and BSD"
+      },
+      {
+        "name": "lz4-devel",
+        "version": "1.9.4",
+        "license": "GPLv2+ and BSD"
+      },
+      {
+        "name": "meson",
+        "version": "1.3.1",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "pam-devel",
+        "version": "1.5.3",
+        "license": "BSD and GPLv2+"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "python3-jinja2",
+        "version": "3.1.3",
+        "license": "BSD-3-Clause"
+      },
+      {
+        "name": "python3-lxml",
+        "version": "5.1.0",
+        "license": "BSD"
+      },
+      {
+        "name": "tree",
+        "version": "2.1.1",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "util-linux",
+        "version": "2.39.1",
+        "license": "GPLv2 and GPLv2+ and LGPLv2+ and BSD with advertising and Public Domain"
+      },
+      {
+        "name": "valgrind-devel",
+        "version": "3.22.0",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "xz",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      },
+      {
+        "name": "xz-devel",
+        "version": "5.4.7",
+        "license": "GPL-3.0-only"
+      }
+    ]
+  },
+  {
+    "pkg-name": "tar",
+    "version": "1.35",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "acl",
+        "version": "2.3.1",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "attr",
+        "version": "2.5.1",
+        "license": "GPLv2+ AND LGPLv2+"
+      },
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "policycoreutils",
+        "version": "3.5",
+        "license": "GPLv2"
+      },
+      {
+        "name": "texinfo",
+        "version": "7.0.3",
+        "license": "GPLv3+"
+      }
+    ]
+  },
+  {
+    "pkg-name": "tcl",
+    "version": "8.6.14",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "systemtap-sdt-devel",
+        "version": "5.0",
+        "license": "GPLv2+ and Public Domain"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "texinfo",
+    "version": "7.0.3",
+    "license": "GPLv3+",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "help2man",
+        "version": "1.49.3",
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "perl-Data-Dumper",
+        "version": "2.183",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "perl-libintl-perl",
+        "version": "1.33",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "perl-Storable",
+        "version": "3.25",
+        "license": "GPL+ or Artistic-1.0-Perl"
+      },
+      {
+        "name": "perl-Text-Unidecode",
+        "version": "1.30",
+        "license": "GPL+ and Artistic"
+      },
+      {
+        "name": "perl-Unicode-EastAsianWidth",
+        "version": "12.0",
+        "license": "CC0"
+      },
+      {
+        "name": "perl-Unicode-Normalize",
+        "version": "1.32",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-generators",
+        "version": "1.10",
+        "license": "GPL+"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "tpm2-tss",
+    "version": "4.0.1",
+    "license": "BSD",
+    "build-dep-list": [
+      {
+        "name": "autoconf-archive",
+        "version": "2023.02.20",
+        "license": "GPL-3.0 and GPL-2.0+"
+      },
+      {
+        "name": "curl",
+        "version": "8.4.0",
+        "license": "curl"
+      },
+      {
+        "name": "doxygen",
+        "version": "1.9.6",
+        "license": "GPL+"
+      },
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "iproute",
+        "version": "6.6.0",
+        "license": "GPLv2+ and Public Domain"
+      },
+      {
+        "name": "json-c-devel",
+        "version": "0.17",
+        "license": "MIT"
+      },
+      {
+        "name": "libcmocka-devel",
+        "version": "1.1.7",
+        "license": "ASL 2.0"
+      },
+      {
+        "name": "libcurl-devel",
+        "version": "8.4.0",
+        "license": "curl"
+      },
+      {
+        "name": "libgcrypt-devel",
+        "version": "1.10.2",
+        "license": "LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "openssl-devel",
+        "version": "3.0.12",
+        "license": "OpenSSL and SSLeay"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      },
+      {
+        "name": "swtpm",
+        "version": "0.8.0",
+        "license": "BSD"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "uthash-devel",
+        "version": "2.3.0",
+        "license": "BSD"
+      },
+      {
+        "name": "util-linux-devel",
+        "version": "2.39.1",
+        "license": "LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "tzdata",
+    "version": "2024a",
+    "license": "Public Domain",
+    "build-dep-list": [
+      {
+        "name": "gawk",
+        "version": "5.2.2",
+        "license": "GPLv3+ and GPLv2+ and LGPLv2+ and BSD"
+      },
+      {
+        "name": "glibc",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "glibc-common",
+        "version": "2.38",
+        "license": "LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net-2.0 and ISC and Public Domain and GFDL-1.3-only"
+      },
+      {
+        "name": "java-11-openjdk-devel",
+        "version": "11.0.25.9",
+        "license": "ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA-MD"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "util-linux",
+    "version": "2.39.1",
+    "license": "GPLv2 and GPLv2+ and LGPLv2+ and BSD with advertising and Public Domain",
+    "build-dep-list": [
+      {
+        "name": "audit-devel",
+        "version": "3.1.2",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext-devel",
+        "version": "0.22",
+        "license": "LGPLv2+ and GPLv3+"
+      },
+      {
+        "name": "libcap-ng-devel",
+        "version": "0.8.3",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libuser-devel",
+        "version": "0.64",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libutempter-devel",
+        "version": "1.2.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "lsof",
+        "version": "4.99.3",
+        "license": "Zlib and Sendmail and LGPL-2.0-or-later"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "pam-devel",
+        "version": "1.5.3",
+        "license": "BSD and GPLv2+"
+      },
+      {
+        "name": "po4a",
+        "version": "0.69",
+        "license": "GPL+"
+      },
+      {
+        "name": "popt-devel",
+        "version": "1.19",
+        "license": "MIT"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "readline-devel",
+        "version": "8.2",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "rubygem-asciidoctor",
+        "version": "2.0.18",
+        "license": "MIT"
+      },
+      {
+        "name": "systemd",
+        "version": "255",
+        "license": "MIT and LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "systemd-devel",
+        "version": "255",
+        "license": "LGPLv2+ and MIT"
+      },
+      {
+        "name": "zlib-devel",
+        "version": "1.2.13",
+        "license": "zlib and Boost"
+      }
+    ]
+  },
+  {
+    "pkg-name": "vim",
+    "version": "9.0.2092",
+    "license": "Vim and MIT",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "chrpath",
+        "version": "0.16",
+        "license": "GPL+"
+      },
+      {
+        "name": "desktop-file-utils",
+        "version": "0.27",
+        "license": "GPLv2+"
+      },
+      {
+        "name": "file",
+        "version": "5.45",
+        "license": "BSD"
+      },
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gettext",
+        "version": "0.22",
+        "license": "GPLv3+ and LGPLv2+"
+      },
+      {
+        "name": "gpm-devel",
+        "version": "1.20.7",
+        "license": "GPLv2 and GPLv2+ with exceptions and GPLv3+ and Verbatim and Copyright only"
+      },
+      {
+        "name": "gtk3-devel",
+        "version": "3.24.41",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libICE-devel",
+        "version": "1.1.1",
+        "license": "MIT"
+      },
+      {
+        "name": "libSM-devel",
+        "version": "1.2.4",
+        "license": "MIT"
+      },
+      {
+        "name": "libX11-devel",
+        "version": "1.8.7",
+        "license": "MIT"
+      },
+      {
+        "name": "libXpm-devel",
+        "version": "3.5.17",
+        "license": "MIT"
+      },
+      {
+        "name": "libXt-devel",
+        "version": "1.3.0",
+        "license": "MIT"
+      },
+      {
+        "name": "libacl-devel",
+        "version": "2.3.1",
+        "license": "LGPLv2+"
+      },
+      {
+        "name": "libappstream-glib",
+        "version": "0.8.2",
+        "license": "LGPLv2+ and GPLv2+"
+      },
+      {
+        "name": "libselinux-devel",
+        "version": "3.5",
+        "license": "Public Domain"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      },
+      {
+        "name": "lua-devel",
+        "version": "5.4.6",
+        "license": "MIT"
+      },
+      {
+        "name": "make",
+        "version": "4.4.1",
+        "license": "GPLv3+"
+      },
+      {
+        "name": "ncurses-devel",
+        "version": "6.4",
+        "license": "MIT"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      },
+      {
+        "name": "perl-ExtUtils-ParseXS",
+        "version": "3.51",
+        "license": "GPL+ or Artistic"
+      },
+      {
+        "name": "perl-devel",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and UCD"
+      },
+      {
+        "name": "perl-generators",
+        "version": "1.10",
+        "license": "GPL+"
+      },
+      {
+        "name": "python3-devel",
+        "version": "3.11.6",
+        "license": "Python-2.0"
+      },
+      {
+        "name": "ruby",
+        "version": "3.2.2",
+        "license": "(Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD"
+      },
+      {
+        "name": "ruby-devel",
+        "version": "3.2.2",
+        "license": "(Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "which",
+    "version": "2.21",
+    "license": "GPLv3",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "xz",
+    "version": "5.4.7",
+    "license": "GPL-3.0-only",
+    "build-dep-list": [
+      {
+        "name": "gcc",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "perl",
+        "version": "5.38.0",
+        "license": "(GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT and UCD and Public Domain and BSD"
+      }
+    ]
+  },
+  {
+    "pkg-name": "zlib",
+    "version": "1.2.13",
+    "license": "zlib and Boost",
+    "build-dep-list": [
+      {
+        "name": "autoconf",
+        "version": "2.71",
+        "license": "GPLv2+ and GPLv3+ and GFDL-1.3-only"
+      },
+      {
+        "name": "automake",
+        "version": "1.16.5",
+        "license": "GPLv2+ and GFDL-1.3-only and Public Domain and MIT"
+      },
+      {
+        "name": "libtool",
+        "version": "2.4.7",
+        "license": "GPLv2+ and LGPLv2+ and GFDL-1.3-or-later"
+      }
+    ]
+  },
+  {
+    "pkg-name": "zstd",
+    "version": "1.5.5",
+    "license": "BSD and GPLv2",
+    "build-dep-list": [
+      {
+        "name": "gcc-c++",
+        "version": "12.3.1",
+        "license": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+      },
+      {
+        "name": "gtest-devel",
+        "version": "1.14.0",
+        "license": "BSD-3-Clause and Apache-2.0"
+      },
+      {
+        "name": "pkgconf",
+        "version": "1.9.5",
+        "license": "ISC"
+      }
+    ]
+  }
+]

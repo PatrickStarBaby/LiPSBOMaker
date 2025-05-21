@@ -1,0 +1,201 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:18e2f5ff-16af-4cf4-9d72-137876b8c376",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-21T09:12:42Z",
+    "lifecycles": [
+      {
+        "name": "source",
+        "phase": "pre-build",
+        "description": "This is the source package stage."
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SLP",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:rpm/libsepol@3.5-3.oe2403?arch=x86_64&package-id=02d8155d3cca2db0",
+      "type": "application",
+      "name": "libsepol",
+      "version": "3.5",
+      "description": "libsepol provides an API for the manipulation of SELinux binary\npolicies. It is used by checkpolicy (the policy compiler) and similar\ntools, as well as by programs like load_policy that need to perform\nspecific transformations on binary policies such as customizing\npolicy boolean settings.",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:libsepol:3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:rpm/libsepol@3.5-3.oe2403?arch=x86_64",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SELinuxProject/selinux/wiki/Releases",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "3.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourceFiles",
+          "value": "libsepol-3.5.tar.gz"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "packageList",
+          "value": "libsepol=3.5-3.oe2403,libsepol-devel=3.5-3.oe2403,libsepol-help=3.5-3.oe2403,libsepol-debuginfo=3.5-3.oe2403,libsepol-debugsource=3.5-3.oe2403"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/flex@2.6.4-5.oe2403?arch=x86_64&upstream=flex-2.6.4-5.oe2403.src.rpm&package-id=a1bcec1c04c35df9",
+      "type": "application",
+      "name": "flex",
+      "version": "2.6.4",
+      "description": "\nFlex is a tool for generating scanners: programs which recognize lexical\npatterns in text.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:flex:2.6.4:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/flex@2.6.4-5.oe2403?arch=x86_64&upstream=flex-2.6.4-5.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://github.com/westes/flex",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "5.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "flex-2.6.4-5.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Mon May 20 10:24:53 2024"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "flex"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=d5fb5b8214bea6ea",
+      "type": "application",
+      "name": "gcc",
+      "version": "12.3.1",
+      "description": "\nThe gcc package contains the GNU Compiler Collection version 12.\nYou'll need this package in order to compile C code.\n",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:*:gcc:12.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm",
+      "externalReferences": [
+        {
+          "url": "https://gcc.gnu.org",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "release",
+          "value": "38.oe2403"
+        },
+        {
+          "name": "architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "sourcePkg",
+          "value": "gcc-12.3.1-38.oe2403.src.rpm"
+        },
+        {
+          "name": "packager",
+          "value": "http://openeuler.org"
+        },
+        {
+          "name": "buildTime",
+          "value": "Wed Jan  8 07:25:26 2025"
+        },
+        {
+          "name": "buildHost",
+          "value": "dc-64g.compass-ci"
+        },
+        {
+          "name": "componentType",
+          "value": "buildDepend"
+        },
+        {
+          "name": "affectsBinaryComposition",
+          "value": "false"
+        },
+        {
+          "name": "rpmRequire",
+          "value": "gcc"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/libsepol@3.5-3.oe2403?arch=x86_64&package-id=02d8155d3cca2db0",
+      "dependsOn": [
+        "pkg:deb/flex@2.6.4-5.oe2403?arch=x86_64&upstream=flex-2.6.4-5.oe2403.src.rpm&package-id=a1bcec1c04c35df9",
+        "pkg:deb/gcc@12.3.1-38.oe2403?arch=x86_64&upstream=gcc-12.3.1-38.oe2403.src.rpm&package-id=d5fb5b8214bea6ea"
+      ]
+    }
+  ]
+}
